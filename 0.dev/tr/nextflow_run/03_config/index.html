@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -846,10 +877,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet" class="md-nav__link">
+  <a href="#ozetle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -933,22 +964,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-cktlar-processe-gore-organize-etme" class="md-nav__link">
+  <a href="#22-cktlar-sureclere-gore-organize-etme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Çıktıları process'e göre organize etme
+        2.2. Çıktıları süreçlere göre organize etme
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2. Çıktıları process&#39;e göre organize etme">
+    <nav class="md-nav" aria-label="2.2. Çıktıları süreçlere göre organize etme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#221-ckt-yollarn-process-adlarna-referansla-degistirin" class="md-nav__link">
+  <a href="#221-ckt-yollarn-surec-adlarna-referansla-degistirin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.1. Çıktı yollarını process adlarına referansla değiştirin
+        2.2.1. Çıktı yollarını süreç adlarına referansla değiştirin
       
     </span>
   </a>
@@ -1022,10 +1053,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_1" class="md-nav__link">
+  <a href="#ozetle_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1070,10 +1101,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-process-tanmnda-bir-conda-paketi-belirtin" class="md-nav__link">
+  <a href="#32-surec-tanmnda-bir-conda-paketi-belirtin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Process tanımında bir Conda paketi belirtin
+        3.2. Süreç tanımında bir Conda paketi belirtin
       
     </span>
   </a>
@@ -1092,10 +1123,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_2" class="md-nav__link">
+  <a href="#ozetle_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1151,10 +1182,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_3" class="md-nav__link">
+  <a href="#ozetle_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1199,10 +1230,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-tum-processler-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
+  <a href="#52-tum-surecler-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Tüm process'ler için kaynak tahsislerini ayarlama
+        5.2. Tüm süreçler için kaynak tahsislerini ayarlama
       
     </span>
   </a>
@@ -1210,10 +1241,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
+  <a href="#53-belirli-bir-surec-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Belirli bir process için kaynak tahsislerini ayarlama
+        5.3. Belirli bir süreç için kaynak tahsislerini ayarlama
       
     </span>
   </a>
@@ -1243,10 +1274,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_4" class="md-nav__link">
+  <a href="#ozetle_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1397,10 +1428,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_5" class="md-nav__link">
+  <a href="#ozetle_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1456,10 +1487,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_6" class="md-nav__link">
+  <a href="#ozetle_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -1727,7 +1758,7 @@
   <span class="md-ellipsis">
     
   
-    Geri bildirim anketi
+    Geri Bildirim Anketi
   
 
     
@@ -2061,7 +2092,7 @@
   <span class="md-ellipsis">
     
   
-    Geri bildirim anketi
+    Geri Bildirim Anketi
   
 
     
@@ -2580,7 +2611,7 @@
   <span class="md-ellipsis">
     
   
-    Bölüm 1: Yönteme genel bakış
+    Bölüm 1: Yönteme Genel Bakış
   
 
     
@@ -3340,7 +3371,7 @@
   <span class="md-ellipsis">
     
   
-    Yönlendirme
+    Başlarken
   
 
     
@@ -3389,14 +3420,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/metadata/" class="md-nav__link">
+      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Metadata ve meta map'ler
+    Temel Betik Kalıpları
   
 
     
@@ -3445,6 +3476,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../side_quests/metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata ve Meta Map'ler
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../side_quests/splitting_and_grouping/" class="md-nav__link">
         
   
@@ -3473,14 +3532,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/workflows_of_workflows/" class="md-nav__link">
+      <a href="../../side_quests/nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    İç İçe Workflow'lar
+    nf-test ile Test Etme
   
 
     
@@ -3508,7 +3567,7 @@
   <span class="md-ellipsis">
     
   
-    İş Akışlarında Hata Ayıklama
+    İş Akışlarında Sorun Giderme
   
 
     
@@ -3529,14 +3588,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
+      <a href="../../side_quests/workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Temel Nextflow Kodlama Kalıpları
+    İş Akışlarının İş Akışları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Geliştirme
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugin Geliştirme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Geliştirme
   
 
     
@@ -3557,14 +3691,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/nf-test/" class="md-nav__link">
+      <a href="../../side_quests/plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    nf-test ile Test Etme
+    Bölüm 1: Eklenti Temelleri
   
 
     
@@ -3573,6 +3707,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bölüm 2: Plugin Projesi Oluşturma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bölüm 3: Özel Fonksiyonlar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bölüm 4: Test Etme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bölüm 5: Trace Observer'lar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bölüm 6: Yapılandırma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Özet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sonraki Adımlar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4172,10 +4510,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet" class="md-nav__link">
+  <a href="#ozetle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4259,22 +4597,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-cktlar-processe-gore-organize-etme" class="md-nav__link">
+  <a href="#22-cktlar-sureclere-gore-organize-etme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Çıktıları process'e göre organize etme
+        2.2. Çıktıları süreçlere göre organize etme
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.2. Çıktıları process&#39;e göre organize etme">
+    <nav class="md-nav" aria-label="2.2. Çıktıları süreçlere göre organize etme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#221-ckt-yollarn-process-adlarna-referansla-degistirin" class="md-nav__link">
+  <a href="#221-ckt-yollarn-surec-adlarna-referansla-degistirin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2.1. Çıktı yollarını process adlarına referansla değiştirin
+        2.2.1. Çıktı yollarını süreç adlarına referansla değiştirin
       
     </span>
   </a>
@@ -4348,10 +4686,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_1" class="md-nav__link">
+  <a href="#ozetle_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4396,10 +4734,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-process-tanmnda-bir-conda-paketi-belirtin" class="md-nav__link">
+  <a href="#32-surec-tanmnda-bir-conda-paketi-belirtin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Process tanımında bir Conda paketi belirtin
+        3.2. Süreç tanımında bir Conda paketi belirtin
       
     </span>
   </a>
@@ -4418,10 +4756,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_2" class="md-nav__link">
+  <a href="#ozetle_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4477,10 +4815,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_3" class="md-nav__link">
+  <a href="#ozetle_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4525,10 +4863,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-tum-processler-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
+  <a href="#52-tum-surecler-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Tüm process'ler için kaynak tahsislerini ayarlama
+        5.2. Tüm süreçler için kaynak tahsislerini ayarlama
       
     </span>
   </a>
@@ -4536,10 +4874,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
+  <a href="#53-belirli-bir-surec-icin-kaynak-tahsislerini-ayarlama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Belirli bir process için kaynak tahsislerini ayarlama
+        5.3. Belirli bir süreç için kaynak tahsislerini ayarlama
       
     </span>
   </a>
@@ -4569,10 +4907,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_4" class="md-nav__link">
+  <a href="#ozetle_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4723,10 +5061,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_5" class="md-nav__link">
+  <a href="#ozetle_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -4782,10 +5120,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ozet_6" class="md-nav__link">
+  <a href="#ozetle_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Özet
+        Özetle
       
     </span>
   </a>
@@ -5010,43 +5348,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -5074,11 +5375,11 @@
  
 
 <h1 id="bolum-3-calstrma-yaplandrmas">Bölüm 3: Çalıştırma yapılandırması<a class="headerlink" href="#bolum-3-calstrma-yaplandrmas" title="Permanent link">&para;</a></h1>
-<p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> Yapay Zeka Destekli Çeviri - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">daha fazla bilgi ve iyileştirme önerileri</a></span></p>
+<p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> Yapay zeka destekli çeviri - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">daha fazla bilgi ve iyileştirme önerileri</a></span></p>
 <p>Bu bölümde, bir Nextflow pipeline'ının yapılandırmasını yönetmeyi keşfedeceğiz; davranışını özelleştirmek, farklı ortamlara uyarlamak ve kaynak kullanımını optimize etmek için <em>workflow kodunun tek bir satırını değiştirmeden</em>.</p>
-<p>Bunu yapmanın birden fazla yolu vardır; bunlar birlikte kullanılabilir ve <a href="https://www.nextflow.io/docs/latest/config.html">Yapılandırma</a> belgelerinde açıklanan öncelik sırasına göre yorumlanır.</p>
+<p>Bunu yapmanın birden fazla yolu vardır; bunlar birlikte kullanılabilir ve <a href="https://nextflow.io/docs/latest/config.html">Yapılandırma</a> belgelerinde açıklanan öncelik sırasına göre yorumlanır.</p>
 <p>Kursun bu bölümünde, Bölüm 2'de konteynerler bölümünde zaten karşılaştığınız <code>nextflow.config</code> dosyası olan en basit ve en yaygın yapılandırma dosyası mekanizmasını göstereceğiz.</p>
-<p>Process direktifleri, executor'lar, profiller ve parametre dosyaları gibi Nextflow yapılandırmasının temel bileşenlerini inceleyeceğiz.
+<p>Süreç yönergeleri, executor'lar, profiller ve parametre dosyaları gibi Nextflow yapılandırmasının temel bileşenlerini inceleyeceğiz.
 Bu yapılandırma seçeneklerini etkili bir şekilde kullanmayı öğrenerek, Nextflow pipeline'larının esnekliğinden, ölçeklenebilirliğinden ve performansından tam olarak yararlanabilirsiniz.</p>
 <p>Bu yapılandırma öğelerini uygulamak için, bu eğitim kursunun 2. Bölümünün sonunda çalıştırdığımız workflow'un <code>3-main.nf</code> olarak yeniden adlandırılmış yeni bir kopyasını çalıştıracağız.</p>
 <p>Hello pipeline'ına aşina değilseniz veya bir hatırlatmaya ihtiyacınız varsa, <a href="../../info/hello_pipeline/">bu bilgi sayfasına</a> bakın.</p>
@@ -5186,7 +5487,7 @@ Yapılandırmada bunlar değer atamalarıdır.</p>
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">Launching `3-main.nf` [disturbed_einstein] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
@@ -5202,7 +5503,7 @@ Yapılandırmada bunlar değer atamalarıdır.</p>
 <details class="abstract">
 <summary>Dosya içeriği</summary>
 <div class="highlight"><span class="filename">results/3-main/cowpy-COLLECTED-batch-output.txt</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="go">_________</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="go">/ HOLà    \</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="go">/ HOLA    \</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="go">| HELLO   |</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="go">---------</span>
@@ -5265,7 +5566,7 @@ Yolu buna göre uyarladığınızdan emin olun!</p>
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">Launching `../3-main.nf` [trusting_escher] DSL2 - revision: 356df0818d</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
@@ -5284,7 +5585,7 @@ Yolu buna göre uyarladığınızdan emin olun!</p>
 <div class="highlight"><span class="filename">tux-run/results/3-main/cowpy-COLLECTED-experiment-output.txt</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">_________</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">/ HELLO   \</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">| BONJOUR |</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="go">\ HOLà    /</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="go">\ HOLA    /</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="go">---------</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="go">  \</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="go">    \</span>
@@ -5335,7 +5636,7 @@ Onu kendi başınıza denemeye çekinmeyin.</p>
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="go">Launching `3-main.nf` [disturbed_sammet] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
@@ -5351,7 +5652,7 @@ Onu kendi başınıza denemeye çekinmeyin.</p>
 <summary>Dosya içeriği</summary>
 <div class="highlight"><span class="filename">results/3-main/cowpy-COLLECTED-yaml-output.txt</span><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">_________</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="go">/ HELLO   \</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">| HOLà    |</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">| HOLA    |</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="go">---------</span>
 <a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="go">\                             .       .</span>
@@ -5374,7 +5675,7 @@ Onu kendi başınıza denemeye çekinmeyin.</p>
 Bu durumlarda, bir parametre dosyası kullanmak, devasa komut satırları yazmak zorunda kalmadan ve workflow betiğini değiştirmeden çalışma zamanında parametre değerleri sağlamamıza olanak tanır.</p>
 <p>Ayrıca parametre setlerini iş arkadaşlarına veya örneğin bir yayın için destekleyici bilgi olarak dağıtmayı kolaylaştırır.
 Bu, çalışmanızı başkaları tarafından daha tekrar üretilebilir hale getirir.</p>
-<h3 id="ozet">Özet<a class="headerlink" href="#ozet" title="Permanent link">&para;</a></h3>
+<h3 id="ozetle">Özetle<a class="headerlink" href="#ozetle" title="Permanent link">&para;</a></h3>
 <p>Workflow girdilerini yönetmek için temel yapılandırma seçeneklerinden nasıl yararlanacağınızı biliyorsunuz.</p>
 <h3 id="srada-ne-var">Sırada ne var?<a class="headerlink" href="#srada-ne-var" title="Permanent link">&para;</a></h3>
 <p>Workflow çıktılarınızın nerede ve nasıl yayınlandığını yönetmeyi öğrenin.</p>
@@ -5384,12 +5685,12 @@ Bu, çalışmanızı başkaları tarafından daha tekrar üretilebilir hale geti
 <summary>Senaryo</summary>
 <p>Pipeline'ınız çıktıları sabit kodlanmış bir dizine yayınlıyor, ancak her seferinde workflow kodunu düzenlemeden sonuçları proje veya deney adına göre organize etmek istiyorsunuz.</p>
 </details>
-<p>Miras aldığımız workflow, workflow düzeyinde çıktı bildirimleri için yollar kullanıyor, bu çok esnek değil ve çok tekrar içeriyor.</p>
+<p>Miras aldığımız workflow, workflow düzeyinde çıktı bildirimleri için yollar kullanıyor; bu çok esnek değil ve çok tekrar içeriyor.</p>
 <p>Bunu daha esnek yapılandırmak için birkaç yaygın yola bakalım.</p>
 <h3 id="21-outputdir-dizin-adn-ozellestirme">2.1. <code>outputDir</code> dizin adını özelleştirme<a class="headerlink" href="#21-outputdir-dizin-adn-ozellestirme" title="Permanent link">&para;</a></h3>
 <p>Şu ana kadar çalıştırdığımız workflow'un her versiyonu çıktılarını çıktı tanımlarına sabit kodlanmış farklı bir alt dizine yayınladı.</p>
 <p>Bölüm 1'de bu alt dizinin nerede olduğunu <code>-output-dir</code> CLI bayrağını kullanarak değiştirmiştik, ancak bu hala sadece statik bir string.
-Bunun yerine bunu bir yapılandırma dosyasında yapılandıralım, burada daha karmaşık dinamik yollar tanımlayabiliriz.
+Bunun yerine bunu bir yapılandırma dosyasında yapılandıralım; burada daha karmaşık dinamik yollar tanımlayabiliriz.
 Bunun için tamamen yeni bir parametre oluşturabilirdik, ancak <code>batch</code> parametresi tam orada olduğu için onu kullanalım.</p>
 <h4 id="211-yaplandrma-dosyasnda-outputdir-icin-bir-deger-ayarlayn">2.1.1. Yapılandırma dosyasında <code>outputDir</code> için bir değer ayarlayın<a class="headerlink" href="#211-yaplandrma-dosyasnda-outputdir-icin-bir-deger-ayarlayn" title="Permanent link">&para;</a></h4>
 <p>Nextflow'un çıktıları yayınlamak için kullandığı yol <code>outputDir</code> seçeneğiyle kontrol edilir.
@@ -5554,7 +5855,7 @@ CLI bayrağını kullanmak, yapılandırmada ayarlanmışsa <code>outputDir</cod
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">Launching `3-main.nf` [amazing_church] DSL2 - revision: 6e18cd130e</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
@@ -5574,18 +5875,18 @@ CLI bayrağını kullanmak, yapılandırmada ayarlanmışsa <code>outputDir</cod
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="go">│   ├── Bonjour-output.txt</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="go">│   ├── COLLECTED-outdir-output.txt</span>
 <a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="go">│   ├── Hello-output.txt</span>
-<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="go">│   ├── Holà-output.txt</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="go">│   ├── Hola-output.txt</span>
 <a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="go">│   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="go">│   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="go">│   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="go">│   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="go">└── outdir-report.txt</span>
 </code></pre></div>
 </details>
 <p>Bu yaklaşımı özel yol tanımlarıyla birleştirerek istediğiniz herhangi bir dizin hiyerarşisini oluşturabilirsiniz.</p>
-<h3 id="22-cktlar-processe-gore-organize-etme">2.2. Çıktıları process'e göre organize etme<a class="headerlink" href="#22-cktlar-processe-gore-organize-etme" title="Permanent link">&para;</a></h3>
-<p>Çıktıları daha fazla organize etmenin popüler bir yolu, process'e göre yapmaktır, yani pipeline'da çalıştırılan her process için alt dizinler oluşturmak.</p>
-<h4 id="221-ckt-yollarn-process-adlarna-referansla-degistirin">2.2.1. Çıktı yollarını process adlarına referansla değiştirin<a class="headerlink" href="#221-ckt-yollarn-process-adlarna-referansla-degistirin" title="Permanent link">&para;</a></h4>
-<p>Tek yapmanız gereken, çıktı yolu bildiriminde process adına <code>&lt;process&gt;.name</code> olarak referans vermektir.</p>
+<h3 id="22-cktlar-sureclere-gore-organize-etme">2.2. Çıktıları süreçlere göre organize etme<a class="headerlink" href="#22-cktlar-sureclere-gore-organize-etme" title="Permanent link">&para;</a></h3>
+<p>Çıktıları daha fazla organize etmenin popüler bir yolu, süreçlere göre yapmaktır; yani pipeline'da çalıştırılan her süreç için alt dizinler oluşturmak.</p>
+<h4 id="221-ckt-yollarn-surec-adlarna-referansla-degistirin">2.2.1. Çıktı yollarını süreç adlarına referansla değiştirin<a class="headerlink" href="#221-ckt-yollarn-surec-adlarna-referansla-degistirin" title="Permanent link">&para;</a></h4>
+<p>Tek yapmanız gereken, çıktı yolu bildiriminde süreç adına <code>&lt;process&gt;.name</code> olarak referans vermektir.</p>
 <p>Workflow dosyasında aşağıdaki değişiklikleri yapın:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Sonra</label><label for="__tabbed_5_2">Önce</label></div>
 <div class="tabbed-content">
@@ -5690,7 +5991,7 @@ CLI bayrağını kullanmak, yapılandırmada ayarlanmışsa <code>outputDir</cod
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
 <a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="go">Launching `3-main.nf` [jovial_mcclintock] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>
@@ -5701,7 +6002,7 @@ CLI bayrağını kullanmak, yapılandırmada ayarlanmışsa <code>outputDir</cod
 <a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="go">[f2/a85c36] cowpy              | 1 of 1 ✔</span>
 </code></pre></div>
 </details>
-<p>Bu hala öncekiyle aynı çıktıyı üretiyor, ancak bu sefer çıktılarımızı <code>results_config/pnames/</code> altında buluyoruz ve process'e göre gruplandırılmışlar.</p>
+<p>Bu hala öncekiyle aynı çıktıyı üretiyor, ancak bu sefer çıktılarımızı <code>results_config/pnames/</code> altında buluyoruz ve süreçlere göre gruplandırılmışlar.</p>
 <details class="abstract">
 <summary>Dizin içeriği</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="go">results_config/pnames/</span>
@@ -5711,19 +6012,19 @@ CLI bayrağını kullanmak, yapılandırmada ayarlanmışsa <code>outputDir</cod
 <a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="go">├── convertToUpper</span>
 <a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="go">│   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="go">│   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="go">│   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="go">│   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="go">├── cowpy</span>
 <a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="go">│   └── cowpy-COLLECTED-pnames-output.txt</span>
 <a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="go">└── sayHello</span>
 <a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="go">    ├── Bonjour-output.txt</span>
 <a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="go">    ├── Hello-output.txt</span>
-<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="go">    └── Holà-output.txt</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="go">    └── Hola-output.txt</span>
 </code></pre></div>
 </details>
 <div class="admonition note">
 <p class="admonition-title">Not</p>
 <p>Burada <code>intermediates</code> ile nihai çıktıların üst düzeyde olması arasındaki ayrımı sildiğimizi unutmayın.
-Bu yaklaşımları karıştırıp eşleştirebilirsiniz ve hatta birden fazla değişken ekleyebilirsiniz, örneğin ilk çıktının yolunu <code class="highlight"><span class="s2">&quot;${params.batch}/intermediates/${sayHello.name}&quot;</span></code> olarak ayarlayarak.</p>
+Bu yaklaşımları karıştırıp eşleştirebilirsiniz ve hatta birden fazla değişken ekleyebilirsiniz; örneğin ilk çıktının yolunu <code class="highlight"><span class="s2">&quot;${params.batch}/intermediates/${sayHello.name}&quot;</span></code> olarak ayarlayarak.</p>
 </div>
 <h3 id="23-workflow-duzeyinde-yaynlama-modunu-ayarlama">2.3. Workflow düzeyinde yayınlama modunu ayarlama<a class="headerlink" href="#23-workflow-duzeyinde-yaynlama-modunu-ayarlama" title="Permanent link">&para;</a></h3>
 <p>Son olarak, tekrarlayan kod miktarını azaltma ruhuyla, çıktı başına <code>mode</code> bildirimlerini yapılandırmada tek bir satırla değiştirebiliriz.</p>
@@ -5851,7 +6152,7 @@ Bu yaklaşımları karıştırıp eşleştirebilirsiniz ve hatta birden fazla de
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `3-main.nf` [rowdy_sagan] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
@@ -5873,18 +6174,18 @@ Hala hepsi düzgün kopyalar, symlink değil.</p>
 <a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="go">├── convertToUpper</span>
 <a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="go">│   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="go">│   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="go">│   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="go">│   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a><span class="go">├── cowpy</span>
 <a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="go">│   └── cowpy-COLLECTED-outmode-output.txt</span>
 <a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="go">└── sayHello</span>
 <a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="go">    ├── Bonjour-output.txt</span>
 <a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a><span class="go">    ├── Hello-output.txt</span>
-<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="go">    └── Holà-output.txt</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="go">    └── Hola-output.txt</span>
 </code></pre></div>
 </details>
-<p>Çıktı başına mod ayarlama yolunu hala kullanmak istemenizin ana nedeni, aynı workflow içinde karıştırıp eşleştirmek istemeniz durumudur, yani bazı çıktıların kopyalanmasını ve bazılarının symlink olmasını isterseniz.</p>
+<p>Çıktı başına mod ayarlama yolunu hala kullanmak istemenizin ana nedeni, aynı workflow içinde karıştırıp eşleştirmek istemeniz durumudur; yani bazı çıktıların kopyalanmasını ve bazılarının symlink olmasını isterseniz.</p>
 <p>Bu şekilde özelleştirebileceğiniz birçok başka seçenek var, ancak umarız bu size seçeneklerin kapsamı ve bunları tercihlerinize uygun şekilde etkili bir şekilde nasıl kullanacağınız hakkında bir fikir verir.</p>
-<h3 id="ozet_1">Özet<a class="headerlink" href="#ozet_1" title="Permanent link">&para;</a></h3>
+<h3 id="ozetle_1">Özetle<a class="headerlink" href="#ozetle_1" title="Permanent link">&para;</a></h3>
 <p>Çıktılarınızın yayınlandığı dizinlerin adlandırmasını ve yapısını ve workflow çıktı yayınlama modunu nasıl kontrol edeceğinizi biliyorsunuz.</p>
 <h3 id="srada-ne-var_1">Sırada ne var?<a class="headerlink" href="#srada-ne-var_1" title="Permanent link">&para;</a></h3>
 <p>Yazılım paketleme teknolojisiyle başlayarak workflow yapılandırmanızı hesaplama ortamınıza nasıl uyarlayacağınızı öğrenin.</p>
@@ -5906,7 +6207,7 @@ Küme Singularity ve Conda'yı destekliyor, bu yüzden yapılandırmanızı buna
 </details>
 <p>Daha önce belirtildiği gibi, Nextflow, HPC'de daha yaygın olarak kullanılan Singularity gibi birden fazla konteyner teknolojisini ve Conda gibi yazılım paket yöneticilerini destekler.</p>
 <p>Yapılandırma dosyamızı Docker yerine Conda kullanacak şekilde değiştirebiliriz.
-Bunu yapmak için <code>docker.enabled</code> değerini <code>false</code> olarak değiştirelim ve Conda kullanımını etkinleştiren bir direktif ekleyelim:</p>
+Bunu yapmak için <code>docker.enabled</code> değerini <code>false</code> olarak değiştirelim ve Conda kullanımını etkinleştiren bir yönerge ekleyelim:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Sonra</label><label for="__tabbed_8_2">Önce</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5921,11 +6222,11 @@ Bunu yapmak için <code>docker.enabled</code> değerini <code>false</code> olara
 </div>
 </div>
 </div>
-<p>Bu, Nextflow'un Conda paketleri belirtilmiş process'ler için Conda ortamları oluşturmasına ve kullanmasına izin verecektir.
-Bu da artık <code>cowpy</code> process'imize bunlardan birini eklememiz gerektiği anlamına gelir!</p>
-<h3 id="32-process-tanmnda-bir-conda-paketi-belirtin">3.2. Process tanımında bir Conda paketi belirtin<a class="headerlink" href="#32-process-tanmnda-bir-conda-paketi-belirtin" title="Permanent link">&para;</a></h3>
+<p>Bu, Nextflow'un Conda paketleri belirtilmiş süreçler için Conda ortamları oluşturmasına ve kullanmasına izin verecektir.
+Bu da artık <code>cowpy</code> sürecimize bunlardan birini eklememiz gerektiği anlamına gelir!</p>
+<h3 id="32-surec-tanmnda-bir-conda-paketi-belirtin">3.2. Süreç tanımında bir Conda paketi belirtin<a class="headerlink" href="#32-surec-tanmnda-bir-conda-paketi-belirtin" title="Permanent link">&para;</a></h3>
 <p><code>cowpy</code> aracını içeren bir Conda paketi için URI'yi zaten aldık: <code>conda-forge::cowpy==1.1.5</code></p>
-<p>Şimdi <code>conda</code> direktifini kullanarak URI'yi <code>cowpy</code> process tanımına ekliyoruz:</p>
+<p>Şimdi <code>conda</code> yönergesini kullanarak URI'yi <code>cowpy</code> süreç tanımına ekliyoruz:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Sonra</label><label for="__tabbed_9_2">Önce</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5956,7 +6257,7 @@ Bu da artık <code>cowpy</code> process'imize bunlardan birini eklememiz gerekti
 </div>
 </div>
 </div>
-<p>Açık olmak gerekirse, <code>docker</code> direktifini <em>değiştirmiyoruz</em>, alternatif bir seçenek <em>ekliyoruz</em>.</p>
+<p>Açık olmak gerekirse, <code>docker</code> yönergesini <em>değiştirmiyoruz</em>, alternatif bir seçenek <em>ekliyoruz</em>.</p>
 <div class="admonition tip">
 <p class="admonition-title">İpucu</p>
 <p>Belirli bir conda paketi için URI almanın birkaç farklı yolu vardır.
@@ -5968,7 +6269,7 @@ Bu da artık <code>cowpy</code> process'imize bunlardan birini eklememiz gerekti
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><span class="filename">Çıktı</span><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
 <a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a><span class="go">Launching `3-main.nf` [trusting_lovelace] DSL2 - revision: 028a841db1</span>
 <a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>
@@ -5980,7 +6281,7 @@ Bu da artık <code>cowpy</code> process'imize bunlardan birini eklememiz gerekti
 </code></pre></div>
 </details>
 <p>Bu sorunsuz çalışmalı ve <code>results_config/conda</code> altında öncekiyle aynı çıktıları üretmelidir.</p>
-<p>Arka planda, Nextflow Conda paketlerini aldı ve ortamı oluşturdu, bu normalde biraz iş gerektirir; bu yüzden bunların hiçbirini kendimiz yapmak zorunda kalmamamız güzel!</p>
+<p>Arka planda, Nextflow Conda paketlerini aldı ve ortamı oluşturdu; bu normalde biraz iş gerektirir, bu yüzden bunların hiçbirini kendimiz yapmak zorunda kalmamamız güzel!</p>
 <div class="admonition info">
 <p class="admonition-title">Bilgi</p>
 <p>Bu hızlı çalışır çünkü <code>cowpy</code> paketi oldukça küçüktür, ancak büyük paketlerle çalışıyorsanız, ilk seferinde normalden biraz daha uzun sürebilir ve tamamlanmadan önce konsol çıktısının bir dakika kadar 'takılı' kaldığını görebilirsiniz.
@@ -5990,13 +6291,13 @@ Bu normaldir ve Nextflow'un yeni bir paket kullandığınızda ilk seferinde yap
 <p>Bu, gerekirse Conda ortamlarıyla çalıştırmaya hazır olduğumuz anlamına gelir.</p>
 <details class="info">
 <summary>Docker ve Conda'yı karıştırma ve eşleştirme</summary>
-<p>Bu direktifler process başına atandığından, 'karıştırıp eşleştirmek' mümkündür, yani örneğin kullandığınız hesaplama altyapısı her ikisini de destekliyorsa, workflow'unuzdaki bazı process'leri Docker ile ve diğerlerini Conda ile çalışacak şekilde yapılandırmak mümkündür.
+<p>Bu yönergeler süreç başına atandığından, 'karıştırıp eşleştirmek' mümkündür; yani örneğin kullandığınız hesaplama altyapısı her ikisini de destekliyorsa, workflow'unuzdaki bazı süreçleri Docker ile ve diğerlerini Conda ile çalışacak şekilde yapılandırmak mümkündür.
 Bu durumda, yapılandırma dosyanızda hem Docker'ı hem de Conda'yı etkinleştirirsiniz.
-Belirli bir process için her ikisi de mevcutsa, Nextflow konteynerleri önceliklendirecektir.</p>
+Belirli bir süreç için her ikisi de mevcutsa, Nextflow konteynerleri önceliklendirecektir.</p>
 <p>Ve daha önce belirtildiği gibi, Nextflow birden fazla başka yazılım paketleme ve konteyner teknolojisini destekler, bu yüzden sadece bu ikisiyle sınırlı değilsiniz.</p>
 </details>
-<h3 id="ozet_2">Özet<a class="headerlink" href="#ozet_2" title="Permanent link">&para;</a></h3>
-<p>Her process'in hangi yazılım paketini kullanması gerektiğini nasıl yapılandıracağınızı ve teknolojiler arasında nasıl geçiş yapacağınızı biliyorsunuz.</p>
+<h3 id="ozetle_2">Özetle<a class="headerlink" href="#ozetle_2" title="Permanent link">&para;</a></h3>
+<p>Her sürecin hangi yazılım paketini kullanması gerektiğini nasıl yapılandıracağınızı ve teknolojiler arasında nasıl geçiş yapacağınızı biliyorsunuz.</p>
 <h3 id="srada-ne-var_2">Sırada ne var?<a class="headerlink" href="#srada-ne-var_2" title="Permanent link">&para;</a></h3>
 <p>Nextflow'un işi gerçekten yapmak için kullandığı çalıştırma platformunu nasıl değiştireceğinizi öğrenin.</p>
 <hr />
@@ -6011,15 +6312,15 @@ Bu, her görevi Nextflow'un çalıştığı makinede yürütür.
 Nextflow başladığında, mevcut CPU'lara ve belleğe bakar.
 Çalıştırılmaya hazır görevlerin kaynakları mevcut kaynakları aşarsa, Nextflow önceki görevlerden bir veya daha fazlası tamamlanıp gerekli kaynakları serbest bırakana kadar son görevleri çalıştırmaktan geri tutar.</p>
 <p>Yerel executor uygun ve verimlidir, ancak tek bir makineyle sınırlıdır. Çok büyük iş yükleri için, yerel makinenizin bir darboğaz olduğunu keşfedebilirsiniz; ya mevcut kaynaklardan daha fazlasını gerektiren tek bir göreviniz var ya da tek bir makinenin onları çalıştırmasını beklemenin çok uzun süreceği kadar çok göreviniz var.</p>
-<p>Nextflow, HPC scheduler'ları (Slurm, LSF, SGE, PBS, Moab, OAR, Bridge, HTCondor ve diğerleri) ve bulut çalıştırma backend'leri (AWS Batch, Google Cloud Batch, Azure Batch, Kubernetes ve daha fazlası) dahil <a href="https://www.nextflow.io/docs/latest/executor.html">birçok farklı çalıştırma backend'ini</a> destekler.</p>
+<p>Nextflow, HPC scheduler'ları (Slurm, LSF, SGE, PBS, Moab, OAR, Bridge, HTCondor ve diğerleri) ve bulut çalıştırma backend'leri (AWS Batch, Google Cloud Batch, Azure Batch, Kubernetes ve daha fazlası) dahil <a href="https://nextflow.io/docs/latest/executor.html">birçok farklı çalıştırma backend'ini</a> destekler.</p>
 <h3 id="41-farkl-bir-backendi-hedefleme">4.1. Farklı bir backend'i hedefleme<a class="headerlink" href="#41-farkl-bir-backendi-hedefleme" title="Permanent link">&para;</a></h3>
-<p>Executor seçimi <code>executor</code> adlı bir process direktifi ile ayarlanır.
+<p>Executor seçimi <code>executor</code> adlı bir süreç yönergesiyle ayarlanır.
 Varsayılan olarak <code>local</code> olarak ayarlanmıştır, bu yüzden aşağıdaki yapılandırma ima edilir:</p>
-<div class="highlight"><span class="filename">Yerleşik yapılandırma</span><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight"><span class="filename">Built-in configuration</span><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w">    </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;local&#39;</span>
 <a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="o">}</span>
 </code></pre></div>
-<p>Executor'ı farklı bir backend'i hedefleyecek şekilde ayarlamak için, kaynak tahsisleri için yukarıda açıklanan benzer sözdizimini kullanarak istediğiniz executor'ı belirtmeniz yeterlidir (tüm seçenekler için <a href="https://www.nextflow.io/docs/latest/executor.html">Executors</a> belgesine bakın).</p>
+<p>Executor'ı farklı bir backend'i hedefleyecek şekilde ayarlamak için, kaynak tahsisleri için yukarıda açıklanan benzer sözdizimini kullanarak istediğiniz executor'ı belirtmeniz yeterlidir (tüm seçenekler için <a href="https://nextflow.io/docs/latest/executor.html">Executors</a> belgesine bakın).</p>
 <div class="highlight"><span class="filename">nextflow.config</span><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;slurm&#39;</span>
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="o">}</span>
@@ -6034,19 +6335,19 @@ Varsayılan olarak <code>local</code> olarak ayarlanmıştır, bu yüzden aşağ
 <details class="abstract">
 <summary>Örnekler</summary>
 <p>Örneğin, 8 CPU ve 4GB RAM gerektiren ve "my-science-work" kuyruğunda çalıştırılacak aynı iş, backend'e bağlı olarak farklı şekillerde ifade edilmelidir.</p>
-<div class="highlight"><span class="filename">SLURM için yapılandırma / sbatch ile gönder</span><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1">#SBATCH -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for SLURM / submit using sbatch</span><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1">#SBATCH -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a><span class="c1">#SBATCH --no-requeue</span>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="c1">#SBATCH -c 8</span>
 <a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="c1">#SBATCH --mem 4096M</span>
 <a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="c1">#SBATCH -p my-science-work</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">PBS için yapılandırma / qsub ile gönder</span><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1">#PBS -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for PBS / submit using qsub</span><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1">#PBS -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="c1">#PBS -j oe</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="c1">#PBS -q my-science-work</span>
 <a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="c1">#PBS -l nodes=1:ppn=5</span>
 <a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="c1">#PBS -l mem=4gb</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">SGE için yapılandırma / qsub ile gönder</span><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1">#$ -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for SGE / submit using qsub</span><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1">#$ -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="c1">#$ -j y</span>
 <a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a><span class="c1">#$ -terse</span>
 <a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="c1">#$ -notify</span>
@@ -6056,10 +6357,10 @@ Varsayılan olarak <code>local</code> olarak ayarlanmıştır, bu yüzden aşağ
 </code></pre></div>
 </details>
 <p>Neyse ki, Nextflow tüm bunları basitleştirir.
-İlgili özellikleri, <code>cpus</code>, <code>memory</code> ve <code>queue</code> gibi (tüm kullanılabilir seçenekler için <a href="https://www.nextflow.io/docs/latest/reference/process.html#process-directives">Process direktifleri</a> belgesine bakın) yalnızca bir kez belirtebilmeniz için standartlaştırılmış bir sözdizimi sağlar.
+İlgili özellikleri, <code>cpus</code>, <code>memory</code> ve <code>queue</code> gibi (tüm kullanılabilir seçenekler için <a href="https://nextflow.io/docs/latest/reference/process.html#process-directives">Süreç yönergeleri</a> belgesine bakın) yalnızca bir kez belirtebilmeniz için standartlaştırılmış bir sözdizimi sağlar.
 Ardından, çalışma zamanında, Nextflow executor ayarına göre uygun backend'e özgü betikleri oluşturmak için bu ayarları kullanacaktır.</p>
 <p>Bu standartlaştırılmış sözdizimini bir sonraki bölümde ele alacağız.</p>
-<h3 id="ozet_3">Özet<a class="headerlink" href="#ozet_3" title="Permanent link">&para;</a></h3>
+<h3 id="ozetle_3">Özetle<a class="headerlink" href="#ozetle_3" title="Permanent link">&para;</a></h3>
 <p>Artık farklı türde hesaplama altyapısı kullanmak için executor'ı nasıl değiştireceğinizi biliyorsunuz.</p>
 <h3 id="srada-ne-var_3">Sırada ne var?<a class="headerlink" href="#srada-ne-var_3" title="Permanent link">&para;</a></h3>
 <p>Nextflow'da kaynak tahsislerini ve sınırlamalarını değerlendirmeyi ve ifade etmeyi öğrenin.</p>
@@ -6071,9 +6372,9 @@ Ardından, çalışma zamanında, Nextflow executor ayarına göre uygun backend
 Ya da belki kullanmadığınız kaynaklar için ücretlendiriliyorsunuz ve maliyetleri optimize etmek istiyorsunuz.</p>
 </details>
 <p>Çoğu yüksek performanslı hesaplama platformu, CPU sayısı ve bellek gibi belirli kaynak tahsis parametrelerini belirtmenize izin verir (ve bazen gerektirir).</p>
-<p>Varsayılan olarak, Nextflow her process için tek bir CPU ve 2GB bellek kullanacaktır.
-İlgili process direktifleri <code>cpus</code> ve <code>memory</code> olarak adlandırılır, bu yüzden aşağıdaki yapılandırma ima edilir:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Yerleşik yapılandırma</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<p>Varsayılan olarak, Nextflow her süreç için tek bir CPU ve 2GB bellek kullanacaktır.
+İlgili süreç yönergeleri <code>cpus</code> ve <code>memory</code> olarak adlandırılır, bu yüzden aşağıdaki yapılandırma ima edilir:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Built-in configuration</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
 <span class="normal"><a href="#__codelineno-48-2">2</a></span>
 <span class="normal"><a href="#__codelineno-48-3">3</a></span>
 <span class="normal"><a href="#__codelineno-48-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
@@ -6081,15 +6382,15 @@ Ya da belki kullanmadığınız kaynaklar için ücretlendiriliyorsunuz ve maliy
 <a id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="o">.</span><span class="na">GB</span>
 <a id="__codelineno-48-4" name="__codelineno-48-4"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Bu değerleri, yapılandırma dosyanızda ek process direktifleri kullanarak tüm process'ler veya belirli adlandırılmış process'ler için değiştirebilirsiniz.
+<p>Bu değerleri, yapılandırma dosyanızda ek süreç yönergeleri kullanarak tüm süreçler veya belirli adlandırılmış süreçler için değiştirebilirsiniz.
 Nextflow bunları seçilen executor için uygun talimatlara çevirecektir.</p>
 <p>Peki hangi değerleri kullanacağınızı nasıl biliyorsunuz?</p>
 <h3 id="51-kaynak-kullanm-raporu-olusturmak-icin-workflowu-calstrn">5.1. Kaynak kullanım raporu oluşturmak için workflow'u çalıştırın<a class="headerlink" href="#51-kaynak-kullanm-raporu-olusturmak-icin-workflowu-calstrn" title="Permanent link">&para;</a></h3>
 <details class="example">
 <summary>Senaryo</summary>
-<p>Process'lerinizin ne kadar bellek veya CPU'ya ihtiyaç duyduğunu bilmiyorsunuz ve kaynakları israf etmekten veya işlerin sonlandırılmasından kaçınmak istiyorsunuz.</p>
+<p>Süreçlerinizin ne kadar bellek veya CPU'ya ihtiyaç duyduğunu bilmiyorsunuz ve kaynakları israf etmekten veya işlerin sonlandırılmasından kaçınmak istiyorsunuz.</p>
 </details>
-<p>Process'lerinizin ne kadar CPU ve belleğe ihtiyaç duyacağını önceden bilmiyorsanız, biraz kaynak profilleme yapabilirsiniz; yani workflow'u bazı varsayılan tahsislerle çalıştırırsınız, her process'in ne kadar kullandığını kaydedersiniz ve oradan temel tahsisleri nasıl ayarlayacağınızı tahmin edersiniz.</p>
+<p>Süreçlerinizin ne kadar CPU ve belleğe ihtiyaç duyacağını önceden bilmiyorsanız, biraz kaynak profilleme yapabilirsiniz; yani workflow'u bazı varsayılan tahsislerle çalıştırırsınız, her sürecin ne kadar kullandığını kaydedersiniz ve oradan temel tahsisleri nasıl ayarlayacağınızı tahmin edersiniz.</p>
 <p>Uygun bir şekilde, Nextflow bunu yapmak için yerleşik araçlar içerir ve istek üzerine sizin için bir rapor oluşturmaktan mutluluk duyar.</p>
 <p>Bunu yapmak için, komut satırınıza <code>-with-report &lt;filename&gt;.html</code> ekleyin.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span><span class="m">3</span>-main.nf<span class="w"> </span>-with-report<span class="w"> </span>report-config-1.html
@@ -6097,9 +6398,9 @@ Nextflow bunları seçilen executor için uygun talimatlara çevirecektir.</p>
 <p>Rapor, tarayıcınızda indirebileceğiniz ve açabileceğiniz bir html dosyasıdır. Ayrıca eğitim ortamında görüntülemek için soldaki dosya gezgininde sağ tıklayıp <code>Show preview</code>'a tıklayabilirsiniz.</p>
 <p>Kaynakları ayarlama fırsatlarını tanımlayıp tanımlayamayacağınızı görmek için rapora bakıp birkaç dakikanızı ayırın.
 Kullanım sonuçlarını tahsis edilenin yüzdesi olarak gösteren sekmelere tıkladığınızdan emin olun.</p>
-<p>Mevcut tüm özellikleri açıklayan <a href="https://www.nextflow.io/docs/latest/reports.html">Raporlar</a> belgelerine bakın.</p>
-<h3 id="52-tum-processler-icin-kaynak-tahsislerini-ayarlama">5.2. Tüm process'ler için kaynak tahsislerini ayarlama<a class="headerlink" href="#52-tum-processler-icin-kaynak-tahsislerini-ayarlama" title="Permanent link">&para;</a></h3>
-<p>Profilleme, eğitim workflow'umuzdaki process'lerin çok hafif olduğunu gösteriyor, bu yüzden process başına varsayılan bellek tahsisini 1GB'a düşürelim.</p>
+<p>Mevcut tüm özellikleri açıklayan <a href="https://nextflow.io/docs/latest/reports.html">Raporlar</a> belgelerine bakın.</p>
+<h3 id="52-tum-surecler-icin-kaynak-tahsislerini-ayarlama">5.2. Tüm süreçler için kaynak tahsislerini ayarlama<a class="headerlink" href="#52-tum-surecler-icin-kaynak-tahsislerini-ayarlama" title="Permanent link">&para;</a></h3>
+<p>Profilleme, eğitim workflow'umuzdaki süreçlerin çok hafif olduğunu gösteriyor, bu yüzden süreç başına varsayılan bellek tahsisini 1GB'a düşürelim.</p>
 <p><code>nextflow.config</code> dosyanıza, pipeline parametreleri bölümünden önce aşağıdakini ekleyin:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">nextflow.config</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-4">4</a></span>
 <span class="normal"><a href="#__codelineno-50-5">5</a></span>
@@ -6107,15 +6408,15 @@ Kullanım sonuçlarını tahsis edilenin yüzdesi olarak gösteren sekmelere tı
 <span class="normal"><a href="#__codelineno-50-7">7</a></span>
 <span class="normal"><a href="#__codelineno-50-8">8</a></span>
 <span class="normal"><a href="#__codelineno-50-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="cm">/*</span>
-<a id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="cm">* Process ayarları</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="cm">* Süreç ayarları</span>
 <a id="__codelineno-50-6" name="__codelineno-50-6"></a><span class="cm">*/</span>
 <a id="__codelineno-50-7" name="__codelineno-50-7"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-50-8" name="__codelineno-50-8"></a><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="na">GB</span>
 <a id="__codelineno-50-9" name="__codelineno-50-9"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Bu, tükettiğimiz hesaplama miktarını azaltmaya yardımcı olacaktır.</p>
-<h3 id="53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama">5.3. Belirli bir process için kaynak tahsislerini ayarlama<a class="headerlink" href="#53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama" title="Permanent link">&para;</a></h3>
-<p>Aynı zamanda, tek bir process için tahsislerin nasıl ayarlanacağını gösterebilmemiz için <code>cowpy</code> process'inin diğerlerinden daha fazla kaynak gerektirdiğini varsayacağız.</p>
+<h3 id="53-belirli-bir-surec-icin-kaynak-tahsislerini-ayarlama">5.3. Belirli bir süreç için kaynak tahsislerini ayarlama<a class="headerlink" href="#53-belirli-bir-surec-icin-kaynak-tahsislerini-ayarlama" title="Permanent link">&para;</a></h3>
+<p>Aynı zamanda, tek bir süreç için tahsislerin nasıl ayarlanacağını gösterebilmemiz için <code>cowpy</code> sürecinin diğerlerinden daha fazla kaynak gerektirdiğini varsayacağız.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Sonra</label><label for="__tabbed_10_2">Önce</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -6129,7 +6430,7 @@ Kullanım sonuçlarını tahsis edilenin yüzdesi olarak gösteren sekmelere tı
 <span class="normal"><a href="#__codelineno-51-11">11</a></span>
 <span class="normal"><a href="#__codelineno-51-12">12</a></span>
 <span class="normal"><a href="#__codelineno-51-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-4" name="__codelineno-51-4"></a><span class="cm">/*</span>
-<a id="__codelineno-51-5" name="__codelineno-51-5"></a><span class="cm">* Process ayarları</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a><span class="cm">* Süreç ayarları</span>
 <a id="__codelineno-51-6" name="__codelineno-51-6"></a><span class="cm">*/</span>
 <a id="__codelineno-51-7" name="__codelineno-51-7"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-51-8" name="__codelineno-51-8"></a><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="na">GB</span>
@@ -6147,7 +6448,7 @@ Kullanım sonuçlarını tahsis edilenin yüzdesi olarak gösteren sekmelere tı
 <span class="normal"><a href="#__codelineno-52-7">7</a></span>
 <span class="normal"><a href="#__codelineno-52-8">8</a></span>
 <span class="normal"><a href="#__codelineno-52-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-4" name="__codelineno-52-4"></a><span class="cm">/*</span>
-<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="cm">* Process ayarları</span>
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a><span class="cm">* Süreç ayarları</span>
 <a id="__codelineno-52-6" name="__codelineno-52-6"></a><span class="cm">*/</span>
 <a id="__codelineno-52-7" name="__codelineno-52-7"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-52-8" name="__codelineno-52-8"></a><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="na">GB</span>
@@ -6156,29 +6457,29 @@ Kullanım sonuçlarını tahsis edilenin yüzdesi olarak gösteren sekmelere tı
 </div>
 </div>
 </div>
-<p>Bu yapılandırmayla, <code>cowpy</code> process'i hariç tüm process'ler 1GB bellek ve tek bir CPU (ima edilen varsayılan) isteyecektir; <code>cowpy</code> process'i 2GB ve 2 CPU isteyecektir.</p>
+<p>Bu yapılandırmayla, <code>cowpy</code> süreci hariç tüm süreçler 1GB bellek ve tek bir CPU (ima edilen varsayılan) isteyecektir; <code>cowpy</code> süreci 2GB ve 2 CPU isteyecektir.</p>
 <div class="admonition info">
 <p class="admonition-title">Bilgi</p>
-<p>Birkaç CPU'ya sahip bir makineniz varsa ve process başına yüksek sayıda tahsis ederseniz, process çağrılarının birbiri ardına kuyruğa alındığını görebilirsiniz.
-Bunun nedeni, Nextflow'un mevcut olandan daha fazla CPU istememizi sağlamasıdır.</p>
+<p>Birkaç CPU'ya sahip bir makineniz varsa ve süreç başına yüksek sayıda tahsis ederseniz, süreç çağrılarının birbiri ardına kuyruğa alındığını görebilirsiniz.
+Bunun nedeni, Nextflow'un mevcut olandan daha fazla CPU istememizi engellemesidir.</p>
 </div>
 <h3 id="54-guncellenmis-yaplandrmayla-workflowu-calstrn">5.4. Güncellenmiş yapılandırmayla workflow'u çalıştırın<a class="headerlink" href="#54-guncellenmis-yaplandrmayla-workflowu-calstrn" title="Permanent link">&para;</a></h3>
-<p>Bunu deneyelim, yapılandırma değişikliklerinden önce ve sonra performansı karşılaştırabilmemiz için profilleme raporu için farklı bir dosya adı sağlayalım.</p>
+<p>Bunu deneyelim; yapılandırma değişikliklerinden önce ve sonra performansı karşılaştırabilmemiz için profilleme raporu için farklı bir dosya adı sağlayalım.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span><span class="m">3</span>-main.nf<span class="w"> </span>-with-report<span class="w"> </span>report-config-2.html
 </code></pre></div>
 <p>Bu kadar küçük bir iş yükü olduğu için muhtemelen gerçek bir fark fark etmeyeceksiniz, ancak gerçek dünya workflow'unun performansını ve kaynak gereksinimlerini analiz etmek için kullanacağınız yaklaşım budur.</p>
-<p>Process'leriniz farklı kaynak gereksinimlerine sahip olduğunda çok yararlıdır. Tahmin değil, gerçek verilere dayalı olarak her process için ayarladığınız kaynak tahsislerini doğru boyutlandırmanızı sağlar.</p>
+<p>Süreçleriniz farklı kaynak gereksinimlerine sahip olduğunda çok yararlıdır. Tahmin değil, gerçek verilere dayalı olarak her süreç için ayarladığınız kaynak tahsislerini doğru boyutlandırmanızı sağlar.</p>
 <div class="admonition tip">
 <p class="admonition-title">İpucu</p>
 <p>Bu, kaynakları optimize etmek için yapabileceğiniz şeylerin sadece küçük bir tadımlığı.
-Nextflow'un kendisi, kaynak sınırlamaları nedeniyle başarısız olan işleri yeniden denemek için gerçekten şık bir <a href="https://www.nextflow.io/docs/latest/process.html#dynamic-task-resources">dinamik yeniden deneme mantığı</a> yerleşik olarak içerir.
-Ayrıca, Seqera Platform kaynak tahsislerinizi otomatik olarak optimize etmek için AI odaklı araçlar da sunmaktadır.</p>
+Nextflow'un kendisi, kaynak sınırlamaları nedeniyle başarısız olan işleri yeniden denemek için gerçekten şık bir <a href="https://nextflow.io/docs/latest/process.html#dynamic-task-resources">dinamik yeniden deneme mantığı</a> yerleşik olarak içerir.
+Ayrıca, Seqera Platform kaynak tahsislerinizi otomatik olarak optimize etmek için yapay zeka odaklı araçlar da sunmaktadır.</p>
 </div>
 <h3 id="55-kaynak-snrlar-ekleme">5.5. Kaynak sınırları ekleme<a class="headerlink" href="#55-kaynak-snrlar-ekleme" title="Permanent link">&para;</a></h3>
 <p>Hangi hesaplama executor'ını ve hesaplama altyapısını kullandığınıza bağlı olarak, tahsis edebileceğiniz (veya etmeniz gereken) konusunda bazı kısıtlamalar olabilir.
 Örneğin, kümeniz belirli sınırlar içinde kalmanızı gerektirebilir.</p>
-<p>İlgili sınırlamaları ayarlamak için <code>resourceLimits</code> direktifini kullanabilirsiniz. Sözdizimi, tek başına bir process bloğunda olduğunda şöyle görünür:</p>
-<div class="highlight"><span class="filename">Sözdizimi örneği</span><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
+<p>İlgili sınırlamaları ayarlamak için <code>resourceLimits</code> yönergesini kullanabilirsiniz. Sözdizimi, tek başına bir süreç bloğunda olduğunda şöyle görünür:</p>
+<div class="highlight"><span class="filename">Syntax example</span><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="w">    </span><span class="n">resourceLimits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="w">        </span><span class="nl">memory:</span><span class="w"> </span><span class="mi">750</span><span class="o">.</span><span class="na">GB</span><span class="o">,</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="w">        </span><span class="nl">cpus:</span><span class="w"> </span><span class="mi">200</span><span class="o">,</span>
@@ -6194,8 +6495,8 @@ Ancak, bu sınırları aşan kaynak tahsisleriyle workflow'u çalıştırmaya ç
 <p>nf-core projesi, çok çeşitli HPC ve bulut executor'larını kapsayan, dünya genelindeki çeşitli kurumlar tarafından paylaşılan bir <a href="https://nf-co.re/configs/">yapılandırma dosyaları koleksiyonu</a> derlemiştir.</p>
 <p>Bu paylaşılan yapılandırmalar hem orada çalışan ve bu nedenle kurumlarının yapılandırmasını hazır olarak kullanabilen insanlar için hem de kendi altyapıları için bir yapılandırma geliştirmek isteyen insanlar için bir model olarak değerlidir.</p>
 </details>
-<h3 id="ozet_4">Özet<a class="headerlink" href="#ozet_4" title="Permanent link">&para;</a></h3>
-<p>Kaynak kullanımını değerlendirmek için bir profilleme raporu oluşturmayı ve tüm process'ler ve/veya bireysel process'ler için kaynak tahsislerini nasıl değiştireceğinizi ve HPC'de çalıştırmak için kaynak sınırlamalarını nasıl ayarlayacağınızı biliyorsunuz.</p>
+<h3 id="ozetle_4">Özetle<a class="headerlink" href="#ozetle_4" title="Permanent link">&para;</a></h3>
+<p>Kaynak kullanımını değerlendirmek için bir profilleme raporu oluşturmayı ve tüm süreçler ve/veya bireysel süreçler için kaynak tahsislerini nasıl değiştireceğinizi ve HPC'de çalıştırmak için kaynak sınırlamalarını nasıl ayarlayacağınızı biliyorsunuz.</p>
 <h3 id="srada-ne-var_4">Sırada ne var?<a class="headerlink" href="#srada-ne-var_4" title="Permanent link">&para;</a></h3>
 <p>Önceden ayarlanmış yapılandırma profillerini nasıl kuracağınızı ve çalışma zamanında bunlar arasında nasıl geçiş yapacağınızı öğrenin.</p>
 <hr />
@@ -6256,7 +6557,7 @@ Her ortam değiştirdiğinizde yapılandırma ayarlarını manuel olarak değiş
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="go">Launching `3-main.nf` [gigantic_brazil] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a>
@@ -6280,11 +6581,11 @@ Ayrıca birlikte gruplamak istediğimiz başka yapılandırma öğeleri varsa ek
 <p>Başkalarının kendi girdi verilerini toplamadan pipeline'ınızı hızlıca denemesini istiyorsunuz.</p>
 </details>
 <p>Profiller yalnızca altyapı yapılandırması için değildir.
-Başkalarının uygun girdi değerlerini kendileri toplamak zorunda kalmadan workflow'u denemelerini kolaylaştırmak için workflow parametreleri için varsayılan değerler ayarlamak için de kullanabiliriz.
+Başkalarının uygun girdi değerlerini kendileri toplamak zorunda kalmadan workflow'u denemelerini kolaylaştırmak için workflow parametreleri için varsayılan değerler ayarlamak amacıyla da kullanabiliriz.
 Bunu bir parametre dosyası kullanmaya alternatif olarak düşünebilirsiniz.</p>
 <h4 id="621-profili-kurun">6.2.1. Profili kurun<a class="headerlink" href="#621-profili-kurun" title="Permanent link">&para;</a></h4>
 <p>Bu bağlamda varsayılan değerleri ifade etmek için sözdizimi, <code>test</code> olarak adlandırdığımız bir profil için şöyle görünür:</p>
-<div class="highlight"><span class="filename">Sözdizimi örneği</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="w">    </span><span class="n">test</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight"><span class="filename">Syntax example</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="w">    </span><span class="n">test</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="w">        </span><span class="n">params</span><span class="o">.&lt;</span><span class="n">parameter1</span><span class="o">&gt;</span>
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="w">        </span><span class="n">params</span><span class="o">.&lt;</span><span class="n">parameter2</span><span class="o">&gt;</span>
 <a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a><span class="w">        </span><span class="o">...</span>
@@ -6341,13 +6642,13 @@ Bunu bir parametre dosyası kullanmaya alternatif olarak düşünebilirsiniz.</p
 <h4 id="622-workflowu-yerel-olarak-test-profiliyle-calstrn">6.2.2. Workflow'u yerel olarak test profiliyle çalıştırın<a class="headerlink" href="#622-workflowu-yerel-olarak-test-profiliyle-calstrn" title="Permanent link">&para;</a></h4>
 <p>Uygun bir şekilde, profiller karşılıklı olarak dışlayıcı değildir, bu yüzden komut satırımızda <code>-profile &lt;profile1&gt;,&lt;profile2&gt;</code> sözdizimini kullanarak birden fazla profil belirtebiliriz (herhangi bir sayıda profil için).</p>
 <p>Aynı yapılandırma öğeleri için değerler ayarlayan ve aynı yapılandırma dosyasında tanımlanan profilleri birleştirirseniz, Nextflow hangi değeri en son okuduğunu kullanarak çakışmayı çözecektir (yani dosyada daha sonra gelen).
-Çakışan ayarlar farklı yapılandırma kaynaklarında ayarlanmışsa, varsayılan <a href="https://www.nextflow.io/docs/latest/config.html#configuration-file">öncelik sırası</a> geçerlidir.</p>
+Çakışan ayarlar farklı yapılandırma kaynaklarında ayarlanmışsa, varsayılan <a href="https://www.nextflow.io/docs/latest/config.html">öncelik sırası</a> geçerlidir.</p>
 <p>Önceki komutumza test profilini eklemeyi deneyelim:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span><span class="m">3</span>-main.nf<span class="w"> </span>-profile<span class="w"> </span>my_laptop,test
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>
 <a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="go">Launching `3-main.nf` [jovial_coulomb] DSL2 - revision: 46a6763141</span>
 <a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a>
@@ -6358,11 +6659,11 @@ Bunu bir parametre dosyası kullanmaya alternatif olarak düşünebilirsiniz.</p
 <a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a><span class="go">[fd/e84fa9] cowpy              | 1 of 1 ✔</span>
 </code></pre></div>
 </details>
-<p>Bu, mümkün olduğunda Docker kullanacak ve <code>results_config/test</code> altında çıktılar üretecek ve bu sefer karakter komik ikili <code>dragonandcow</code>.</p>
+<p>Bu, mümkün olduğunda Docker kullanacak ve <code>results_config/test</code> altında çıktılar üretecek; bu sefer karakter komik ikili <code>dragonandcow</code>.</p>
 <details class="abstract">
 <summary>Dosya içeriği</summary>
 <div class="highlight"><span class="filename">results_config/test/</span><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="go"> _________</span>
-<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="go">/ HOLà    \</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="go">/ HOLA    \</span>
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="go">| HELLO   |</span>
 <a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a><span class="go">---------</span>
@@ -6476,7 +6777,7 @@ Bu, herhangi bir şey başlatmak zorunda kalmadan hangi ayarların kullanılaca�
 </code></pre></div>
 </details>
 <p>Bu, birden fazla yapılandırma katmanı içeren karmaşık projeler için özellikle yararlı olur.</p>
-<h3 id="ozet_5">Özet<a class="headerlink" href="#ozet_5" title="Permanent link">&para;</a></h3>
+<h3 id="ozetle_5">Özetle<a class="headerlink" href="#ozetle_5" title="Permanent link">&para;</a></h3>
 <p>Çalışma zamanında minimum güçlükle önceden ayarlanmış bir yapılandırmayı seçmek için profilleri nasıl kullanacağınızı biliyorsunuz.
 Daha genel olarak, workflow çalıştırmalarınızı farklı hesaplama platformlarına uyacak şekilde ve analizlerinizin tekrar üretilebilirliğini artırmak için nasıl yapılandıracağınızı biliyorsunuz.</p>
 <h3 id="srada-ne-var_5">Sırada ne var?<a class="headerlink" href="#srada-ne-var_5" title="Permanent link">&para;</a></h3>
@@ -6497,7 +6798,7 @@ Pratikte, genellikle GitHub gibi uzak havuzlarda depolanan pipeline'ları çalı
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>
 <a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="go">Pulling nextflow-io/hello ...</span>
 <a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a><span class="go"> downloaded from https://github.com/nextflow-io/hello.git</span>
@@ -6523,7 +6824,7 @@ Sonraki çalıştırmalar, açıkça bir güncelleme istemediğiniz sürece önb
 </code></pre></div>
 <details class="success">
 <summary>Komut çıktısı</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>
 <a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a><span class="go">Launching `https://github.com/nextflow-io/hello` [sick_carson] DSL2 - revision: 2ce0b0e294 [v1.3]</span>
 <a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>
@@ -6539,15 +6840,15 @@ Sonraki çalıştırmalar, açıkça bir güncelleme istemediğiniz sürece önb
 </code></pre></div>
 </details>
 <p>Tam versiyonları belirtmek tekrar üretilebilirlik için önemlidir.</p>
-<h3 id="ozet_6">Özet<a class="headerlink" href="#ozet_6" title="Permanent link">&para;</a></h3>
+<h3 id="ozetle_6">Özetle<a class="headerlink" href="#ozetle_6" title="Permanent link">&para;</a></h3>
 <p>Pipeline'ları doğrudan GitHub ve diğer uzak havuzlardan nasıl çalıştıracağınızı ve tekrar üretilebilirlik için versiyonları nasıl belirteceğinizi biliyorsunuz.</p>
 <h3 id="srada-ne-var_6">Sırada ne var?<a class="headerlink" href="#srada-ne-var_6" title="Permanent link">&para;</a></h3>
 <p>Kendinize büyük bir tebrik verin!
 Nextflow pipeline'larını çalıştırmaya ve yönetmeye başlamak için bilmeniz gereken her şeyi biliyorsunuz.</p>
 <p>Bu, bu kursu sonlandırıyor, ancak öğrenmeye devam etmek istiyorsanız, iki ana önerimiz var:</p>
 <ul>
-<li>Kendi pipeline'larınızı geliştirmeyi daha derinlemesine incelemek istiyorsanız, bu kursla aynı genel ilerlemeyi kapsayan ancak channel'lar ve operatörler hakkında çok daha ayrıntılı giden yeni başlayanlar için bir kurs olan <a href="../../hello_nextflow/">Hello Nextflow</a>'a bakın.</li>
-<li>Koda daha derinlemesine girmeden Nextflow pipeline'larını çalıştırmayı öğrenmeye devam etmek istiyorsanız, son derece popüler <a href="https://nf-co.re/">nf-core</a> projesinden pipeline'ları bulmak ve çalıştırmak için araçları tanıtan <a href="../../hello_nf-core/">Hello nf-core</a>'un ilk bölümüne bakın.</li>
+<li>Kendi pipeline'larınızı geliştirmeyi daha derinlemesine incelemek istiyorsanız, bu kursla aynı genel ilerlemeyi kapsayan ancak kanallar ve operatörler hakkında çok daha ayrıntılı giden yeni başlayanlar için bir kurs olan <a href="../../hello_nextflow/">Hello Nextflow</a>'a bakın.</li>
+<li>Koda daha derinlemesine girmeden Nextflow pipeline'larını çalıştırmayı öğrenmeye devam etmek istiyorsanız, son derece popüler <a href="../../hello_nf-core/">nf-core</a> projesinden pipeline'ları bulmak ve çalıştırmak için araçları tanıtan <a href="https://nf-co.re/">Hello nf-core</a>'un ilk bölümüne bakın.</li>
 </ul>
 <p>İyi eğlenceler!</p>
 <hr />
@@ -6560,21 +6861,21 @@ Parametre değerleri hem workflow dosyasında hem de `nextflow.config`'de ayarla
 - [ ] Karşılaşılan ilk değer
 - [ ] Bir hataya neden olur
 
-Daha fazla bilgi: [1.1. `nextflow.config`'de değerler ayarlayın](#11-nextflowconfigde-degerler-ayarlayin)
+Daha fazla bilgi: [1.1. `nextflow.config`'de değerler ayarlayın](#11-set-up-values-in-nextflowconfig)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-0">
     <a href="#quiz-0" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-0-question">
         <p>Parametre değerleri hem workflow dosyasında hem de <code>nextflow.config</code>'de ayarlandığında, hangisi önceliklidir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0">Workflow dosyası değeri</label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" correct><label for="quiz-0-1">Yapılandırma dosyası değeri</label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" ><label for="quiz-0-2">Karşılaşılan ilk değer</label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3">Bir hataya neden olur</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-0-question"><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0">Workflow dosyası değeri</label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" data-correct="true"><label for="quiz-0-1">Yapılandırma dosyası değeri</label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" ><label for="quiz-0-2">Karşılaşılan ilk değer</label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3">Bir hataya neden olur</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#11-nextflowconfigde-degerler-ayarlayin">1.1. <code>nextflow.config</code>'de değerler ayarlayın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#11-set-up-values-in-nextflowconfig">1.1. <code>nextflow.config</code>'de değerler ayarlayın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6585,21 +6886,21 @@ Workflow dosyasında vs. yapılandırma dosyasında varsayılan parametre ayarla
 - [ ] Yapılandırma türlenmiş bildirim kullanır, workflow atama kullanır
 - [ ] Yalnızca yapılandırma dosyaları varsayılan değerler ayarlayabilir
 
-Daha fazla bilgi: [1.1. `nextflow.config`'de değerler ayarlayın](#11-nextflowconfigde-degerler-ayarlayin)
+Daha fazla bilgi: [1.1. `nextflow.config`'de değerler ayarlayın](#11-set-up-values-in-nextflowconfig)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-1">
     <a href="#quiz-1" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-1-question">
         <p>Workflow dosyasında vs. yapılandırma dosyasında varsayılan parametre ayarlama arasındaki sözdizimi farkı nedir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">Aynı sözdizimini kullanırlar</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" correct><label for="quiz-1-1">Workflow türlenmiş bildirim kullanır (<code class="highlight"><span class="nl">param:</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span></code>), yapılandırma atama kullanır (<code class="highlight"><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span></code>)</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" ><label for="quiz-1-2">Yapılandırma türlenmiş bildirim kullanır, workflow atama kullanır</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Yalnızca yapılandırma dosyaları varsayılan değerler ayarlayabilir</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-1-question"><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">Aynı sözdizimini kullanırlar</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" data-correct="true"><label for="quiz-1-1">Workflow türlenmiş bildirim kullanır (<code class="highlight"><span class="nl">param:</span><span class="w"> </span><span class="n">Type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span></code>), yapılandırma atama kullanır (<code class="highlight"><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span></code>)</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" ><label for="quiz-1-2">Yapılandırma türlenmiş bildirim kullanır, workflow atama kullanır</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Yalnızca yapılandırma dosyaları varsayılan değerler ayarlayabilir</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#11-nextflowconfigde-degerler-ayarlayin">1.1. <code>nextflow.config</code>'de değerler ayarlayın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#11-set-up-values-in-nextflowconfig">1.1. <code>nextflow.config</code>'de değerler ayarlayın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6610,96 +6911,96 @@ Bir workflow çalıştırırken parametre dosyası nasıl belirtilir?
 - [x] `-params-file params.yaml`
 - [ ] `--input-params params.yaml`
 
-Daha fazla bilgi: [1.3. Parametre dosyası kullanın](#13-parametre-dosyasi-kullanin)
+Daha fazla bilgi: [1.3. Parametre dosyası kullanın](#13-use-a-parameter-file)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-2">
     <a href="#quiz-2" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-2-question">
         <p>Bir workflow çalıştırırken parametre dosyası nasıl belirtilir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-2-0" ><label for="quiz-2-0"><code>--params params.yaml</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1"><code>-config params.yaml</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" correct><label for="quiz-2-2"><code>-params-file params.yaml</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3"><code>--input-params params.yaml</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-2-question"><div><input type="radio" name="answer" value="0" id="quiz-2-0" ><label for="quiz-2-0"><code>--params params.yaml</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1"><code>-config params.yaml</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" data-correct="true"><label for="quiz-2-2"><code>-params-file params.yaml</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3"><code>--input-params params.yaml</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#13-parametre-dosyasi-kullanin">1.3. Parametre dosyası kullanın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#13-use-a-parameter-file">1.3. Parametre dosyası kullanın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
 <quiz>
 `outputDir` yapılandırma seçeneği neyi kontrol eder?
-- [ ] work dizininin konumu
+- [ ] Work dizininin konumu
 - [x] Workflow çıktılarının yayınlandığı temel yol
 - [ ] Log dosyaları için dizin
 - [ ] Modül dosyalarının konumu
 
-Daha fazla bilgi: [2.1. outputDir dizin adını özelleştirme](#21-outputdir-dizin-adini-ozellestirme)
+Daha fazla bilgi: [2.1. outputDir dizin adını özelleştirme](#21-customize-the-outputdir-directory-name)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-3">
     <a href="#quiz-3" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-3-question">
         <p><code>outputDir</code> yapılandırma seçeneği neyi kontrol eder?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-3-0" ><label for="quiz-3-0">work dizininin konumu</label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" correct><label for="quiz-3-1">Workflow çıktılarının yayınlandığı temel yol</label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2">Log dosyaları için dizin</label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3">Modül dosyalarının konumu</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-3-question"><div><input type="radio" name="answer" value="0" id="quiz-3-0" ><label for="quiz-3-0">Work dizininin konumu</label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" data-correct="true"><label for="quiz-3-1">Workflow çıktılarının yayınlandığı temel yol</label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2">Log dosyaları için dizin</label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3">Modül dosyalarının konumu</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#21-outputdir-dizin-adini-ozellestirme">2.1. outputDir dizin adını özelleştirme</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#21-customize-the-outputdir-directory-name">2.1. outputDir dizin adını özelleştirme</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
 <quiz>
-Çıktı yolu yapılandırmasında bir process adına dinamik olarak nasıl referans verilir?
+Çıktı yolu yapılandırmasında bir süreç adına dinamik olarak nasıl referans verilir?
 - [ ] `#!groovy ${processName}`
 - [ ] `#!groovy path "<process>.name"`
 - [x] `#!groovy path { <process>.name }`
 - [ ] `@processName`
 
-Daha fazla bilgi: [2.2. Çıktıları process'e göre organize etme](#22-ciktilari-processe-gore-organize-etme)
+Daha fazla bilgi: [2.2. Çıktıları süreçlere göre organize etme](#22-organize-outputs-by-process)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-4">
     <a href="#quiz-4" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
-        <p>Çıktı yolu yapılandırmasında bir process adına dinamik olarak nasıl referans verilir?</p>
+    <div class="quiz-question" id="quiz-4-question">
+        <p>Çıktı yolu yapılandırmasında bir süreç adına dinamik olarak nasıl referans verilir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0"><code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">processName</span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" ><label for="quiz-4-1"><code class="highlight"><span class="n">path</span><span class="w"> </span><span class="s2">&quot;&lt;process&gt;.name&quot;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" correct><label for="quiz-4-2"><code class="highlight"><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">&lt;</span><span class="n">process</span><span class="o">&gt;.</span><span class="na">name</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3"><code>@processName</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-4-question"><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0"><code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">processName</span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" ><label for="quiz-4-1"><code class="highlight"><span class="n">path</span><span class="w"> </span><span class="s2">&quot;&lt;process&gt;.name&quot;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" data-correct="true"><label for="quiz-4-2"><code class="highlight"><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">&lt;</span><span class="n">process</span><span class="o">&gt;.</span><span class="na">name</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3"><code>@processName</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#22-ciktilari-processe-gore-organize-etme">2.2. Çıktıları process'e göre organize etme</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#22-organize-outputs-by-process">2.2. Çıktıları süreçlere göre organize etme</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
 <quiz>
-Hem Docker hem de Conda etkinleştirilmişse ve bir process'in her iki direktifi de varsa, hangisi önceliklendirilir?
+Hem Docker hem de Conda etkinleştirilmişse ve bir sürecin her iki yönergesi de varsa, hangisi önceliklendirilir?
 - [x] Docker (konteynerlar)
 - [ ] Conda
-- [ ] Process'te tanımlanan ilki
+- [ ] Süreçte tanımlanan ilki
 - [ ] Bir hataya neden olur
 
-Daha fazla bilgi: [3. Yazılım paketleme teknolojisi seçme](#3-yazilim-paketleme-teknolojisi-secme)
+Daha fazla bilgi: [3. Yazılım paketleme teknolojisi seçme](#3-select-a-software-packaging-technology)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-5">
     <a href="#quiz-5" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
-        <p>Hem Docker hem de Conda etkinleştirilmişse ve bir process'in her iki direktifi de varsa, hangisi önceliklendirilir?</p>
+    <div class="quiz-question" id="quiz-5-question">
+        <p>Hem Docker hem de Conda etkinleştirilmişse ve bir sürecin her iki yönergesi de varsa, hangisi önceliklendirilir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-5-0" correct><label for="quiz-5-0">Docker (konteynerlar)</label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" ><label for="quiz-5-1">Conda</label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" ><label for="quiz-5-2">Process'te tanımlanan ilki</label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3">Bir hataya neden olur</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-5-question"><div><input type="radio" name="answer" value="0" id="quiz-5-0" data-correct="true"><label for="quiz-5-0">Docker (konteynerlar)</label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" ><label for="quiz-5-1">Conda</label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" ><label for="quiz-5-2">Süreçte tanımlanan ilki</label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3">Bir hataya neden olur</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#3-yazilim-paketleme-teknolojisi-secme">3. Yazılım paketleme teknolojisi seçme</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#3-select-a-software-packaging-technology">3. Yazılım paketleme teknolojisi seçme</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6710,21 +7011,21 @@ Nextflow'daki varsayılan executor nedir?
 - [ ] `kubernetes`
 - [ ] `aws`
 
-Daha fazla bilgi: [4. Çalıştırma platformu seçme](#4-calistirma-platformu-secme)
+Daha fazla bilgi: [4. Çalıştırma platformu seçme](#4-select-an-execution-platform)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-6">
     <a href="#quiz-6" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-6-question">
         <p>Nextflow'daki varsayılan executor nedir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-6-0" correct><label for="quiz-6-0"><code>local</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>slurm</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" ><label for="quiz-6-2"><code>kubernetes</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>aws</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-6-question"><div><input type="radio" name="answer" value="0" id="quiz-6-0" data-correct="true"><label for="quiz-6-0"><code>local</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>slurm</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" ><label for="quiz-6-2"><code>kubernetes</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>aws</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#4-calistirma-platformu-secme">4. Çalıştırma platformu seçme</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#4-select-an-execution-platform">4. Çalıştırma platformu seçme</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6735,71 +7036,71 @@ Kaynak kullanım raporu oluşturan komut nedir?
 - [x] `nextflow run workflow.nf -with-report report.html`
 - [ ] `nextflow run workflow.nf -profile report`
 
-Daha fazla bilgi: [5.1. Kaynak kullanım raporu oluşturmak için workflow'u çalıştırın](#51-kaynak-kullanim-raporu-olusturmak-icin-workflowu-calistirin)
+Daha fazla bilgi: [5.1. Kaynak kullanım raporu oluşturmak için workflow'u çalıştırın](#51-run-the-workflow-to-generate-a-resource-utilization-report)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-7">
     <a href="#quiz-7" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-7-question">
         <p>Kaynak kullanım raporu oluşturan komut nedir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0"><code>nextflow run workflow.nf -with-metrics</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" ><label for="quiz-7-1"><code>nextflow run workflow.nf -with-stats</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" correct><label for="quiz-7-2"><code>nextflow run workflow.nf -with-report report.html</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3"><code>nextflow run workflow.nf -profile report</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-7-question"><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0"><code>nextflow run workflow.nf -with-metrics</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" ><label for="quiz-7-1"><code>nextflow run workflow.nf -with-stats</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" data-correct="true"><label for="quiz-7-2"><code>nextflow run workflow.nf -with-report report.html</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3"><code>nextflow run workflow.nf -profile report</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#51-kaynak-kullanim-raporu-olusturmak-icin-workflowu-calistirin">5.1. Kaynak kullanım raporu oluşturmak için workflow'u çalıştırın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#51-run-the-workflow-to-generate-a-resource-utilization-report">5.1. Kaynak kullanım raporu oluşturmak için workflow'u çalıştırın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
 <quiz>
-Yapılandırma dosyasında `cowpy` adlı belirli bir process için kaynak gereksinimleri nasıl ayarlanır?
+Yapılandırma dosyasında `cowpy` adlı belirli bir süreç için kaynak gereksinimleri nasıl ayarlanır?
 - [ ] `#!groovy cowpy.memory = '2.GB'`
 - [ ] `#!groovy process.cowpy.memory = '2.GB'`
 - [x] `#!groovy process { withName: 'cowpy' { memory = '2.GB' } }`
 - [ ] `#!groovy resources.cowpy.memory = '2.GB'`
 
-Daha fazla bilgi: [5.3. Belirli bir process için kaynak tahsislerini ayarlama](#53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama)
+Daha fazla bilgi: [5.3. Belirli bir süreç için kaynak tahsislerini ayarlama](#53-set-resource-allocations-for-a-specific-process)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-8">
     <a href="#quiz-8" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
-        <p>Yapılandırma dosyasında <code>cowpy</code> adlı belirli bir process için kaynak gereksinimleri nasıl ayarlanır?</p>
+    <div class="quiz-question" id="quiz-8-question">
+        <p>Yapılandırma dosyasında <code>cowpy</code> adlı belirli bir süreç için kaynak gereksinimleri nasıl ayarlanır?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-8-0" ><label for="quiz-8-0"><code class="highlight"><span class="n">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-8-1" ><label for="quiz-8-1"><code class="highlight"><span class="n">process</span><span class="o">.</span><span class="na">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-8-2" correct><label for="quiz-8-2"><code class="highlight"><span class="n">process</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nl">withName:</span><span class="w"> </span><span class="s1">&#39;cowpy&#39;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-8-3" ><label for="quiz-8-3"><code class="highlight"><span class="n">resources</span><span class="o">.</span><span class="na">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-8-question"><div><input type="radio" name="answer" value="0" id="quiz-8-0" ><label for="quiz-8-0"><code class="highlight"><span class="n">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-8-1" ><label for="quiz-8-1"><code class="highlight"><span class="n">process</span><span class="o">.</span><span class="na">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-8-2" data-correct="true"><label for="quiz-8-2"><code class="highlight"><span class="n">process</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nl">withName:</span><span class="w"> </span><span class="s1">&#39;cowpy&#39;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-8-3" ><label for="quiz-8-3"><code class="highlight"><span class="n">resources</span><span class="o">.</span><span class="na">cowpy</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2.GB&#39;</span></code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#53-belirli-bir-process-icin-kaynak-tahsislerini-ayarlama">5.3. Belirli bir process için kaynak tahsislerini ayarlama</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#53-set-resource-allocations-for-a-specific-process">5.3. Belirli bir süreç için kaynak tahsislerini ayarlama</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
 <quiz>
-`resourceLimits` direktifi ne yapar?
+`resourceLimits` yönergesi ne yapar?
 - [ ] Minimum kaynak gereksinimlerini ayarlar
-- [ ] Process'lere kaynak tahsis eder
+- [ ] Süreçlere kaynak tahsis eder
 - [x] İstenebilecek maksimum kaynakları sınırlar
 - [ ] Kaynak kullanımını gerçek zamanlı izler
 
-Daha fazla bilgi: [5.5. Kaynak sınırları ekleme](#55-kaynak-sinirlari-ekleme)
+Daha fazla bilgi: [5.5. Kaynak sınırları ekleme](#55-add-resource-limits)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-9">
     <a href="#quiz-9" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
-        <p><code>resourceLimits</code> direktifi ne yapar?</p>
+    <div class="quiz-question" id="quiz-9-question">
+        <p><code>resourceLimits</code> yönergesi ne yapar?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-9-0" ><label for="quiz-9-0">Minimum kaynak gereksinimlerini ayarlar</label></div><div><input type="radio" name="answer" value="1" id="quiz-9-1" ><label for="quiz-9-1">Process'lere kaynak tahsis eder</label></div><div><input type="radio" name="answer" value="2" id="quiz-9-2" correct><label for="quiz-9-2">İstenebilecek maksimum kaynakları sınırlar</label></div><div><input type="radio" name="answer" value="3" id="quiz-9-3" ><label for="quiz-9-3">Kaynak kullanımını gerçek zamanlı izler</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-9-question"><div><input type="radio" name="answer" value="0" id="quiz-9-0" ><label for="quiz-9-0">Minimum kaynak gereksinimlerini ayarlar</label></div><div><input type="radio" name="answer" value="1" id="quiz-9-1" ><label for="quiz-9-1">Süreçlere kaynak tahsis eder</label></div><div><input type="radio" name="answer" value="2" id="quiz-9-2" data-correct="true"><label for="quiz-9-2">İstenebilecek maksimum kaynakları sınırlar</label></div><div><input type="radio" name="answer" value="3" id="quiz-9-3" ><label for="quiz-9-3">Kaynak kullanımını gerçek zamanlı izler</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#55-kaynak-sinirlari-ekleme">5.5. Kaynak sınırları ekleme</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#55-add-resource-limits">5.5. Kaynak sınırları ekleme</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6810,21 +7111,21 @@ Tek bir komutta birden fazla profil nasıl belirtilir?
 - [x] `-profile profile1,profile2`
 - [ ] `--profile profile1 --profile profile2`
 
-Daha fazla bilgi: [6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın](#6-onceden-ayarlanmis-yapilandirmalar-arasinda-gecis-yapmak-icin-profilleri-kullanin)
+Daha fazla bilgi: [6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın](#6-use-profiles-to-switch-between-preset-configurations)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-10">
     <a href="#quiz-10" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-10-question">
         <p>Tek bir komutta birden fazla profil nasıl belirtilir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-10-0" ><label for="quiz-10-0"><code>-profile profile1 -profile profile2</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-10-1" ><label for="quiz-10-1"><code>-profiles profile1,profile2</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-10-2" correct><label for="quiz-10-2"><code>-profile profile1,profile2</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-10-3" ><label for="quiz-10-3"><code>--profile profile1 --profile profile2</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-10-question"><div><input type="radio" name="answer" value="0" id="quiz-10-0" ><label for="quiz-10-0"><code>-profile profile1 -profile profile2</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-10-1" ><label for="quiz-10-1"><code>-profiles profile1,profile2</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-10-2" data-correct="true"><label for="quiz-10-2"><code>-profile profile1,profile2</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-10-3" ><label for="quiz-10-3"><code>--profile profile1 --profile profile2</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#6-onceden-ayarlanmis-yapilandirmalar-arasinda-gecis-yapmak-icin-profilleri-kullanin">6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#6-use-profiles-to-switch-between-preset-configurations">6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6835,21 +7136,21 @@ Nextflow'un kullanacağı tamamen çözülmüş yapılandırmayı gösteren komu
 - [x] `nextflow config`
 - [ ] `nextflow resolve`
 
-Daha fazla bilgi: [6.3. Çözülmüş yapılandırmayı görmek için `nextflow config` kullanın](#63-cozulmus-yapilandirmayi-gormek-icin-nextflow-config-kullanin)
+Daha fazla bilgi: [6.3. Çözülmüş yapılandırmayı görmek için `nextflow config` kullanın](#63-use-nextflow-config-to-see-the-resolved-configuration)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-11">
     <a href="#quiz-11" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-11-question">
         <p>Nextflow'un kullanacağı tamamen çözülmüş yapılandırmayı gösteren komut nedir?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-11-0" ><label for="quiz-11-0"><code>nextflow show-config</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-11-1" ><label for="quiz-11-1"><code>nextflow settings</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-11-2" correct><label for="quiz-11-2"><code>nextflow config</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-11-3" ><label for="quiz-11-3"><code>nextflow resolve</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-11-question"><div><input type="radio" name="answer" value="0" id="quiz-11-0" ><label for="quiz-11-0"><code>nextflow show-config</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-11-1" ><label for="quiz-11-1"><code>nextflow settings</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-11-2" data-correct="true"><label for="quiz-11-2"><code>nextflow config</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-11-3" ><label for="quiz-11-3"><code>nextflow resolve</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#63-cozulmus-yapilandirmayi-gormek-icin-nextflow-config-kullanin">6.3. Çözülmüş yapılandırmayı görmek için <code>nextflow config</code> kullanın</a></p></section>
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#63-use-nextflow-config-to-see-the-resolved-configuration">6.3. Çözülmüş yapılandırmayı görmek için <code>nextflow config</code> kullanın</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6858,24 +7159,77 @@ Profiller ne için kullanılabilir? (Geçerli olanların hepsini seçin)
 - [x] Altyapıya özgü ayarları tanımlama (executor'lar, konteynerlar)
 - [x] Farklı ortamlar için kaynak sınırlarını ayarlama
 - [x] Kolay workflow testi için test parametreleri sağlama
-- [ ] Yeni process'ler tanımlama
+- [ ] Yeni süreçler tanımlama
 
-Daha fazla bilgi: [6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın](#6-onceden-ayarlanmis-yapilandirmalar-arasinda-gecis-yapmak-icin-profilleri-kullanin)
+Daha fazla bilgi: [6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın](#6-use-profiles-to-switch-between-preset-configurations)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-12">
     <a href="#quiz-12" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-12-question">
         <p>Profiller ne için kullanılabilir? (Geçerli olanların hepsini seçin)</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="checkbox" name="answer" value="0" id="quiz-12-0" correct><label for="quiz-12-0">Altyapıya özgü ayarları tanımlama (executor'lar, konteynerlar)</label></div><div><input type="checkbox" name="answer" value="1" id="quiz-12-1" correct><label for="quiz-12-1">Farklı ortamlar için kaynak sınırlarını ayarlama</label></div><div><input type="checkbox" name="answer" value="2" id="quiz-12-2" correct><label for="quiz-12-2">Kolay workflow testi için test parametreleri sağlama</label></div><div><input type="checkbox" name="answer" value="3" id="quiz-12-3" ><label for="quiz-12-3">Yeni process'ler tanımlama</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-12-question"><div><input type="checkbox" name="answer" value="0" id="quiz-12-0" data-correct="true"><label for="quiz-12-0">Altyapıya özgü ayarları tanımlama (executor'lar, konteynerlar)</label></div><div><input type="checkbox" name="answer" value="1" id="quiz-12-1" data-correct="true"><label for="quiz-12-1">Farklı ortamlar için kaynak sınırlarını ayarlama</label></div><div><input type="checkbox" name="answer" value="2" id="quiz-12-2" data-correct="true"><label for="quiz-12-2">Kolay workflow testi için test parametreleri sağlama</label></div><div><input type="checkbox" name="answer" value="3" id="quiz-12-3" ><label for="quiz-12-3">Yeni süreçler tanımlama</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
         <button type="submit" class="quiz-button">Submit</button>
     </form>
-    <section class="content hidden"><p>Daha fazla bilgi: <a href="#6-onceden-ayarlanmis-yapilandirmalar-arasinda-gecis-yapmak-icin-profilleri-kullanin">6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın</a></p></section>
-</div><style type="text/css">.quiz {
+    <section class="content hidden"><p>Daha fazla bilgi: <a href="#6-use-profiles-to-switch-between-preset-configurations">6. Önceden ayarlanmış yapılandırmalar arasında geçiş yapmak için profilleri kullanın</a></p></section>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -6889,11 +7243,11 @@ Daha fazla bilgi: [6. Önceden ayarlanmış yapılandırmalar arasında geçiş 
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -6908,11 +7262,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -6922,10 +7276,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -6950,34 +7306,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -6992,8 +7397,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -7248,7 +7660,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -7465,10 +7876,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -7793,14 +8202,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -7923,9 +8439,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -7966,27 +8481,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -8007,7 +8522,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -8027,15 +8542,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8055,7 +8572,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -8065,8 +8582,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -8080,11 +8597,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8146,10 +8667,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -8200,34 +8719,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -8248,11 +8763,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -8264,39 +8779,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -8322,6 +8810,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -8341,9 +8835,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();

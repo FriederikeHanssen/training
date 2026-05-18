@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -460,7 +491,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Inici
   
 
     
@@ -3183,7 +3214,7 @@
   <span class="md-ellipsis">
     
   
-    Orientació
+    Primers passos
   
 
     
@@ -3211,7 +3242,63 @@
   <span class="md-ellipsis">
     
   
-    Entorn de Desenvolupament
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrons Essencials de Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processament de fitxers d'entrada
   
 
     
@@ -3260,14 +3347,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/working_with_files/" class="md-nav__link">
+      <a href="../../side_quests/splitting_and_grouping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Processament d'entrada de fitxers
+    Divisió i Agrupació
   
 
     
@@ -3288,14 +3375,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/splitting_and_grouping/" class="md-nav__link">
+      <a href="../../side_quests/nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Divisió i Agrupació
+    Proves amb nf-test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resolució de Problemes en Workflows
   
 
     
@@ -3343,15 +3458,62 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolupament de Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolupament de Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../side_quests/debugging/" class="md-nav__link">
+      <a href="../../side_quests/plugin_development/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Depuració de Workflows
+    Desenvolupament de Plugins
   
 
     
@@ -3372,14 +3534,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
+      <a href="../../side_quests/plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Patrons Essencials de Scripting en Nextflow
+    Part 1: Conceptes bàsics dels plugins
   
 
     
@@ -3400,14 +3562,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/nf-test/" class="md-nav__link">
+      <a href="../../side_quests/plugin_development/02_create_project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Proves amb nf-test
+    Part 2: Crear un projecte de plugin
   
 
     
@@ -3416,6 +3578,182 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Funcions personalitzades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Proves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Configuració
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passos Següents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4696,43 +5034,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4957,13 +5258,13 @@ Però la necessitarem per aprofitar les sortides a nivell de workflow, així que
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">Launching `hello-world.nf` [goofy_torvalds] DSL2 - revision: c33d41f479</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="go">executor &gt;  local (1)</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="go">[65/7be2fa] sayHello | 1 of 1 ✔</span>
-</code></pre></div>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="hll"><span class="go">[65/7be2fa] sayHello | 1 of 1 ✔</span>
+</span></code></pre></div>
 </details>
 <p>Si la sortida de la vostra consola s'assembla a això, felicitats, acabeu d'executar el vostre primer workflow de Nextflow!</p>
 <p>La sortida més important aquí és l'última línia, que està ressaltada a la sortida anterior:</p>
@@ -4977,7 +5278,7 @@ Mirem-ho ara.</p>
 <p>Dins del directori <code>work</code>, Nextflow organitza les sortides i els registres per crida de procés.
 Per a cada crida de procés, Nextflow crea un subdirectori imbricat, anomenat amb un hash per fer-lo únic, on prepararà totes les entrades necessàries (utilitzant enllaços simbòlics per defecte), escriurà fitxers auxiliars i escriurà registres i qualsevol sortida del procés.</p>
 <p>El camí a aquest subdirectori es mostra en forma truncada entre claudàtors a la sortida de la consola.
-Mirant el que hem obtingut per a l'execució mostrada anteriorment, la línia de registre de la consola per al procés sayHello comença amb <code>[65/7be2fa]</code>. Això correspon al camí de directori següent: <code>work/65/7be2fad5e71e5f49998f795677fd68</code></p>
+Mirant el que hem obtingut per a l'execució mostrada anteriorment, la línia de registre de la consola per al procés sayHello comença amb <code>[65/7be2fa]</code>. Això correspon al camí de directori següent: <code>work/65/7be2fa7be2fad5e71e5f49998f795677fd68</code></p>
 <p>Vegem què hi ha allà.</p>
 <details class="abstract">
 <summary>Contingut del directori</summary>
@@ -5214,7 +5515,7 @@ Més endavant, aprendreu maneres de generar estructures de directoris de sortida
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">Launching `hello-world.nf` [jovial_mayer] DSL2 - revision: 35bd3425e5</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
@@ -5294,7 +5595,7 @@ Per establir una ubicació personalitzada, només cal editar el <code>path</code
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="go">Launching `hello-world.nf` [tiny_shaw] DSL2 - revision: 757723adc1</span>
 <a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
@@ -5369,7 +5670,7 @@ Només cal afegir <code>mode 'copy'</code> a la definició de sortida a nivell d
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go">Launching `hello-world.nf` [tiny_shaw] DSL2 - revision: 757723adc1</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
@@ -5542,7 +5843,7 @@ En principi podem escriure-ho a qualsevol lloc; però com que el volem donar a l
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="go">Launching `hello-world.nf` [elated_lavoisier] DSL2 - revision: 7c031b42ea</span>
 <a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>
@@ -5581,7 +5882,7 @@ No obstant això, els resultats de les execucions anteriors encara es conserven 
 <a id="__codelineno-43-21" name="__codelineno-43-21"></a><span class="cm"> * Paràmetres del pipeline</span>
 <a id="__codelineno-43-22" name="__codelineno-43-22"></a><span class="cm"> */</span>
 <a id="__codelineno-43-23" name="__codelineno-43-23"></a><span class="n">params</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-43-24" name="__codelineno-43-24"></a><span class="w">    </span><span class="nl">input:</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Holà mundo!&#39;</span>
+<a id="__codelineno-43-24" name="__codelineno-43-24"></a><span class="w">    </span><span class="nl">input:</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hola mundo!&#39;</span>
 <a id="__codelineno-43-25" name="__codelineno-43-25"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Com veieu, podem especificar el tipus d'entrada que el workflow espera (Nextflow 25.10.2 i posteriors).
@@ -5589,7 +5890,7 @@ La sintaxi és <code>nom: Tipus = valor_per_defecte</code>.
 Els tipus suportats inclouen <code>String</code>, <code>Integer</code>, <code>Float</code>, <code>Boolean</code> i <code>Path</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>En workflows més antics, podeu veure que tot aquest bloc <code>params</code> s'escriu simplement com <code>input = 'Holà mundo!'</code>.</p>
+<p>En workflows més antics, podeu veure que tot aquest bloc <code>params</code> s'escriu simplement com <code>input = 'Hola mundo!'</code>.</p>
 </div>
 <p>A mesura que afegiu més paràmetres al vostre pipeline, hauríeu d'afegir-los tots a aquest bloc, tant si necessiteu donar-los un valor per defecte com si no.
 Això facilitarà trobar tots els paràmetres configurables d'una ullada.</p>
@@ -5599,7 +5900,7 @@ Això facilitarà trobar tots els paràmetres configurables d'una ullada.</p>
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="go">Launching `hello-world.nf` [determined_edison] DSL2 - revision: 3539118582</span>
 <a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>
@@ -5614,7 +5915,7 @@ Això facilitarà trobar tots els paràmetres configurables d'una ullada.</p>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>- file : /workspaces/training/hello-nextflow/solutions/1-hello-world/hello-world-3.nf
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>- cause: you tried to assign a value to the class &#39;java.lang.String&#39;
 <a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>@ line 24, column 12.
-<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>      input: String = &#39;Holà mundo!&#39;
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>      input: String = &#39;Hola mundo!&#39;
 <a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>              ^
 <a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>
 <a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>1 error
@@ -5632,7 +5933,7 @@ Consulteu el material d'ajuda sobre <a href="../../info/nxf_versions/">versions 
 <p>La sortida estarà al mateix lloc que anteriorment, però el contingut hauria d'estar actualitzat amb el nou text.</p>
 <details class="abstract">
 <summary>Contingut del fitxer</summary>
-<div class="highlight"><span class="filename">results/hello_world/output.txt</span><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">Holà mundo!</span>
+<div class="highlight"><span class="filename">results/hello_world/output.txt</span><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">Hola mundo!</span>
 </code></pre></div>
 </details>
 <p>Nextflow va utilitzar el valor per defecte del paràmetre de salutació per crear la sortida.</p>
@@ -5643,7 +5944,7 @@ Consulteu el material d'ajuda sobre <a href="../../info/nxf_versions/">versions 
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>
 <a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="go">Launching `hello-world.nf` [elegant_faraday] DSL2 - revision: 3539118582</span>
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>
@@ -5686,7 +5987,7 @@ Això significa que Nextflow només executarà processos que hàgiu afegit o mod
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>
 <a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="go">Launching `hello-world.nf` [golden_cantor] DSL2 - revision: 35bd3425e5</span>
 <a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>
@@ -5800,11 +6101,11 @@ Més informació: [1.1.1. La definició de procés](#111-the-process-definition)
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-0">
     <a href="#quiz-0" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-0-question">
         <p>Quins són els components mínims requerits d'un procés de Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0">Només blocs d'entrada i sortida</label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" correct><label for="quiz-0-1">Blocs de sortida i script</label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" ><label for="quiz-0-2">Blocs d'entrada, sortida i script</label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3">Només un bloc script</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-0-question"><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0">Només blocs d'entrada i sortida</label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" data-correct="true"><label for="quiz-0-1">Blocs de sortida i script</label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" ><label for="quiz-0-2">Blocs d'entrada, sortida i script</label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3">Només un bloc script</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5825,11 +6126,11 @@ Més informació: [1.1.1. La definició de procés](#111-the-process-definition)
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-1">
     <a href="#quiz-1" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-1-question">
         <p>Quin és el propòsit del bloc de sortida en un procés?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">Imprimir resultats a la consola</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" ><label for="quiz-1-1">Desar fitxers al directori work</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" correct><label for="quiz-1-2">Declarar sortides esperades del procés</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Definir variables d'entorn</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-1-question"><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">Imprimir resultats a la consola</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" ><label for="quiz-1-1">Desar fitxers al directori work</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" data-correct="true"><label for="quiz-1-2">Declarar sortides esperades del procés</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Definir variables d'entorn</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5848,11 +6149,11 @@ Quina comanda s'utilitza per executar un workflow de Nextflow?
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-2">
     <a href="#quiz-2" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-2-question">
         <p>Quina comanda s'utilitza per executar un workflow de Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-2-0" ><label for="quiz-2-0"><code>nextflow start</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1"><code>nextflow execute</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" correct><label for="quiz-2-2"><code>nextflow run</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3"><code>nextflow launch</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-2-question"><div><input type="radio" name="answer" value="0" id="quiz-2-0" ><label for="quiz-2-0"><code>nextflow start</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1"><code>nextflow execute</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" data-correct="true"><label for="quiz-2-2"><code>nextflow run</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3"><code>nextflow launch</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5886,7 +6187,7 @@ Més informació: [1.2.2. Trobeu la sortida i els registres al directori `work`]
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-3">
                 <a href="#quiz-3" class="quiz-header-link">#</a>
 
-                <div class="quiz-question">
+                <div class="quiz-question" id="quiz-3-question">
                     <p>Mirant el directori work d'una tasca, quin fitxer conté la comanda real que es va executar?</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>work/a3/7be2fa.../
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── .command.begin
@@ -5900,7 +6201,7 @@ Més informació: [1.2.2. Trobeu la sortida i els registres al directori `work`]
 </code></pre></div>
                 </div>
                 <form action="javascript:void(0);" onsubmit="return false;">
-                    <fieldset><div><input type="radio" name="answer" value="0" id="quiz-3-0" ><label for="quiz-3-0"><code>.command.run</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" correct><label for="quiz-3-1"><code>.command.sh</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2"><code>.command.log</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3"><code>.command.out</code></label></div></fieldset>
+                    <fieldset aria-labelledby="quiz-3-question"><div><input type="radio" name="answer" value="0" id="quiz-3-0" ><label for="quiz-3-0"><code>.command.run</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" data-correct="true"><label for="quiz-3-1"><code>.command.sh</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2"><code>.command.log</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3"><code>.command.out</code></label></div></fieldset>
                     <div class="quiz-feedback hidden"></div>
 
                 </form>
@@ -5921,11 +6222,11 @@ Més informació: [4.1. Torneu a llançar un workflow amb `-resume`](#41-re-laun
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-4">
     <a href="#quiz-4" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-4-question">
         <p>Què fa la bandera <code>-resume</code>?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0">Reinicia el workflow des del principi</label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" ><label for="quiz-4-1">Pausa el workflow</label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" correct><label for="quiz-4-2">Omet processos que ja s'han completat correctament</label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3">Crea una còpia de seguretat del workflow</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-4-question"><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0">Reinicia el workflow des del principi</label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" ><label for="quiz-4-1">Pausa el workflow</label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" data-correct="true"><label for="quiz-4-2">Omet processos que ja s'han completat correctament</label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3">Crea una còpia de seguretat del workflow</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5946,11 +6247,11 @@ Més informació: [2.3. Establiu el mode de publicació a còpia](#23-set-the-pu
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-5">
     <a href="#quiz-5" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-5-question">
         <p>Quin és el mode per defecte per publicar sortides de workflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-5-0" ><label for="quiz-5-0">Copiar fitxers al directori de sortida</label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" correct><label for="quiz-5-1">Crear enllaços simbòlics al directori de sortida</label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" ><label for="quiz-5-2">Moure fitxers al directori de sortida</label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3">Comprimir fitxers al directori de sortida</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-5-question"><div><input type="radio" name="answer" value="0" id="quiz-5-0" ><label for="quiz-5-0">Copiar fitxers al directori de sortida</label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" data-correct="true"><label for="quiz-5-1">Crear enllaços simbòlics al directori de sortida</label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" ><label for="quiz-5-2">Moure fitxers al directori de sortida</label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3">Comprimir fitxers al directori de sortida</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5971,11 +6272,11 @@ Més informació: [3.2. Configureu un paràmetre de línia de comandes per captu
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-6">
     <a href="#quiz-6" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-6-question">
         <p>Com passeu un valor de paràmetre a un workflow de Nextflow des de la línia de comandes?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-6-0" ><label for="quiz-6-0"><code>-parameter value</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>--parameter:value</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" correct><label for="quiz-6-2"><code>--parameter value</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>-p parameter=value</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-6-question"><div><input type="radio" name="answer" value="0" id="quiz-6-0" ><label for="quiz-6-0"><code>-parameter value</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>--parameter:value</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" data-correct="true"><label for="quiz-6-2"><code>--parameter value</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>-p parameter=value</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -5994,16 +6295,69 @@ Com es fa referència a una variable dins d'un bloc script de Nextflow?
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-7">
     <a href="#quiz-7" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-7-question">
         <p>Com es fa referència a una variable dins d'un bloc script de Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0">Utilitzeu la sintaxi <code>%variable%</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" correct><label for="quiz-7-1">Utilitzeu la sintaxi <code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">variable</span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" ><label for="quiz-7-2">Utilitzeu la sintaxi <code>{{variable}}</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3">Utilitzeu la sintaxi <code>[variable]</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-7-question"><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0">Utilitzeu la sintaxi <code>%variable%</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" data-correct="true"><label for="quiz-7-1">Utilitzeu la sintaxi <code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">variable</span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" ><label for="quiz-7-2">Utilitzeu la sintaxi <code>{{variable}}</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3">Utilitzeu la sintaxi <code>[variable]</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
     <section class="content hidden"></section>
-</div><style type="text/css">.quiz {
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -6017,11 +6371,11 @@ Com es fa referència a una variable dins d'un bloc script de Nextflow?
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -6036,11 +6390,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -6050,10 +6404,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -6078,34 +6434,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -6120,8 +6525,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -6376,7 +6788,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -6593,10 +7004,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -6921,14 +7330,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -7051,9 +7567,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -7094,27 +7609,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -7135,7 +7650,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -7155,15 +7670,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -7183,7 +7700,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -7193,8 +7710,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -7208,11 +7725,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -7274,10 +7795,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -7328,34 +7847,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -7376,11 +7891,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -7392,39 +7907,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -7450,6 +7938,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -7469,9 +7963,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();

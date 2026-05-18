@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
                 
@@ -509,15 +540,15 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#catalogue-des-cours-de-formation-nextflow" class="md-nav__link">
+  <a href="#catalog-of-nextflow-training-courses" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Catalogue des cours de formation Nextflow
+        Catalog of Nextflow training courses
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Catalogue des cours de formation Nextflow">
+    <nav class="md-nav" aria-label="Catalog of Nextflow training courses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2604,7 +2635,7 @@
   <span class="md-ellipsis">
     
   
-    Orientation
+    Premiers pas
   
 
     
@@ -2632,7 +2663,7 @@
   <span class="md-ellipsis">
     
   
-    Environnement de Développement
+    Index
   
 
     
@@ -2653,14 +2684,14 @@
   
   
     <li class="md-nav__item">
-      <a href="side_quests/metadata/" class="md-nav__link">
+      <a href="side_quests/essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Métadonnées et meta maps
+    Modèles de Scripting Essentiels
   
 
     
@@ -2709,14 +2740,14 @@
   
   
     <li class="md-nav__item">
-      <a href="side_quests/splitting_and_grouping/" class="md-nav__link">
+      <a href="side_quests/metadata/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Division et regroupement
+    Métadonnées et meta maps
   
 
     
@@ -2737,14 +2768,42 @@
   
   
     <li class="md-nav__item">
-      <a href="side_quests/workflows_of_workflows/" class="md-nav__link">
+      <a href="side_quests/splitting_and_grouping/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Workflows de workflows
+    Séparation et regroupement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/nf_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tests avec nf-test
   
 
     
@@ -2772,7 +2831,7 @@
   <span class="md-ellipsis">
     
   
-    Débogage des Workflows
+    Résolution des problèmes dans les Workflows
   
 
     
@@ -2793,14 +2852,89 @@
   
   
     <li class="md-nav__item">
-      <a href="side_quests/essential_scripting_patterns/" class="md-nav__link">
+      <a href="side_quests/workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Modèles de Script Nextflow Essentiels
+    Workflows de Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développement de plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Développement de plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Développement de plugins
   
 
     
@@ -2821,14 +2955,14 @@
   
   
     <li class="md-nav__item">
-      <a href="side_quests/nf-test/" class="md-nav__link">
+      <a href="side_quests/plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Tests avec nf-test
+    Partie 1 : Les bases des plugins
   
 
     
@@ -2837,6 +2971,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 2 : Créer un projet de plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 3 : Fonctions personnalisées
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 4 : Tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 5 : Observateurs de trace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Partie 6 : Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Résumé
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prochaines étapes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3287,15 +3625,15 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#catalogue-des-cours-de-formation-nextflow" class="md-nav__link">
+  <a href="#catalog-of-nextflow-training-courses" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Catalogue des cours de formation Nextflow
+        Catalog of Nextflow training courses
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Catalogue des cours de formation Nextflow">
+    <nav class="md-nav" aria-label="Catalog of Nextflow training courses">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3540,43 +3878,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -3612,8 +3913,8 @@
 <p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"/></svg></span> <strong>Cours en libre-service</strong></p>
 <hr />
 <p><strong>Bienvenue sur le portail de formation de la communauté Nextflow !</strong></p>
-<p>Les cours de formation listés ci-dessous sont conçus pour être utilisés comme ressource en libre-service.
-Vous pouvez les suivre à votre rythme à tout moment, soit dans l'environnement web que nous fournissons via Github Codespaces, soit dans votre propre environnement.</p>
+<p>Les cours de formation listés ci-dessous sont conçus pour être utilisés en libre-service.
+Vous pouvez les suivre à votre propre rythme, à tout moment, soit dans l'environnement web que nous fournissons via Github Codespaces, soit dans votre propre environnement.</p>
 <p><a class="md-button md-button--primary mt-1" href="#catalog-of-nextflow-training-courses">Explorer les cours <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </li>
 <li>
@@ -3621,37 +3922,37 @@ Vous pouvez les suivre à votre rythme à tout moment, soit dans l'environnement
 <hr />
 <details class="warning">
 <summary>Compatibilité des versions</summary>
-<p><!-- Any update to this content needs to be copied to the local installation page -->
-<strong>Depuis janvier 2026, tous nos cours de formation Nextflow nécessitent Nextflow version 25.10.2 ou ultérieure, avec la syntaxe stricte activée, sauf indication contraire.</strong></p>
+<p><!-- Toute mise à jour de ce contenu doit être copiée sur la page d'installation locale -->
+<strong>À partir de janvier 2026, tous nos cours de formation Nextflow requièrent Nextflow version 25.10.2 ou ultérieure, avec la syntaxe stricte activée, sauf indication contraire.</strong></p>
 <p>Pour plus d'informations sur les exigences de version et la syntaxe stricte, veuillez consulter le <a href="https://nextflow.io/docs/latest/strict-syntax.html">guide de migration de la documentation Nextflow</a>.</p>
-<p>Les versions antérieures du matériel de formation correspondant à la syntaxe précédente sont disponibles via le sélecteur de version dans la barre de menu de cette page web.</p>
+<p>Les versions plus anciennes du matériel de formation correspondant à la syntaxe précédente sont disponibles via le sélecteur de version dans la barre de menu de cette page.</p>
 </details>
 <details class="terminal">
 <summary>Options d'environnement</summary>
-<p>Nous fournissons un environnement de formation web où tout ce dont vous avez besoin pour suivre la formation est préinstallé, accessible via Github Codespaces (nécessite un compte GitHub gratuit).</p>
+<p>Nous fournissons un environnement de formation web où tout ce dont vous avez besoin pour suivre la formation est préinstallé, disponible via Github Codespaces (nécessite un compte GitHub gratuit).</p>
 <p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
-<p>Si cela ne correspond pas à vos besoins, veuillez consulter les autres <a href="envsetup/">Options d'environnement</a>.</p>
+<p>Si cela ne correspond pas à vos besoins, veuillez consulter les autres <a href="envsetup/">options d'environnement</a>.</p>
 </details>
 <details class="learning">
 <summary>Événements de formation</summary>
-<p>Si vous préférez suivre une formation Nextflow dans le cadre d'un événement structuré, il existe de nombreuses opportunités pour le faire. Nous vous recommandons de consulter les options suivantes :</p>
+<p>Si vous préférez suivre une formation Nextflow dans le cadre d'un événement structuré, de nombreuses opportunités s'offrent à vous. Nous vous recommandons de consulter les options suivantes :</p>
 <ul>
-<li><strong><a href="">Training Weeks</a></strong> organisées trimestriellement par l'équipe Communauté</li>
-<li><strong><a href="https://seqera.io/events/">Seqera Events</a></strong> incluent des événements de formation en présentiel organisés par Seqera (recherchez 'Seqera Sessions' et 'Nextflow Summit')</li>
+<li><strong><a href="">Training Weeks</a></strong> organisées trimestriellement par l'équipe Community</li>
+<li><strong><a href="https://seqera.io/events/">Seqera Events</a></strong> comprennent des événements de formation en présentiel organisés par Seqera (recherchez « Seqera Sessions » et « Nextflow Summit »)</li>
 <li><strong><a href="">Nextflow Ambassadors</a></strong> organisent des événements pour leur communauté locale</li>
-<li><strong><a href="https://nf-co.re/events">nf-core events</a></strong> incluent des hackathons communautaires</li>
+<li><strong><a href="https://nf-co.re/events">nf-core events</a></strong> comprennent des hackathons communautaires</li>
 </ul>
 </details>
 <details class="people">
 <summary>Informations pour les formateur·trices</summary>
-<p>Si vous êtes un·e formateur·trice organisant vos propres formations, vous êtes libre d'utiliser nos supports directement depuis le portail de formation à condition d'attribuer le crédit approprié. Voir 'Crédits et contributions' ci-dessous pour plus de détails.</p>
-<p>De plus, nous serions ravis d'avoir de vos nouvelles sur la façon dont nous pourrions mieux soutenir vos efforts de formation ! Veuillez nous contacter à <a href="mailto:community@seqera.io">community@seqera.io</a> ou sur le forum communautaire (voir la page <a href="help/">Aide</a>).</p>
+<p>Si vous êtes un·e formateur·trice qui organise vos propres formations, vous êtes invité·e à utiliser nos supports directement depuis le portail de formation, à condition d'attribuer les crédits appropriés. Consultez la section « Crédits et contributions » ci-dessous pour plus de détails.</p>
+<p>De plus, nous serions ravis d'avoir votre retour sur la façon dont nous pourrions mieux soutenir vos efforts de formation ! Contactez-nous à <a href="mailto:community@seqera.io">community@seqera.io</a> ou sur le forum communautaire (voir la page <a href="help/">Aide</a>).</p>
 </details>
 <details class="licensing">
 <summary>Licence open-source et politique de contribution</summary>
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img align="right" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" src="assets/img/cc_by-nc-sa.svg" /></a></p>
-<p>Ce matériel de formation est développé et maintenu par <a href="https://seqera.io">Seqera</a> et publié sous une licence open-source (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>) au bénéfice de la communauté. Si vous souhaitez utiliser ce matériel d'une manière qui sort du cadre de la licence (notez les limitations concernant l'utilisation commerciale et la redistribution), veuillez nous contacter à <a href="mailto:community@seqera.io">community@seqera.io</a> pour discuter de votre demande.</p>
-<p>Nous accueillons favorablement les améliorations, corrections et rapports de bugs de la communauté. Chaque page comporte une icône <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> en haut à droite de la page qui renvoie au dépôt de code, où vous pouvez signaler des problèmes ou proposer des modifications au matériel source de formation via une pull request. Voir le <code>README.md</code> dans le dépôt pour plus de détails.</p>
+<p>Ce matériel de formation est développé et maintenu par <a href="https://seqera.io">Seqera</a> et publié sous une licence open-source (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>) au bénéfice de la communauté. Si vous souhaitez utiliser ce matériel d'une manière qui dépasse le cadre de la licence (notez les restrictions sur l'utilisation commerciale et la redistribution), veuillez nous contacter à <a href="mailto:community@seqera.io">community@seqera.io</a> pour discuter de votre demande.</p>
+<p>Nous accueillons avec plaisir les améliorations, corrections et signalements de bugs de la communauté. Chaque page dispose d'une icône <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> en haut à droite, qui renvoie vers le dépôt de code, où vous pouvez signaler des problèmes ou proposer des modifications au matériel de formation via une pull request. Consultez le fichier <code>README.md</code> dans le dépôt pour plus de détails.</p>
 </details>
 </li>
 </ul>
@@ -3662,27 +3963,27 @@ Vous pouvez les suivre à votre rythme à tout moment, soit dans l'environnement
 Nous apprécions vos commentaires et suggestions d'amélioration.
 Consultez notre <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">guide de traduction</a> pour plus d'informations.</p>
 </div>
-<h2 id="catalogue-des-cours-de-formation-nextflow">Catalogue des cours de formation Nextflow<a class="headerlink" href="#catalogue-des-cours-de-formation-nextflow" title="Permanent link">&para;</a></h2>
+<h2 id="catalog-of-nextflow-training-courses">Catalog of Nextflow training courses<a class="headerlink" href="#catalog-of-nextflow-training-courses" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
-<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.12 10H19V8.2h-3.62l-2-3.33c-.3-.5-.84-.84-1.46-.84-.18 0-.34.03-.5.08L6 5.8V11h1.8V7.33l2.11-.66L6 22h1.8l2.87-8.11L13 17v5h1.8v-6.41l-2.49-4.54.73-2.87M14 3.8c1 0 1.8-.8 1.8-1.8S15 .2 14 .2 12.2 1 12.2 2 13 3.8 14 3.8"/></svg></span> <strong>Parcours d'introduction</strong></p>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.12 10H19V8.2h-3.62l-2-3.33c-.3-.5-.84-.84-1.46-.84-.18 0-.34.03-.5.08L6 5.8V11h1.8V7.33l2.11-.66L6 22h1.8l2.87-8.11L13 17v5h1.8v-6.41l-2.49-4.54.73-2.87M14 3.8c1 0 1.8-.8 1.8-1.8S15 .2 14 .2 12.2 1 12.2 2 13 3.8 14 3.8"/></svg></span> <strong>Parcours débutant</strong></p>
 <hr />
 <h3 class="mt-1" id="nextflow-for-newcomers"><span class="twemoji nextflow-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.19 14.19 6 18l3.81-8.19L18 6m-6-4A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 8.9a1.1 1.1 0 0 0-1.1 1.1 1.1 1.1 0 0 0 1.1 1.1 1.1 1.1 0 0 0 1.1-1.1 1.1 1.1 0 0 0-1.1-1.1"/></svg></span> Nextflow for Newcomers<a class="headerlink" href="#nextflow-for-newcomers" title="Permanent link">&para;</a></h3>
-<p>Cours indépendants du domaine destinés aux personnes complètement nouvelles à Nextflow. Chaque cours se compose d'une série de modules de formation conçus pour aider les apprenant·es à développer progressivement leurs compétences.</p>
+<p>Des cours indépendants de tout domaine, destinés aux personnes qui découvrent complètement Nextflow. Chaque cours est composé d'une série de modules de formation conçus pour aider les apprenant·es à développer leurs compétences progressivement.</p>
 <details class="courses">
 <summary><strong>Hello Nextflow :</strong> Apprenez à développer vos propres pipelines</summary>
-<p>Ce cours couvre les composants principaux du langage Nextflow avec suffisamment de détails pour permettre le développement de pipelines simples mais entièrement fonctionnels, ainsi que les éléments clés de la conception, du développement et des pratiques de configuration de pipelines.</p>
+<p>Ce cours couvre les composants essentiels du langage Nextflow avec suffisamment de détails pour permettre le développement de pipelines simples mais entièrement fonctionnels, ainsi que les éléments clés de la conception, du développement et des bonnes pratiques de configuration des pipelines.</p>
 <p><a class="md-button md-button--secondary" href="hello_nextflow/">Commencer la formation Hello Nextflow <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <details class="courses">
 <summary><strong>Nextflow Run :</strong> Apprenez à exécuter des pipelines existants</summary>
-<p>Une introduction concise à l'exécution et à la configuration de pipelines Nextflow, basée sur le cours développeur Hello Nextflow mais avec moins d'accent sur le code. Couvre l'exécution, les sorties, la structure de base du code et la configuration pour différents environnements de calcul.</p>
+<p>Une introduction concise à l'exécution et à la configuration de pipelines Nextflow, basée sur le cours Hello Nextflow pour les développeur·ses, mais avec moins d'accent sur le code. Couvre l'exécution, les sorties, la structure de base du code et la configuration pour différents environnements de calcul.</p>
 <p><a class="md-button md-button--secondary" href="nextflow_run/">Commencer la formation Nextflow Run <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <hr />
 <h3 class="mt-1" id="nextflow-for-science"><span class="twemoji nextflow-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.46 6.28 11.05 9c-2.58.26-4.55 2.41-4.55 5a5 5 0 0 0 5 5c2.05 0 3.81-1.23 4.58-3H13.5v-2h8v2h-2.25a8.05 8.05 0 0 1-2.46 4h2.71v2h-16v-2h2.71a8 8 0 0 1-2.71-6c0-3.63 2.46-6.8 5.96-7.72m3.28-4.21.76 1.3.86-.5 3.5 6.06-3.47 2-3.5-6.06.87-.5-.76-1.3z"/></svg></span> Nextflow for Science<a class="headerlink" href="#nextflow-for-science" title="Permanent link">&para;</a></h3>
-<p>Apprenez à appliquer les concepts et composants présentés dans 'Hello Nextflow' à des cas d'usage scientifiques spécifiques.</p>
+<p>Apprenez à appliquer les concepts et composants présentés dans « Hello Nextflow » à des cas d'usage scientifiques spécifiques.</p>
 <details class="courses">
 <summary><strong>Nextflow for Genomics</strong> (variant calling)</summary>
 <p>Pour les chercheur·euses qui souhaitent apprendre à développer leurs propres pipelines de génomique. Le cours utilise un cas d'usage de variant calling pour démontrer comment développer un pipeline de génomique simple mais fonctionnel.</p>
@@ -3690,12 +3991,12 @@ Consultez notre <a href="https://github.com/nextflow-io/training/blob/master/TRA
 </details>
 <details class="courses">
 <summary><strong>Nextflow for RNAseq</strong> (bulk RNAseq)</summary>
-<p>Pour les chercheur·euses qui souhaitent apprendre à développer leurs propres pipelines RNAseq. Le cours utilise un cas d'usage de traitement de RNAseq en bulk pour démontrer comment développer un pipeline RNAseq simple mais fonctionnel.</p>
+<p>Pour les chercheur·euses qui souhaitent apprendre à développer leurs propres pipelines RNAseq. Le cours utilise un cas d'usage de traitement bulk RNAseq pour démontrer comment développer un pipeline RNAseq simple mais fonctionnel.</p>
 <p><a class="md-button md-button--secondary" href="nf4_science/rnaseq/">Commencer la formation Nextflow for RNAseq <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <details class="courses">
 <summary><strong>Nextflow for Imaging</strong> (spatial omics)</summary>
-<p>Pour les chercheur·euses en imagerie et omiques spatiales qui souhaitent apprendre à exécuter et personnaliser des pipelines d'analyse. Le cours utilise le pipeline nf-core/molkart pour fournir un workflow biologiquement pertinent démontrant comment exécuter, configurer et gérer les entrées pour les pipelines Nextflow.</p>
+<p>Pour les chercheur·euses en imagerie et en spatial omics qui souhaitent apprendre à exécuter et personnaliser des pipelines d'analyse. Le cours utilise le pipeline nf-core/molkart pour fournir un pipeline biologiquement pertinent et démontrer comment exécuter, configurer et gérer les entrées pour les workflows de pipelines Nextflow.</p>
 <p><a class="md-button md-button--secondary" href="nf4_science/imaging/">Commencer la formation Nextflow for Imaging <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 </li>
@@ -3704,24 +4005,24 @@ Consultez notre <a href="https://github.com/nextflow-io/training/blob/master/TRA
 <hr />
 <h3 class="mt-1" id="from-nextflow-to-nf-core"><span class="twemoji nextflow-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14v-3.09c-.72-.33-1.39-.73-2-1.2V14zm-2 4H3v-2H1v-2h2V7h2v1.43C6.8 10 9.27 11 12 11s5.2-1 7-2.57V7h2v7h2v2h-2v2h-2v-2H5zm12-7.09V14h2V9.71c-.61.47-1.28.87-2 1.2M16 14v-2.68c-.64.23-1.31.4-2 .52V14zm-3 0v-2.04L12 12l-1-.04V14zm-3 0v-2.16c-.69-.12-1.36-.29-2-.52V14z"/></svg></span> From Nextflow to nf-core<a class="headerlink" href="#from-nextflow-to-nf-core" title="Permanent link">&para;</a></h3>
 <p>Apprenez à utiliser le code et les bonnes pratiques du projet communautaire <a href="https://nf-co.re/">nf-core</a>.</p>
-<p>Ces cours vous aident à passer des fondamentaux de Nextflow aux bonnes pratiques nf-core.
-Comprenez comment et pourquoi la communauté nf-core construit des pipelines, et comment vous pouvez contribuer et réutiliser ces techniques.</p>
+<p>Ces cours vous accompagnent des fondamentaux de Nextflow jusqu'aux bonnes pratiques nf-core.
+Comprenez comment et pourquoi la communauté nf-core développe des pipelines, et comment vous pouvez contribuer et réutiliser ces techniques.</p>
 <details class="courses">
-<summary><strong>Hello nf-core :</strong> Démarrez avec nf-core</summary>
-<p>Pour les développeur·ses qui souhaitent apprendre à exécuter et développer des pipelines conformes à <a href="https://nf-co.re/">nf-core</a>. Le cours couvre la structure des pipelines nf-core avec suffisamment de détails pour permettre le développement de pipelines simples mais entièrement fonctionnels qui suivent le modèle nf-core et les bonnes pratiques de développement, ainsi que l'utilisation de modules nf-core existants.</p>
+<summary><strong>Hello nf-core :</strong> Premiers pas avec nf-core</summary>
+<p>Pour les développeur·ses qui souhaitent apprendre à exécuter et développer des pipelines conformes à <a href="https://nf-co.re/">nf-core</a>. Le cours couvre la structure des pipelines nf-core avec suffisamment de détails pour permettre le développement de pipelines simples mais entièrement fonctionnels, suivant le modèle nf-core et les bonnes pratiques de développement, ainsi que l'utilisation des modules nf-core existants.</p>
 <p><a class="md-button md-button--secondary" href="hello_nf-core/">Commencer la formation Hello nf-core <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <hr />
 <h3 class="mt-1" id="advanced-nextflow-training"><span class="twemoji nextflow-primary"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"/></svg></span> Advanced Nextflow Training<a class="headerlink" href="#advanced-nextflow-training" title="Permanent link">&para;</a></h3>
 <p>Apprenez des concepts et mécanismes avancés pour développer et déployer des pipelines Nextflow afin de répondre à des cas d'usage réels.</p>
 <details class="courses">
-<summary><strong>Side Quests :</strong> Approfondissements sur des sujets autonomes</summary>
-<p>Mini-cours autonomes destinés aux développeur·ses Nextflow qui souhaitent élargir leur gamme et/ou approfondir leurs compétences sur des sujets particuliers. Ils sont présentés de manière linéaire mais peuvent être suivis dans n'importe quel ordre (voir les dépendances dans chaque aperçu de mini-cours).</p>
-<p><a class="md-button md-button--secondary" href="side_quests/">Parcourir les Side Quests <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
+<summary><strong>Quêtes secondaires :</strong> Explorations approfondies de sujets autonomes</summary>
+<p>Des mini-cours autonomes destinés aux développeur·ses Nextflow qui souhaitent élargir leur champ de compétences et/ou approfondir leurs connaissances sur des sujets particuliers. Ils sont présentés de manière linéaire mais peuvent être suivis dans n'importe quel ordre (voir les dépendances dans l'aperçu de chaque mini-cours).</p>
+<p><a class="md-button md-button--secondary" href="side_quests/">Parcourir les Quêtes secondaires <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <details class="courses">
-<summary><strong>Training Collections :</strong> Parcours d'apprentissage recommandés à travers les Side Quests</summary>
-<p>Les Training Collections combinent plusieurs Side Quests afin de fournir une expérience d'apprentissage complète autour d'un thème ou d'un cas d'usage particulier.</p>
+<summary><strong>Training Collections :</strong> Parcours d'apprentissage recommandés à travers les Quêtes secondaires</summary>
+<p>Les Training Collections combinent plusieurs Quêtes secondaires afin de fournir une expérience d'apprentissage complète autour d'un thème ou d'un cas d'usage particulier.</p>
 <p><a class="md-button md-button--secondary" href="training_collections/">Parcourir les Training Collections <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 </li>
@@ -3729,14 +4030,67 @@ Comprenez comment et pourquoi la communauté nf-core construit des pipelines, et
 </div>
 <div class="admonition info">
 <p class="admonition-title">Vous recherchez des supports de formation archivés ?</p>
-<p>Les anciens supports de formation (Fundamentals Training, Advanced Training et autres cours expérimentaux) ont été retirés du portail de formation car ils sont incompatibles avec la syntaxe stricte de Nextflow 3.0.
-Si vous avez besoin d'accéder à ces supports, ils sont disponibles dans l'<a href="https://github.com/nextflow-io/training">historique git</a> avant janvier 2026.</p>
+<p>Les anciens supports de formation (Fundamentals Training, Advanced Training et d'autres cours expérimentaux) ont été retirés du portail de formation car ils sont incompatibles avec la syntaxe stricte de Nextflow 3.0.
+Si vous avez besoin d'accéder à ces supports, ils sont disponibles dans l'<a href="https://github.com/nextflow-io/training">historique git</a> antérieur à janvier 2026.</p>
 </div>
 <hr />
 <div class="homepage_logos">
 <p><img alt="Seqera" src="assets/img/seqera_logo.png#only-light" /></p>
 <p><img alt="Seqera" src="assets/img/seqera_logo_dark.png#only-dark" /></p>
-</div><style type="text/css">.quiz {
+</div><div id="quiz-progress-sidebar" aria-label="Progression du quiz" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Progression du quiz
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Répondu : <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correctes : <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Réinitialiser
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Progression du quiz" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Répondu : <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correctes : <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Réinitialiser
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -3750,11 +4104,11 @@ Si vous avez besoin d'accéder à ces supports, ils sont disponibles dans l'<a h
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -3769,11 +4123,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -3783,10 +4137,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -3811,34 +4167,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -3853,8 +4258,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -4109,7 +4521,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -4156,7 +4567,7 @@ input[type="radio"].wrong {
 }
 </style><script type="text/javascript">var JSConfetti=function(){"use strict";function t(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function e(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function i(t,i,n){return i&&e(t.prototype,i),n&&e(t,n),t}function n(t){return+t.replace(/px/,"")}function s(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,n=Math.random()*(e-t)+t;return Math.floor(n*Math.pow(10,i))/Math.pow(10,i)}function o(t){return t[s(0,t.length)]}var a=["#fcf403","#62fc03","#f4fc03","#03e7fc","#03fca5","#a503fc","#fc03ad","#fc03c2"];function r(t){return Math.log(t)/Math.log(1920)}var h=function(){function e(i){t(this,e);var n=i.initialPosition,a=i.direction,h=i.confettiRadius,c=i.confettiColors,u=i.emojis,l=i.emojiSize,d=i.canvasWidth,f=s(.9,1.7,3)*r(d);this.confettiSpeed={x:f,y:f},this.finalConfettiSpeedX=s(.2,.6,3),this.rotationSpeed=u.length?.01:s(.03,.07,3)*r(d),this.dragForceCoefficient=s(5e-4,9e-4,6),this.radius={x:h,y:h},this.initialRadius=h,this.rotationAngle="left"===a?s(0,.2,3):s(-.2,0,3),this.emojiSize=l,this.emojiRotationAngle=s(0,2*Math.PI),this.radiusYUpdateDirection="down";var m="left"===a?s(82,15)*Math.PI/180:s(-15,-82)*Math.PI/180;this.absCos=Math.abs(Math.cos(m)),this.absSin=Math.abs(Math.sin(m));var v=s(-150,0),p={x:n.x+("left"===a?-v:v)*this.absCos,y:n.y-v*this.absSin};this.currentPosition=Object.assign({},p),this.initialPosition=Object.assign({},p),this.color=u.length?null:o(c),this.emoji=u.length?o(u):null,this.createdAt=(new Date).getTime(),this.direction=a}return i(e,[{key:"draw",value:function(t){var e=this.currentPosition,i=this.radius,n=this.color,s=this.emoji,o=this.rotationAngle,a=this.emojiRotationAngle,r=this.emojiSize,h=window.devicePixelRatio;n?(t.fillStyle=n,t.beginPath(),t.ellipse(e.x*h,e.y*h,i.x*h,i.y*h,o,0,2*Math.PI),t.fill()):s&&(t.font="".concat(r,"px serif"),t.save(),t.translate(h*e.x,h*e.y),t.rotate(a),t.textAlign="center",t.fillText(s,0,0),t.restore())}},{key:"updatePosition",value:function(t,e){var i=this.confettiSpeed,n=this.dragForceCoefficient,s=this.finalConfettiSpeedX,o=this.radiusYUpdateDirection,a=this.rotationSpeed,r=this.createdAt,h=this.direction,c=e-r;i.x>s&&(this.confettiSpeed.x-=n*t),this.currentPosition.x+=i.x*("left"===h?-this.absCos:this.absCos)*t,this.currentPosition.y=this.initialPosition.y-i.y*this.absSin*c+.00125*Math.pow(c,2)/2,this.rotationSpeed-=this.emoji?1e-4:1e-5*t,this.rotationSpeed<0&&(this.rotationSpeed=0),this.emoji?this.emojiRotationAngle+=this.rotationSpeed*t%(2*Math.PI):"down"===o?(this.radius.y-=t*a,this.radius.y<=0&&(this.radius.y=0,this.radiusYUpdateDirection="up")):(this.radius.y+=t*a,this.radius.y>=this.initialRadius&&(this.radius.y=this.initialRadius,this.radiusYUpdateDirection="down"))}},{key:"getIsVisibleOnCanvas",value:function(t){return this.currentPosition.y<t+100}}]),e}();function c(){var t=document.createElement("canvas");return t.style.position="fixed",t.style.width="100%",t.style.height="100%",t.style.top="0",t.style.left="0",t.style.zIndex="1000",t.style.pointerEvents="none",document.body.appendChild(t),t}function u(t){var e=t.confettiRadius,i=void 0===e?6:e,n=t.confettiNumber,s=void 0===n?t.confettiesNumber||(t.emojis?40:250):n,o=t.confettiColors,r=void 0===o?a:o,h=t.emojis,c=void 0===h?t.emojies||[]:h,u=t.emojiSize,l=void 0===u?80:u;return t.emojies&&console.error("emojies argument is deprecated, please use emojis instead"),t.confettiesNumber&&console.error("confettiesNumber argument is deprecated, please use confettiNumber instead"),{confettiRadius:i,confettiNumber:s,confettiColors:r,emojis:c,emojiSize:l}}var l=function(){function e(i){var n=this;t(this,e),this.canvasContext=i,this.shapes=[],this.promise=new Promise((function(t){return n.resolvePromise=t}))}return i(e,[{key:"getBatchCompletePromise",value:function(){return this.promise}},{key:"addShapes",value:function(){var t;(t=this.shapes).push.apply(t,arguments)}},{key:"complete",value:function(){var t;return!this.shapes.length&&(null===(t=this.resolvePromise)||void 0===t||t.call(this),!0)}},{key:"processShapes",value:function(t,e,i){var n=this,s=t.timeDelta,o=t.currentTime;this.shapes=this.shapes.filter((function(t){return t.updatePosition(s,o),t.draw(n.canvasContext),!i||t.getIsVisibleOnCanvas(e)}))}}]),e}();return function(){function e(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};t(this,e),this.activeConfettiBatches=[],this.canvas=i.canvas||c(),this.canvasContext=this.canvas.getContext("2d"),this.requestAnimationFrameRequested=!1,this.lastUpdated=(new Date).getTime(),this.iterationIndex=0,this.loop=this.loop.bind(this),requestAnimationFrame(this.loop)}return i(e,[{key:"loop",value:function(){var t,e,i,s,o;this.requestAnimationFrameRequested=!1,t=this.canvas,e=window.devicePixelRatio,i=getComputedStyle(t),s=n(i.getPropertyValue("width")),o=n(i.getPropertyValue("height")),t.setAttribute("width",(s*e).toString()),t.setAttribute("height",(o*e).toString());var a=(new Date).getTime(),r=a-this.lastUpdated,h=this.canvas.offsetHeight,c=this.iterationIndex%10==0;this.activeConfettiBatches=this.activeConfettiBatches.filter((function(t){return t.processShapes({timeDelta:r,currentTime:a},h,c),!c||!t.complete()})),this.iterationIndex++,this.queueAnimationFrameIfNeeded(a)}},{key:"queueAnimationFrameIfNeeded",value:function(t){this.requestAnimationFrameRequested||this.activeConfettiBatches.length<1||(this.requestAnimationFrameRequested=!0,this.lastUpdated=t||(new Date).getTime(),requestAnimationFrame(this.loop))}},{key:"addConfetti",value:function(){for(var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=u(t),i=e.confettiRadius,n=e.confettiNumber,s=e.confettiColors,o=e.emojis,a=e.emojiSize,r=this.canvas.getBoundingClientRect(),c=r.width,d=r.height,f=5*d/7,m={x:0,y:f},v={x:c,y:f},p=new l(this.canvasContext),y=0;y<n/2;y++){var g=new h({initialPosition:m,direction:"right",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c}),C=new h({initialPosition:v,direction:"left",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c});p.addShapes(g,C)}return this.activeConfettiBatches.push(p),this.queueAnimationFrameIfNeeded(),p.getBatchCompletePromise()}},{key:"clearCanvas",value:function(){this.activeConfettiBatches=[]}},{key:"destroyCanvas",value:function(){this.canvas.remove()}}]),e}()}();
 </script><script type="text/javascript">
-window.mkdocsQuizTranslations = {"Submit": "Soumettre", "Question {n}": "Question {n}", "Quiz Progress": "Progression du quiz", "questions answered": "questions répondues", "correct": "correctes", "Quiz Complete!": "Quiz terminé !", "Reset quiz": "Réinitialiser le quiz", "Quiz results are saved to your browser's local storage and will persist between sessions.": "Les résultats du quiz sont enregistrés dans le stockage local de votre navigateur et persisteront entre les sessions.", "Outstanding! You aced it!": "Exceptionnel ! Vous avez tout réussi !", "Great job! You really know your stuff!": "Excellent travail ! Vous maîtrisez vraiment le sujet !", "Good effort! Keep learning!": "Bien joué ! Continuez à apprendre !", "Not bad, but there's room for improvement!": "Pas mal, mais peut mieux faire !", "Better luck next time! Keep trying!": "Ça sera mieux la prochaine fois ! Continuez d'essayer !", "Are you sure you want to reset the quiz? This will clear your progress.": "Êtes-vous sûr de vouloir réinitialiser le quiz ? Cela effacera votre progression.", "Try Again": "Réessayer", "Correct answer!": "Bonne réponse !", "Incorrect answer. Please try again.": "Mauvaise réponse. Veuillez réessayer.", "Incorrect answer.": "Mauvaise réponse.", "Answered:": "Répondu :", "Correct:": "Correctes :", "Reset": "Réinitialiser", "(empty)": "(vide)"};
+window.mkdocsQuizTranslations = {"Submit": "Soumettre", "Answer": "Réponse", "Question {n}": "Question {n}", "Quiz Progress": "Progression du quiz", "questions answered": "questions répondues", "correct": "correctes", "Quiz Complete!": "Quiz terminé !", "Reset quiz": "Réinitialiser le quiz", "Quiz results are saved to your browser's local storage and will persist between sessions.": "Les résultats du quiz sont enregistrés dans le stockage local de votre navigateur et persisteront entre les sessions.", "Outstanding! You aced it!": "Exceptionnel ! Vous avez tout réussi !", "Great job! You really know your stuff!": "Excellent travail ! Vous maîtrisez vraiment le sujet !", "Good effort! Keep learning!": "Bien joué ! Continuez à apprendre !", "Not bad, but there's room for improvement!": "Pas mal, mais peut mieux faire !", "Better luck next time! Keep trying!": "Ça sera mieux la prochaine fois ! Continuez d'essayer !", "Are you sure you want to reset the quiz? This will clear your progress.": "Êtes-vous sûr de vouloir réinitialiser le quiz ? Cela effacera votre progression.", "Try Again": "Réessayer", "Correct answer!": "Bonne réponse !", "Incorrect answer. Please try again.": "Mauvaise réponse. Veuillez réessayer.", "Incorrect answer.": "Mauvaise réponse.", "Answered:": "Répondu :", "Correct:": "Correctes :", "Reset": "Réinitialiser", "(empty)": "(vide)"};
 </script><script type="text/javascript">
 window.mkdocsQuizConfig = {
   confetti: true,
@@ -4326,10 +4737,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -4654,14 +5063,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -4784,9 +5300,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -4827,27 +5342,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -4868,7 +5383,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -4888,15 +5403,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -4916,7 +5433,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -4926,8 +5443,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -4941,11 +5458,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -5007,10 +5528,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -5061,34 +5580,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -5109,11 +5624,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -5125,39 +5640,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -5183,6 +5671,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -5202,9 +5696,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();

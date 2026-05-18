@@ -14,7 +14,7 @@
         <link rel="prev" href="../orientation/">
       
       
-        <link rel="next" href="../metadata/">
+        <link rel="next" href="../essential_scripting_patterns/">
       
       
         
@@ -43,11 +43,11 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Ambiente de Desenvolvimento - training.nextflow.io</title>
+        <title>Index - training.nextflow.io</title>
       
     
     
@@ -164,6 +164,64 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
@@ -196,7 +254,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ambiente de Desenvolvimento
+              Index
             
           </span>
         </div>
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    Orientação
+    Primeiros passos
   
 
     
@@ -2354,7 +2385,7 @@
   <span class="md-ellipsis">
     
   
-    Ambiente de Desenvolvimento
+    Index
   
 
     
@@ -2372,7 +2403,7 @@
   <span class="md-ellipsis">
     
   
-    Ambiente de Desenvolvimento
+    Index
   
 
     
@@ -2392,10 +2423,10 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#o-que-voce-deve-saber-primeiro" class="md-nav__link">
+  <a href="#o-que-voce-deve-saber-antes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        O que você deve saber primeiro
+        O que você deve saber antes
       
     </span>
   </a>
@@ -2466,10 +2497,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2480,22 +2511,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#1-destaque-de-sintaxe-e-estrutura-de-codigo" class="md-nav__link">
+  <a href="#1-realce-de-sintaxe-e-estrutura-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Destaque de Sintaxe e Estrutura de Código
+        1. Realce de Sintaxe e Estrutura do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Destaque de Sintaxe e Estrutura de Código">
+    <nav class="md-nav" aria-label="1. Realce de Sintaxe e Estrutura do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-elementos-de-sintaxe-nextflow" class="md-nav__link">
+  <a href="#11-elementos-de-sintaxe-do-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Elementos de Sintaxe Nextflow
+        1.1. Elementos de Sintaxe do Nextflow
       
     </span>
   </a>
@@ -2503,10 +2534,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-compreendendo-a-estrutura-de-codigo" class="md-nav__link">
+  <a href="#12-entendendo-a-estrutura-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Compreendendo a Estrutura de Código
+        1.2. Entendendo a Estrutura do Código
       
     </span>
   </a>
@@ -2525,10 +2556,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_1" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2539,34 +2570,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2-autocompletar-inteligente" class="md-nav__link">
+  <a href="#2-auto-completar-inteligente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Autocompletar Inteligente
+        2. Auto-completar Inteligente
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Autocompletar Inteligente">
+    <nav class="md-nav" aria-label="2. Auto-completar Inteligente">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-sugestoes-sensiveis-ao-contexto" class="md-nav__link">
+  <a href="#21-sugestoes-contextuais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Sugestões Sensíveis ao Contexto
+        2.1. Sugestões Contextuais
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.1. Sugestões Sensíveis ao Contexto">
+    <nav class="md-nav" aria-label="2.1. Sugestões Contextuais">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operacoes-de-canal" class="md-nav__link">
+  <a href="#operacoes-com-canais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operações de Canal
+        Operações com Canais
       
     </span>
   </a>
@@ -2612,10 +2643,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_2" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2660,10 +2691,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-padroes-de-erros-comuns" class="md-nav__link">
+  <a href="#33-padroes-comuns-de-erro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Padrões de Erros Comuns
+        3.3. Padrões Comuns de Erro
       
     </span>
   </a>
@@ -2682,10 +2713,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_3" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2696,15 +2727,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-navegacao-de-codigo-e-gerenciamento-de-simbolos" class="md-nav__link">
+  <a href="#4-navegacao-no-codigo-e-gerenciamento-de-simbolos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Navegação de Código e Gerenciamento de Símbolos
+        4. Navegação no Código e Gerenciamento de Símbolos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Navegação de Código e Gerenciamento de Símbolos">
+    <nav class="md-nav" aria-label="4. Navegação no Código e Gerenciamento de Símbolos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2719,10 +2750,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-navegacao-de-simbolos" class="md-nav__link">
+  <a href="#42-navegacao-por-simbolos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Navegação de Símbolos
+        4.2. Navegação por Símbolos
       
     </span>
   </a>
@@ -2741,10 +2772,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#44-painel-outline" class="md-nav__link">
+  <a href="#44-painel-de-estrutura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4. Painel Outline
+        4.4. Painel de Estrutura
       
     </span>
   </a>
@@ -2752,10 +2783,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#45-visualizacao-dag" class="md-nav__link">
+  <a href="#45-visualizacao-do-dag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.5. Visualização DAG
+        4.5. Visualização do DAG
       
     </span>
   </a>
@@ -2774,10 +2805,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_4" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2800,10 +2831,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-navegacao-rapida-de-arquivos" class="md-nav__link">
+  <a href="#51-navegacao-rapida-entre-arquivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. Navegação Rápida de Arquivos
+        5.1. Navegação Rápida entre Arquivos
       
     </span>
   </a>
@@ -2811,10 +2842,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-editor-dividido-para-desenvolvimento-multi-arquivo" class="md-nav__link">
+  <a href="#52-editor-dividido-para-desenvolvimento-com-multiplos-arquivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Editor Dividido para Desenvolvimento Multi-arquivo
+        5.2. Editor Dividido para Desenvolvimento com Múltiplos Arquivos
       
     </span>
   </a>
@@ -2844,10 +2875,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_5" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2858,15 +2889,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-formatacao-de-codigo-e-manutencao" class="md-nav__link">
+  <a href="#6-formatacao-e-manutencao-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Formatação de Código e Manutenção
+        6. Formatação e Manutenção do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Formatação de Código e Manutenção">
+    <nav class="md-nav" aria-label="6. Formatação e Manutenção do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2881,15 +2912,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-recursos-de-organizacao-de-codigo" class="md-nav__link">
+  <a href="#62-recursos-de-organizacao-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Recursos de Organização de Código
+        6.2. Recursos de Organização do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Recursos de Organização de Código">
+    <nav class="md-nav" aria-label="6.2. Recursos de Organização do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2926,10 +2957,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#selecao-e-edicao-multi-linha" class="md-nav__link">
+  <a href="#selecao-e-edicao-de-multiplas-linhas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seleção e Edição Multi-linha
+        Seleção e Edição de Múltiplas Linhas
       
     </span>
   </a>
@@ -2953,10 +2984,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_6" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -2967,15 +2998,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#7-integracao-com-fluxo-de-trabalho-de-desenvolvimento" class="md-nav__link">
+  <a href="#7-integracao-com-o-fluxo-de-trabalho-de-desenvolvimento" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Integração com Fluxo de Trabalho de Desenvolvimento
+        7. Integração com o Fluxo de Trabalho de Desenvolvimento
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Integração com Fluxo de Trabalho de Desenvolvimento">
+    <nav class="md-nav" aria-label="7. Integração com o Fluxo de Trabalho de Desenvolvimento">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3012,10 +3043,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_7" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -3029,12 +3060,12 @@
   <a href="#8-recapitulacao-e-notas-rapidas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Recapitulação e notas rápidas
+        8. Recapitulação e Notas Rápidas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8. Recapitulação e notas rápidas">
+    <nav class="md-nav" aria-label="8. Recapitulação e Notas Rápidas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3086,10 +3117,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_8" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -3302,14 +3333,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../metadata/" class="md-nav__link">
+      <a href="../essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Metadados e mapas meta
+    Padrões Essenciais de Scripting
   
 
     
@@ -3337,7 +3368,35 @@
   <span class="md-ellipsis">
     
   
-    Processamento de entrada de arquivos
+    Processamento de Entrada de Arquivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadados e Meta Maps
   
 
     
@@ -3386,14 +3445,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
+      <a href="../nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fluxos de Trabalho de Fluxos de Trabalho
+    Index
   
 
     
@@ -3421,7 +3480,7 @@
   <span class="md-ellipsis">
     
   
-    Depurando Workflows
+    Solução de Problemas em Fluxos de Trabalho
   
 
     
@@ -3442,14 +3501,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../essential_scripting_patterns/" class="md-nav__link">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Padrões Essenciais de Script Nextflow
+    Fluxos de Trabalho de Fluxos de Trabalho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento de Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvimento de Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento de Plugins
   
 
     
@@ -3470,14 +3604,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Testando com nf-test
+    Parte 1: Conceitos Básicos de Plugins
   
 
     
@@ -3486,6 +3620,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 2: Criar um Projeto de Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 3: Funções Personalizadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 4: Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 6: Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Próximos Passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3934,10 +4272,10 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#o-que-voce-deve-saber-primeiro" class="md-nav__link">
+  <a href="#o-que-voce-deve-saber-antes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        O que você deve saber primeiro
+        O que você deve saber antes
       
     </span>
   </a>
@@ -4008,10 +4346,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4022,22 +4360,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#1-destaque-de-sintaxe-e-estrutura-de-codigo" class="md-nav__link">
+  <a href="#1-realce-de-sintaxe-e-estrutura-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Destaque de Sintaxe e Estrutura de Código
+        1. Realce de Sintaxe e Estrutura do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Destaque de Sintaxe e Estrutura de Código">
+    <nav class="md-nav" aria-label="1. Realce de Sintaxe e Estrutura do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-elementos-de-sintaxe-nextflow" class="md-nav__link">
+  <a href="#11-elementos-de-sintaxe-do-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Elementos de Sintaxe Nextflow
+        1.1. Elementos de Sintaxe do Nextflow
       
     </span>
   </a>
@@ -4045,10 +4383,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-compreendendo-a-estrutura-de-codigo" class="md-nav__link">
+  <a href="#12-entendendo-a-estrutura-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Compreendendo a Estrutura de Código
+        1.2. Entendendo a Estrutura do Código
       
     </span>
   </a>
@@ -4067,10 +4405,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_1" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4081,34 +4419,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2-autocompletar-inteligente" class="md-nav__link">
+  <a href="#2-auto-completar-inteligente" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Autocompletar Inteligente
+        2. Auto-completar Inteligente
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Autocompletar Inteligente">
+    <nav class="md-nav" aria-label="2. Auto-completar Inteligente">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-sugestoes-sensiveis-ao-contexto" class="md-nav__link">
+  <a href="#21-sugestoes-contextuais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Sugestões Sensíveis ao Contexto
+        2.1. Sugestões Contextuais
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.1. Sugestões Sensíveis ao Contexto">
+    <nav class="md-nav" aria-label="2.1. Sugestões Contextuais">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operacoes-de-canal" class="md-nav__link">
+  <a href="#operacoes-com-canais" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operações de Canal
+        Operações com Canais
       
     </span>
   </a>
@@ -4154,10 +4492,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_2" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4202,10 +4540,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-padroes-de-erros-comuns" class="md-nav__link">
+  <a href="#33-padroes-comuns-de-erro" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Padrões de Erros Comuns
+        3.3. Padrões Comuns de Erro
       
     </span>
   </a>
@@ -4224,10 +4562,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_3" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4238,15 +4576,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-navegacao-de-codigo-e-gerenciamento-de-simbolos" class="md-nav__link">
+  <a href="#4-navegacao-no-codigo-e-gerenciamento-de-simbolos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Navegação de Código e Gerenciamento de Símbolos
+        4. Navegação no Código e Gerenciamento de Símbolos
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Navegação de Código e Gerenciamento de Símbolos">
+    <nav class="md-nav" aria-label="4. Navegação no Código e Gerenciamento de Símbolos">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4261,10 +4599,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-navegacao-de-simbolos" class="md-nav__link">
+  <a href="#42-navegacao-por-simbolos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Navegação de Símbolos
+        4.2. Navegação por Símbolos
       
     </span>
   </a>
@@ -4283,10 +4621,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#44-painel-outline" class="md-nav__link">
+  <a href="#44-painel-de-estrutura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4. Painel Outline
+        4.4. Painel de Estrutura
       
     </span>
   </a>
@@ -4294,10 +4632,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#45-visualizacao-dag" class="md-nav__link">
+  <a href="#45-visualizacao-do-dag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.5. Visualização DAG
+        4.5. Visualização do DAG
       
     </span>
   </a>
@@ -4316,10 +4654,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_4" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4342,10 +4680,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-navegacao-rapida-de-arquivos" class="md-nav__link">
+  <a href="#51-navegacao-rapida-entre-arquivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. Navegação Rápida de Arquivos
+        5.1. Navegação Rápida entre Arquivos
       
     </span>
   </a>
@@ -4353,10 +4691,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-editor-dividido-para-desenvolvimento-multi-arquivo" class="md-nav__link">
+  <a href="#52-editor-dividido-para-desenvolvimento-com-multiplos-arquivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Editor Dividido para Desenvolvimento Multi-arquivo
+        5.2. Editor Dividido para Desenvolvimento com Múltiplos Arquivos
       
     </span>
   </a>
@@ -4386,10 +4724,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_5" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4400,15 +4738,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-formatacao-de-codigo-e-manutencao" class="md-nav__link">
+  <a href="#6-formatacao-e-manutencao-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Formatação de Código e Manutenção
+        6. Formatação e Manutenção do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Formatação de Código e Manutenção">
+    <nav class="md-nav" aria-label="6. Formatação e Manutenção do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4423,15 +4761,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-recursos-de-organizacao-de-codigo" class="md-nav__link">
+  <a href="#62-recursos-de-organizacao-do-codigo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Recursos de Organização de Código
+        6.2. Recursos de Organização do Código
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Recursos de Organização de Código">
+    <nav class="md-nav" aria-label="6.2. Recursos de Organização do Código">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4468,10 +4806,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#selecao-e-edicao-multi-linha" class="md-nav__link">
+  <a href="#selecao-e-edicao-de-multiplas-linhas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Seleção e Edição Multi-linha
+        Seleção e Edição de Múltiplas Linhas
       
     </span>
   </a>
@@ -4495,10 +4833,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_6" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4509,15 +4847,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#7-integracao-com-fluxo-de-trabalho-de-desenvolvimento" class="md-nav__link">
+  <a href="#7-integracao-com-o-fluxo-de-trabalho-de-desenvolvimento" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Integração com Fluxo de Trabalho de Desenvolvimento
+        7. Integração com o Fluxo de Trabalho de Desenvolvimento
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Integração com Fluxo de Trabalho de Desenvolvimento">
+    <nav class="md-nav" aria-label="7. Integração com o Fluxo de Trabalho de Desenvolvimento">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4554,10 +4892,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_7" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4571,12 +4909,12 @@
   <a href="#8-recapitulacao-e-notas-rapidas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Recapitulação e notas rápidas
+        8. Recapitulação e Notas Rápidas
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8. Recapitulação e notas rápidas">
+    <nav class="md-nav" aria-label="8. Recapitulação e Notas Rápidas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4628,10 +4966,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#qual-e-o-proximo-passo_8" class="md-nav__link">
+  <a href="#o-que-vem-a-seguir_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Qual é o próximo passo?
+        O que vem a seguir?
       
     </span>
   </a>
@@ -4836,43 +5174,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4882,7 +5183,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/dev_environment.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/dev_environment/index.md"
   title="Editar esta página"
   class="md-content__button md-icon"
   rel="edit"
@@ -4899,48 +5200,49 @@
 </a>
  
 
+<hr />
 <h1 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento<a class="headerlink" href="#ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h1>
 <p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> Tradução assistida por IA - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">saiba mais e sugira melhorias</a></span></p>
-<p>Ambientes de Desenvolvimento Integrados (IDEs) modernos podem transformar dramaticamente sua experiência de desenvolvimento com Nextflow. Este side quest foca especificamente em aproveitar o VS Code e sua extensão Nextflow para escrever código mais rapidamente, detectar erros precocemente e navegar workflows complexos de forma eficiente.</p>
+<p>Ambientes de Desenvolvimento Integrados (IDEs) modernos podem transformar radicalmente sua experiência de desenvolvimento com Nextflow. Esta missão secundária foca especificamente em aproveitar o VS Code e sua extensão para Nextflow para escrever código mais rápido, detectar erros cedo e navegar por fluxos de trabalho complexos com eficiência.</p>
 <div class="admonition note">
-<p class="admonition-title">Este não é um tutorial tradicional</p>
-<p>Ao contrário de outros módulos de treinamento, este guia é organizado como uma coleção de dicas rápidas, sugestões e exemplos práticos em vez de um tutorial passo a passo. Cada seção pode ser explorada independentemente com base em seus interesses e necessidades atuais de desenvolvimento. Sinta-se à vontade para pular entre seções e focar nos recursos que serão mais imediatamente úteis para o desenvolvimento do seu fluxo de trabalho.</p>
+<p class="admonition-title">Isso não é um tutorial tradicional</p>
+<p>Ao contrário de outros módulos de treinamento, este guia é organizado como uma coleção de dicas rápidas, sugestões e exemplos práticos, em vez de um tutorial passo a passo. Cada seção pode ser explorada de forma independente, de acordo com seus interesses e necessidades de desenvolvimento atuais. Sinta-se à vontade para pular entre as seções e focar nos recursos que serão mais imediatamente úteis para o desenvolvimento do seu fluxo de trabalho.</p>
 </div>
-<h2 id="o-que-voce-deve-saber-primeiro">O que você deve saber primeiro<a class="headerlink" href="#o-que-voce-deve-saber-primeiro" title="Permanent link">&para;</a></h2>
-<p>Este guia assume que você completou o curso de treinamento <a href="../hello_nextflow/">Hello Nextflow</a> e está confortável com conceitos fundamentais do Nextflow, incluindo:</p>
+<h2 id="o-que-voce-deve-saber-antes">O que você deve saber antes<a class="headerlink" href="#o-que-voce-deve-saber-antes" title="Permanent link">&para;</a></h2>
+<p>Este guia assume que você concluiu o curso de treinamento <a href="../../hello_nextflow/">Hello Nextflow</a> e está confortável com os conceitos fundamentais do Nextflow, incluindo:</p>
 <ul>
-<li><strong>Estrutura básica de fluxo de trabalho</strong>: Compreensão de processos, fluxos de trabalho e como eles se conectam</li>
-<li><strong>Operações de canal</strong>: Criação de canais, passagem de dados entre processos e uso de operadores básicos</li>
-<li><strong>Módulos e organização</strong>: Criação de módulos reutilizáveis e uso de declarações include</li>
-<li><strong>Fundamentos de configuração</strong>: Uso do <code>nextflow.config</code> para parâmetros, diretivas de processo e perfis</li>
+<li><strong>Estrutura básica do fluxo de trabalho</strong>: Entender processos, fluxos de trabalho e como eles se conectam</li>
+<li><strong>Operações com canais</strong>: Criar canais, passar dados entre processos e usar operadores básicos</li>
+<li><strong>Módulos e organização</strong>: Criar módulos reutilizáveis e usar declarações include</li>
+<li><strong>Noções básicas de configuração</strong>: Usar <code>nextflow.config</code> para parâmetros, diretivas de processo e perfis</li>
 </ul>
 <h2 id="o-que-voce-aprendera-aqui">O que você aprenderá aqui<a class="headerlink" href="#o-que-voce-aprendera-aqui" title="Permanent link">&para;</a></h2>
-<p>Este guia foca em <strong>recursos de produtividade do IDE</strong> que tornarão você um desenvolvedor Nextflow mais eficiente:</p>
+<p>Este guia foca em <strong>recursos de produtividade do IDE</strong> que farão de você um desenvolvedor Nextflow mais eficiente:</p>
 <ul>
-<li><strong>Destaque de sintaxe avançado</strong>: Compreender o que o VS Code está mostrando sobre a estrutura do seu código</li>
-<li><strong>Autocompletar inteligente</strong>: Aproveitar sugestões sensíveis ao contexto para escrever código mais rapidamente</li>
-<li><strong>Detecção de erros e diagnósticos</strong>: Capturar erros de sintaxe antes de executar seu fluxo de trabalho</li>
-<li><strong>Navegação de código</strong>: Mover-se rapidamente entre processos, módulos e definições</li>
-<li><strong>Formatação e organização</strong>: Manter estilo de código consistente e legível</li>
+<li><strong>Realce de sintaxe avançado</strong>: Entender o que o VS Code está mostrando sobre a estrutura do seu código</li>
+<li><strong>Auto-completar inteligente</strong>: Aproveitar sugestões contextuais para escrever código mais rápido</li>
+<li><strong>Detecção de erros e diagnósticos</strong>: Identificar erros de sintaxe antes de executar seu fluxo de trabalho</li>
+<li><strong>Navegação no código</strong>: Mover-se rapidamente entre processos, módulos e definições</li>
+<li><strong>Formatação e organização</strong>: Manter um estilo de código consistente e legível</li>
 <li><strong>Desenvolvimento assistido por IA</strong> (opcional): Usar ferramentas modernas de IA integradas ao seu IDE</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Por que recursos de IDE agora?</p>
-<p>Você provavelmente já estava usando o VS Code durante o curso <a href="../hello_nextflow/">Hello Nextflow</a>, mas mantivemos o foco no aprendizado dos fundamentos do Nextflow em vez dos recursos do IDE. Agora que você está confortável com conceitos básicos do Nextflow como processos, fluxos de trabalho, canais e módulos, você está pronto para aproveitar os recursos sofisticados do IDE que o tornarão um desenvolvedor mais eficiente.</p>
-<p>Pense nisso como "subir de nível" seu ambiente de desenvolvimento - o mesmo editor que você tem usado possui capacidades muito mais poderosas que se tornam verdadeiramente valiosas uma vez que você entende com o que elas estão te ajudando.</p>
+<p>Você provavelmente já estava usando o VS Code durante o curso <a href="../../hello_nextflow/">Hello Nextflow</a>, mas mantivemos o foco no aprendizado dos fundamentos do Nextflow em vez dos recursos do IDE. Agora que você está confortável com os conceitos básicos do Nextflow — como processos, fluxos de trabalho, canais e módulos — você está pronto para aproveitar os sofisticados recursos do IDE que farão de você um desenvolvedor mais eficiente.</p>
+<p>Pense nisso como "subir de nível" no seu ambiente de desenvolvimento — o mesmo editor que você tem usado possui capacidades muito mais poderosas que se tornam verdadeiramente valiosas quando você entende o que elas estão te ajudando a fazer.</p>
 </div>
 <hr />
 <h2 id="0-configuracao-e-aquecimento">0. Configuração e Aquecimento<a class="headerlink" href="#0-configuracao-e-aquecimento" title="Permanent link">&para;</a></h2>
-<p>Vamos configurar um espaço de trabalho especificamente para explorar recursos do IDE:</p>
-<div class="highlight"><span class="filename">Navegue para o diretório de recursos do IDE</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>side-quests/ide_features
+<p>Vamos configurar um espaço de trabalho especificamente para explorar os recursos do IDE:</p>
+<div class="highlight"><span class="filename">Navigate to the IDE features directory</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>side-quests/ide_features
 </code></pre></div>
 <p>Abra este diretório no VS Code:</p>
-<div class="highlight"><span class="filename">Abra o VS Code no diretório atual</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
+<div class="highlight"><span class="filename">Open VS Code in current directory</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
 </code></pre></div>
 <p>O diretório <code>ide_features</code> contém fluxos de trabalho de exemplo que demonstram vários recursos do IDE:</p>
-<div class="highlight"><span class="filename">Mostre a estrutura de diretórios</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tree<span class="w"> </span>.
+<div class="highlight"><span class="filename">Show directory structure</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tree<span class="w"> </span>.
 </code></pre></div>
-<div class="highlight"><span class="filename">Estrutura do projeto</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">tree .</span>
+<div class="highlight"><span class="filename">Project structure</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">tree .</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">.</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">├── basic_workflow.nf</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">├── complex_workflow.nf</span>
@@ -4963,79 +5265,79 @@
 <p class="admonition-title">Sobre os Arquivos de Exemplo</p>
 <ul>
 <li><code>basic_workflow.nf</code> é um fluxo de trabalho básico funcional que você pode executar e modificar</li>
-<li><code>complex_workflow.nf</code> é projetado apenas para ilustração para demonstrar recursos de navegação - pode não executar com sucesso, mas mostra uma estrutura de fluxo de trabalho realista com múltiplos arquivos</li>
+<li><code>complex_workflow.nf</code> foi criado apenas para ilustração, para demonstrar recursos de navegação — ele pode não ser executado com sucesso, mas mostra uma estrutura realista de fluxo de trabalho com múltiplos arquivos</li>
 </ul>
 </div>
 <h3 id="atalhos-de-teclado">Atalhos de Teclado<a class="headerlink" href="#atalhos-de-teclado" title="Permanent link">&para;</a></h3>
-<p>Alguns dos recursos neste guia usarão atalhos de teclado opcionais. Você pode estar acessando este material via GitHub Codespaces no navegador, e neste caso às vezes os atalhos não funcionarão como esperado porque são usados para outras coisas no seu sistema.</p>
-<p>Se você estiver executando o VS Code localmente, como provavelmente estará quando realmente escrever fluxos de trabalho, os atalhos funcionarão conforme descrito.</p>
+<p>Alguns dos recursos neste guia usam atalhos de teclado opcionais. Se você estiver acessando este material via GitHub Codespaces no navegador, alguns atalhos podem não funcionar como esperado, pois são usados para outras funções no seu sistema.</p>
+<p>Se você estiver executando o VS Code localmente, como provavelmente fará quando estiver escrevendo fluxos de trabalho de verdade, os atalhos funcionarão conforme descrito.</p>
 <p>Se você estiver usando um Mac, alguns (não todos) atalhos de teclado usarão "cmd" em vez de "ctrl", e indicaremos isso no texto como <code>Ctrl/Cmd</code>.</p>
 <h3 id="01-instalando-a-extensao-nextflow">0.1. Instalando a Extensão Nextflow<a class="headerlink" href="#01-instalando-a-extensao-nextflow" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Já Usando Devcontainers?</p>
-<p>Se você estiver trabalhando no <strong>GitHub Codespaces</strong> ou usando um <strong>devcontainer local</strong>, a extensão Nextflow provavelmente já está instalada e configurada para você. Você pode pular as etapas de instalação manual abaixo e prosseguir diretamente para explorar os recursos da extensão.</p>
+<p>Se você estiver trabalhando no <strong>GitHub Codespaces</strong> ou usando um <strong>devcontainer local</strong>, a extensão Nextflow provavelmente já está instalada e configurada para você. Você pode pular as etapas de instalação manual abaixo e ir diretamente para explorar os recursos da extensão.</p>
 </div>
 <p>Para instalar a extensão manualmente:</p>
 <ol>
 <li>Abra o VS Code</li>
 <li>Vá para a visualização de Extensões clicando no ícone de extensões à esquerda: <img alt="ícone de extensões" src="../img/extensions_icon.png" /> (atalho <code>Ctrl/Cmd+Shift+X</code> se você estiver executando o VSCode localmente)</li>
-<li>Procure por "Nextflow"</li>
+<li>Pesquise por "Nextflow"</li>
 <li>Instale a extensão oficial do Nextflow</li>
 </ol>
-<p><img alt="Instalar Extensão Nextflow" src="../img/install_extension.png" /></p>
+<p><img alt="Instalar a Extensão Nextflow" src="../img/install_extension.png" /></p>
 <h3 id="02-layout-do-espaco-de-trabalho">0.2. Layout do Espaço de Trabalho<a class="headerlink" href="#02-layout-do-espaco-de-trabalho" title="Permanent link">&para;</a></h3>
-<p>Como você tem usado o VS Code durante o Hello Nextflow, você já está familiarizado com o básico. Aqui está como organizar seu espaço de trabalho eficientemente para esta sessão:</p>
+<p>Como você já usou o VS Code durante o Hello Nextflow, você já está familiarizado com o básico. Veja como organizar seu espaço de trabalho de forma eficiente para esta sessão:</p>
 <ul>
-<li><strong>Área do Editor</strong>: Para visualizar e editar arquivos. Você pode dividir isso em vários painéis para comparar arquivos lado a lado.</li>
-<li><strong>Explorador de Arquivos</strong> clique (<img alt="ícone do explorador de arquivos" src="../img/files_icon.png" />) (<code>Ctrl/Cmd+Shift+E</code>): Os arquivos e pastas locais no seu sistema. Mantenha isso aberto à esquerda para navegar entre arquivos</li>
-<li><strong>Terminal Integrado</strong> (<code>Ctrl+Shift+</code> crase para Windows e MacOS): Um terminal para interagir com o computador na parte inferior. Use isso para executar Nextflow ou outros comandos.</li>
-<li><strong>Painel de Problemas</strong> (<code>Ctrl+Shift+M</code>): O VS Code mostrará quaisquer erros e problemas que detectar aqui. Isso é útil para destacar questões rapidamente.</li>
+<li><strong>Área do Editor</strong>: Para visualizar e editar arquivos. Você pode dividir em múltiplos painéis para comparar arquivos lado a lado.</li>
+<li><strong>Explorador de Arquivos</strong> clique em (<img alt="ícone do explorador de arquivos" src="../img/files_icon.png" />) (<code>Ctrl/Cmd+Shift+E</code>): Os arquivos e pastas locais no seu sistema. Mantenha aberto à esquerda para navegar entre arquivos</li>
+<li><strong>Terminal Integrado</strong> (<code>Ctrl+Shift+</code> acento grave para Windows e MacOS): Um terminal para interagir com o computador na parte inferior. Use para executar Nextflow ou outros comandos.</li>
+<li><strong>Painel de Problemas</strong> (<code>Ctrl+Shift+M</code>): O VS Code mostrará aqui todos os erros e problemas detectados. Útil para identificar problemas rapidamente.</li>
 </ul>
-<p>Você pode arrastar painéis ou ocultá-los (<code>Ctrl/Cmd+B</code> para alternar a barra lateral) para personalizar seu layout enquanto trabalhamos nos exemplos.</p>
+<p>Você pode arrastar painéis ou ocultá-los (<code>Ctrl/Cmd+B</code> para alternar a barra lateral) para personalizar seu layout enquanto trabalhamos pelos exemplos.</p>
 <h3 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h3>
-<p>Você tem o VS Code configurado com a extensão Nextflow e entende o layout do espaço de trabalho para desenvolvimento eficiente.</p>
-<h3 id="qual-e-o-proximo-passo">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo" title="Permanent link">&para;</a></h3>
-<p>Aprenda como o destaque de sintaxe ajuda você a entender a estrutura do código Nextflow rapidamente.</p>
+<p>Você configurou o VS Code com a extensão Nextflow e entende o layout do espaço de trabalho para um desenvolvimento eficiente.</p>
+<h3 id="o-que-vem-a-seguir">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir" title="Permanent link">&para;</a></h3>
+<p>Aprenda como o realce de sintaxe ajuda você a entender a estrutura do código Nextflow de relance.</p>
 <hr />
-<h2 id="1-destaque-de-sintaxe-e-estrutura-de-codigo">1. Destaque de Sintaxe e Estrutura de Código<a class="headerlink" href="#1-destaque-de-sintaxe-e-estrutura-de-codigo" title="Permanent link">&para;</a></h2>
-<p>Agora que seu espaço de trabalho está configurado, vamos explorar como o destaque de sintaxe do VS Code ajuda você a ler e escrever código Nextflow de forma mais eficaz.</p>
-<h3 id="11-elementos-de-sintaxe-nextflow">1.1. Elementos de Sintaxe Nextflow<a class="headerlink" href="#11-elementos-de-sintaxe-nextflow" title="Permanent link">&para;</a></h3>
-<p>Abra <code>basic_workflow.nf</code> para ver o destaque de sintaxe em ação:</p>
+<h2 id="1-realce-de-sintaxe-e-estrutura-do-codigo">1. Realce de Sintaxe e Estrutura do Código<a class="headerlink" href="#1-realce-de-sintaxe-e-estrutura-do-codigo" title="Permanent link">&para;</a></h2>
+<p>Agora que seu espaço de trabalho está configurado, vamos explorar como o realce de sintaxe do VS Code ajuda você a ler e escrever código Nextflow com mais eficiência.</p>
+<h3 id="11-elementos-de-sintaxe-do-nextflow">1.1. Elementos de Sintaxe do Nextflow<a class="headerlink" href="#11-elementos-de-sintaxe-do-nextflow" title="Permanent link">&para;</a></h3>
+<p>Abra <code>basic_workflow.nf</code> para ver o realce de sintaxe em ação:</p>
 <p><img alt="Demonstração de Sintaxe" src="../img/syntax_showcase.png" /></p>
 <p>Observe como o VS Code destaca:</p>
 <ul>
 <li><strong>Palavras-chave</strong> (<code>process</code>, <code>workflow</code>, <code>input</code>, <code>output</code>, <code>script</code>) em cores distintas</li>
 <li><strong>Literais de string</strong> e <strong>parâmetros</strong> com estilos diferentes</li>
-<li><strong>Comentários</strong> em uma cor suave</li>
+<li><strong>Comentários</strong> em uma cor discreta</li>
 <li><strong>Variáveis</strong> e <strong>chamadas de função</strong> com ênfase apropriada</li>
 <li><strong>Blocos de código</strong> com guias de indentação adequadas</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Cores Dependentes do Tema</p>
-<p>As cores específicas que você vê dependerão do seu tema do VS Code (modo escuro/claro), configurações de cores e quaisquer personalizações que você tenha feito. O importante é que diferentes elementos de sintaxe sejam visualmente distinguidos uns dos outros, tornando a estrutura do código mais fácil de entender independentemente do esquema de cores escolhido.</p>
+<p>As cores específicas que você verá dependerão do tema do VS Code (modo escuro/claro), configurações de cores e quaisquer personalizações que você tenha feito. O importante é que diferentes elementos de sintaxe sejam visualmente distinguidos uns dos outros, tornando a estrutura do código mais fácil de entender independentemente do esquema de cores escolhido.</p>
 </div>
-<h3 id="12-compreendendo-a-estrutura-de-codigo">1.2. Compreendendo a Estrutura de Código<a class="headerlink" href="#12-compreendendo-a-estrutura-de-codigo" title="Permanent link">&para;</a></h3>
-<p>O destaque de sintaxe ajuda você a identificar rapidamente:</p>
+<h3 id="12-entendendo-a-estrutura-do-codigo">1.2. Entendendo a Estrutura do Código<a class="headerlink" href="#12-entendendo-a-estrutura-do-codigo" title="Permanent link">&para;</a></h3>
+<p>O realce de sintaxe ajuda você a identificar rapidamente:</p>
 <ul>
 <li><strong>Limites de processo</strong>: Distinção clara entre diferentes processos</li>
 <li><strong>Blocos de entrada/saída</strong>: Fácil de identificar definições de fluxo de dados</li>
 <li><strong>Blocos de script</strong>: Os comandos reais sendo executados</li>
-<li><strong>Operações de canal</strong>: Etapas de transformação de dados</li>
-<li><strong>Diretivas de configuração</strong>: Configurações específicas do processo</li>
+<li><strong>Operações com canais</strong>: Etapas de transformação de dados</li>
+<li><strong>Diretivas de configuração</strong>: Configurações específicas de processo</li>
 </ul>
-<p>Esta organização visual se torna inestimável ao trabalhar com fluxos de trabalho complexos contendo múltiplos processos e fluxos de dados intrincados.</p>
+<p>Essa organização visual se torna inestimável ao trabalhar com fluxos de trabalho complexos contendo múltiplos processos e fluxos de dados intrincados.</p>
 <h3 id="conclusao_1">Conclusão<a class="headerlink" href="#conclusao_1" title="Permanent link">&para;</a></h3>
-<p>Você entende como o destaque de sintaxe do VS Code ajuda você a ler a estrutura do código Nextflow e identificar diferentes elementos da linguagem para um desenvolvimento mais rápido.</p>
-<h3 id="qual-e-o-proximo-passo_1">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_1" title="Permanent link">&para;</a></h3>
-<p>Aprenda como o autocompletar inteligente acelera a escrita de código com sugestões sensíveis ao contexto.</p>
+<p>Você entende como o realce de sintaxe do VS Code ajuda a ler a estrutura do código Nextflow e identificar diferentes elementos da linguagem para um desenvolvimento mais rápido.</p>
+<h3 id="o-que-vem-a-seguir_1">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_1" title="Permanent link">&para;</a></h3>
+<p>Aprenda como o auto-completar inteligente acelera a escrita de código com sugestões contextuais.</p>
 <hr />
-<h2 id="2-autocompletar-inteligente">2. Autocompletar Inteligente<a class="headerlink" href="#2-autocompletar-inteligente" title="Permanent link">&para;</a></h2>
-<p>Os recursos de autocompletar do VS Code ajudam você a escrever código mais rapidamente e com menos erros, sugerindo opções apropriadas baseadas no contexto.</p>
-<h3 id="21-sugestoes-sensiveis-ao-contexto">2.1. Sugestões Sensíveis ao Contexto<a class="headerlink" href="#21-sugestoes-sensiveis-ao-contexto" title="Permanent link">&para;</a></h3>
-<p>As opções de autocompletar variam dependendo de onde você está no seu código:</p>
-<h4 id="operacoes-de-canal">Operações de Canal<a class="headerlink" href="#operacoes-de-canal" title="Permanent link">&para;</a></h4>
+<h2 id="2-auto-completar-inteligente">2. Auto-completar Inteligente<a class="headerlink" href="#2-auto-completar-inteligente" title="Permanent link">&para;</a></h2>
+<p>Os recursos de auto-completar do VS Code ajudam você a escrever código mais rápido e com menos erros, sugerindo opções apropriadas com base no contexto.</p>
+<h3 id="21-sugestoes-contextuais">2.1. Sugestões Contextuais<a class="headerlink" href="#21-sugestoes-contextuais" title="Permanent link">&para;</a></h3>
+<p>As opções de auto-completar variam dependendo de onde você está no seu código:</p>
+<h4 id="operacoes-com-canais">Operações com Canais<a class="headerlink" href="#operacoes-com-canais" title="Permanent link">&para;</a></h4>
 <p>Abra <code>basic_workflow.nf</code> novamente e tente digitar <code>channel.</code> no bloco workflow:</p>
-<p><img alt="Autocompletar de canal" src="../img/autocomplete_channel.png" /></p>
+<p><img alt="Auto-completar de canal" src="../img/autocomplete_channel.png" /></p>
 <p>Você verá sugestões para:</p>
 <ul>
 <li><code>fromPath()</code> - Criar canal a partir de caminhos de arquivo</li>
@@ -5044,54 +5346,54 @@
 <li><code>fromSRA()</code> - Criar canal a partir de acessos SRA</li>
 <li>E muito mais...</li>
 </ul>
-<p>Isso ajuda você a encontrar rapidamente a factory de canal certa para usar sem precisar lembrar nomes exatos de métodos.</p>
-<p>Você também pode descobrir os operadores disponíveis para aplicar a canais. Por exemplo, digite <code>FASTQC.out.html.</code> para ver operações disponíveis:</p>
-<p><img alt="Autocompletar de operações de canal" src="../img/autocomplete_operators.png" /></p>
+<p>Isso ajuda você a encontrar rapidamente o factory de canal correto sem precisar lembrar os nomes exatos dos métodos.</p>
+<p>Você também pode descobrir os operadores disponíveis para aplicar aos canais. Por exemplo, digite <code>FASTQC.out.html.</code> para ver as operações disponíveis:</p>
+<p><img alt="Auto-completar de operações de canal" src="../img/autocomplete_operators.png" /></p>
 <h4 id="diretivas-de-processo">Diretivas de Processo<a class="headerlink" href="#diretivas-de-processo" title="Permanent link">&para;</a></h4>
-<p>Dentro de um bloco de script de processo, digite <code>task.</code> para ver propriedades de runtime disponíveis:</p>
-<p><img alt="Autocompletar de propriedades de task" src="../img/autocomplete_task.png" /></p>
+<p>Dentro de um bloco script de processo, digite <code>task.</code> para ver as propriedades de runtime disponíveis:</p>
+<p><img alt="Auto-completar de propriedades de task" src="../img/autocomplete_task.png" /></p>
 <h4 id="configuracao">Configuração<a class="headerlink" href="#configuracao" title="Permanent link">&para;</a></h4>
-<p>Abra nextflow.config e digite <code>process.</code> em qualquer lugar para ver diretivas de processo disponíveis:</p>
-<p><img alt="Autocompletar de configuração" src="../img/autocomplete_config.png" /></p>
+<p>Abra nextflow.config e digite <code>process.</code> em qualquer lugar para ver as diretivas de processo disponíveis:</p>
+<p><img alt="Auto-completar de configuração" src="../img/autocomplete_config.png" /></p>
 <p>Você verá sugestões para:</p>
 <ul>
 <li><code>executor</code></li>
 <li><code>memory</code></li>
 <li><code>cpus</code></li>
 </ul>
-<p>Isso economiza tempo ao configurar processos e funciona em diferentes escopos de configuração. Por exemplo, tente digitar <code>docker.</code> para ver opções de configuração específicas do Docker.</p>
+<p>Isso economiza tempo ao configurar processos e funciona em diferentes escopos de configuração. Por exemplo, tente digitar <code>docker.</code> para ver as opções de configuração específicas do Docker.</p>
 <h3 id="conclusao_2">Conclusão<a class="headerlink" href="#conclusao_2" title="Permanent link">&para;</a></h3>
-<p>Você pode usar o autocompletar inteligente do VS Code para descobrir operações de canal disponíveis, diretivas de processo e opções de configuração sem memorizar sintaxe.</p>
-<h3 id="qual-e-o-proximo-passo_2">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_2" title="Permanent link">&para;</a></h3>
-<p>Aprenda como a detecção de erros em tempo real ajuda você a capturar problemas antes de executar seu fluxo de trabalho, simplesmente lendo o código.</p>
+<p>Você pode usar o auto-completar inteligente do VS Code para descobrir operações de canal disponíveis, diretivas de processo e opções de configuração sem memorizar a sintaxe.</p>
+<h3 id="o-que-vem-a-seguir_2">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_2" title="Permanent link">&para;</a></h3>
+<p>Aprenda como a detecção de erros em tempo real ajuda você a identificar problemas antes de executar seu fluxo de trabalho, simplesmente lendo o código.</p>
 <h2 id="3-deteccao-de-erros-e-diagnosticos">3. Detecção de Erros e Diagnósticos<a class="headerlink" href="#3-deteccao-de-erros-e-diagnosticos" title="Permanent link">&para;</a></h2>
-<p>A detecção de erros em tempo real do VS Code ajuda você a capturar problemas antes de executar seu fluxo de trabalho.</p>
+<p>A detecção de erros em tempo real do VS Code ajuda você a identificar problemas antes de executar seu fluxo de trabalho.</p>
 <h3 id="31-deteccao-de-erros-de-sintaxe">3.1. Detecção de Erros de Sintaxe<a class="headerlink" href="#31-deteccao-de-erros-de-sintaxe" title="Permanent link">&para;</a></h3>
-<p>Vamos criar um erro deliberado para ver a detecção em ação. Abra <code>basic_workflow.nf</code> e mude o nome do processo de <code>FASTQC</code> para <code>FASTQ</code> (ou qualquer outro nome inválido). O VS Code imediatamente destacará o erro no bloco workflow com um sublinhado ondulado vermelho:</p>
+<p>Vamos criar um erro deliberado para ver a detecção em ação. Abra <code>basic_workflow.nf</code> e altere o nome do processo de <code>FASTQC</code> para <code>FASTQ</code> (ou qualquer outro nome inválido). O VS Code imediatamente destacará o erro no bloco workflow com um sublinhado vermelho ondulado:</p>
 <p><img alt="Sublinhado de erro" src="../img/error_underline.png" /></p>
 <h3 id="32-painel-de-problemas">3.2. Painel de Problemas<a class="headerlink" href="#32-painel-de-problemas" title="Permanent link">&para;</a></h3>
-<p>Além do destaque individual de erros, o VS Code fornece um Painel de Problemas centralizado que agrega todos os erros, avisos e mensagens de informação em todo o seu espaço de trabalho. Abra-o com <code>Ctrl/Cmd+Shift+M</code> e use o ícone de filtro para mostrar apenas erros relevantes ao arquivo atual:</p>
+<p>Além do destaque individual de erros, o VS Code fornece um Painel de Problemas centralizado que agrega todos os erros, avisos e mensagens informativas em seu espaço de trabalho. Abra-o com <code>Ctrl/Cmd+Shift+M</code> e use o ícone de filtro para mostrar apenas os erros relevantes ao arquivo atual:</p>
 <p><img alt="Filtrar o painel de problemas" src="../img/active_file.png" /></p>
 <p>Clique em qualquer problema para ir diretamente à linha problemática</p>
 <p><img alt="Painel de Problemas" src="../img/problems_panel.png" /></p>
-<p>Corrija o erro mudando o nome do processo de volta para <code>FASTQC</code>.</p>
-<h3 id="33-padroes-de-erros-comuns">3.3. Padrões de Erros Comuns<a class="headerlink" href="#33-padroes-de-erros-comuns" title="Permanent link">&para;</a></h3>
-<p>Erros comuns na sintaxe Nextflow incluem:</p>
+<p>Corrija o erro alterando o nome do processo de volta para <code>FASTQC</code>.</p>
+<h3 id="33-padroes-comuns-de-erro">3.3. Padrões Comuns de Erro<a class="headerlink" href="#33-padroes-comuns-de-erro" title="Permanent link">&para;</a></h3>
+<p>Erros comuns na sintaxe do Nextflow incluem:</p>
 <ul>
-<li><strong>Colchetes faltando</strong>: <code>{</code> ou <code>}</code> não correspondidos</li>
+<li><strong>Colchetes faltando</strong>: <code>{</code> ou <code>}</code> sem correspondência</li>
 <li><strong>Blocos incompletos</strong>: Seções obrigatórias ausentes em processos</li>
-<li><strong>Sintaxe inválida</strong>: DSL Nextflow mal formado</li>
-<li><strong>Erros de digitação em palavras-chave</strong>: Diretivas de processo escritas incorretamente</li>
+<li><strong>Sintaxe inválida</strong>: DSL Nextflow malformado</li>
+<li><strong>Erros de digitação em palavras-chave</strong>: Diretivas de processo com erros ortográficos</li>
 <li><strong>Incompatibilidades de canal</strong>: Incompatibilidades de tipo</li>
 </ul>
-<p>O language server do Nextflow destaca esses problemas no Painel de Problemas. Você pode verificá-los cedo para evitar erros de sintaxe ao executar um pipeline.</p>
+<p>O servidor de linguagem Nextflow destaca esses problemas no Painel de Problemas. Você pode verificá-los antecipadamente para evitar erros de sintaxe ao executar um pipeline.</p>
 <h3 id="conclusao_3">Conclusão<a class="headerlink" href="#conclusao_3" title="Permanent link">&para;</a></h3>
-<p>Você pode usar a detecção de erros do VS Code e o Painel de Problemas para capturar erros de sintaxe e problemas antes de executar seu fluxo de trabalho, economizando tempo e evitando frustrações.</p>
-<h3 id="qual-e-o-proximo-passo_3">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_3" title="Permanent link">&para;</a></h3>
+<p>Você pode usar a detecção de erros e o Painel de Problemas do VS Code para identificar erros de sintaxe e problemas antes de executar seu fluxo de trabalho, economizando tempo e evitando frustrações.</p>
+<h3 id="o-que-vem-a-seguir_3">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_3" title="Permanent link">&para;</a></h3>
 <p>Aprenda como navegar eficientemente entre processos, módulos e definições em fluxos de trabalho complexos.</p>
 <hr />
-<h2 id="4-navegacao-de-codigo-e-gerenciamento-de-simbolos">4. Navegação de Código e Gerenciamento de Símbolos<a class="headerlink" href="#4-navegacao-de-codigo-e-gerenciamento-de-simbolos" title="Permanent link">&para;</a></h2>
-<p>Navegação eficiente é crucial ao trabalhar com fluxos de trabalho complexos que abrangem múltiplos arquivos. Para entender isso, substitua a definição do processo em <code>basic_workflow.nf</code> com uma importação do módulo que fornecemos:</p>
+<h2 id="4-navegacao-no-codigo-e-gerenciamento-de-simbolos">4. Navegação no Código e Gerenciamento de Símbolos<a class="headerlink" href="#4-navegacao-no-codigo-e-gerenciamento-de-simbolos" title="Permanent link">&para;</a></h2>
+<p>A navegação eficiente é crucial ao trabalhar com fluxos de trabalho complexos que abrangem múltiplos arquivos. Para entender isso, substitua a definição de processo em <code>basic_workflow.nf</code> por uma importação do módulo que fornecemos:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Depois</label><label for="__tabbed_1_2">Antes</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5117,90 +5419,88 @@
 <span class="normal"><a href="#__codelineno-5-18">18</a></span>
 <span class="normal"><a href="#__codelineno-5-19">19</a></span>
 <span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTQC</span><span class="w"> </span><span class="o">{</span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTQC</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">tag</span><span class="w"> </span><span class="s2">&quot;${sample_id}&quot;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;${params.output_dir}/fastqc&quot;</span><span class="o">,</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nl">output:</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.html&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">html</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.zip&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">zip</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">.</span><span class="na">ext</span><span class="o">.</span><span class="na">args</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="s2">    fastqc \\</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s2">        ${args} \\</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s2">        --threads ${task.cpus} \\</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s2">        ${reads}</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="o">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nl">output:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.html&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">html</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.zip&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">zip</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nl">script:</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">.</span><span class="na">ext</span><span class="o">.</span><span class="na">args</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="s2">    fastqc \\</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="s2">        ${args} \\</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s2">        --threads ${task.cpus} \\</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s2">        ${reads}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <h3 id="41-ir-para-definicao">4.1. Ir para Definição<a class="headerlink" href="#41-ir-para-definicao" title="Permanent link">&para;</a></h3>
-<p>Se você passar o mouse sobre um nome de processo como <code>FASTQC</code>, você verá um popup com a interface do módulo (entradas e saídas):</p>
+<p>Se você passar o mouse sobre um nome de processo como <code>FASTQC</code>, verá um popup com a interface do módulo (entradas e saídas):</p>
 <p><img alt="Ir para definição" src="../img/syntax.png" /></p>
-<p>Este recurso é particularmente valioso ao criar fluxos de trabalho, pois permite que você entenda a interface do módulo sem abrir o arquivo do módulo diretamente.</p>
-<p>Você pode navegar rapidamente para qualquer definição de processo, módulo ou variável usando <strong>Ctrl/Cmd-click</strong>. Passe o mouse sobre o link para o arquivo do módulo no topo do script e siga o link conforme sugerido:</p>
+<p>Este recurso é particularmente valioso ao criar fluxos de trabalho, pois permite entender a interface do módulo sem abrir o arquivo do módulo diretamente.</p>
+<p>Você pode navegar rapidamente para qualquer definição de processo, módulo ou variável usando <strong>Ctrl/Cmd-clique</strong>. Passe o mouse sobre o link para o arquivo do módulo no topo do script e siga o link conforme sugerido:</p>
 <p><img alt="Seguir link" src="../img/follow_link.png" /></p>
-<p>A mesma coisa funciona para nomes de processo. Volte para <code>basic_workflow.nf</code> e tente isso no nome do processo <code>FASTQC</code> no bloco workflow. Isso leva você diretamente ao nome do processo (que é o mesmo que o arquivo do módulo neste exemplo, mas poderia estar no meio de um arquivo muito maior).</p>
-<p>Para voltar para onde você estava, use <strong>Alt+←</strong> (ou <strong>Ctrl+-</strong> no Mac). Esta é uma maneira poderosa de explorar código sem perder sua posição.</p>
-<p>Agora vamos explorar a navegação em um fluxo de trabalho mais complexo usando <code>complex_workflow.nf</code> (o arquivo somente para ilustração mencionado anteriormente). Este fluxo de trabalho contém múltiplos processos definidos em arquivos de módulo separados, além de alguns inline. Embora estruturas complexas de múltiplos arquivos possam ser desafiadoras para navegar manualmente, a capacidade de pular para definições torna a exploração muito mais gerenciável.</p>
+<p>O mesmo funciona para nomes de processo. Volte para <code>basic_workflow.nf</code> e tente isso no nome do processo <code>FASTQC</code> no bloco workflow. Isso leva você diretamente ao nome do processo (que é o mesmo que o arquivo do módulo neste exemplo, mas poderia estar no meio de um arquivo muito maior).</p>
+<p>Para voltar ao ponto anterior, use <strong>Alt+←</strong> (ou <strong>Ctrl+-</strong> no Mac). Esta é uma forma poderosa de explorar o código sem perder seu lugar.</p>
+<p>Agora vamos explorar a navegação em um fluxo de trabalho mais complexo usando <code>complex_workflow.nf</code> (o arquivo apenas para ilustração mencionado anteriormente). Este fluxo de trabalho contém múltiplos processos definidos em arquivos de módulo separados, além de alguns inline. Embora estruturas complexas com múltiplos arquivos possam ser desafiadoras de navegar manualmente, a capacidade de pular para definições torna a exploração muito mais gerenciável.</p>
 <ol>
 <li>Abra <code>complex_workflow.nf</code></li>
-<li>Navegue para definições de módulo</li>
+<li>Navegue para as definições de módulo</li>
 <li>Use <strong>Alt+←</strong> (ou <strong>Ctrl+-</strong>) para navegar de volta</li>
 <li>Navegue para o nome do processo <code>FASTQC</code> no bloco workflow. Isso leva você diretamente ao nome do processo (que é o mesmo que o arquivo do módulo neste exemplo, mas poderia estar no meio de um arquivo muito maior).</li>
 <li>Navegue de volta novamente</li>
-<li>Navegue para o processo <code>TRIM_GALORE</code> no bloco workflow. Este é definido inline, então não levará você a um arquivo separado, mas ainda mostrará a definição do processo, e você ainda pode navegar de volta para onde estava.</li>
+<li>Navegue para o processo <code>TRIM_GALORE</code> no bloco workflow. Este está definido inline, então não levará você a um arquivo separado, mas ainda mostrará a definição do processo, e você ainda pode navegar de volta ao ponto anterior.</li>
 </ol>
-<h3 id="42-navegacao-de-simbolos">4.2. Navegação de Símbolos<a class="headerlink" href="#42-navegacao-de-simbolos" title="Permanent link">&para;</a></h3>
-<p>Com <code>complex_workflow.nf</code> ainda aberto, você pode obter uma visão geral de todos os símbolos no arquivo digitando <code>@</code> na barra de pesquisa no topo do VSCode (o atalho de teclado é <code>Ctrl/Cmd+Shift+O</code>, mas pode não funcionar no Codespaces). Isso abre o painel de navegação de símbolos, que lista todos os símbolos no arquivo atual:</p>
-<p><img alt="Navegação de símbolos" src="../img/symbols.png" /></p>
+<h3 id="42-navegacao-por-simbolos">4.2. Navegação por Símbolos<a class="headerlink" href="#42-navegacao-por-simbolos" title="Permanent link">&para;</a></h3>
+<p>Com <code>complex_workflow.nf</code> ainda aberto, você pode obter uma visão geral de todos os símbolos no arquivo digitando <code>@</code> na barra de pesquisa no topo do VSCode (o atalho de teclado é <code>Ctrl/Cmd+Shift+O</code>, mas pode não funcionar no Codespaces). Isso abre o painel de navegação por símbolos, que lista todos os símbolos no arquivo atual:</p>
+<p><img alt="Navegação por símbolos" src="../img/symbols.png" /></p>
 <p>Isso mostra:</p>
 <ul>
 <li>Todas as definições de processo</li>
 <li>Definições de workflow (há dois workflows definidos neste arquivo)</li>
 <li>Definições de função</li>
 </ul>
-<p>Comece a digitar para filtrar resultados.</p>
+<p>Comece a digitar para filtrar os resultados.</p>
 <h3 id="43-encontrar-todas-as-referencias">4.3. Encontrar Todas as Referências<a class="headerlink" href="#43-encontrar-todas-as-referencias" title="Permanent link">&para;</a></h3>
-<p>Entender onde um processo ou variável é usado em toda a sua base de código pode ser muito útil. Por exemplo, se você quiser encontrar todas as referências ao processo <code>FASTQC</code>, comece navegando até sua definição. Você pode fazer isso abrindo <code>modules/fastqc.nf</code> diretamente, ou usando o recurso de navegação rápida do VS Code com <code>Ctrl/Cmd-click</code> como fizemos acima. Uma vez na definição do processo, clique com o botão direito no nome do processo <code>FASTQC</code> e selecione "Find All References" no menu de contexto para ver todas as instâncias onde ele é usado.</p>
+<p>Entender onde um processo ou variável é usado em toda a sua base de código pode ser muito útil. Por exemplo, se você quiser encontrar todas as referências ao processo <code>FASTQC</code>, comece navegando para sua definição. Você pode fazer isso abrindo <code>modules/fastqc.nf</code> diretamente, ou usando o recurso de navegação rápida do VS Code com <code>Ctrl/Cmd-clique</code> como fizemos acima. Uma vez na definição do processo, clique com o botão direito no nome do processo <code>FASTQC</code> e selecione "Find All References" no menu de contexto para ver todas as instâncias onde ele é usado.</p>
 <p><img alt="Encontrar referências" src="../img/references.png" /></p>
-<p>Este recurso exibe todas as instâncias onde <code>FASTQC</code> é referenciado dentro do seu espaço de trabalho, incluindo seu uso nos dois workflows distintos. Esta percepção é crucial para avaliar o impacto potencial de modificações no processo <code>FASTQC</code>.</p>
-<h3 id="44-painel-outline">4.4. Painel Outline<a class="headerlink" href="#44-painel-outline" title="Permanent link">&para;</a></h3>
-<p>O painel Outline, localizado na barra lateral Explorer (clique <img alt="ícone do Explorer" src="../img/files_icon.png" />), fornece uma visão geral conveniente de todos os símbolos no seu arquivo atual. Este recurso permite que você navegue e gerencie rapidamente a estrutura do seu código exibindo funções, variáveis e outros elementos-chave em uma visualização hierárquica.</p>
-<p><img alt="Painel Outline" src="../img/outline.png" /></p>
-<p>Use o painel Outline para navegar rapidamente para diferentes partes do seu código sem usar o navegador de arquivos.</p>
-<h3 id="45-visualizacao-dag">4.5. Visualização DAG<a class="headerlink" href="#45-visualizacao-dag" title="Permanent link">&para;</a></h3>
-<p>A extensão Nextflow do VS Code pode visualizar seu fluxo de trabalho como um Grafo Acíclico Direcionado (DAG). Isso ajuda você a entender o fluxo de dados e dependências entre processos. Abra <code>complex_workflow.nf</code> e clique no botão "Preview DAG" acima de <code>workflow {</code> (o segundo bloco <code>workflow</code> neste arquivo):</p>
-<p><img alt="Visualização DAG" src="../img/dag_preview.png" /></p>
-<p>Este é apenas o workflow de 'entrada', mas você também pode visualizar o DAG para os workflows internos clicando no botão "Preview DAG" acima do workflow <code>RNASEQ_PIPELINE {</code> mais acima:</p>
-<p><img alt="Visualização DAG workflow interno" src="../img/dag_preview_inner.png" /></p>
-<p>Para este fluxo de trabalho, você pode usar os nós no DAG para navegar até as definições de processo correspondentes no código. Clique em um nó e ele levará você à definição de processo relevante no editor. Particularmente quando um fluxo de trabalho cresce para um tamanho grande, isso pode realmente ajudá-lo a navegar pelo código e entender como os processos estão conectados.</p>
+<p>Este recurso exibe todas as instâncias onde <code>FASTQC</code> é referenciado em seu espaço de trabalho, incluindo seu uso nos dois fluxos de trabalho distintos. Essa informação é crucial para avaliar o impacto potencial de modificações no processo <code>FASTQC</code>.</p>
+<h3 id="44-painel-de-estrutura">4.4. Painel de Estrutura<a class="headerlink" href="#44-painel-de-estrutura" title="Permanent link">&para;</a></h3>
+<p>O painel de Estrutura (Outline), localizado na barra lateral do Explorador (clique em <img alt="ícone do Explorador" src="../img/files_icon.png" />), fornece uma visão geral conveniente de todos os símbolos no arquivo atual. Este recurso permite navegar e gerenciar rapidamente a estrutura do seu código, exibindo funções, variáveis e outros elementos-chave em uma visualização hierárquica.</p>
+<p><img alt="Painel de Estrutura" src="../img/outline.png" /></p>
+<p>Use o painel de Estrutura para navegar rapidamente para diferentes partes do seu código sem usar o explorador de arquivos.</p>
+<h3 id="45-visualizacao-do-dag">4.5. Visualização do DAG<a class="headerlink" href="#45-visualizacao-do-dag" title="Permanent link">&para;</a></h3>
+<p>A extensão Nextflow do VS Code pode visualizar seu fluxo de trabalho como um Grafo Acíclico Dirigido (DAG). Isso ajuda você a entender o fluxo de dados e as dependências entre processos. Abra <code>complex_workflow.nf</code> e clique no botão "Preview DAG" acima de <code>workflow {</code> (o segundo bloco <code>workflow</code> neste arquivo):</p>
+<p><img alt="Pré-visualização do DAG" src="../img/dag_preview.png" /></p>
+<p>Este é apenas o workflow de 'entrada', mas você também pode pré-visualizar o DAG para os workflows internos clicando no botão "Preview DAG" acima do workflow <code>RNASEQ_PIPELINE {</code> mais acima:</p>
+<p><img alt="Pré-visualização do DAG do workflow interno" src="../img/dag_preview_inner.png" /></p>
+<p>Para este fluxo de trabalho, você pode usar os nós no DAG para navegar para as definições de processo correspondentes no código. Clique em um nó e ele levará você à definição de processo relevante no editor. Especialmente quando um fluxo de trabalho cresce muito, isso pode realmente ajudar a navegar pelo código e entender como os processos estão conectados.</p>
 <h3 id="conclusao_4">Conclusão<a class="headerlink" href="#conclusao_4" title="Permanent link">&para;</a></h3>
-<p>Você pode navegar fluxos de trabalho complexos eficientemente usando ir-para-definição, busca de símbolos, encontrar referências e visualização DAG para entender a estrutura do código e dependências.</p>
-<h3 id="qual-e-o-proximo-passo_4">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_4" title="Permanent link">&para;</a></h3>
+<p>Você pode navegar por fluxos de trabalho complexos com eficiência usando ir para definição, pesquisa de símbolos, encontrar referências e visualização do DAG para entender a estrutura do código e as dependências.</p>
+<h3 id="o-que-vem-a-seguir_4">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_4" title="Permanent link">&para;</a></h3>
 <p>Aprenda como trabalhar efetivamente com múltiplos arquivos interconectados em projetos Nextflow maiores.</p>
 <h2 id="5-trabalhando-com-multiplos-arquivos">5. Trabalhando com Múltiplos Arquivos<a class="headerlink" href="#5-trabalhando-com-multiplos-arquivos" title="Permanent link">&para;</a></h2>
-<p>O desenvolvimento real com Nextflow envolve trabalhar com múltiplos arquivos interconectados. Vamos explorar como o VS Code ajuda você a gerenciar projetos complexos eficientemente.</p>
-<h3 id="51-navegacao-rapida-de-arquivos">5.1. Navegação Rápida de Arquivos<a class="headerlink" href="#51-navegacao-rapida-de-arquivos" title="Permanent link">&para;</a></h3>
-<p>Com <code>complex_workflow.nf</code> aberto, você notará que ele importa vários módulos. Vamos praticar navegação rápida entre eles.</p>
+<p>O desenvolvimento real com Nextflow envolve trabalhar com múltiplos arquivos interconectados. Vamos explorar como o VS Code ajuda você a gerenciar projetos complexos com eficiência.</p>
+<h3 id="51-navegacao-rapida-entre-arquivos">5.1. Navegação Rápida entre Arquivos<a class="headerlink" href="#51-navegacao-rapida-entre-arquivos" title="Permanent link">&para;</a></h3>
+<p>Com <code>complex_workflow.nf</code> aberto, você notará que ele importa vários módulos. Vamos praticar a navegação rápida entre eles.</p>
 <p>Pressione <strong>Ctrl+P</strong> (ou <strong>Cmd+P</strong>) e comece a digitar "fast":</p>
-<p>O VS Code mostrará arquivos correspondentes. Selecione <code>modules/fastqc.nf</code> para ir lá instantaneamente. Isso é muito mais rápido do que clicar no explorador de arquivos quando você sabe aproximadamente qual arquivo está procurando.</p>
+<p>O VS Code mostrará os arquivos correspondentes. Selecione <code>modules/fastqc.nf</code> para ir diretamente para lá. Isso é muito mais rápido do que clicar pelo explorador de arquivos quando você sabe aproximadamente qual arquivo está procurando.</p>
 <p>Tente isso com outros padrões:</p>
 <ul>
 <li>Digite "star" para encontrar o arquivo do módulo de alinhamento STAR (<code>star.nf</code>)</li>
 <li>Digite "utils" para encontrar o arquivo de funções utilitárias (<code>utils.nf</code>)</li>
-<li>Digite "config" para ir para arquivos de configuração (<code>nextflow.config</code>)</li>
+<li>Digite "config" para ir para os arquivos de configuração (<code>nextflow.config</code>)</li>
 </ul>
-<h3 id="52-editor-dividido-para-desenvolvimento-multi-arquivo">5.2. Editor Dividido para Desenvolvimento Multi-arquivo<a class="headerlink" href="#52-editor-dividido-para-desenvolvimento-multi-arquivo" title="Permanent link">&para;</a></h3>
-<p>Ao trabalhar com módulos, você frequentemente precisa ver tanto o fluxo de trabalho principal quanto as definições de módulo simultaneamente. Vamos configurar isso:</p>
+<h3 id="52-editor-dividido-para-desenvolvimento-com-multiplos-arquivos">5.2. Editor Dividido para Desenvolvimento com Múltiplos Arquivos<a class="headerlink" href="#52-editor-dividido-para-desenvolvimento-com-multiplos-arquivos" title="Permanent link">&para;</a></h3>
+<p>Ao trabalhar com módulos, muitas vezes você precisa ver tanto o fluxo de trabalho principal quanto as definições de módulo simultaneamente. Vamos configurar isso:</p>
 <ol>
 <li>Abra <code>complex_workflow.nf</code></li>
 <li>Abra <code>modules/fastqc.nf</code> em uma nova aba</li>
@@ -5210,45 +5510,45 @@
 <p><img alt="Editor dividido" src="../img/split_editor.png" /></p>
 <p>Isso é inestimável quando:</p>
 <ul>
-<li>Verificando interfaces de módulo ao escrever chamadas de workflow, e a visualização não é suficiente</li>
-<li>Comparando processos similares em diferentes módulos</li>
-<li>Depurando fluxo de dados entre workflow e módulos</li>
+<li>Verificando interfaces de módulo ao escrever chamadas de workflow, e a pré-visualização não é suficiente</li>
+<li>Comparando processos semelhantes em diferentes módulos</li>
+<li>Depurando o fluxo de dados entre workflow e módulos</li>
 </ul>
 <h3 id="53-pesquisa-em-todo-o-projeto">5.3. Pesquisa em Todo o Projeto<a class="headerlink" href="#53-pesquisa-em-todo-o-projeto" title="Permanent link">&para;</a></h3>
 <p>Às vezes você precisa encontrar onde padrões específicos são usados em todo o seu projeto. Pressione <code>Ctrl/Cmd+Shift+F</code> para abrir o painel de pesquisa.</p>
-<p>Tente pesquisar por <code>publishDir</code> em todo o espaço de trabalho:</p>
+<p>Tente pesquisar por <code>container</code> em todo o espaço de trabalho:</p>
 <p><img alt="Pesquisa no projeto" src="../img/project_search.png" /></p>
-<p>Isso mostra todo arquivo que usa diretórios de publicação, ajudando você a:</p>
+<p>Isso mostra todos os arquivos que usam a diretiva container, ajudando você a:</p>
 <ul>
-<li>Entender padrões de organização de saída</li>
+<li>Entender quais processos usam contêineres</li>
 <li>Encontrar exemplos de diretivas específicas</li>
 <li>Garantir consistência entre módulos</li>
 </ul>
 <h3 id="conclusao_5">Conclusão<a class="headerlink" href="#conclusao_5" title="Permanent link">&para;</a></h3>
-<p>Você pode gerenciar projetos complexos de múltiplos arquivos usando navegação rápida de arquivos, editores divididos e pesquisa em todo o projeto para trabalhar eficientemente com fluxos de trabalho e módulos.</p>
-<h3 id="qual-e-o-proximo-passo_5">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_5" title="Permanent link">&para;</a></h3>
-<p>Aprenda como recursos de formatação de código e manutenção mantêm seus fluxos de trabalho organizados e legíveis.</p>
+<p>Você pode gerenciar projetos complexos com múltiplos arquivos usando navegação rápida entre arquivos, editores divididos e pesquisa em todo o projeto para trabalhar eficientemente entre fluxos de trabalho e módulos.</p>
+<h3 id="o-que-vem-a-seguir_5">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_5" title="Permanent link">&para;</a></h3>
+<p>Aprenda como os recursos de formatação e manutenção de código mantêm seus fluxos de trabalho organizados e legíveis.</p>
 <hr />
-<h2 id="6-formatacao-de-codigo-e-manutencao">6. Formatação de Código e Manutenção<a class="headerlink" href="#6-formatacao-de-codigo-e-manutencao" title="Permanent link">&para;</a></h2>
-<p>Formatação adequada de código é essencial não apenas para estética, mas também para melhorar a legibilidade, compreensão e facilidade de atualização de fluxos de trabalho complexos.</p>
+<h2 id="6-formatacao-e-manutencao-do-codigo">6. Formatação e Manutenção do Código<a class="headerlink" href="#6-formatacao-e-manutencao-do-codigo" title="Permanent link">&para;</a></h2>
+<p>A formatação adequada do código é essencial não apenas para a estética, mas também para melhorar a legibilidade, a compreensão e a facilidade de atualização de fluxos de trabalho complexos.</p>
 <h3 id="61-formatacao-automatica-em-acao">6.1. Formatação Automática em Ação<a class="headerlink" href="#61-formatacao-automatica-em-acao" title="Permanent link">&para;</a></h3>
 <p>Abra <code>basic_workflow.nf</code> e deliberadamente bagunce a formatação:</p>
 <ul>
-<li>Remova alguma indentação: Destaque o documento inteiro e pressione <code>shift+tab</code> várias vezes para remover o máximo de indentações possível.</li>
-<li>Adicione espaços extras em lugares aleatórios: na declaração <code>channel.fromPath</code>, adicione 30 espaços após o <code>(</code>.</li>
+<li>Remova alguma indentação: Selecione o documento inteiro e pressione <code>shift+tab</code> várias vezes para remover o máximo de indentações possível.</li>
+<li>Adicione espaços extras em lugares aleatórios: na instrução <code>channel.fromPath</code>, adicione 30 espaços após o <code>(</code>.</li>
 <li>Quebre algumas linhas de forma estranha: Adicione uma nova linha entre o operador <code>.view {</code> e a string <code>Processing sample:</code>, mas não adicione uma nova linha correspondente antes do parêntese de fechamento <code>}</code>.</li>
 </ul>
 <p>Agora pressione <code>Shift+Alt+F</code> (ou <code>Shift+Option+F</code> no MacOS) para formatar automaticamente:</p>
 <p>O VS Code imediatamente:</p>
 <ul>
 <li>Corrige a indentação para mostrar a estrutura do processo claramente</li>
-<li>Alinha elementos similares de forma consistente</li>
+<li>Alinha elementos semelhantes de forma consistente</li>
 <li>Remove espaços em branco desnecessários</li>
 <li>Mantém quebras de linha legíveis</li>
 </ul>
-<p>Note que a formatação automática pode não resolver todos os problemas de estilo de código. O language server do Nextflow visa manter seu código organizado, mas também respeita suas preferências pessoais em certas áreas. Por exemplo, se você remover a indentação dentro do bloco <code>script</code> de um processo, o formatador deixará como está, já que você pode intencionalmente preferir esse estilo.</p>
-<p>Atualmente, não há uma imposição de estilo rigorosa para Nextflow, então o language server oferece alguma flexibilidade. No entanto, ele aplicará consistentemente regras de formatação em torno de definições de métodos e funções para manter a clareza.</p>
-<h3 id="62-recursos-de-organizacao-de-codigo">6.2. Recursos de Organização de Código<a class="headerlink" href="#62-recursos-de-organizacao-de-codigo" title="Permanent link">&para;</a></h3>
+<p>Observe que a formatação automática pode não resolver todos os problemas de estilo de código. O servidor de linguagem Nextflow visa manter seu código organizado, mas também respeita suas preferências pessoais em certas áreas. Por exemplo, se você remover a indentação dentro do bloco <code>script</code> de um processo, o formatador deixará como está, pois você pode intencionalmente preferir esse estilo.</p>
+<p>Atualmente, não há aplicação estrita de estilo para Nextflow, então o servidor de linguagem oferece alguma flexibilidade. No entanto, ele aplicará consistentemente regras de formatação em torno de definições de métodos e funções para manter a clareza.</p>
+<h3 id="62-recursos-de-organizacao-do-codigo">6.2. Recursos de Organização do Código<a class="headerlink" href="#62-recursos-de-organizacao-do-codigo" title="Permanent link">&para;</a></h3>
 <h4 id="comentar-rapidamente">Comentar Rapidamente<a class="headerlink" href="#comentar-rapidamente" title="Permanent link">&para;</a></h4>
 <p>Selecione um bloco de código no seu fluxo de trabalho e pressione <strong>Ctrl+/</strong> (ou <strong>Cmd+/</strong>) para comentá-lo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// workflow {</span>
@@ -5263,114 +5563,167 @@
 <ul>
 <li>Desabilitar temporariamente partes de fluxos de trabalho durante o desenvolvimento</li>
 <li>Adicionar comentários explicativos a operações de canal complexas</li>
-<li>Documentar seções de fluxo de trabalho</li>
+<li>Documentar seções do fluxo de trabalho</li>
 </ul>
 <p>Use <strong>Ctrl+/</strong> (ou <strong>Cmd+/</strong>) novamente para descomentar o código.</p>
 <h4 id="dobramento-de-codigo-para-visao-geral">Dobramento de Código para Visão Geral<a class="headerlink" href="#dobramento-de-codigo-para-visao-geral" title="Permanent link">&para;</a></h4>
-<p>Em <code>complex_workflow.nf</code>, note as pequenas setas ao lado das definições de processo. Clique nelas para dobrar (colapsar) processos:</p>
+<p>Em <code>complex_workflow.nf</code>, observe as pequenas setas ao lado das definições de processo. Clique nelas para dobrar (recolher) os processos:</p>
 <p><img alt="Dobramento de código" src="../img/code_folding.png" /></p>
-<p>Isso fornece uma visão geral de alto nível da estrutura do seu fluxo de trabalho sem se perder em detalhes de implementação.</p>
+<p>Isso fornece uma visão geral de alto nível da estrutura do seu fluxo de trabalho sem se perder nos detalhes de implementação.</p>
 <h4 id="correspondencia-de-colchetes">Correspondência de Colchetes<a class="headerlink" href="#correspondencia-de-colchetes" title="Permanent link">&para;</a></h4>
-<p>Coloque seu cursor próximo a qualquer colchete <code>{</code> ou <code>}</code> e o VS Code destaca o colchete correspondente. Use <strong>Ctrl+Shift+\</strong> (ou <strong>Cmd+Shift+\</strong>) para pular entre colchetes correspondentes.</p>
+<p>Posicione o cursor ao lado de qualquer colchete <code>{</code> ou <code>}</code> e o VS Code destaca o colchete correspondente. Use <strong>Ctrl+Shift+\</strong> (ou <strong>Cmd+Shift+\</strong>) para pular entre colchetes correspondentes.</p>
 <p>Isso é crucial para:</p>
 <ul>
-<li>Entender limites de processo</li>
+<li>Entender os limites do processo</li>
 <li>Encontrar colchetes faltando ou extras</li>
-<li>Navegar estruturas de fluxo de trabalho aninhadas</li>
+<li>Navegar por estruturas de workflow aninhadas</li>
 </ul>
-<h4 id="selecao-e-edicao-multi-linha">Seleção e Edição Multi-linha<a class="headerlink" href="#selecao-e-edicao-multi-linha" title="Permanent link">&para;</a></h4>
-<p>Para editar múltiplas linhas simultaneamente, o VS Code oferece recursos poderosos de múltiplos cursores:</p>
+<h4 id="selecao-e-edicao-de-multiplas-linhas">Seleção e Edição de Múltiplas Linhas<a class="headerlink" href="#selecao-e-edicao-de-multiplas-linhas" title="Permanent link">&para;</a></h4>
+<p>Para editar múltiplas linhas simultaneamente, o VS Code oferece poderosas capacidades de múltiplos cursores:</p>
 <ul>
-<li><strong>Seleção multi-linha</strong>: Segure <strong>Ctrl+Alt</strong> (ou <strong>Cmd+Option</strong> para MacOS) e use as setas do teclado para selecionar múltiplas linhas</li>
-<li><strong>Indentação multi-linha</strong>: Selecione múltiplas linhas e use <strong>Tab</strong> para indentar ou <strong>Shift+Tab</strong> para remover indentação de blocos inteiros</li>
+<li><strong>Seleção de múltiplas linhas</strong>: Segure <strong>Ctrl+Alt</strong> (ou <strong>Cmd+Option</strong> no MacOS) e use as teclas de seta para selecionar múltiplas linhas</li>
+<li><strong>Indentação de múltiplas linhas</strong>: Selecione múltiplas linhas e use <strong>Tab</strong> para indentar ou <strong>Shift+Tab</strong> para desindentar blocos inteiros</li>
 </ul>
 <p>Isso é particularmente útil para:</p>
 <ul>
-<li>Indentar blocos de processo inteiros consistentemente</li>
+<li>Indentar blocos de processo inteiros de forma consistente</li>
 <li>Adicionar comentários a múltiplas linhas de uma vez</li>
-<li>Editar definições de parâmetros similares em múltiplos processos</li>
+<li>Editar definições de parâmetros semelhantes em múltiplos processos</li>
 </ul>
 <h3 id="conclusao_6">Conclusão<a class="headerlink" href="#conclusao_6" title="Permanent link">&para;</a></h3>
-<p>Você pode manter código limpo e legível usando formatação automática, recursos de comentário, dobramento de código, correspondência de colchetes e edição multi-linha para organizar fluxos de trabalho complexos eficientemente.</p>
-<h3 id="qual-e-o-proximo-passo_6">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_6" title="Permanent link">&para;</a></h3>
-<p>Aprenda como o VS Code se integra ao seu fluxo de trabalho de desenvolvimento mais amplo além de apenas editar código.</p>
+<p>Você pode manter um código limpo e legível usando formatação automática, recursos de comentário, dobramento de código, correspondência de colchetes e edição de múltiplas linhas para organizar fluxos de trabalho complexos com eficiência.</p>
+<h3 id="o-que-vem-a-seguir_6">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_6" title="Permanent link">&para;</a></h3>
+<p>Aprenda como o VS Code se integra ao seu fluxo de trabalho de desenvolvimento mais amplo, além de apenas editar código.</p>
 <hr />
-<h2 id="7-integracao-com-fluxo-de-trabalho-de-desenvolvimento">7. Integração com Fluxo de Trabalho de Desenvolvimento<a class="headerlink" href="#7-integracao-com-fluxo-de-trabalho-de-desenvolvimento" title="Permanent link">&para;</a></h2>
+<h2 id="7-integracao-com-o-fluxo-de-trabalho-de-desenvolvimento">7. Integração com o Fluxo de Trabalho de Desenvolvimento<a class="headerlink" href="#7-integracao-com-o-fluxo-de-trabalho-de-desenvolvimento" title="Permanent link">&para;</a></h2>
 <p>O VS Code se integra bem ao seu fluxo de trabalho de desenvolvimento além de apenas editar código.</p>
 <h3 id="71-integracao-com-controle-de-versao">7.1. Integração com Controle de Versão<a class="headerlink" href="#71-integracao-com-controle-de-versao" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Codespaces e Integração Git</p>
-<p>Se você estiver trabalhando no <strong>GitHub Codespaces</strong>, alguns recursos de integração Git podem não funcionar como esperado, particularmente atalhos de teclado para Controle de Código. Você também pode ter recusado abrir o diretório como um repositório Git durante a configuração inicial, o que é adequado para fins de treinamento.</p>
+<p class="admonition-title">Codespaces e Integração com Git</p>
+<p>Se você estiver trabalhando no <strong>GitHub Codespaces</strong>, alguns recursos de integração com Git podem não funcionar como esperado, especialmente atalhos de teclado para Controle de Código-Fonte. Você também pode ter recusado abrir o diretório como um repositório Git durante a configuração inicial, o que é adequado para fins de treinamento.</p>
 </div>
-<p>Se seu projeto é um repositório git (como este é), o VS Code mostra:</p>
+<p>Se o seu projeto for um repositório git (como este é), o VS Code mostra:</p>
 <ul>
 <li>Arquivos modificados com indicadores coloridos</li>
-<li>Status Git na barra de status</li>
+<li>Status do Git na barra de status</li>
 <li>Visualizações de diff inline</li>
 <li>Capacidades de commit e push</li>
 </ul>
-<p>Abra o painel de Controle de Código usando o botão de controle de código (<img alt="Ícone de controle de código" src="../img/source_control_icon.png" />) (<code>Ctrl+Shift+G</code> ou <code>Cmd+Shift+G</code> se você estiver trabalhando com VSCode localmente) para ver alterações git e fazer stage de commits diretamente no editor.</p>
-<p><img alt="Painel de Controle de Código" src="../img/source_control.png" /></p>
+<p>Abra o painel de Controle de Código-Fonte usando o botão de controle de código-fonte (<img alt="ícone de controle de código-fonte" src="../img/source_control_icon.png" />) (<code>Ctrl+Shift+G</code> ou <code>Cmd+Shift+G</code> se você estiver trabalhando com VSCode localmente) para ver as alterações do git e fazer commits diretamente no editor.</p>
+<p><img alt="Painel de Controle de Código-Fonte" src="../img/source_control.png" /></p>
 <h3 id="72-executando-e-inspecionando-fluxos-de-trabalho">7.2. Executando e Inspecionando Fluxos de Trabalho<a class="headerlink" href="#72-executando-e-inspecionando-fluxos-de-trabalho" title="Permanent link">&para;</a></h3>
-<p>Vamos executar um fluxo de trabalho e então inspecionar os resultados. No terminal integrado (<code>Ctrl+Shift+</code> crase tanto no Windows quanto no MacOS), execute o fluxo de trabalho básico:</p>
-<div class="highlight"><span class="filename">Execute o fluxo de trabalho básico</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>basic_workflow.nf<span class="w"> </span>--input<span class="w"> </span>data/sample_data.csv<span class="w"> </span>--output_dir<span class="w"> </span>results
+<p>Vamos executar um fluxo de trabalho e depois inspecionar os resultados. No terminal integrado (<code>Ctrl+Shift+</code> acento grave no Windows e MacOS), execute o fluxo de trabalho básico:</p>
+<div class="highlight"><span class="filename">Run the basic workflow</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>basic_workflow.nf<span class="w"> </span>--input<span class="w"> </span>data/sample_data.csv<span class="w"> </span>--output_dir<span class="w"> </span>results
 </code></pre></div>
-<p>Enquanto o fluxo de trabalho executa, você verá saída em tempo real no terminal. Após a conclusão, você pode usar o VS Code para inspecionar resultados sem sair do seu editor:</p>
+<p>Enquanto o fluxo de trabalho é executado, você verá a saída em tempo real no terminal. Após a conclusão, você pode usar o VS Code para inspecionar os resultados sem sair do editor:</p>
 <ol>
-<li><strong>Navegar para diretórios de trabalho</strong>: Use o explorador de arquivos ou terminal para navegar em <code>.nextflow/work</code></li>
-<li><strong>Abrir arquivos de log</strong>: Clique em caminhos de arquivo de log na saída do terminal para abri-los diretamente no VS Code</li>
+<li><strong>Navegar para os diretórios de trabalho</strong>: Use o explorador de arquivos ou terminal para navegar por <code>.nextflow/work</code></li>
+<li><strong>Abrir arquivos de log</strong>: Clique nos caminhos de arquivos de log na saída do terminal para abri-los diretamente no VS Code</li>
 <li><strong>Inspecionar saídas</strong>: Navegue pelos diretórios de resultados publicados no explorador de arquivos</li>
 <li><strong>Visualizar relatórios de execução</strong>: Abra relatórios HTML diretamente no VS Code ou no seu navegador</li>
 </ol>
-<p>Isso mantém tudo em um só lugar em vez de alternar entre múltiplas aplicações.</p>
+<p>Isso mantém tudo em um só lugar, em vez de alternar entre múltiplos aplicativos.</p>
 <h3 id="conclusao_7">Conclusão<a class="headerlink" href="#conclusao_7" title="Permanent link">&para;</a></h3>
 <p>Você pode integrar o VS Code com controle de versão e execução de fluxo de trabalho para gerenciar todo o seu processo de desenvolvimento a partir de uma única interface.</p>
-<h3 id="qual-e-o-proximo-passo_7">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_7" title="Permanent link">&para;</a></h3>
-<p>Veja como todos esses recursos do IDE trabalham juntos no seu fluxo de trabalho de desenvolvimento diário.</p>
+<h3 id="o-que-vem-a-seguir_7">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_7" title="Permanent link">&para;</a></h3>
+<p>Veja como todos esses recursos do IDE funcionam juntos no seu fluxo de trabalho de desenvolvimento diário.</p>
 <hr />
-<h2 id="8-recapitulacao-e-notas-rapidas">8. Recapitulação e notas rápidas<a class="headerlink" href="#8-recapitulacao-e-notas-rapidas" title="Permanent link">&para;</a></h2>
+<h2 id="8-recapitulacao-e-notas-rapidas">8. Recapitulação e Notas Rápidas<a class="headerlink" href="#8-recapitulacao-e-notas-rapidas" title="Permanent link">&para;</a></h2>
 <p>Aqui estão algumas notas rápidas sobre cada um dos recursos do IDE discutidos acima:</p>
 <h3 id="81-iniciando-um-novo-recurso">8.1. Iniciando um Novo Recurso<a class="headerlink" href="#81-iniciando-um-novo-recurso" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Abertura rápida de arquivo</strong> (<code>Ctrl+P</code> ou <code>Cmd+P</code>) para encontrar módulos existentes relevantes</li>
-<li><strong>Editor dividido</strong> para visualizar processos similares lado a lado</li>
-<li><strong>Navegação de símbolos</strong> (<code>Ctrl+Shift+O</code> ou <code>Cmd+Shift+O</code>) para entender a estrutura do arquivo</li>
-<li><strong>Autocompletar</strong> para escrever novo código rapidamente</li>
+<li><strong>Editor dividido</strong> para visualizar processos semelhantes lado a lado</li>
+<li><strong>Navegação por símbolos</strong> (<code>Ctrl+Shift+O</code> ou <code>Cmd+Shift+O</code>) para entender a estrutura do arquivo</li>
+<li><strong>Auto-completar</strong> para escrever novo código rapidamente</li>
 </ol>
 <h3 id="82-depurando-problemas">8.2. Depurando Problemas<a class="headerlink" href="#82-depurando-problemas" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Painel de problemas</strong> (<code>Ctrl+Shift+M</code> ou <code>Cmd+Shift+M</code>) para ver todos os erros de uma vez</li>
-<li><strong>Ir para definição</strong> (<code>Ctrl-click</code> ou <code>Cmd-click</code>) para entender interfaces de processo</li>
-<li><strong>Encontrar todas as referências</strong> para ver como processos são usados</li>
-<li><strong>Pesquisa em todo o projeto</strong> para encontrar padrões ou problemas similares</li>
+<li><strong>Painel de Problemas</strong> (<code>Ctrl+Shift+M</code> ou <code>Cmd+Shift+M</code>) para ver todos os erros de uma vez</li>
+<li><strong>Ir para definição</strong> (<code>Ctrl-clique</code> ou <code>Cmd-clique</code>) para entender interfaces de processo</li>
+<li><strong>Encontrar todas as referências</strong> para ver como os processos são usados</li>
+<li><strong>Pesquisa em todo o projeto</strong> para encontrar padrões ou problemas semelhantes</li>
 </ol>
 <h3 id="83-refatoracao-e-melhoria">8.3. Refatoração e Melhoria<a class="headerlink" href="#83-refatoracao-e-melhoria" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Pesquisa em todo o projeto</strong> (<code>Ctrl+Shift+F</code> ou <code>Cmd+Shift+F</code>) para encontrar padrões</li>
 <li><strong>Formatação automática</strong> (<code>Shift+Alt+F</code> ou <code>Shift+Option+F</code>) para manter consistência</li>
 <li><strong>Dobramento de código</strong> para focar na estrutura</li>
-<li><strong>Integração Git</strong> para rastrear mudanças</li>
+<li><strong>Integração com Git</strong> para rastrear alterações</li>
 </ol>
 <hr />
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Você agora teve um tour rápido dos recursos do IDE do VS Code para desenvolvimento Nextflow. Essas ferramentas tornarão você significativamente mais produtivo ao:</p>
+<p>Você agora fez um tour rápido pelos recursos do IDE do VS Code para desenvolvimento com Nextflow. Essas ferramentas farão de você um desenvolvedor significativamente mais produtivo ao:</p>
 <ul>
-<li><strong>Reduzir erros</strong> através de verificação de sintaxe em tempo real</li>
-<li><strong>Acelerar o desenvolvimento</strong> com autocompletar inteligente</li>
-<li><strong>Melhorar a navegação</strong> em fluxos de trabalho complexos de múltiplos arquivos</li>
-<li><strong>Manter a qualidade</strong> através de formatação consistente</li>
-<li><strong>Melhorar a compreensão</strong> através de destaque avançado e visualização de estrutura</li>
+<li><strong>Reduzir erros</strong> por meio da verificação de sintaxe em tempo real</li>
+<li><strong>Acelerar o desenvolvimento</strong> com auto-completar inteligente</li>
+<li><strong>Melhorar a navegação</strong> em fluxos de trabalho complexos com múltiplos arquivos</li>
+<li><strong>Manter a qualidade</strong> por meio de formatação consistente</li>
+<li><strong>Aprimorar a compreensão</strong> por meio de realce avançado e visualização de estrutura</li>
 </ul>
-<p>Não esperamos que você lembre de tudo, mas agora você sabe que esses recursos existem e poderá encontrá-los quando precisar. À medida que continua desenvolvendo fluxos de trabalho Nextflow, esses recursos do IDE se tornarão uma segunda natureza, permitindo que você se concentre em escrever código de alta qualidade em vez de lutar com sintaxe e estrutura.</p>
-<h3 id="qual-e-o-proximo-passo_8">Qual é o próximo passo?<a class="headerlink" href="#qual-e-o-proximo-passo_8" title="Permanent link">&para;</a></h3>
+<p>Não esperamos que você se lembre de tudo, mas agora que você sabe que esses recursos existem, poderá encontrá-los quando precisar. À medida que você continua desenvolvendo fluxos de trabalho Nextflow, esses recursos do IDE se tornarão naturais, permitindo que você se concentre em escrever código de alta qualidade em vez de lutar com sintaxe e estrutura.</p>
+<h3 id="o-que-vem-a-seguir_8">O que vem a seguir?<a class="headerlink" href="#o-que-vem-a-seguir_8" title="Permanent link">&para;</a></h3>
 <p>Aplique essas habilidades de IDE enquanto trabalha em outros módulos de treinamento, por exemplo:</p>
 <ul>
-<li><strong><a href="../nf-test/">nf-test</a></strong>: Crie suítes de teste abrangentes para seus fluxos de trabalho</li>
+<li><strong><a href="../nf_test/">nf-test</a></strong>: Crie suítes de teste abrangentes para seus fluxos de trabalho</li>
 <li><strong><a href="../../hello_nf-core/">Hello nf-core</a></strong>: Construa pipelines de qualidade de produção com padrões da comunidade</li>
 </ul>
-<p>O verdadeiro poder desses recursos do IDE emerge à medida que você trabalha em projetos maiores e mais complexos. Comece a incorporá-los ao seu fluxo de trabalho gradualmente—dentro de algumas sessões, eles se tornarão uma segunda natureza e transformarão como você aborda o desenvolvimento Nextflow.</p>
-<p>Desde capturar erros antes que eles te desacelerem até navegar bases de código complexas com facilidade, essas ferramentas tornarão você um desenvolvedor mais confiante e eficiente.</p>
-<p>Bom código!</p><style type="text/css">.quiz {
+<p>O verdadeiro poder desses recursos do IDE emerge à medida que você trabalha em projetos maiores e mais complexos. Comece a incorporá-los ao seu fluxo de trabalho gradualmente — em poucas sessões, eles se tornarão naturais e transformarão a forma como você aborda o desenvolvimento com Nextflow.</p>
+<p>Desde detectar erros antes que eles te atrasem até navegar por bases de código complexas com facilidade, essas ferramentas farão de você um desenvolvedor mais confiante e eficiente.</p>
+<p>Bom código!</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -5384,11 +5737,11 @@
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -5403,11 +5756,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -5417,10 +5770,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -5445,34 +5800,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -5487,8 +5891,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -5743,7 +6154,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -5960,10 +6370,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -6288,14 +6696,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -6418,9 +6933,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -6461,27 +6975,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -6502,7 +7016,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -6522,15 +7036,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6550,7 +7066,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -6560,8 +7076,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -6575,11 +7091,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6641,10 +7161,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -6695,34 +7213,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -6743,11 +7257,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -6759,39 +7273,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -6817,6 +7304,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -6836,9 +7329,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
@@ -6920,7 +7410,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../orientation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Orientação">
+          <a href="../orientation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Primeiros passos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6930,20 +7420,20 @@ window.mkdocsQuizConfig = {
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Orientação
+                Primeiros passos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../metadata/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Metadados e mapas meta">
+          <a href="../essential_scripting_patterns/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Padrões Essenciais de Scripting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Metadados e mapas meta
+                Padrões Essenciais de Scripting
               </div>
             </div>
             <div class="md-footer__button md-icon">

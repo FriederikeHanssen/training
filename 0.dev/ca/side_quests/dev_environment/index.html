@@ -14,7 +14,7 @@
         <link rel="prev" href="../orientation/">
       
       
-        <link rel="next" href="../metadata/">
+        <link rel="next" href="../essential_scripting_patterns/">
       
       
         
@@ -43,11 +43,11 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Entorn de Desenvolupament - training.nextflow.io</title>
+        <title>Index - training.nextflow.io</title>
       
     
     
@@ -164,6 +164,64 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
@@ -196,7 +254,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Entorn de Desenvolupament
+              Index
             
           </span>
         </div>
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -460,7 +491,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Inici
   
 
     
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    Orientació
+    Primers passos
   
 
     
@@ -2354,7 +2385,7 @@
   <span class="md-ellipsis">
     
   
-    Entorn de Desenvolupament
+    Index
   
 
     
@@ -2372,7 +2403,7 @@
   <span class="md-ellipsis">
     
   
-    Entorn de Desenvolupament
+    Index
   
 
     
@@ -2425,7 +2456,7 @@
   <a href="#dreceres-de-teclat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dreceres de Teclat
+        Dreceres de teclat
       
     </span>
   </a>
@@ -2436,7 +2467,7 @@
   <a href="#01-installacio-de-lextensio-de-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0.1. Instal·lació de l'Extensió de Nextflow
+        0.1. Instal·lació de l'extensió de Nextflow
       
     </span>
   </a>
@@ -2447,7 +2478,7 @@
   <a href="#02-disposicio-de-lespai-de-treball" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0.2. Disposició de l'Espai de Treball
+        0.2. Disposició de l'espai de treball
       
     </span>
   </a>
@@ -2495,7 +2526,7 @@
   <a href="#11-elements-de-sintaxi-de-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Elements de Sintaxi de Nextflow
+        1.1. Elements de sintaxi de Nextflow
       
     </span>
   </a>
@@ -2506,7 +2537,7 @@
   <a href="#12-comprensio-de-lestructura-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Comprensió de l'Estructura del Codi
+        1.2. Comprensió de l'estructura del codi
       
     </span>
   </a>
@@ -2539,34 +2570,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2-autocompletat-intelligent" class="md-nav__link">
+  <a href="#2-autocomplecio-intelligent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Autocompletat Intel·ligent
+        2. Autocompleció Intel·ligent
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Autocompletat Intel·ligent">
+    <nav class="md-nav" aria-label="2. Autocompleció Intel·ligent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#21-suggeriments-contextuals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Suggeriments Contextuals
+        2.1. Suggeriments contextuals
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.1. Suggeriments Contextuals">
+    <nav class="md-nav" aria-label="2.1. Suggeriments contextuals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operacions-de-canal" class="md-nav__link">
+  <a href="#operacions-amb-canals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operacions de Canal
+        Operacions amb canals
       
     </span>
   </a>
@@ -2577,7 +2608,7 @@
   <a href="#directives-de-proces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Directives de Procés
+        Directives de procés
       
     </span>
   </a>
@@ -2641,7 +2672,7 @@
   <a href="#31-deteccio-derrors-de-sintaxi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Detecció d'Errors de Sintaxi
+        3.1. Detecció d'errors de sintaxi
       
     </span>
   </a>
@@ -2652,7 +2683,7 @@
   <a href="#32-panell-de-problemes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Panell de Problemes
+        3.2. Panell de problemes
       
     </span>
   </a>
@@ -2660,10 +2691,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-patrons-derror-comuns" class="md-nav__link">
+  <a href="#33-patrons-derrors-comuns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Patrons d'Error Comuns
+        3.3. Patrons d'errors comuns
       
     </span>
   </a>
@@ -2696,22 +2727,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-navegacio-de-codi-i-gestio-de-simbols" class="md-nav__link">
+  <a href="#4-navegacio-pel-codi-i-gestio-de-simbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Navegació de Codi i Gestió de Símbols
+        4. Navegació pel Codi i Gestió de Símbols
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Navegació de Codi i Gestió de Símbols">
+    <nav class="md-nav" aria-label="4. Navegació pel Codi i Gestió de Símbols">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#41-anar-a-la-definicio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Anar a la Definició
+        4.1. Anar a la definició
       
     </span>
   </a>
@@ -2719,10 +2750,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-navegacio-de-simbols" class="md-nav__link">
+  <a href="#42-navegacio-per-simbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Navegació de Símbols
+        4.2. Navegació per símbols
       
     </span>
   </a>
@@ -2733,7 +2764,7 @@
   <a href="#43-trobar-totes-les-referencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. Trobar Totes les Referències
+        4.3. Trobar totes les referències
       
     </span>
   </a>
@@ -2744,7 +2775,7 @@
   <a href="#44-panell-desquema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4. Panell d'Esquema
+        4.4. Panell d'esquema
       
     </span>
   </a>
@@ -2752,10 +2783,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#45-visualitzacio-dag" class="md-nav__link">
+  <a href="#45-visualitzacio-del-dag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.5. Visualització DAG
+        4.5. Visualització del DAG
       
     </span>
   </a>
@@ -2788,22 +2819,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-treballar-a-traves-de-multiples-fitxers" class="md-nav__link">
+  <a href="#5-treballar-amb-multiples-fitxers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Treballar a Través de Múltiples Fitxers
+        5. Treballar amb Múltiples Fitxers
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Treballar a Través de Múltiples Fitxers">
+    <nav class="md-nav" aria-label="5. Treballar amb Múltiples Fitxers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-navegacio-rapida-de-fitxers" class="md-nav__link">
+  <a href="#51-navegacio-rapida-entre-fitxers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. Navegació Ràpida de Fitxers
+        5.1. Navegació ràpida entre fitxers
       
     </span>
   </a>
@@ -2811,10 +2842,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-editor-dividit-per-a-desenvolupament-multi-fitxer" class="md-nav__link">
+  <a href="#52-editor-dividit-per-al-desenvolupament-multifitxer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Editor Dividit per a Desenvolupament Multi-fitxer
+        5.2. Editor dividit per al desenvolupament multifitxer
       
     </span>
   </a>
@@ -2825,7 +2856,7 @@
   <a href="#53-cerca-a-tot-el-projecte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Cerca a Tot el Projecte
+        5.3. Cerca a tot el projecte
       
     </span>
   </a>
@@ -2858,22 +2889,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-format-i-manteniment-de-codi" class="md-nav__link">
+  <a href="#6-formatacio-i-manteniment-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Format i Manteniment de Codi
+        6. Formatació i Manteniment del Codi
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Format i Manteniment de Codi">
+    <nav class="md-nav" aria-label="6. Formatació i Manteniment del Codi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-format-automatic-en-accio" class="md-nav__link">
+  <a href="#61-formatacio-automatica-en-accio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. Format Automàtic en Acció
+        6.1. Formatació automàtica en acció
       
     </span>
   </a>
@@ -2881,22 +2912,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-funcionalitats-dorganitzacio-de-codi" class="md-nav__link">
+  <a href="#62-funcionalitats-dorganitzacio-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Funcionalitats d'Organització de Codi
+        6.2. Funcionalitats d'organització del codi
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Funcionalitats d&#39;Organització de Codi">
+    <nav class="md-nav" aria-label="6.2. Funcionalitats d&#39;organització del codi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#comentaris-rapids" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comentaris Ràpids
+        Comentaris ràpids
       
     </span>
   </a>
@@ -2904,10 +2935,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plegat-de-codi-per-a-visio-general" class="md-nav__link">
+  <a href="#plegament-de-codi-per-a-una-visio-general" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plegat de Codi per a Visió General
+        Plegament de codi per a una visió general
       
     </span>
   </a>
@@ -2918,7 +2949,7 @@
   <a href="#coincidencia-de-claudators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Coincidència de Claudàtors
+        Coincidència de claudàtors
       
     </span>
   </a>
@@ -2926,10 +2957,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seleccio-i-edicio-multi-linia" class="md-nav__link">
+  <a href="#seleccio-i-edicio-multilinia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Selecció i Edició Multi-línia
+        Selecció i edició multilínia
       
     </span>
   </a>
@@ -2967,22 +2998,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#7-integracio-del-workflow-de-desenvolupament" class="md-nav__link">
+  <a href="#7-integracio-del-flux-de-treball-de-desenvolupament" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Integració del Workflow de Desenvolupament
+        7. Integració del Flux de Treball de Desenvolupament
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Integració del Workflow de Desenvolupament">
+    <nav class="md-nav" aria-label="7. Integració del Flux de Treball de Desenvolupament">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#71-integracio-de-control-de-versions" class="md-nav__link">
+  <a href="#71-integracio-amb-el-control-de-versions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1. Integració de Control de Versions
+        7.1. Integració amb el control de versions
       
     </span>
   </a>
@@ -2993,7 +3024,7 @@
   <a href="#72-execucio-i-inspeccio-de-workflows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. Execució i Inspecció de Workflows
+        7.2. Execució i inspecció de workflows
       
     </span>
   </a>
@@ -3026,22 +3057,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#8-recapitulacio-i-notes-rapides" class="md-nav__link">
+  <a href="#8-resum-i-notes-rapides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Recapitulació i notes ràpides
+        8. Resum i notes ràpides
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8. Recapitulació i notes ràpides">
+    <nav class="md-nav" aria-label="8. Resum i notes ràpides">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-comencar-una-nova-funcionalitat" class="md-nav__link">
+  <a href="#81-iniciar-una-nova-funcionalitat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. Començar una Nova Funcionalitat
+        8.1. Iniciar una nova funcionalitat
       
     </span>
   </a>
@@ -3049,10 +3080,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-depuracio-de-problemes" class="md-nav__link">
+  <a href="#82-depurar-problemes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.2. Depuració de Problemes
+        8.2. Depurar problemes
       
     </span>
   </a>
@@ -3063,7 +3094,7 @@
   <a href="#83-refactoritzacio-i-millora" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.3. Refactorització i Millora
+        8.3. Refactorització i millora
       
     </span>
   </a>
@@ -3302,14 +3333,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../metadata/" class="md-nav__link">
+      <a href="../essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Metadades i mapes de metadades
+    Patrons Essencials de Scripting
   
 
     
@@ -3337,7 +3368,35 @@
   <span class="md-ellipsis">
     
   
-    Processament d'entrada de fitxers
+    Processament de fitxers d'entrada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadades i mapes de metadades
   
 
     
@@ -3386,14 +3445,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
+      <a href="../nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Workflows de Workflows
+    Proves amb nf-test
   
 
     
@@ -3421,7 +3480,7 @@
   <span class="md-ellipsis">
     
   
-    Depuració de Workflows
+    Resolució de Problemes en Workflows
   
 
     
@@ -3442,14 +3501,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../essential_scripting_patterns/" class="md-nav__link">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Patrons Essencials de Scripting en Nextflow
+    Workflows de Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolupament de Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolupament de Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolupament de Plugins
   
 
     
@@ -3470,14 +3604,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Proves amb nf-test
+    Part 1: Conceptes bàsics dels plugins
   
 
     
@@ -3486,6 +3620,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: Crear un projecte de plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Funcions personalitzades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Proves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Configuració
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passos Següents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3967,7 +4305,7 @@
   <a href="#dreceres-de-teclat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dreceres de Teclat
+        Dreceres de teclat
       
     </span>
   </a>
@@ -3978,7 +4316,7 @@
   <a href="#01-installacio-de-lextensio-de-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0.1. Instal·lació de l'Extensió de Nextflow
+        0.1. Instal·lació de l'extensió de Nextflow
       
     </span>
   </a>
@@ -3989,7 +4327,7 @@
   <a href="#02-disposicio-de-lespai-de-treball" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0.2. Disposició de l'Espai de Treball
+        0.2. Disposició de l'espai de treball
       
     </span>
   </a>
@@ -4037,7 +4375,7 @@
   <a href="#11-elements-de-sintaxi-de-nextflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Elements de Sintaxi de Nextflow
+        1.1. Elements de sintaxi de Nextflow
       
     </span>
   </a>
@@ -4048,7 +4386,7 @@
   <a href="#12-comprensio-de-lestructura-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2. Comprensió de l'Estructura del Codi
+        1.2. Comprensió de l'estructura del codi
       
     </span>
   </a>
@@ -4081,34 +4419,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2-autocompletat-intelligent" class="md-nav__link">
+  <a href="#2-autocomplecio-intelligent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Autocompletat Intel·ligent
+        2. Autocompleció Intel·ligent
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Autocompletat Intel·ligent">
+    <nav class="md-nav" aria-label="2. Autocompleció Intel·ligent">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#21-suggeriments-contextuals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. Suggeriments Contextuals
+        2.1. Suggeriments contextuals
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2.1. Suggeriments Contextuals">
+    <nav class="md-nav" aria-label="2.1. Suggeriments contextuals">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#operacions-de-canal" class="md-nav__link">
+  <a href="#operacions-amb-canals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Operacions de Canal
+        Operacions amb canals
       
     </span>
   </a>
@@ -4119,7 +4457,7 @@
   <a href="#directives-de-proces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Directives de Procés
+        Directives de procés
       
     </span>
   </a>
@@ -4183,7 +4521,7 @@
   <a href="#31-deteccio-derrors-de-sintaxi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Detecció d'Errors de Sintaxi
+        3.1. Detecció d'errors de sintaxi
       
     </span>
   </a>
@@ -4194,7 +4532,7 @@
   <a href="#32-panell-de-problemes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. Panell de Problemes
+        3.2. Panell de problemes
       
     </span>
   </a>
@@ -4202,10 +4540,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-patrons-derror-comuns" class="md-nav__link">
+  <a href="#33-patrons-derrors-comuns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. Patrons d'Error Comuns
+        3.3. Patrons d'errors comuns
       
     </span>
   </a>
@@ -4238,22 +4576,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-navegacio-de-codi-i-gestio-de-simbols" class="md-nav__link">
+  <a href="#4-navegacio-pel-codi-i-gestio-de-simbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Navegació de Codi i Gestió de Símbols
+        4. Navegació pel Codi i Gestió de Símbols
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Navegació de Codi i Gestió de Símbols">
+    <nav class="md-nav" aria-label="4. Navegació pel Codi i Gestió de Símbols">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#41-anar-a-la-definicio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Anar a la Definició
+        4.1. Anar a la definició
       
     </span>
   </a>
@@ -4261,10 +4599,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-navegacio-de-simbols" class="md-nav__link">
+  <a href="#42-navegacio-per-simbols" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Navegació de Símbols
+        4.2. Navegació per símbols
       
     </span>
   </a>
@@ -4275,7 +4613,7 @@
   <a href="#43-trobar-totes-les-referencies" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. Trobar Totes les Referències
+        4.3. Trobar totes les referències
       
     </span>
   </a>
@@ -4286,7 +4624,7 @@
   <a href="#44-panell-desquema" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.4. Panell d'Esquema
+        4.4. Panell d'esquema
       
     </span>
   </a>
@@ -4294,10 +4632,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#45-visualitzacio-dag" class="md-nav__link">
+  <a href="#45-visualitzacio-del-dag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.5. Visualització DAG
+        4.5. Visualització del DAG
       
     </span>
   </a>
@@ -4330,22 +4668,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-treballar-a-traves-de-multiples-fitxers" class="md-nav__link">
+  <a href="#5-treballar-amb-multiples-fitxers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Treballar a Través de Múltiples Fitxers
+        5. Treballar amb Múltiples Fitxers
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Treballar a Través de Múltiples Fitxers">
+    <nav class="md-nav" aria-label="5. Treballar amb Múltiples Fitxers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-navegacio-rapida-de-fitxers" class="md-nav__link">
+  <a href="#51-navegacio-rapida-entre-fitxers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. Navegació Ràpida de Fitxers
+        5.1. Navegació ràpida entre fitxers
       
     </span>
   </a>
@@ -4353,10 +4691,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-editor-dividit-per-a-desenvolupament-multi-fitxer" class="md-nav__link">
+  <a href="#52-editor-dividit-per-al-desenvolupament-multifitxer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. Editor Dividit per a Desenvolupament Multi-fitxer
+        5.2. Editor dividit per al desenvolupament multifitxer
       
     </span>
   </a>
@@ -4367,7 +4705,7 @@
   <a href="#53-cerca-a-tot-el-projecte" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.3. Cerca a Tot el Projecte
+        5.3. Cerca a tot el projecte
       
     </span>
   </a>
@@ -4400,22 +4738,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-format-i-manteniment-de-codi" class="md-nav__link">
+  <a href="#6-formatacio-i-manteniment-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Format i Manteniment de Codi
+        6. Formatació i Manteniment del Codi
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Format i Manteniment de Codi">
+    <nav class="md-nav" aria-label="6. Formatació i Manteniment del Codi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-format-automatic-en-accio" class="md-nav__link">
+  <a href="#61-formatacio-automatica-en-accio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. Format Automàtic en Acció
+        6.1. Formatació automàtica en acció
       
     </span>
   </a>
@@ -4423,22 +4761,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-funcionalitats-dorganitzacio-de-codi" class="md-nav__link">
+  <a href="#62-funcionalitats-dorganitzacio-del-codi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. Funcionalitats d'Organització de Codi
+        6.2. Funcionalitats d'organització del codi
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6.2. Funcionalitats d&#39;Organització de Codi">
+    <nav class="md-nav" aria-label="6.2. Funcionalitats d&#39;organització del codi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#comentaris-rapids" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comentaris Ràpids
+        Comentaris ràpids
       
     </span>
   </a>
@@ -4446,10 +4784,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plegat-de-codi-per-a-visio-general" class="md-nav__link">
+  <a href="#plegament-de-codi-per-a-una-visio-general" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plegat de Codi per a Visió General
+        Plegament de codi per a una visió general
       
     </span>
   </a>
@@ -4460,7 +4798,7 @@
   <a href="#coincidencia-de-claudators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Coincidència de Claudàtors
+        Coincidència de claudàtors
       
     </span>
   </a>
@@ -4468,10 +4806,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#seleccio-i-edicio-multi-linia" class="md-nav__link">
+  <a href="#seleccio-i-edicio-multilinia" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Selecció i Edició Multi-línia
+        Selecció i edició multilínia
       
     </span>
   </a>
@@ -4509,22 +4847,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#7-integracio-del-workflow-de-desenvolupament" class="md-nav__link">
+  <a href="#7-integracio-del-flux-de-treball-de-desenvolupament" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Integració del Workflow de Desenvolupament
+        7. Integració del Flux de Treball de Desenvolupament
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="7. Integració del Workflow de Desenvolupament">
+    <nav class="md-nav" aria-label="7. Integració del Flux de Treball de Desenvolupament">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#71-integracio-de-control-de-versions" class="md-nav__link">
+  <a href="#71-integracio-amb-el-control-de-versions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.1. Integració de Control de Versions
+        7.1. Integració amb el control de versions
       
     </span>
   </a>
@@ -4535,7 +4873,7 @@
   <a href="#72-execucio-i-inspeccio-de-workflows" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.2. Execució i Inspecció de Workflows
+        7.2. Execució i inspecció de workflows
       
     </span>
   </a>
@@ -4568,22 +4906,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#8-recapitulacio-i-notes-rapides" class="md-nav__link">
+  <a href="#8-resum-i-notes-rapides" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Recapitulació i notes ràpides
+        8. Resum i notes ràpides
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8. Recapitulació i notes ràpides">
+    <nav class="md-nav" aria-label="8. Resum i notes ràpides">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-comencar-una-nova-funcionalitat" class="md-nav__link">
+  <a href="#81-iniciar-una-nova-funcionalitat" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. Començar una Nova Funcionalitat
+        8.1. Iniciar una nova funcionalitat
       
     </span>
   </a>
@@ -4591,10 +4929,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-depuracio-de-problemes" class="md-nav__link">
+  <a href="#82-depurar-problemes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.2. Depuració de Problemes
+        8.2. Depurar problemes
       
     </span>
   </a>
@@ -4605,7 +4943,7 @@
   <a href="#83-refactoritzacio-i-millora" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.3. Refactorització i Millora
+        8.3. Refactorització i millora
       
     </span>
   </a>
@@ -4836,43 +5174,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4882,7 +5183,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/dev_environment.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/dev_environment/index.md"
   title="Edita aquesta pàgina"
   class="md-content__button md-icon"
   rel="edit"
@@ -4899,35 +5200,36 @@
 </a>
  
 
+<hr />
 <h1 id="entorn-de-desenvolupament">Entorn de Desenvolupament<a class="headerlink" href="#entorn-de-desenvolupament" title="Permanent link">&para;</a></h1>
 <p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> Traducció assistida per IA - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">més informació i suggeriments</a></span></p>
-<p>Els Entorns de Desenvolupament Integrats (IDE) moderns poden transformar dramàticament la vostra experiència de desenvolupament amb Nextflow. Aquesta missió secundària se centra específicament en aprofitar VS Code i la seva extensió de Nextflow per escriure codi més ràpidament, detectar errors de manera primerenca i navegar per workflows complexos de manera eficient.</p>
+<p>Els Entorns de Desenvolupament Integrats (IDE) moderns poden transformar radicalment la vostra experiència de desenvolupament amb Nextflow. Aquesta missió secundària se centra específicament en aprofitar VS Code i la seva extensió de Nextflow per escriure codi més ràpidament, detectar errors d'hora i navegar per workflows complexos de manera eficient.</p>
 <div class="admonition note">
 <p class="admonition-title">Això no és un tutorial tradicional</p>
-<p>A diferència d'altres mòduls de formació, aquesta guia està organitzada com una col·lecció de consells ràpids, trucs i exemples pràctics en lloc d'un tutorial pas a pas. Cada secció es pot explorar de manera independent segons els vostres interessos i necessitats actuals de desenvolupament. Sentiu-vos lliures de saltar d'una secció a una altra i centrar-vos en les funcionalitats que seran més útils immediatament per al vostre desenvolupament de workflows.</p>
+<p>A diferència d'altres mòduls de formació, aquesta guia està organitzada com una col·lecció de consells ràpids, suggeriments i exemples pràctics en lloc d'un tutorial pas a pas. Cada secció es pot explorar de manera independent segons els vostres interessos i les vostres necessitats de desenvolupament actuals. Sentiu-vos lliures de saltar entre seccions i centrar-vos en les funcionalitats que siguin més útils immediatament per al vostre desenvolupament de workflows.</p>
 </div>
 <h2 id="que-haurieu-de-saber-primer">Què hauríeu de saber primer<a class="headerlink" href="#que-haurieu-de-saber-primer" title="Permanent link">&para;</a></h2>
-<p>Aquesta guia assumeix que heu completat el curs de formació <a href="../hello_nextflow/">Hello Nextflow</a> i que us sentiu còmodes amb els conceptes fonamentals de Nextflow, incloent:</p>
+<p>Aquesta guia assumeix que heu completat el curs de formació <a href="../../hello_nextflow/">Hello Nextflow</a> i que esteu familiaritzats amb els conceptes fonamentals de Nextflow, incloent-hi:</p>
 <ul>
-<li><strong>Estructura bàsica de workflow</strong>: Comprendre processos, workflows i com es connecten entre ells</li>
-<li><strong>Operacions de canal</strong>: Crear canals, passar dades entre processos i utilitzar operadors bàsics</li>
-<li><strong>Mòduls i organització</strong>: Crear mòduls reutilitzables i utilitzar declaracions include</li>
-<li><strong>Conceptes bàsics de configuració</strong>: Utilitzar <code>nextflow.config</code> per a paràmetres, directives de procés i perfils</li>
+<li><strong>Estructura bàsica del workflow</strong>: Comprensió dels processos, workflows i com es connecten entre si</li>
+<li><strong>Operacions amb canals</strong>: Creació de canals, pas de dades entre processos i ús d'operadors bàsics</li>
+<li><strong>Mòduls i organització</strong>: Creació de mòduls reutilitzables i ús de sentències include</li>
+<li><strong>Conceptes bàsics de configuració</strong>: Ús de <code>nextflow.config</code> per a paràmetres, directives de procés i perfils</li>
 </ul>
 <h2 id="que-aprendreu-aqui">Què aprendreu aquí<a class="headerlink" href="#que-aprendreu-aqui" title="Permanent link">&para;</a></h2>
-<p>Aquesta guia se centra en <strong>funcionalitats de productivitat de l'IDE</strong> que us faran un desenvolupador de Nextflow més eficient:</p>
+<p>Aquesta guia se centra en les <strong>funcionalitats de productivitat de l'IDE</strong> que us convertiran en un desenvolupador de Nextflow més eficient:</p>
 <ul>
-<li><strong>Ressaltat de sintaxi avançat</strong>: Entendre què us mostra VS Code sobre l'estructura del vostre codi</li>
-<li><strong>Autocompletat intel·ligent</strong>: Aprofitar suggeriments contextuals per escriure codi més ràpidament</li>
-<li><strong>Detecció d'errors i diagnòstics</strong>: Detectar errors de sintaxi abans d'executar el vostre workflow</li>
-<li><strong>Navegació de codi</strong>: Moure's ràpidament entre processos, mòduls i definicions</li>
-<li><strong>Format i organització</strong>: Mantenir un estil de codi consistent i llegible</li>
-<li><strong>Desenvolupament assistit per IA</strong> (opcional): Utilitzar eines d'IA modernes integrades amb el vostre IDE</li>
+<li><strong>Ressaltat de sintaxi avançat</strong>: Comprensió del que VS Code us mostra sobre l'estructura del vostre codi</li>
+<li><strong>Autocompleció intel·ligent</strong>: Aprofitament de suggeriments contextuals per escriure codi més ràpidament</li>
+<li><strong>Detecció d'errors i diagnòstics</strong>: Detecció d'errors de sintaxi abans d'executar el vostre workflow</li>
+<li><strong>Navegació pel codi</strong>: Moviment ràpid entre processos, mòduls i definicions</li>
+<li><strong>Formatació i organització</strong>: Manteniment d'un estil de codi consistent i llegible</li>
+<li><strong>Desenvolupament assistit per IA</strong> (opcional): Ús d'eines d'IA modernes integrades amb el vostre IDE</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Per què funcionalitats d'IDE ara?</p>
-<p>Probablement ja heu estat utilitzant VS Code durant el curs <a href="../hello_nextflow/">Hello Nextflow</a>, però vam mantenir el focus en aprendre els fonaments de Nextflow en lloc de les funcionalitats de l'IDE. Ara que us sentiu còmodes amb conceptes bàsics de Nextflow com processos, workflows, canals i mòduls, esteu preparats per aprofitar les funcionalitats sofisticades de l'IDE que us faran un desenvolupador més eficient.</p>
-<p>Penseu en això com a "pujar de nivell" el vostre entorn de desenvolupament - el mateix editor que heu estat utilitzant té capacitats molt més potents que esdevenen realment valuoses un cop enteneu amb què us estan ajudant.</p>
+<p class="admonition-title">Per què les funcionalitats de l'IDE ara?</p>
+<p>Probablement ja heu estat utilitzant VS Code durant el curs <a href="../../hello_nextflow/">Hello Nextflow</a>, però hem mantingut el focus en aprendre els fonaments de Nextflow en lloc de les funcionalitats de l'IDE. Ara que esteu familiaritzats amb els conceptes bàsics de Nextflow com processos, workflows, canals i mòduls, esteu preparats per aprofitar les sofisticades funcionalitats de l'IDE que us convertiran en un desenvolupador més eficient.</p>
+<p>Penseu en això com a "pujar de nivell" el vostre entorn de desenvolupament: el mateix editor que heu estat utilitzant té capacitats molt més potents que es tornen veritablement valuoses un cop enteneu per a què us estan ajudant.</p>
 </div>
 <hr />
 <h2 id="0-configuracio-i-escalfament">0. Configuració i Escalfament<a class="headerlink" href="#0-configuracio-i-escalfament" title="Permanent link">&para;</a></h2>
@@ -4960,138 +5262,138 @@
 <a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="go">3 directories, 12 files</span>
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Sobre els Fitxers d'Exemple</p>
+<p class="admonition-title">Sobre els fitxers d'exemple</p>
 <ul>
 <li><code>basic_workflow.nf</code> és un workflow bàsic funcional que podeu executar i modificar</li>
-<li><code>complex_workflow.nf</code> està dissenyat només per a il·lustració per demostrar funcionalitats de navegació - pot ser que no s'executi correctament però mostra una estructura de workflow multi-fitxer realista</li>
+<li><code>complex_workflow.nf</code> està dissenyat únicament per a il·lustració per demostrar les funcionalitats de navegació; pot ser que no s'executi correctament, però mostra una estructura de workflow multifitxer realista</li>
 </ul>
 </div>
-<h3 id="dreceres-de-teclat">Dreceres de Teclat<a class="headerlink" href="#dreceres-de-teclat" title="Permanent link">&para;</a></h3>
-<p>Algunes de les funcionalitats d'aquesta guia utilitzaran dreceres de teclat opcionals. És possible que estigueu accedint a aquest material via GitHub Codespaces al navegador, i en aquest cas de vegades les dreceres no funcionaran com s'espera perquè s'utilitzen per a altres coses al vostre sistema.</p>
-<p>Si esteu executant VS Code localment, com probablement fareu quan estigueu escrivint workflows realment, les dreceres funcionaran com es descriu.</p>
-<p>Si utilitzeu un Mac, algunes (no totes) dreceres de teclat utilitzaran "cmd" en lloc de "ctrl", i ho indicarem al text com <code>Ctrl/Cmd</code>.</p>
-<h3 id="01-installacio-de-lextensio-de-nextflow">0.1. Instal·lació de l'Extensió de Nextflow<a class="headerlink" href="#01-installacio-de-lextensio-de-nextflow" title="Permanent link">&para;</a></h3>
+<h3 id="dreceres-de-teclat">Dreceres de teclat<a class="headerlink" href="#dreceres-de-teclat" title="Permanent link">&para;</a></h3>
+<p>Algunes de les funcionalitats d'aquesta guia utilitzen dreceres de teclat opcionals. És possible que accediu a aquest material a través de GitHub Codespaces al navegador, i en aquest cas de vegades les dreceres no funcionaran com s'espera perquè s'utilitzen per a altres coses al vostre sistema.</p>
+<p>Si executeu VS Code localment, com probablement fareu quan estigueu escrivint workflows, les dreceres funcionaran tal com es descriu.</p>
+<p>Si utilitzeu un Mac, algunes (no totes) les dreceres de teclat utilitzaran "cmd" en lloc de "ctrl", i ho indicarem al text com <code>Ctrl/Cmd</code>.</p>
+<h3 id="01-installacio-de-lextensio-de-nextflow">0.1. Instal·lació de l'extensió de Nextflow<a class="headerlink" href="#01-installacio-de-lextensio-de-nextflow" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Ja Utilitzeu Devcontainers?</p>
-<p>Si esteu treballant a <strong>GitHub Codespaces</strong> o utilitzant un <strong>devcontainer local</strong>, l'extensió de Nextflow probablement ja està instal·lada i configurada per a vosaltres. Podeu saltar els passos d'instal·lació manual a continuació i procedir directament a explorar les funcionalitats de l'extensió.</p>
+<p class="admonition-title">Ja utilitzeu Devcontainers?</p>
+<p>Si esteu treballant a <strong>GitHub Codespaces</strong> o utilitzant un <strong>devcontainer local</strong>, l'extensió de Nextflow probablement ja està instal·lada i configurada per a vosaltres. Podeu ometre els passos d'instal·lació manual que hi ha a continuació i procedir directament a explorar les funcionalitats de l'extensió.</p>
 </div>
 <p>Per instal·lar l'extensió manualment:</p>
 <ol>
 <li>Obriu VS Code</li>
-<li>Aneu a la vista d'Extensions clicant la icona d'extensions a l'esquerra: <img alt="icona d'extensions" src="../img/extensions_icon.png" /> (drecera <code>Ctrl/Cmd+Shift+X</code> si esteu executant VSCode localment)</li>
+<li>Aneu a la vista d'Extensions fent clic a la icona d'extensions a l'esquerra: <img alt="icona d'extensions" src="../img/extensions_icon.png" /> (drecera <code>Ctrl/Cmd+Shift+X</code> si executeu VSCode localment)</li>
 <li>Cerqueu "Nextflow"</li>
 <li>Instal·leu l'extensió oficial de Nextflow</li>
 </ol>
-<p><img alt="Instal·lar l'Extensió de Nextflow" src="../img/install_extension.png" /></p>
-<h3 id="02-disposicio-de-lespai-de-treball">0.2. Disposició de l'Espai de Treball<a class="headerlink" href="#02-disposicio-de-lespai-de-treball" title="Permanent link">&para;</a></h3>
-<p>Com que heu estat utilitzant VS Code durant Hello Nextflow, ja esteu familiaritzats amb els conceptes bàsics. Així és com organitzar el vostre espai de treball de manera eficient per a aquesta sessió:</p>
+<p><img alt="Instal·la l'extensió de Nextflow" src="../img/install_extension.png" /></p>
+<h3 id="02-disposicio-de-lespai-de-treball">0.2. Disposició de l'espai de treball<a class="headerlink" href="#02-disposicio-de-lespai-de-treball" title="Permanent link">&para;</a></h3>
+<p>Com que heu estat utilitzant VS Code durant tot Hello Nextflow, ja esteu familiaritzats amb els conceptes bàsics. Aquí teniu com organitzar el vostre espai de treball de manera eficient per a aquesta sessió:</p>
 <ul>
-<li><strong>Àrea d'Editor</strong>: Per visualitzar i editar fitxers. Podeu dividir-la en múltiples panells per comparar fitxers costat a costat.</li>
-<li><strong>Explorador de Fitxers</strong> cliqueu (<img alt="icona d'explorador de fitxers" src="../img/files_icon.png" />) (<code>Ctrl/Cmd+Shift+E</code>): Els fitxers i carpetes locals al vostre sistema. Manteniu-lo obert a l'esquerra per navegar entre fitxers</li>
-<li><strong>Terminal Integrat</strong> (<code>Ctrl+Shift+</code> accent greu tant per a Windows com per a MacOS): Un terminal per interactuar amb l'ordinador a la part inferior. Utilitzeu-lo per executar Nextflow o altres comandes.</li>
-<li><strong>Panell de Problemes</strong> (<code>Ctrl+Shift+M</code>): VS Code mostrarà aquí qualsevol error i problema que detecti. Això és útil per ressaltar problemes d'una ullada.</li>
+<li><strong>Àrea de l'editor</strong>: Per visualitzar i editar fitxers. Podeu dividir-la en múltiples panells per comparar fitxers un al costat de l'altre.</li>
+<li><strong>Explorador de fitxers</strong> feu clic a (<img alt="icona de l'explorador de fitxers" src="../img/files_icon.png" />) (<code>Ctrl/Cmd+Shift+E</code>): Els fitxers i carpetes locals del vostre sistema. Manteniu-lo obert a l'esquerra per navegar entre fitxers.</li>
+<li><strong>Terminal integrat</strong> (<code>Ctrl+Shift+</code> accent greu tant per a Windows com per a MacOS): Un terminal per interactuar amb l'ordinador a la part inferior. Utilitzeu-lo per executar Nextflow o altres comandes.</li>
+<li><strong>Panell de problemes</strong> (<code>Ctrl+Shift+M</code>): VS Code mostrarà aquí qualsevol error i problema que detecti. Això és útil per destacar problemes d'un cop d'ull.</li>
 </ul>
-<p>Podeu arrossegar panells o amagar-los (<code>Ctrl/Cmd+B</code> per alternar la barra lateral) per personalitzar la vostra disposició mentre treballem amb els exemples.</p>
+<p>Podeu arrossegar els panells o amagar-los (<code>Ctrl/Cmd+B</code> per alternar la barra lateral) per personalitzar la vostra disposició mentre treballem pels exemples.</p>
 <h3 id="conclusio">Conclusió<a class="headerlink" href="#conclusio" title="Permanent link">&para;</a></h3>
 <p>Teniu VS Code configurat amb l'extensió de Nextflow i enteneu la disposició de l'espai de treball per a un desenvolupament eficient.</p>
 <h3 id="que-segueix">Què segueix?<a class="headerlink" href="#que-segueix" title="Permanent link">&para;</a></h3>
-<p>Apreneu com el ressaltat de sintaxi us ajuda a entendre l'estructura del codi Nextflow d'una ullada.</p>
+<p>Apreneu com el ressaltat de sintaxi us ajuda a entendre l'estructura del codi Nextflow d'un cop d'ull.</p>
 <hr />
 <h2 id="1-ressaltat-de-sintaxi-i-estructura-del-codi">1. Ressaltat de Sintaxi i Estructura del Codi<a class="headerlink" href="#1-ressaltat-de-sintaxi-i-estructura-del-codi" title="Permanent link">&para;</a></h2>
 <p>Ara que el vostre espai de treball està configurat, explorem com el ressaltat de sintaxi de VS Code us ajuda a llegir i escriure codi Nextflow de manera més efectiva.</p>
-<h3 id="11-elements-de-sintaxi-de-nextflow">1.1. Elements de Sintaxi de Nextflow<a class="headerlink" href="#11-elements-de-sintaxi-de-nextflow" title="Permanent link">&para;</a></h3>
+<h3 id="11-elements-de-sintaxi-de-nextflow">1.1. Elements de sintaxi de Nextflow<a class="headerlink" href="#11-elements-de-sintaxi-de-nextflow" title="Permanent link">&para;</a></h3>
 <p>Obriu <code>basic_workflow.nf</code> per veure el ressaltat de sintaxi en acció:</p>
-<p><img alt="Mostra de Sintaxi" src="../img/syntax_showcase.png" /></p>
+<p><img alt="Mostra de sintaxi" src="../img/syntax_showcase.png" /></p>
 <p>Observeu com VS Code ressalta:</p>
 <ul>
-<li><strong>Paraules clau</strong> (<code>process</code>, <code>workflow</code>, <code>input</code>, <code>output</code>, <code>script</code>) amb colors diferents</li>
-<li><strong>Literals de cadena</strong> i <strong>paràmetres</strong> amb estils diferents</li>
+<li><strong>Paraules clau</strong> (<code>process</code>, <code>workflow</code>, <code>input</code>, <code>output</code>, <code>script</code>) amb colors distintius</li>
+<li><strong>Literals de string</strong> i <strong>paràmetres</strong> amb estils diferents</li>
 <li><strong>Comentaris</strong> amb un color apagat</li>
-<li><strong>Variables</strong> i <strong>crides a funcions</strong> amb l'èmfasi apropiat</li>
+<li><strong>Variables</strong> i <strong>crides a funcions</strong> amb l'èmfasi adequat</li>
 <li><strong>Blocs de codi</strong> amb guies d'indentació adequades</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Colors Dependents del Tema</p>
-<p>Els colors específics que veieu dependran del vostre tema de VS Code (mode fosc/clar), configuració de colors i qualsevol personalització que hàgiu fet. L'important és que diferents elements de sintaxi es distingeixen visualment entre ells, fent que l'estructura del codi sigui més fàcil d'entendre independentment de l'esquema de colors escollit.</p>
+<p class="admonition-title">Colors depenents del tema</p>
+<p>Els colors específics que veureu dependran del vostre tema de VS Code (mode fosc/clar), la configuració de colors i qualsevol personalització que hàgiu fet. El important és que els diferents elements de sintaxi es distingeixen visualment entre si, fent que l'estructura del codi sigui més fàcil d'entendre independentment de l'esquema de colors que hàgiu triat.</p>
 </div>
-<h3 id="12-comprensio-de-lestructura-del-codi">1.2. Comprensió de l'Estructura del Codi<a class="headerlink" href="#12-comprensio-de-lestructura-del-codi" title="Permanent link">&para;</a></h3>
+<h3 id="12-comprensio-de-lestructura-del-codi">1.2. Comprensió de l'estructura del codi<a class="headerlink" href="#12-comprensio-de-lestructura-del-codi" title="Permanent link">&para;</a></h3>
 <p>El ressaltat de sintaxi us ajuda a identificar ràpidament:</p>
 <ul>
-<li><strong>Límits de procés</strong>: Distinció clara entre diferents processos</li>
-<li><strong>Blocs d'entrada/sortida</strong>: Fàcil de detectar definicions de flux de dades</li>
-<li><strong>Blocs de script</strong>: Les comandes reals que s'executen</li>
-<li><strong>Operacions de canal</strong>: Passos de transformació de dades</li>
-<li><strong>Directives de configuració</strong>: Configuracions específiques de procés</li>
+<li><strong>Límits dels processos</strong>: Distinció clara entre diferents processos</li>
+<li><strong>Blocs d'entrada/sortida</strong>: Fàcil de localitzar les definicions del flux de dades</li>
+<li><strong>Blocs de script</strong>: Les comandes reals que s'estan executant</li>
+<li><strong>Operacions amb canals</strong>: Passos de transformació de dades</li>
+<li><strong>Directives de configuració</strong>: Configuració específica del procés</li>
 </ul>
-<p>Aquesta organització visual esdevé invaluable quan es treballa amb workflows complexos que contenen múltiples processos i fluxos de dades intrincats.</p>
+<p>Aquesta organització visual es torna inestimable quan es treballa amb workflows complexos que contenen múltiples processos i fluxos de dades intricats.</p>
 <h3 id="conclusio_1">Conclusió<a class="headerlink" href="#conclusio_1" title="Permanent link">&para;</a></h3>
-<p>Enteneu com el ressaltat de sintaxi de VS Code us ajuda a llegir l'estructura del codi Nextflow i identificar diferents elements del llenguatge per a un desenvolupament més ràpid.</p>
+<p>Enteneu com el ressaltat de sintaxi de VS Code us ajuda a llegir l'estructura del codi Nextflow i identificar els diferents elements del llenguatge per a un desenvolupament més ràpid.</p>
 <h3 id="que-segueix_1">Què segueix?<a class="headerlink" href="#que-segueix_1" title="Permanent link">&para;</a></h3>
-<p>Apreneu com l'autocompletat intel·ligent accelera l'escriptura de codi amb suggeriments contextuals.</p>
+<p>Apreneu com l'autocompleció intel·ligent accelera l'escriptura de codi amb suggeriments contextuals.</p>
 <hr />
-<h2 id="2-autocompletat-intelligent">2. Autocompletat Intel·ligent<a class="headerlink" href="#2-autocompletat-intelligent" title="Permanent link">&para;</a></h2>
-<p>Les funcionalitats d'autocompletat de VS Code us ajuden a escriure codi més ràpidament i amb menys errors suggerint opcions apropiades segons el context.</p>
-<h3 id="21-suggeriments-contextuals">2.1. Suggeriments Contextuals<a class="headerlink" href="#21-suggeriments-contextuals" title="Permanent link">&para;</a></h3>
-<p>Les opcions d'autocompletat varien segons on us trobeu al vostre codi:</p>
-<h4 id="operacions-de-canal">Operacions de Canal<a class="headerlink" href="#operacions-de-canal" title="Permanent link">&para;</a></h4>
-<p>Obriu <code>basic_workflow.nf</code> de nou i proveu d'escriure <code>channel.</code> al bloc de workflow:</p>
-<p><img alt="Autocompletat de canal" src="../img/autocomplete_channel.png" /></p>
+<h2 id="2-autocomplecio-intelligent">2. Autocompleció Intel·ligent<a class="headerlink" href="#2-autocomplecio-intelligent" title="Permanent link">&para;</a></h2>
+<p>Les funcionalitats d'autocompleció de VS Code us ajuden a escriure codi més ràpidament i amb menys errors suggerint opcions adequades basades en el context.</p>
+<h3 id="21-suggeriments-contextuals">2.1. Suggeriments contextuals<a class="headerlink" href="#21-suggeriments-contextuals" title="Permanent link">&para;</a></h3>
+<p>Les opcions d'autocompleció varien depenent d'on us trobeu al vostre codi:</p>
+<h4 id="operacions-amb-canals">Operacions amb canals<a class="headerlink" href="#operacions-amb-canals" title="Permanent link">&para;</a></h4>
+<p>Obriu <code>basic_workflow.nf</code> de nou i proveu d'escriure <code>channel.</code> al bloc del workflow:</p>
+<p><img alt="Autocompleció de canal" src="../img/autocomplete_channel.png" /></p>
 <p>Veureu suggeriments per a:</p>
 <ul>
-<li><code>fromPath()</code> - Crear canal des de rutes de fitxer</li>
-<li><code>fromFilePairs()</code> - Crear canal des de fitxers aparellats</li>
-<li><code>of()</code> - Crear canal des de valors</li>
-<li><code>fromSRA()</code> - Crear canal des d'accessos SRA</li>
+<li><code>fromPath()</code> - Crea un canal a partir de rutes de fitxers</li>
+<li><code>fromFilePairs()</code> - Crea un canal a partir de fitxers aparellats</li>
+<li><code>of()</code> - Crea un canal a partir de valors</li>
+<li><code>fromSRA()</code> - Crea un canal a partir d'accessions SRA</li>
 <li>I molts més...</li>
 </ul>
-<p>Això us ajuda a trobar ràpidament la factory de canal correcta a utilitzar sense necessitat de recordar noms de mètode exactes.</p>
+<p>Això us ajuda a trobar ràpidament la fàbrica de canals adequada sense necessitat de recordar els noms exactes dels mètodes.</p>
 <p>També podeu descobrir els operadors disponibles per aplicar als canals. Per exemple, escriviu <code>FASTQC.out.html.</code> per veure les operacions disponibles:</p>
-<p><img alt="Autocompletat d'operacions de canal" src="../img/autocomplete_operators.png" /></p>
-<h4 id="directives-de-proces">Directives de Procés<a class="headerlink" href="#directives-de-proces" title="Permanent link">&para;</a></h4>
-<p>Dins d'un bloc de script de procés, escriviu <code>task.</code> per veure les propietats d'execució disponibles:</p>
-<p><img alt="Autocompletat de propietats de tasca" src="../img/autocomplete_task.png" /></p>
+<p><img alt="Autocompleció d'operadors de canal" src="../img/autocomplete_operators.png" /></p>
+<h4 id="directives-de-proces">Directives de procés<a class="headerlink" href="#directives-de-proces" title="Permanent link">&para;</a></h4>
+<p>Dins d'un bloc script d'un procés, escriviu <code>task.</code> per veure les propietats d'execució disponibles:</p>
+<p><img alt="Autocompleció de propietats de tasca" src="../img/autocomplete_task.png" /></p>
 <h4 id="configuracio">Configuració<a class="headerlink" href="#configuracio" title="Permanent link">&para;</a></h4>
-<p>Obriu nextflow.config i escriviu <code>process.</code> a qualsevol lloc per veure les directives de procés disponibles:</p>
-<p><img alt="Autocompletat de configuració" src="../img/autocomplete_config.png" /></p>
+<p>Obriu nextflow.config i escriviu <code>process.</code> en qualsevol lloc per veure les directives de procés disponibles:</p>
+<p><img alt="Autocompleció de configuració" src="../img/autocomplete_config.png" /></p>
 <p>Veureu suggeriments per a:</p>
 <ul>
 <li><code>executor</code></li>
 <li><code>memory</code></li>
 <li><code>cpus</code></li>
 </ul>
-<p>Això estalvia temps quan es configuren processos i funciona a través de diferents àmbits de configuració. Per exemple, proveu d'escriure <code>docker.</code> per veure opcions de configuració específiques de Docker.</p>
+<p>Això estalvia temps en configurar processos i funciona en diferents àmbits de configuració. Per exemple, proveu d'escriure <code>docker.</code> per veure les opcions de configuració específiques de Docker.</p>
 <h3 id="conclusio_2">Conclusió<a class="headerlink" href="#conclusio_2" title="Permanent link">&para;</a></h3>
-<p>Podeu utilitzar l'autocompletat intel·ligent de VS Code per descobrir operacions de canal disponibles, directives de procés i opcions de configuració sense memoritzar sintaxi.</p>
+<p>Podeu utilitzar l'autocompleció intel·ligent de VS Code per descobrir les operacions de canal disponibles, les directives de procés i les opcions de configuració sense memoritzar la sintaxi.</p>
 <h3 id="que-segueix_2">Què segueix?<a class="headerlink" href="#que-segueix_2" title="Permanent link">&para;</a></h3>
 <p>Apreneu com la detecció d'errors en temps real us ajuda a detectar problemes abans d'executar el vostre workflow, simplement llegint el codi.</p>
 <h2 id="3-deteccio-derrors-i-diagnostics">3. Detecció d'Errors i Diagnòstics<a class="headerlink" href="#3-deteccio-derrors-i-diagnostics" title="Permanent link">&para;</a></h2>
 <p>La detecció d'errors en temps real de VS Code us ajuda a detectar problemes abans d'executar el vostre workflow.</p>
-<h3 id="31-deteccio-derrors-de-sintaxi">3.1. Detecció d'Errors de Sintaxi<a class="headerlink" href="#31-deteccio-derrors-de-sintaxi" title="Permanent link">&para;</a></h3>
-<p>Creem un error deliberat per veure la detecció en acció. Obriu <code>basic_workflow.nf</code> i canvieu el nom del procés de <code>FASTQC</code> a <code>FASTQ</code> (o qualsevol altre nom invàlid). VS Code ressaltarà immediatament l'error al bloc de workflow amb una línia ondulada vermella:</p>
+<h3 id="31-deteccio-derrors-de-sintaxi">3.1. Detecció d'errors de sintaxi<a class="headerlink" href="#31-deteccio-derrors-de-sintaxi" title="Permanent link">&para;</a></h3>
+<p>Creem un error deliberat per veure la detecció en acció. Obriu <code>basic_workflow.nf</code> i canvieu el nom del procés de <code>FASTQC</code> a <code>FASTQ</code> (o qualsevol altre nom no vàlid). VS Code ressaltarà immediatament l'error al bloc del workflow amb un subratllat vermell ondulat:</p>
 <p><img alt="Subratllat d'error" src="../img/error_underline.png" /></p>
-<h3 id="32-panell-de-problemes">3.2. Panell de Problemes<a class="headerlink" href="#32-panell-de-problemes" title="Permanent link">&para;</a></h3>
-<p>Més enllà del ressaltat d'errors individuals, VS Code proporciona un Panell de Problemes centralitzat que agrega tots els errors, advertències i missatges d'informació a través del vostre espai de treball. Obriu-lo amb <code>Ctrl/Cmd+Shift+M</code> i utilitzeu la icona de filtre per mostrar només errors rellevants al fitxer actual:</p>
-<p><img alt="Filtrar el panell de problemes" src="../img/active_file.png" /></p>
-<p>Cliqueu a qualsevol problema per saltar directament a la línia problemàtica</p>
-<p><img alt="Panell de Problemes" src="../img/problems_panel.png" /></p>
+<h3 id="32-panell-de-problemes">3.2. Panell de problemes<a class="headerlink" href="#32-panell-de-problemes" title="Permanent link">&para;</a></h3>
+<p>Més enllà del ressaltat individual d'errors, VS Code proporciona un panell de Problemes centralitzat que agrega tots els errors, advertències i missatges d'informació de tot el vostre espai de treball. Obriu-lo amb <code>Ctrl/Cmd+Shift+M</code> i utilitzeu la icona de filtre per mostrar només els errors rellevants per al fitxer actual:</p>
+<p><img alt="Filtra el panell de problemes" src="../img/active_file.png" /></p>
+<p>Feu clic en qualsevol problema per saltar directament a la línia problemàtica</p>
+<p><img alt="Panell de problemes" src="../img/problems_panel.png" /></p>
 <p>Corregiu l'error canviant el nom del procés de nou a <code>FASTQC</code>.</p>
-<h3 id="33-patrons-derror-comuns">3.3. Patrons d'Error Comuns<a class="headerlink" href="#33-patrons-derror-comuns" title="Permanent link">&para;</a></h3>
-<p>Els errors comuns a la sintaxi de Nextflow inclouen:</p>
+<h3 id="33-patrons-derrors-comuns">3.3. Patrons d'errors comuns<a class="headerlink" href="#33-patrons-derrors-comuns" title="Permanent link">&para;</a></h3>
+<p>Els errors comuns en la sintaxi de Nextflow inclouen:</p>
 <ul>
 <li><strong>Claudàtors que falten</strong>: <code>{</code> o <code>}</code> sense parella</li>
 <li><strong>Blocs incomplets</strong>: Seccions requerides que falten als processos</li>
-<li><strong>Sintaxi invàlida</strong>: DSL de Nextflow mal format</li>
-<li><strong>Errors tipogràfics a paraules clau</strong>: Directives de procés mal escrites</li>
-<li><strong>Desajustos de canal</strong>: Incompatibilitats de tipus</li>
+<li><strong>Sintaxi no vàlida</strong>: DSL de Nextflow mal format</li>
+<li><strong>Errors tipogràfics en paraules clau</strong>: Directives de procés mal escrites</li>
+<li><strong>Incompatibilitats de canals</strong>: Incompatibilitats de tipus</li>
 </ul>
-<p>El servidor de llenguatge de Nextflow ressalta aquests problemes al Panell de Problemes. Podeu revisar-los de manera primerenca per evitar errors de sintaxi mentre executeu un pipeline.</p>
+<p>El servidor de llenguatge de Nextflow ressalta aquests problemes al panell de Problemes. Podeu revisar-los d'hora per evitar errors de sintaxi mentre executeu un pipeline.</p>
 <h3 id="conclusio_3">Conclusió<a class="headerlink" href="#conclusio_3" title="Permanent link">&para;</a></h3>
-<p>Podeu utilitzar la detecció d'errors de VS Code i el Panell de Problemes per detectar errors de sintaxi i problemes abans d'executar el vostre workflow, estalviant temps i evitant frustracions.</p>
+<p>Podeu utilitzar la detecció d'errors de VS Code i el panell de Problemes per detectar errors de sintaxi i problemes abans d'executar el vostre workflow, estalviant temps i evitant frustracions.</p>
 <h3 id="que-segueix_3">Què segueix?<a class="headerlink" href="#que-segueix_3" title="Permanent link">&para;</a></h3>
-<p>Apreneu com navegar eficientment entre processos, mòduls i definicions en workflows complexos.</p>
+<p>Apreneu a navegar eficientment entre processos, mòduls i definicions en workflows complexos.</p>
 <hr />
-<h2 id="4-navegacio-de-codi-i-gestio-de-simbols">4. Navegació de Codi i Gestió de Símbols<a class="headerlink" href="#4-navegacio-de-codi-i-gestio-de-simbols" title="Permanent link">&para;</a></h2>
-<p>La navegació eficient és crucial quan es treballa amb workflows complexos que abasten múltiples fitxers. Per entendre això, substituïu la definició del procés a <code>basic_workflow.nf</code> amb una importació del mòdul que us hem proporcionat:</p>
+<h2 id="4-navegacio-pel-codi-i-gestio-de-simbols">4. Navegació pel Codi i Gestió de Símbols<a class="headerlink" href="#4-navegacio-pel-codi-i-gestio-de-simbols" title="Permanent link">&para;</a></h2>
+<p>La navegació eficient és crucial quan es treballa amb workflows complexos que abasten múltiples fitxers. Per entendre això, substituïu la definició del procés a <code>basic_workflow.nf</code> per una importació del mòdul que us hem proporcionat:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Després</label><label for="__tabbed_1_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5117,139 +5419,137 @@
 <span class="normal"><a href="#__codelineno-5-18">18</a></span>
 <span class="normal"><a href="#__codelineno-5-19">19</a></span>
 <span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTQC</span><span class="w"> </span><span class="o">{</span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTQC</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">tag</span><span class="w"> </span><span class="s2">&quot;${sample_id}&quot;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="s2">&quot;${params.output_dir}/fastqc&quot;</span><span class="o">,</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nl">output:</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.html&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">html</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.zip&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">zip</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">.</span><span class="na">ext</span><span class="o">.</span><span class="na">args</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="s2">    fastqc \\</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s2">        ${args} \\</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s2">        --threads ${task.cpus} \\</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s2">        ${reads}</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="o">}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nl">output:</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.html&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">html</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">sample_id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;*.zip&quot;</span><span class="o">),</span><span class="w"> </span><span class="nl">emit:</span><span class="w"> </span><span class="n">zip</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nl">script:</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">.</span><span class="na">ext</span><span class="o">.</span><span class="na">args</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="s2">    fastqc \\</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="s2">        ${args} \\</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="s2">        --threads ${task.cpus} \\</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s2">        ${reads}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<h3 id="41-anar-a-la-definicio">4.1. Anar a la Definició<a class="headerlink" href="#41-anar-a-la-definicio" title="Permanent link">&para;</a></h3>
-<p>Si passeu el ratolí per sobre d'un nom de procés com <code>FASTQC</code>, veureu una finestra emergent amb la interfície del mòdul (entrades i sortides):</p>
+<h3 id="41-anar-a-la-definicio">4.1. Anar a la definició<a class="headerlink" href="#41-anar-a-la-definicio" title="Permanent link">&para;</a></h3>
+<p>Si passeu el ratolí per sobre del nom d'un procés com <code>FASTQC</code>, veureu una finestra emergent amb la interfície del mòdul (entrades i sortides):</p>
 <p><img alt="Anar a la definició" src="../img/syntax.png" /></p>
-<p>Aquesta funcionalitat és particularment valuosa quan s'escriuen workflows, ja que us permet entendre la interfície del mòdul sense obrir directament el fitxer del mòdul.</p>
-<p>Podeu navegar ràpidament a qualsevol definició de procés, mòdul o variable utilitzant <strong>Ctrl/Cmd-clic</strong>. Passeu el ratolí per sobre de l'enllaç al fitxer del mòdul a la part superior de l'script, i seguiu l'enllaç com es suggereix:</p>
-<p><img alt="Seguir enllaç" src="../img/follow_link.png" /></p>
-<p>El mateix funciona per als noms de procés. Torneu a <code>basic_workflow.nf</code> i proveu-ho amb el nom del procés <code>FASTQC</code> al bloc de workflow. Això us enllaça directament al nom del procés (que és el mateix que el fitxer del mòdul en aquest exemple, però podria estar a mig camí d'un fitxer molt més gran).</p>
-<p>Per tornar a on éreu, utilitzeu <strong>Alt+←</strong> (o <strong>Ctrl+-</strong> a Mac). Aquesta és una manera potent d'explorar codi sense perdre la vostra posició.</p>
-<p>Ara explorem la navegació en un workflow més complex utilitzant <code>complex_workflow.nf</code> (el fitxer només d'il·lustració mencionat anteriorment). Aquest workflow conté múltiples processos definits en fitxers de mòdul separats, així com alguns en línia. Tot i que les estructures multi-fitxer complexes poden ser difícils de navegar manualment, la capacitat de saltar a definicions fa l'exploració molt més manejable.</p>
+<p>Aquesta funcionalitat és particularment valuosa quan s'escriuen workflows, ja que us permet entendre la interfície del mòdul sense obrir el fitxer del mòdul directament.</p>
+<p>Podeu navegar ràpidament a qualsevol definició de procés, mòdul o variable utilitzant <strong>Ctrl/Cmd-clic</strong>. Passeu el ratolí per sobre de l'enllaç al fitxer del mòdul a la part superior del script i seguiu l'enllaç tal com se suggereix:</p>
+<p><img alt="Segueix l'enllaç" src="../img/follow_link.png" /></p>
+<p>El mateix funciona per als noms de processos. Torneu a <code>basic_workflow.nf</code> i proveu-ho amb el nom del procés <code>FASTQC</code> al bloc del workflow. Això us porta directament al nom del procés (que és el mateix que el fitxer del mòdul en aquest exemple, però podria estar a mig camí d'un fitxer molt més gran).</p>
+<p>Per tornar on éreu, utilitzeu <strong>Alt+←</strong> (o <strong>Ctrl+-</strong> al Mac). Aquesta és una manera potent d'explorar el codi sense perdre el vostre lloc.</p>
+<p>Ara explorem la navegació en un workflow més complex utilitzant <code>complex_workflow.nf</code> (el fitxer només per a il·lustració esmentat anteriorment). Aquest workflow conté múltiples processos definits en fitxers de mòdul separats, així com alguns en línia. Tot i que les estructures multifitxer complexes poden ser difícils de navegar manualment, la capacitat de saltar a les definicions fa que l'exploració sigui molt més manejable.</p>
 <ol>
 <li>Obriu <code>complex_workflow.nf</code></li>
-<li>Navegueu a definicions de mòdul</li>
+<li>Navegueu a les definicions dels mòduls</li>
 <li>Utilitzeu <strong>Alt+←</strong> (o <strong>Ctrl+-</strong>) per navegar enrere</li>
-<li>Navegueu al nom del procés <code>FASTQC</code> al bloc de workflow. Això us enllaça directament al nom del procés (que és el mateix que el fitxer del mòdul en aquest exemple, però podria estar a mig camí d'un fitxer molt més gran).</li>
+<li>Navegueu al nom del procés <code>FASTQC</code> al bloc del workflow. Això us porta directament al nom del procés (que és el mateix que el fitxer del mòdul en aquest exemple, però podria estar a mig camí d'un fitxer molt més gran).</li>
 <li>Navegueu enrere de nou</li>
-<li>Navegueu al procés <code>TRIM_GALORE</code> al bloc de workflow. Aquest està definit en línia, així que no us portarà a un fitxer separat, però encara us mostrarà la definició del procés, i encara podreu navegar enrere a on éreu.</li>
+<li>Navegueu al procés <code>TRIM_GALORE</code> al bloc del workflow. Està definit en línia, de manera que no us portarà a un fitxer separat, però encara us mostrarà la definició del procés i podreu navegar enrere on éreu.</li>
 </ol>
-<h3 id="42-navegacio-de-simbols">4.2. Navegació de Símbols<a class="headerlink" href="#42-navegacio-de-simbols" title="Permanent link">&para;</a></h3>
-<p>Amb <code>complex_workflow.nf</code> encara obert, podeu obtenir una visió general de tots els símbols al fitxer escrivint <code>@</code> a la barra de cerca a la part superior de VSCode (la drecera de teclat és <code>Ctrl/Cmd+Shift+O</code>, però pot ser que no funcioni a Codespaces). Això obre el panell de navegació de símbols, que llista tots els símbols al fitxer actual:</p>
-<p><img alt="Navegació de símbols" src="../img/symbols.png" /></p>
+<h3 id="42-navegacio-per-simbols">4.2. Navegació per símbols<a class="headerlink" href="#42-navegacio-per-simbols" title="Permanent link">&para;</a></h3>
+<p>Amb <code>complex_workflow.nf</code> encara obert, podeu obtenir una visió general de tots els símbols del fitxer escrivint <code>@</code> a la barra de cerca a la part superior de VSCode (la drecera de teclat és <code>Ctrl/Cmd+Shift+O</code>, però pot no funcionar a Codespaces). Això obre el panell de navegació per símbols, que llista tots els símbols del fitxer actual:</p>
+<p><img alt="Navegació per símbols" src="../img/symbols.png" /></p>
 <p>Això mostra:</p>
 <ul>
-<li>Totes les definicions de procés</li>
-<li>Definicions de workflow (hi ha dos workflows definits en aquest fitxer)</li>
-<li>Definicions de funció</li>
+<li>Totes les definicions de processos</li>
+<li>Definicions de workflows (hi ha dos workflows definits en aquest fitxer)</li>
+<li>Definicions de funcions</li>
 </ul>
-<p>Comenceu a escriure per filtrar resultats.</p>
-<h3 id="43-trobar-totes-les-referencies">4.3. Trobar Totes les Referències<a class="headerlink" href="#43-trobar-totes-les-referencies" title="Permanent link">&para;</a></h3>
-<p>Entendre on s'utilitza un procés o variable a través del vostre codi pot ser molt útil. Per exemple, si voleu trobar totes les referències al procés <code>FASTQC</code>, comenceu navegant a la seva definició. Podeu fer-ho obrint <code>modules/fastqc.nf</code> directament, o utilitzant la funcionalitat de navegació ràpida de VS Code amb <code>Ctrl/Cmd-clic</code> com vam fer anteriorment. Un cop a la definició del procés, feu clic dret sobre el nom del procés <code>FASTQC</code> i seleccioneu "Find All References" del menú contextual per veure totes les instàncies on s'utilitza.</p>
+<p>Comenceu a escriure per filtrar els resultats.</p>
+<h3 id="43-trobar-totes-les-referencies">4.3. Trobar totes les referències<a class="headerlink" href="#43-trobar-totes-les-referencies" title="Permanent link">&para;</a></h3>
+<p>Entendre on s'utilitza un procés o variable a tot el vostre codi pot ser molt útil. Per exemple, si voleu trobar totes les referències al procés <code>FASTQC</code>, comenceu navegant a la seva definició. Podeu fer-ho obrint <code>modules/fastqc.nf</code> directament, o utilitzant la funcionalitat de navegació ràpida de VS Code amb <code>Ctrl/Cmd-clic</code> com hem fet anteriorment. Un cop a la definició del procés, feu clic dret sobre el nom del procés <code>FASTQC</code> i seleccioneu "Find All References" del menú contextual per veure totes les instàncies on s'utilitza.</p>
 <p><img alt="Trobar referències" src="../img/references.png" /></p>
-<p>Aquesta funcionalitat mostra totes les instàncies on es fa referència a <code>FASTQC</code> dins del vostre espai de treball, incloent el seu ús als dos workflows diferents. Aquesta visió és crucial per avaluar l'impacte potencial de modificacions al procés <code>FASTQC</code>.</p>
-<h3 id="44-panell-desquema">4.4. Panell d'Esquema<a class="headerlink" href="#44-panell-desquema" title="Permanent link">&para;</a></h3>
-<p>El panell d'Esquema, ubicat a la barra lateral de l'Explorador (cliqueu <img alt="icona d'Explorador" src="../img/files_icon.png" />), proporciona una visió general convenient de tots els símbols al vostre fitxer actual. Aquesta funcionalitat us permet navegar ràpidament i gestionar l'estructura del vostre codi mostrant funcions, variables i altres elements clau en una vista jeràrquica.</p>
+<p>Aquesta funcionalitat mostra totes les instàncies on es fa referència a <code>FASTQC</code> dins del vostre espai de treball, incloent-hi el seu ús als dos workflows diferents. Aquesta informació és crucial per avaluar l'impacte potencial de les modificacions al procés <code>FASTQC</code>.</p>
+<h3 id="44-panell-desquema">4.4. Panell d'esquema<a class="headerlink" href="#44-panell-desquema" title="Permanent link">&para;</a></h3>
+<p>El panell d'Esquema, situat a la barra lateral de l'Explorador (feu clic a <img alt="Icona de l'Explorador" src="../img/files_icon.png" />), proporciona una visió general convenient de tots els símbols del vostre fitxer actual. Aquesta funcionalitat us permet navegar ràpidament i gestionar l'estructura del vostre codi mostrant funcions, variables i altres elements clau en una vista jeràrquica.</p>
 <p><img alt="Panell d'esquema" src="../img/outline.png" /></p>
 <p>Utilitzeu el panell d'Esquema per navegar ràpidament a diferents parts del vostre codi sense utilitzar el navegador de fitxers.</p>
-<h3 id="45-visualitzacio-dag">4.5. Visualització DAG<a class="headerlink" href="#45-visualitzacio-dag" title="Permanent link">&para;</a></h3>
-<p>L'extensió de Nextflow de VS Code pot visualitzar el vostre workflow com un Graf Acíclic Dirigit (DAG). Això us ajuda a entendre el flux de dades i les dependències entre processos. Obriu <code>complex_workflow.nf</code> i cliqueu el botó "Preview DAG" sobre <code>workflow {</code> (el segon bloc <code>workflow</code> en aquest fitxer):</p>
-<p><img alt="Vista prèvia DAG" src="../img/dag_preview.png" /></p>
-<p>Aquest és només el workflow 'entry', però també podeu previsualitzar el DAG per als workflows interns clicant el botó "Preview DAG" sobre el workflow <code>RNASEQ_PIPELINE {</code> més amunt:</p>
-<p><img alt="Vista prèvia DAG workflow intern" src="../img/dag_preview_inner.png" /></p>
-<p>Per a aquest workflow, podeu utilitzar els nodes del DAG per navegar a les definicions de procés corresponents al codi. Cliqueu a un node, i us portarà a la definició de procés rellevant a l'editor. Particularment quan un workflow creix a una mida gran, això pot ajudar-vos realment a navegar pel codi i entendre com estan connectats els processos.</p>
+<h3 id="45-visualitzacio-del-dag">4.5. Visualització del DAG<a class="headerlink" href="#45-visualitzacio-del-dag" title="Permanent link">&para;</a></h3>
+<p>L'extensió de Nextflow de VS Code pot visualitzar el vostre workflow com un Graf Acíclic Dirigit (DAG). Això us ajuda a entendre el flux de dades i les dependències entre processos. Obriu <code>complex_workflow.nf</code> i feu clic al botó "Preview DAG" que apareix sobre <code>workflow {</code> (el segon bloc <code>workflow</code> d'aquest fitxer):</p>
+<p><img alt="Previsualització del DAG" src="../img/dag_preview.png" /></p>
+<p>Això és només el workflow d'entrada, però també podeu previsualitzar el DAG per als workflows interns fent clic al botó "Preview DAG" sobre el workflow <code>RNASEQ_PIPELINE {</code> més amunt:</p>
+<p><img alt="Previsualització del DAG del workflow intern" src="../img/dag_preview_inner.png" /></p>
+<p>Per a aquest workflow, podeu utilitzar els nodes del DAG per navegar a les definicions de processos corresponents al codi. Feu clic en un node i us portarà a la definició del procés rellevant a l'editor. Especialment quan un workflow creix fins a una mida gran, això pot ajudar-vos realment a navegar pel codi i entendre com estan connectats els processos.</p>
 <h3 id="conclusio_4">Conclusió<a class="headerlink" href="#conclusio_4" title="Permanent link">&para;</a></h3>
-<p>Podeu navegar workflows complexos eficientment utilitzant anar-a-definició, cerca de símbols, trobar referències i visualització DAG per entendre l'estructura del codi i les dependències.</p>
+<p>Podeu navegar per workflows complexos de manera eficient utilitzant anar a la definició, cerca de símbols, trobar referències i visualització del DAG per entendre l'estructura del codi i les dependències.</p>
 <h3 id="que-segueix_4">Què segueix?<a class="headerlink" href="#que-segueix_4" title="Permanent link">&para;</a></h3>
-<p>Apreneu com treballar efectivament a través de múltiples fitxers interconnectats en projectes Nextflow més grans.</p>
-<h2 id="5-treballar-a-traves-de-multiples-fitxers">5. Treballar a Través de Múltiples Fitxers<a class="headerlink" href="#5-treballar-a-traves-de-multiples-fitxers" title="Permanent link">&para;</a></h2>
-<p>El desenvolupament real de Nextflow implica treballar amb múltiples fitxers interconnectats. Explorem com VS Code us ajuda a gestionar projectes complexos de manera eficient.</p>
-<h3 id="51-navegacio-rapida-de-fitxers">5.1. Navegació Ràpida de Fitxers<a class="headerlink" href="#51-navegacio-rapida-de-fitxers" title="Permanent link">&para;</a></h3>
-<p>Amb <code>complex_workflow.nf</code> obert, notareu que importa diversos mòduls. Practiquem la navegació ràpida entre ells.</p>
+<p>Apreneu a treballar eficaçment en múltiples fitxers interconnectats en projectes Nextflow més grans.</p>
+<h2 id="5-treballar-amb-multiples-fitxers">5. Treballar amb Múltiples Fitxers<a class="headerlink" href="#5-treballar-amb-multiples-fitxers" title="Permanent link">&para;</a></h2>
+<p>El desenvolupament real amb Nextflow implica treballar amb múltiples fitxers interconnectats. Explorem com VS Code us ajuda a gestionar projectes complexos de manera eficient.</p>
+<h3 id="51-navegacio-rapida-entre-fitxers">5.1. Navegació ràpida entre fitxers<a class="headerlink" href="#51-navegacio-rapida-entre-fitxers" title="Permanent link">&para;</a></h3>
+<p>Amb <code>complex_workflow.nf</code> obert, observareu que importa diversos mòduls. Practiquem la navegació ràpida entre ells.</p>
 <p>Premeu <strong>Ctrl+P</strong> (o <strong>Cmd+P</strong>) i comenceu a escriure "fast":</p>
-<p>VS Code us mostrarà fitxers coincidents. Seleccioneu <code>modules/fastqc.nf</code> per saltar-hi instantàniament. Això és molt més ràpid que clicar a través de l'explorador de fitxers quan sabeu aproximadament quin fitxer esteu buscant.</p>
-<p>Proveu això amb altres patrons:</p>
+<p>VS Code us mostrarà els fitxers coincidents. Seleccioneu <code>modules/fastqc.nf</code> per saltar-hi instantàniament. Això és molt més ràpid que fer clic a través de l'explorador de fitxers quan sabeu aproximadament quin fitxer esteu buscant.</p>
+<p>Proveu-ho amb altres patrons:</p>
 <ul>
 <li>Escriviu "star" per trobar el fitxer del mòdul d'alineament STAR (<code>star.nf</code>)</li>
-<li>Escriviu "utils" per trobar el fitxer de funcions d'utilitat (<code>utils.nf</code>)</li>
-<li>Escriviu "config" per saltar a fitxers de configuració (<code>nextflow.config</code>)</li>
+<li>Escriviu "utils" per trobar el fitxer de funcions utilitàries (<code>utils.nf</code>)</li>
+<li>Escriviu "config" per saltar als fitxers de configuració (<code>nextflow.config</code>)</li>
 </ul>
-<h3 id="52-editor-dividit-per-a-desenvolupament-multi-fitxer">5.2. Editor Dividit per a Desenvolupament Multi-fitxer<a class="headerlink" href="#52-editor-dividit-per-a-desenvolupament-multi-fitxer" title="Permanent link">&para;</a></h3>
-<p>Quan es treballa amb mòduls, sovint necessiteu veure tant el workflow principal com les definicions de mòdul simultàniament. Configurem això:</p>
+<h3 id="52-editor-dividit-per-al-desenvolupament-multifitxer">5.2. Editor dividit per al desenvolupament multifitxer<a class="headerlink" href="#52-editor-dividit-per-al-desenvolupament-multifitxer" title="Permanent link">&para;</a></h3>
+<p>Quan treballeu amb mòduls, sovint necessiteu veure tant el workflow principal com les definicions dels mòduls simultàniament. Configurem-ho:</p>
 <ol>
 <li>Obriu <code>complex_workflow.nf</code></li>
 <li>Obriu <code>modules/fastqc.nf</code> en una pestanya nova</li>
 <li>Feu clic dret a la pestanya <code>modules/fastqc.nf</code> i seleccioneu "Split Right"</li>
-<li>Ara podeu veure ambdós fitxers costat a costat</li>
+<li>Ara podeu veure els dos fitxers un al costat de l'altre</li>
 </ol>
 <p><img alt="Editor dividit" src="../img/split_editor.png" /></p>
-<p>Això és invaluable quan:</p>
+<p>Això és inestimable quan:</p>
 <ul>
-<li>Es comproven interfícies de mòdul mentre s'escriuen crides de workflow, i la vista prèvia no és suficient</li>
-<li>Es comparen processos similars a través de diferents mòduls</li>
-<li>Es depura el flux de dades entre workflow i mòduls</li>
+<li>Comproveu les interfícies dels mòduls mentre escriviu crides al workflow, i la previsualització no és suficient</li>
+<li>Compareu processos similars en diferents mòduls</li>
+<li>Depureu el flux de dades entre el workflow i els mòduls</li>
 </ul>
-<h3 id="53-cerca-a-tot-el-projecte">5.3. Cerca a Tot el Projecte<a class="headerlink" href="#53-cerca-a-tot-el-projecte" title="Permanent link">&para;</a></h3>
-<p>De vegades necessiteu trobar on s'utilitzen patrons específics a través de tot el vostre projecte. Premeu <code>Ctrl/Cmd+Shift+F</code> per obrir el panell de cerca.</p>
-<p>Proveu de cercar <code>publishDir</code> a través de l'espai de treball:</p>
-<p><img alt="Cerca de projecte" src="../img/project_search.png" /></p>
-<p>Això us mostra cada fitxer que utilitza directoris de publicació, ajudant-vos a:</p>
+<h3 id="53-cerca-a-tot-el-projecte">5.3. Cerca a tot el projecte<a class="headerlink" href="#53-cerca-a-tot-el-projecte" title="Permanent link">&para;</a></h3>
+<p>De vegades necessiteu trobar on s'utilitzen patrons específics a tot el vostre projecte. Premeu <code>Ctrl/Cmd+Shift+F</code> per obrir el panell de cerca.</p>
+<p>Proveu de cercar <code>container</code> a tot l'espai de treball:</p>
+<p><img alt="Cerca al projecte" src="../img/project_search.png" /></p>
+<p>Això us mostra tots els fitxers que utilitzen la directiva container, ajudant-vos a:</p>
 <ul>
-<li>Entendre patrons d'organització de sortida</li>
+<li>Entendre quins processos utilitzen contenidors</li>
 <li>Trobar exemples de directives específiques</li>
-<li>Assegurar consistència a través de mòduls</li>
+<li>Garantir la consistència entre mòduls</li>
 </ul>
 <h3 id="conclusio_5">Conclusió<a class="headerlink" href="#conclusio_5" title="Permanent link">&para;</a></h3>
-<p>Podeu gestionar projectes multi-fitxer complexos utilitzant navegació ràpida de fitxers, editors dividits i cerca a tot el projecte per treballar eficientment a través de workflows i mòduls.</p>
+<p>Podeu gestionar projectes complexos multifitxer utilitzant la navegació ràpida entre fitxers, editors dividits i la cerca a tot el projecte per treballar eficientment entre workflows i mòduls.</p>
 <h3 id="que-segueix_5">Què segueix?<a class="headerlink" href="#que-segueix_5" title="Permanent link">&para;</a></h3>
-<p>Apreneu com les funcionalitats de format i manteniment de codi mantenen els vostres workflows organitzats i llegibles.</p>
+<p>Apreneu com les funcionalitats de formatació i manteniment del codi mantenen els vostres workflows organitzats i llegibles.</p>
 <hr />
-<h2 id="6-format-i-manteniment-de-codi">6. Format i Manteniment de Codi<a class="headerlink" href="#6-format-i-manteniment-de-codi" title="Permanent link">&para;</a></h2>
-<p>El format adequat del codi és essencial no només per a l'estètica sinó també per millorar la llegibilitat, la comprensió i la facilitat d'actualització de workflows complexos.</p>
-<h3 id="61-format-automatic-en-accio">6.1. Format Automàtic en Acció<a class="headerlink" href="#61-format-automatic-en-accio" title="Permanent link">&para;</a></h3>
-<p>Obriu <code>basic_workflow.nf</code> i desorganitzeu deliberadament el format:</p>
+<h2 id="6-formatacio-i-manteniment-del-codi">6. Formatació i Manteniment del Codi<a class="headerlink" href="#6-formatacio-i-manteniment-del-codi" title="Permanent link">&para;</a></h2>
+<p>La formatació adequada del codi és essencial no només per a l'estètica, sinó també per millorar la llegibilitat, la comprensió i la facilitat d'actualitzar workflows complexos.</p>
+<h3 id="61-formatacio-automatica-en-accio">6.1. Formatació automàtica en acció<a class="headerlink" href="#61-formatacio-automatica-en-accio" title="Permanent link">&para;</a></h3>
+<p>Obriu <code>basic_workflow.nf</code> i desordeneu deliberadament la formatació:</p>
 <ul>
-<li>Elimineu alguna indentació: Ressalteu tot el document i premeu <code>shift+tab</code> moltes vegades per eliminar tantes indentacions com sigui possible.</li>
-<li>Afegiu espais extra en llocs aleatoris: a la declaració <code>channel.fromPath</code>, afegiu 30 espais després del <code>(</code>.</li>
-<li>Trenqueu algunes línies de manera estranya: Afegiu una línia nova entre l'operador <code>.view {</code> i la cadena <code>Processing sample:</code> però no afegiu una línia nova corresponent abans del parèntesi de tancament <code>}</code>.</li>
+<li>Elimineu part de la indentació: Seleccioneu tot el document i premeu <code>shift+tab</code> moltes vegades per eliminar tantes indentacions com sigui possible.</li>
+<li>Afegiu espais addicionals en llocs aleatoris: a la sentència <code>channel.fromPath</code>, afegiu 30 espais després del <code>(</code>.</li>
+<li>Trenqueu algunes línies de manera incòmoda: Afegiu una nova línia entre l'operador <code>.view {</code> i la cadena <code>Processing sample:</code> però no afegiu un salt de línia corresponent abans del parèntesi de tancament <code>}</code>.</li>
 </ul>
-<p>Ara premeu <code>Shift+Alt+F</code> (o <code>Shift+Option+F</code> a MacOS) per formatar automàticament:</p>
+<p>Ara premeu <code>Shift+Alt+F</code> (o <code>Shift+Option+F</code> al MacOS) per formatar automàticament:</p>
 <p>VS Code immediatament:</p>
 <ul>
 <li>Corregeix la indentació per mostrar l'estructura del procés clarament</li>
 <li>Alinea elements similars de manera consistent</li>
-<li>Elimina espais en blanc innecessaris</li>
+<li>Elimina els espais en blanc innecessaris</li>
 <li>Manté salts de línia llegibles</li>
 </ul>
-<p>Tingueu en compte que el format automàtic pot no resoldre tots els problemes d'estil de codi. El servidor de llenguatge de Nextflow pretén mantenir el vostre codi endreçat, però també respecta les vostres preferències personals en certes àrees. Per exemple, si elimineu la indentació dins del bloc <code>script</code> d'un procés, el formatador ho deixarà tal com està, ja que podríeu preferir intencionadament aquest estil.</p>
-<p>Actualment, no hi ha una aplicació estricta d'estil per a Nextflow, així que el servidor de llenguatge ofereix certa flexibilitat. No obstant això, aplicarà consistentment regles de format al voltant de definicions de mètodes i funcions per mantenir la claredat.</p>
-<h3 id="62-funcionalitats-dorganitzacio-de-codi">6.2. Funcionalitats d'Organització de Codi<a class="headerlink" href="#62-funcionalitats-dorganitzacio-de-codi" title="Permanent link">&para;</a></h3>
-<h4 id="comentaris-rapids">Comentaris Ràpids<a class="headerlink" href="#comentaris-rapids" title="Permanent link">&para;</a></h4>
+<p>Tingueu en compte que la formatació automàtica pot no resoldre tots els problemes d'estil del codi. El servidor de llenguatge de Nextflow intenta mantenir el vostre codi ordenat, però també respecta les vostres preferències personals en certes àrees. Per exemple, si elimineu la indentació dins del bloc <code>script</code> d'un procés, el formatador ho deixarà tal com està, ja que potser preferiu intencionadament aquest estil.</p>
+<p>Actualment, no hi ha una aplicació estricta d'estil per a Nextflow, de manera que el servidor de llenguatge ofereix una certa flexibilitat. No obstant això, aplicarà de manera consistent les regles de formatació al voltant de les definicions de mètodes i funcions per mantenir la claredat.</p>
+<h3 id="62-funcionalitats-dorganitzacio-del-codi">6.2. Funcionalitats d'organització del codi<a class="headerlink" href="#62-funcionalitats-dorganitzacio-del-codi" title="Permanent link">&para;</a></h3>
+<h4 id="comentaris-rapids">Comentaris ràpids<a class="headerlink" href="#comentaris-rapids" title="Permanent link">&para;</a></h4>
 <p>Seleccioneu un bloc de codi al vostre workflow i premeu <strong>Ctrl+/</strong> (o <strong>Cmd+/</strong>) per comentar-lo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// workflow {</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">//     ch_input = channel.fromPath(params.input)</span>
@@ -5261,116 +5561,169 @@
 </code></pre></div>
 <p>Això és perfecte per a:</p>
 <ul>
-<li>Desactivar temporalment parts de workflows durant el desenvolupament</li>
+<li>Desactivar temporalment parts dels workflows durant el desenvolupament</li>
 <li>Afegir comentaris explicatius a operacions de canal complexes</li>
-<li>Documentar seccions de workflow</li>
+<li>Documentar seccions del workflow</li>
 </ul>
 <p>Utilitzeu <strong>Ctrl+/</strong> (o <strong>Cmd+/</strong>) de nou per descomentar el codi.</p>
-<h4 id="plegat-de-codi-per-a-visio-general">Plegat de Codi per a Visió General<a class="headerlink" href="#plegat-de-codi-per-a-visio-general" title="Permanent link">&para;</a></h4>
-<p>A <code>complex_workflow.nf</code>, observeu les petites fletxes al costat de les definicions de procés. Cliqueu-les per plegar (col·lapsar) processos:</p>
-<p><img alt="Plegat de codi" src="../img/code_folding.png" /></p>
-<p>Això us dóna una visió general d'alt nivell de l'estructura del vostre workflow sense perdre's en detalls d'implementació.</p>
-<h4 id="coincidencia-de-claudators">Coincidència de Claudàtors<a class="headerlink" href="#coincidencia-de-claudators" title="Permanent link">&para;</a></h4>
-<p>Col·loqueu el cursor al costat de qualsevol claudàtor <code>{</code> o <code>}</code> i VS Code ressalta el claudàtor coincident. Utilitzeu <strong>Ctrl+Shift+\</strong> (o <strong>Cmd+Shift+\</strong>) per saltar entre claudàtors coincidents.</p>
+<h4 id="plegament-de-codi-per-a-una-visio-general">Plegament de codi per a una visió general<a class="headerlink" href="#plegament-de-codi-per-a-una-visio-general" title="Permanent link">&para;</a></h4>
+<p>A <code>complex_workflow.nf</code>, observeu les petites fletxes al costat de les definicions de processos. Feu-hi clic per plegar (col·lapsar) els processos:</p>
+<p><img alt="Plegament de codi" src="../img/code_folding.png" /></p>
+<p>Això us dóna una visió general d'alt nivell de l'estructura del vostre workflow sense perdre-us en els detalls d'implementació.</p>
+<h4 id="coincidencia-de-claudators">Coincidència de claudàtors<a class="headerlink" href="#coincidencia-de-claudators" title="Permanent link">&para;</a></h4>
+<p>Col·loqueu el cursor al costat de qualsevol claudàtor <code>{</code> o <code>}</code> i VS Code ressaltarà el claudàtor coincident. Utilitzeu <strong>Ctrl+Shift+\</strong> (o <strong>Cmd+Shift+\</strong>) per saltar entre claudàtors coincidents.</p>
 <p>Això és crucial per a:</p>
 <ul>
-<li>Entendre límits de procés</li>
+<li>Entendre els límits dels processos</li>
 <li>Trobar claudàtors que falten o sobren</li>
-<li>Navegar estructures de workflow niuades</li>
+<li>Navegar per estructures de workflow niades</li>
 </ul>
-<h4 id="seleccio-i-edicio-multi-linia">Selecció i Edició Multi-línia<a class="headerlink" href="#seleccio-i-edicio-multi-linia" title="Permanent link">&para;</a></h4>
-<p>Per editar múltiples línies simultàniament, VS Code ofereix capacitats multi-cursor potents:</p>
+<h4 id="seleccio-i-edicio-multilinia">Selecció i edició multilínia<a class="headerlink" href="#seleccio-i-edicio-multilinia" title="Permanent link">&para;</a></h4>
+<p>Per editar múltiples línies simultàniament, VS Code ofereix potents capacitats de multicursor:</p>
 <ul>
-<li><strong>Selecció multi-línia</strong>: Manteniu <strong>Ctrl+Alt</strong> (o <strong>Cmd+Option</strong> per a MacOS) i utilitzeu les tecles de fletxa per seleccionar múltiples línies</li>
-<li><strong>Indentació multi-línia</strong>: Seleccioneu múltiples línies i utilitzeu <strong>Tab</strong> per indentar o <strong>Shift+Tab</strong> per desindentar blocs sencers</li>
+<li><strong>Selecció multilínia</strong>: Manteniu premut <strong>Ctrl+Alt</strong> (o <strong>Cmd+Option</strong> al MacOS) i utilitzeu les tecles de fletxa per seleccionar múltiples línies</li>
+<li><strong>Indentació multilínia</strong>: Seleccioneu múltiples línies i utilitzeu <strong>Tab</strong> per indentar o <strong>Shift+Tab</strong> per desdentar blocs sencers</li>
 </ul>
 <p>Això és particularment útil per a:</p>
 <ul>
-<li>Indentar blocs de procés sencers de manera consistent</li>
+<li>Indentar blocs de processos sencers de manera consistent</li>
 <li>Afegir comentaris a múltiples línies alhora</li>
-<li>Editar definicions de paràmetres similars a través de múltiples processos</li>
+<li>Editar definicions de paràmetres similars en múltiples processos</li>
 </ul>
 <h3 id="conclusio_6">Conclusió<a class="headerlink" href="#conclusio_6" title="Permanent link">&para;</a></h3>
-<p>Podeu mantenir codi net i llegible utilitzant format automàtic, funcionalitats de comentaris, plegat de codi, coincidència de claudàtors i edició multi-línia per organitzar workflows complexos de manera eficient.</p>
+<p>Podeu mantenir un codi net i llegible utilitzant la formatació automàtica, les funcionalitats de comentaris, el plegament de codi, la coincidència de claudàtors i l'edició multilínia per organitzar workflows complexos de manera eficient.</p>
 <h3 id="que-segueix_6">Què segueix?<a class="headerlink" href="#que-segueix_6" title="Permanent link">&para;</a></h3>
-<p>Apreneu com VS Code s'integra amb el vostre workflow de desenvolupament més ampli més enllà de simplement editar codi.</p>
+<p>Apreneu com VS Code s'integra amb el vostre flux de treball de desenvolupament més ampli més enllà de simplement editar codi.</p>
 <hr />
-<h2 id="7-integracio-del-workflow-de-desenvolupament">7. Integració del Workflow de Desenvolupament<a class="headerlink" href="#7-integracio-del-workflow-de-desenvolupament" title="Permanent link">&para;</a></h2>
-<p>VS Code s'integra bé amb el vostre workflow de desenvolupament més enllà de simplement editar codi.</p>
-<h3 id="71-integracio-de-control-de-versions">7.1. Integració de Control de Versions<a class="headerlink" href="#71-integracio-de-control-de-versions" title="Permanent link">&para;</a></h3>
+<h2 id="7-integracio-del-flux-de-treball-de-desenvolupament">7. Integració del Flux de Treball de Desenvolupament<a class="headerlink" href="#7-integracio-del-flux-de-treball-de-desenvolupament" title="Permanent link">&para;</a></h2>
+<p>VS Code s'integra bé amb el vostre flux de treball de desenvolupament més enllà de simplement editar codi.</p>
+<h3 id="71-integracio-amb-el-control-de-versions">7.1. Integració amb el control de versions<a class="headerlink" href="#71-integracio-amb-el-control-de-versions" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
-<p class="admonition-title">Codespaces i Integració Git</p>
-<p>Si esteu treballant a <strong>GitHub Codespaces</strong>, algunes funcionalitats d'integració Git poden no funcionar com s'espera, particularment dreceres de teclat per a Control de Codi. També podeu haver declinat obrir el directori com a repositori Git durant la configuració inicial, que està bé per a propòsits de formació.</p>
+<p class="admonition-title">Codespaces i integració amb Git</p>
+<p>Si esteu treballant a <strong>GitHub Codespaces</strong>, algunes funcionalitats d'integració amb Git poden no funcionar com s'espera, especialment les dreceres de teclat per al Control de Codi Font. És possible que també hàgiu declinat obrir el directori com a repositori Git durant la configuració inicial, cosa que és correcta per a propòsits de formació.</p>
 </div>
-<p>Si el vostre projecte és un repositori git (com aquest ho és), VS Code mostra:</p>
+<p>Si el vostre projecte és un repositori git (com ho és aquest), VS Code mostra:</p>
 <ul>
 <li>Fitxers modificats amb indicadors de color</li>
 <li>Estat de Git a la barra d'estat</li>
 <li>Vistes de diferències en línia</li>
 <li>Capacitats de commit i push</li>
 </ul>
-<p>Obriu el panell de Control de Codi utilitzant el botó de control de codi (<img alt="icona de Control de codi" src="../img/source_control_icon.png" />) (<code>Ctrl+Shift+G</code> o <code>Cmd+Shift+G</code> si esteu treballant amb VSCode localment) per veure canvis de git i preparar commits directament a l'editor.</p>
-<p><img alt="Panell de Control de Codi" src="../img/source_control.png" /></p>
-<h3 id="72-execucio-i-inspeccio-de-workflows">7.2. Execució i Inspecció de Workflows<a class="headerlink" href="#72-execucio-i-inspeccio-de-workflows" title="Permanent link">&para;</a></h3>
-<p>Executem un workflow i després inspeccionem els resultats. Al terminal integrat (<code>Ctrl+Shift+</code> accent greu tant a Windows com a MacOS), executeu el workflow bàsic:</p>
+<p>Obriu el panell de Control de Codi Font utilitzant el botó de control de codi font (<img alt="Icona de control de codi font" src="../img/source_control_icon.png" />) (<code>Ctrl+Shift+G</code> o <code>Cmd+Shift+G</code> si esteu treballant amb VSCode localment) per veure els canvis de git i fer commits directament a l'editor.</p>
+<p><img alt="Panell de Control de Codi Font" src="../img/source_control.png" /></p>
+<h3 id="72-execucio-i-inspeccio-de-workflows">7.2. Execució i inspecció de workflows<a class="headerlink" href="#72-execucio-i-inspeccio-de-workflows" title="Permanent link">&para;</a></h3>
+<p>Executem un workflow i després inspeccionem els resultats. Al terminal integrat (<code>Ctrl+Shift+</code> accent greu tant per a Windows com per a MacOS), executeu el workflow bàsic:</p>
 <div class="highlight"><span class="filename">Run the basic workflow</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>basic_workflow.nf<span class="w"> </span>--input<span class="w"> </span>data/sample_data.csv<span class="w"> </span>--output_dir<span class="w"> </span>results
 </code></pre></div>
-<p>Mentre el workflow s'executa, veureu sortida en temps real al terminal. Després de completar-se, podeu utilitzar VS Code per inspeccionar resultats sense sortir del vostre editor:</p>
+<p>Mentre s'executa el workflow, veureu la sortida en temps real al terminal. Després de la finalització, podeu utilitzar VS Code per inspeccionar els resultats sense sortir de l'editor:</p>
 <ol>
-<li><strong>Navegueu a directoris de treball</strong>: Utilitzeu l'explorador de fitxers o el terminal per navegar <code>.nextflow/work</code></li>
-<li><strong>Obriu fitxers de registre</strong>: Cliqueu a rutes de fitxers de registre a la sortida del terminal per obrir-los directament a VS Code</li>
-<li><strong>Inspeccioneu sortides</strong>: Navegueu directoris de resultats publicats a l'explorador de fitxers</li>
+<li><strong>Navegueu als directoris de treball</strong>: Utilitzeu l'explorador de fitxers o el terminal per navegar per <code>.nextflow/work</code></li>
+<li><strong>Obriu fitxers de registre</strong>: Feu clic a les rutes dels fitxers de registre a la sortida del terminal per obrir-los directament a VS Code</li>
+<li><strong>Inspeccioneu les sortides</strong>: Navegueu pels directoris de resultats publicats a l'explorador de fitxers</li>
 <li><strong>Visualitzeu informes d'execució</strong>: Obriu informes HTML directament a VS Code o al vostre navegador</li>
 </ol>
 <p>Això manté tot en un sol lloc en lloc de canviar entre múltiples aplicacions.</p>
 <h3 id="conclusio_7">Conclusió<a class="headerlink" href="#conclusio_7" title="Permanent link">&para;</a></h3>
-<p>Podeu integrar VS Code amb control de versions i execució de workflows per gestionar tot el vostre procés de desenvolupament des d'una única interfície.</p>
+<p>Podeu integrar VS Code amb el control de versions i l'execució de workflows per gestionar tot el vostre procés de desenvolupament des d'una única interfície.</p>
 <h3 id="que-segueix_7">Què segueix?<a class="headerlink" href="#que-segueix_7" title="Permanent link">&para;</a></h3>
-<p>Veieu com totes aquestes funcionalitats d'IDE treballen juntes al vostre workflow de desenvolupament diari.</p>
+<p>Veieu com totes aquestes funcionalitats de l'IDE funcionen juntes en el vostre flux de treball de desenvolupament diari.</p>
 <hr />
-<h2 id="8-recapitulacio-i-notes-rapides">8. Recapitulació i notes ràpides<a class="headerlink" href="#8-recapitulacio-i-notes-rapides" title="Permanent link">&para;</a></h2>
-<p>Aquí teniu algunes notes ràpides sobre cadascuna de les funcionalitats d'IDE discutides anteriorment:</p>
-<h3 id="81-comencar-una-nova-funcionalitat">8.1. Començar una Nova Funcionalitat<a class="headerlink" href="#81-comencar-una-nova-funcionalitat" title="Permanent link">&para;</a></h3>
+<h2 id="8-resum-i-notes-rapides">8. Resum i notes ràpides<a class="headerlink" href="#8-resum-i-notes-rapides" title="Permanent link">&para;</a></h2>
+<p>Aquí teniu algunes notes ràpides sobre cadascuna de les funcionalitats de l'IDE comentades anteriorment:</p>
+<h3 id="81-iniciar-una-nova-funcionalitat">8.1. Iniciar una nova funcionalitat<a class="headerlink" href="#81-iniciar-una-nova-funcionalitat" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Obertura ràpida de fitxers</strong> (<code>Ctrl+P</code> o <code>Cmd+P</code>) per trobar mòduls existents rellevants</li>
-<li><strong>Editor dividit</strong> per veure processos similars costat a costat</li>
-<li><strong>Navegació de símbols</strong> (<code>Ctrl+Shift+O</code> o <code>Cmd+Shift+O</code>) per entendre l'estructura del fitxer</li>
-<li><strong>Autocompletat</strong> per escriure codi nou ràpidament</li>
+<li><strong>Editor dividit</strong> per veure processos similars un al costat de l'altre</li>
+<li><strong>Navegació per símbols</strong> (<code>Ctrl+Shift+O</code> o <code>Cmd+Shift+O</code>) per entendre l'estructura del fitxer</li>
+<li><strong>Autocompleció</strong> per escriure codi nou ràpidament</li>
 </ol>
-<h3 id="82-depuracio-de-problemes">8.2. Depuració de Problemes<a class="headerlink" href="#82-depuracio-de-problemes" title="Permanent link">&para;</a></h3>
+<h3 id="82-depurar-problemes">8.2. Depurar problemes<a class="headerlink" href="#82-depurar-problemes" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Panell de problemes</strong> (<code>Ctrl+Shift+M</code> o <code>Cmd+Shift+M</code>) per veure tots els errors alhora</li>
-<li><strong>Anar a la definició</strong> (<code>Ctrl-clic</code> o <code>Cmd-clic</code>) per entendre interfícies de procés</li>
+<li><strong>Anar a la definició</strong> (<code>Ctrl-clic</code> o <code>Cmd-clic</code>) per entendre les interfícies dels processos</li>
 <li><strong>Trobar totes les referències</strong> per veure com s'utilitzen els processos</li>
 <li><strong>Cerca a tot el projecte</strong> per trobar patrons o problemes similars</li>
 </ol>
-<h3 id="83-refactoritzacio-i-millora">8.3. Refactorització i Millora<a class="headerlink" href="#83-refactoritzacio-i-millora" title="Permanent link">&para;</a></h3>
+<h3 id="83-refactoritzacio-i-millora">8.3. Refactorització i millora<a class="headerlink" href="#83-refactoritzacio-i-millora" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Cerca a tot el projecte</strong> (<code>Ctrl+Shift+F</code> o <code>Cmd+Shift+F</code>) per trobar patrons</li>
-<li><strong>Format automàtic</strong> (<code>Shift+Alt+F</code> o <code>Shift+Option+F</code>) per mantenir consistència</li>
-<li><strong>Plegat de codi</strong> per centrar-se en l'estructura</li>
-<li><strong>Integració Git</strong> per fer seguiment de canvis</li>
+<li><strong>Formatació automàtica</strong> (<code>Shift+Alt+F</code> o <code>Shift+Option+F</code>) per mantenir la consistència</li>
+<li><strong>Plegament de codi</strong> per centrar-se en l'estructura</li>
+<li><strong>Integració amb Git</strong> per fer un seguiment dels canvis</li>
 </ol>
 <hr />
 <h2 id="resum">Resum<a class="headerlink" href="#resum" title="Permanent link">&para;</a></h2>
-<p>Ara heu tingut un recorregut ràpid per les funcionalitats d'IDE de VS Code per al desenvolupament de Nextflow. Aquestes eines us faran significativament més productius:</p>
+<p>Ara heu fet un recorregut ràpid per les funcionalitats de l'IDE de VS Code per al desenvolupament amb Nextflow. Aquestes eines us faran significativament més productius:</p>
 <ul>
-<li><strong>Reduint errors</strong> mitjançant comprovació de sintaxi en temps real</li>
-<li><strong>Accelerant el desenvolupament</strong> amb autocompletat intel·ligent</li>
-<li><strong>Millorant la navegació</strong> en workflows multi-fitxer complexos</li>
-<li><strong>Mantenint la qualitat</strong> mitjançant format consistent</li>
-<li><strong>Millorant la comprensió</strong> mitjançant ressaltat avançat i visualització d'estructura</li>
+<li><strong>Reduint errors</strong> mitjançant la comprovació de sintaxi en temps real</li>
+<li><strong>Accelerant el desenvolupament</strong> amb l'autocompleció intel·ligent</li>
+<li><strong>Millorant la navegació</strong> en workflows complexos multifitxer</li>
+<li><strong>Mantenint la qualitat</strong> mitjançant una formatació consistent</li>
+<li><strong>Millorant la comprensió</strong> mitjançant el ressaltat avançat i la visualització de l'estructura</li>
 </ul>
-<p>No esperem que recordeu tot, però ara sabeu que aquestes funcionalitats existeixen i podreu trobar-les quan les necessiteu. A mesura que continueu desenvolupant workflows de Nextflow, aquestes funcionalitats d'IDE esdevindran una segona naturalesa, permetent-vos centrar-vos en escriure codi d'alta qualitat en lloc de lluitar amb la sintaxi i l'estructura.</p>
+<p>No esperem que recordeu tot, però ara que sabeu que existeixen aquestes funcionalitats, podreu trobar-les quan les necessiteu. A mesura que continueu desenvolupant workflows amb Nextflow, aquestes funcionalitats de l'IDE es tornaran una segona naturalesa, permetent-vos centrar-vos en escriure codi d'alta qualitat en lloc de lluitar amb la sintaxi i l'estructura.</p>
 <h3 id="que-segueix_8">Què segueix?<a class="headerlink" href="#que-segueix_8" title="Permanent link">&para;</a></h3>
-<p>Apliqueu aquestes habilitats d'IDE mentre treballeu amb altres mòduls de formació, per exemple:</p>
+<p>Apliqueu aquestes habilitats de l'IDE mentre treballeu en altres mòduls de formació, per exemple:</p>
 <ul>
-<li><strong><a href="../nf-test/">nf-test</a></strong>: Creeu suites de proves completes per als vostres workflows</li>
+<li><strong><a href="../nf_test/">nf-test</a></strong>: Creeu suites de proves exhaustives per als vostres workflows</li>
 <li><strong><a href="../../hello_nf-core/">Hello nf-core</a></strong>: Construïu pipelines de qualitat de producció amb estàndards de la comunitat</li>
 </ul>
-<p>El veritable poder d'aquestes funcionalitats d'IDE emergeix a mesura que treballeu en projectes més grans i complexos. Comenceu a incorporar-les al vostre workflow gradualment—en poques sessions, esdevindran una segona naturalesa i transformaran com abordeu el desenvolupament de Nextflow.</p>
-<p>Des de detectar errors abans que us alenteixen fins a navegar per codis complexos amb facilitat, aquestes eines us faran un desenvolupador més confiat i eficient.</p>
-<p>Feliç programació!</p><style type="text/css">.quiz {
+<p>El veritable poder d'aquestes funcionalitats de l'IDE emergeix quan treballeu en projectes més grans i complexos. Comenceu a incorporar-les al vostre flux de treball gradualment: en poques sessions, es tornaran una segona naturalesa i transformaran la manera com abordeu el desenvolupament amb Nextflow.</p>
+<p>Des de detectar errors abans que us alentissin fins a navegar per bases de codi complexes amb facilitat, aquestes eines us convertiran en un desenvolupador més segur i eficient.</p>
+<p>Bon codi!</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -5384,11 +5737,11 @@
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -5403,11 +5756,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -5417,10 +5770,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -5445,34 +5800,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -5487,8 +5891,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -5743,7 +6154,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -5960,10 +6370,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -6288,14 +6696,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -6418,9 +6933,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -6461,27 +6975,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -6502,7 +7016,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -6522,15 +7036,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6550,7 +7066,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -6560,8 +7076,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -6575,11 +7091,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6641,10 +7161,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -6695,34 +7213,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -6743,11 +7257,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -6759,39 +7273,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -6817,6 +7304,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -6836,9 +7329,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
@@ -6920,7 +7410,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../orientation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Orientació">
+          <a href="../orientation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Primers passos">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6930,20 +7420,20 @@ window.mkdocsQuizConfig = {
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Orientació
+                Primers passos
               </div>
             </div>
           </a>
         
         
           
-          <a href="../metadata/" class="md-footer__link md-footer__link--next" aria-label="Següent: Metadades i mapes de metadades">
+          <a href="../essential_scripting_patterns/" class="md-footer__link md-footer__link--next" aria-label="Següent: Patrons Essencials de Scripting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Metadades i mapes de metadades
+                Patrons Essencials de Scripting
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -3290,7 +3321,7 @@
   <span class="md-ellipsis">
     
   
-    Orientação
+    Primeiros passos
   
 
     
@@ -3318,7 +3349,7 @@
   <span class="md-ellipsis">
     
   
-    Ambiente de Desenvolvimento
+    Index
   
 
     
@@ -3339,14 +3370,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/metadata/" class="md-nav__link">
+      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Metadados e mapas meta
+    Padrões Essenciais de Scripting
   
 
     
@@ -3374,7 +3405,35 @@
   <span class="md-ellipsis">
     
   
-    Processamento de entrada de arquivos
+    Processamento de Entrada de Arquivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadados e Meta Maps
   
 
     
@@ -3423,14 +3482,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/workflows_of_workflows/" class="md-nav__link">
+      <a href="../../side_quests/nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Fluxos de Trabalho de Fluxos de Trabalho
+    Index
   
 
     
@@ -3458,7 +3517,7 @@
   <span class="md-ellipsis">
     
   
-    Depurando Workflows
+    Solução de Problemas em Fluxos de Trabalho
   
 
     
@@ -3479,14 +3538,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/essential_scripting_patterns/" class="md-nav__link">
+      <a href="../../side_quests/workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Padrões Essenciais de Script Nextflow
+    Fluxos de Trabalho de Fluxos de Trabalho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento de Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolvimento de Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento de Plugins
   
 
     
@@ -3507,14 +3641,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../side_quests/nf-test/" class="md-nav__link">
+      <a href="../../side_quests/plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Testando com nf-test
+    Parte 1: Conceitos Básicos de Plugins
   
 
     
@@ -3523,6 +3657,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 2: Criar um Projeto de Plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 3: Funções Personalizadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 4: Testes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parte 6: Configuração
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../side_quests/plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Próximos Passos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4910,43 +5248,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -5043,8 +5344,8 @@ Ele é equivalente ao script produzido ao trabalhar na Parte 5 deste curso de tr
 </span><a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
 <a id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="w">    </span><span class="o">}</span>
 <a id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="w">    </span><span class="n">cowpy_art</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello_config&#39;</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="hll"><span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="s1">&#39;hello_config&#39;</span>
+</span><a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
 <a id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">    </span><span class="o">}</span>
 <a id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
@@ -5053,7 +5354,7 @@ Ele é equivalente ao script produzido ao trabalhar na Parte 5 deste curso de tr
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">Launching `hello-config.nf` [nice_escher] DSL2 - revision: d5dfdc9872</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
@@ -5073,10 +5374,10 @@ Ele é equivalente ao script produzido ao trabalhar na Parte 5 deste curso de tr
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">│   ├── Bonjour-output.txt</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">│   ├── COLLECTED-batch-output.txt</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="go">│   ├── Hello-output.txt</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="go">│   ├── Holà-output.txt</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="go">│   ├── Hola-output.txt</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="go">│   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="go">│   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="go">│   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="go">│   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="go">└── batch-report.txt</span>
 </code></pre></div>
 </details>
@@ -5084,7 +5385,7 @@ Ele é equivalente ao script produzido ao trabalhar na Parte 5 deste curso de tr
 <details class="abstract">
 <summary>Conteúdo do arquivo</summary>
 <div class="highlight"><span class="filename">results/hello_config/cowpy-COLLECTED-batch-output.txt</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">_________</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="go">/ HOLà    \</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="go">/ HOLA    \</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">| HELLO   |</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">---------</span>
@@ -5210,7 +5511,7 @@ Você poderia modificar o caractere, por exemplo, e executar o fluxo de trabalho
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">Launching `hello-config.nf` [disturbed_einstein] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
@@ -5226,7 +5527,7 @@ Você poderia modificar o caractere, por exemplo, e executar o fluxo de trabalho
 <details class="abstract">
 <summary>Conteúdo do arquivo</summary>
 <div class="highlight"><span class="filename">results/hello_config/cowpy-COLLECTED-batch-output.txt</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">_________</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">/ HOLà    \</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="go">/ HOLA    \</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">| HELLO   |</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="go">---------</span>
@@ -5286,7 +5587,7 @@ Certifique-se de adaptar o caminho adequadamente!</p>
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">Launching `../hello-config.nf` [trusting_escher] DSL2 - revision: 356df0818d</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
@@ -5305,7 +5606,7 @@ Certifique-se de adaptar o caminho adequadamente!</p>
 <div class="highlight"><span class="filename">tux-run/results/hello_config/cowpy-COLLECTED-experiment-output.txt</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="go">_________</span>
 <a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="go">/ HELLO   \</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="go">| BONJOUR |</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="go">\ HOLà    /</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="go">\ HOLA    /</span>
 <a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="go">---------</span>
 <a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="go">  \</span>
 <a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="go">    \</span>
@@ -5320,7 +5621,7 @@ Certifique-se de adaptar o caminho adequadamente!</p>
 </details>
 <p>É isso; agora você tem um espaço para experimentar sem modificar sua configuração 'normal'.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Aviso</p>
 <p>Certifique-se de voltar ao diretório anterior antes de passar para a próxima seção!</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">cd</span><span class="w"> </span>..
 </code></pre></div>
@@ -5352,7 +5653,7 @@ Sinta-se livre para tentar essa por conta própria.</p>
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="go">Launching `hello-config.nf` [disturbed_sammet] DSL2 - revision: ede9037d02</span>
 <a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
@@ -5368,7 +5669,7 @@ Sinta-se livre para tentar essa por conta própria.</p>
 <summary>Conteúdo do arquivo</summary>
 <div class="highlight"><span class="filename">results/hello_config/cowpy-COLLECTED-yaml-output.txt</span><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">_________</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="go">/ HELLO   \</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">| HOLà    |</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">| HOLA    |</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="go">---------</span>
 <a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="go">\                             .       .</span>
@@ -5414,7 +5715,7 @@ Esta é a maneira recomendada de controlar o caminho raiz onde as saídas são p
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
 <a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="go">Launching `hello-config.nf` [prickly_kay] DSL2 - revision: 32ecc4fba2</span>
 <a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
@@ -5436,10 +5737,10 @@ Esta é a maneira recomendada de controlar o caminho raiz onde as saídas são p
 <a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="go">        ├── Bonjour-output.txt</span>
 <a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="go">        ├── COLLECTED-batch-output.txt</span>
 <a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="go">        ├── Hello-output.txt</span>
-<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="go">        ├── Holà-output.txt</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="go">        ├── Hola-output.txt</span>
 <a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="go">        ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="go">        ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="go">        └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="go">        └── UPPER-Hola-output.txt</span>
 </code></pre></div>
 </details>
 <p>Note que ainda temos o subdiretório <code>hello_config</code> das declarações <code>path</code> no bloco de saída.
@@ -5557,14 +5858,14 @@ Para saídas que não precisam de um subdiretório, podemos definir a diretiva <
 <a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="go">    ├── Bonjour-output.txt</span>
 <a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="go">    ├── COLLECTED-batch-output.txt</span>
 <a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="go">    ├── Hello-output.txt</span>
-<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="go">    ├── Holà-output.txt</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="go">    ├── Hola-output.txt</span>
 <a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="go">    ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="go">    ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="go">    └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="go">    └── UPPER-Hola-output.txt</span>
 </code></pre></div>
 </details>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>A opção <code>-output-dir</code> é usada para controlar <em>onde</em> as saídas vão, enquanto a diretiva <code>path</code> no bloco de saída controla a <em>estrutura de subdiretórios</em>.</p>
 </div>
 <h3 id="22-caminhos-de-saida-dinamicos">2.2. Caminhos de saída dinâmicos<a class="headerlink" href="#22-caminhos-de-saida-dinamicos" title="Permanent link">&para;</a></h3>
@@ -5628,7 +5929,7 @@ Agora você pode mudar o local de saída definindo o parâmetro <code>--batch</c
 </code></pre></div>
 <p>Isso publica saídas em <code>custom-outdir-config/my_run/</code>.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Nota</p>
 <p>A opção CLI <code>-output-dir</code> tem precedência sobre a configuração <code>outputDir</code>.
 Se estiver definida, a opção de configuração será ignorada completamente.</p>
 </div>
@@ -5735,10 +6036,10 @@ Se estiver definida, a opção de configuração será ignorada completamente.</
 <p>Na edição acima, apagamos a distinção entre <code>intermediates</code> versus saídas finais estando no nível superior.
 Vamos colocar isso de volta, e também colocar os arquivos em um subdiretório <code>params.batch</code>.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>Incluir <code>params.batch</code> no <code>path</code> do bloco de saída, em vez do <code>outputDir</code> de configuração, significa que não será sobrescrito com <code>-output-dir</code> no CLI.</p>
 </div>
-<p>Primeiro, atualize o arquivo de configuração para remover <code>${params.batch}</code> do <code>outputDir</code> (já que estamos movendo-o para as declarações de caminho):</p>
+<p>Primeiro, atualize o arquivo de configuração para remover <code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">params</span><span class="o">.</span><span class="na">batch</span><span class="o">}</span></code> do <code>outputDir</code> (já que estamos movendo-o para as declarações de caminho):</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Depois</label><label for="__tabbed_6_2">Antes</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5866,7 +6167,7 @@ Vamos colocar isso de volta, e também colocar os arquivos em um subdiretório <
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
 <a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="go">Launching `hello-config.nf` [mad_curry] DSL2 - revision: 668a98ccb9</span>
 <a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>
@@ -5892,11 +6193,11 @@ Vamos colocar isso de volta, e também colocar os arquivos em um subdiretório <
 <a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a><span class="go">        ├── convertToUpper</span>
 <a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a><span class="go">        │   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a><span class="go">        │   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="go">        │   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a><span class="go">        │   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a><span class="go">        └── sayHello</span>
 <a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a><span class="go">            ├── Bonjour-output.txt</span>
 <a id="__codelineno-42-16" name="__codelineno-42-16" href="#__codelineno-42-16"></a><span class="go">            ├── Hello-output.txt</span>
-<a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a><span class="go">            └── Holà-output.txt</span>
+<a id="__codelineno-42-17" name="__codelineno-42-17" href="#__codelineno-42-17"></a><span class="go">            └── Hola-output.txt</span>
 </code></pre></div>
 </details>
 <h3 id="23-defina-o-modo-de-publicacao-no-nivel-do-fluxo-de-trabalho">2.3. Defina o modo de publicação no nível do fluxo de trabalho<a class="headerlink" href="#23-defina-o-modo-de-publicacao-no-nivel-do-fluxo-de-trabalho" title="Permanent link">&para;</a></h3>
@@ -6025,7 +6326,7 @@ Vamos colocar isso de volta, e também colocar os arquivos em um subdiretório <
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
 <a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="go">Launching `hello-config.nf` [small_stone] DSL2 - revision: 024d6361b5</span>
 <a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>
@@ -6051,11 +6352,11 @@ Vamos colocar isso de volta, e também colocar os arquivos em um subdiretório <
 <a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a><span class="go">        ├── convertToUpper</span>
 <a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a><span class="go">        │   ├── UPPER-Bonjour-output.txt</span>
 <a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a><span class="go">        │   ├── UPPER-Hello-output.txt</span>
-<a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a><span class="go">        │   └── UPPER-Holà-output.txt</span>
+<a id="__codelineno-49-13" name="__codelineno-49-13" href="#__codelineno-49-13"></a><span class="go">        │   └── UPPER-Hola-output.txt</span>
 <a id="__codelineno-49-14" name="__codelineno-49-14" href="#__codelineno-49-14"></a><span class="go">        └── sayHello</span>
 <a id="__codelineno-49-15" name="__codelineno-49-15" href="#__codelineno-49-15"></a><span class="go">            ├── Bonjour-output.txt</span>
 <a id="__codelineno-49-16" name="__codelineno-49-16" href="#__codelineno-49-16"></a><span class="go">            ├── Hello-output.txt</span>
-<a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a><span class="go">            └── Holà-output.txt</span>
+<a id="__codelineno-49-17" name="__codelineno-49-17" href="#__codelineno-49-17"></a><span class="go">            └── Hola-output.txt</span>
 </code></pre></div>
 </details>
 <p>A principal razão pela qual você ainda pode querer usar a maneira por saída de definir o modo é se você quiser misturar e combinar dentro do mesmo fluxo de trabalho, <em>ou seja</em>, ter algumas saídas sendo copiadas e algumas sendo symlinkadas.</p>
@@ -6130,7 +6431,7 @@ O que significa que agora precisamos adicionar um desses ao nosso processo <code
 </div>
 <p>Para ser claro, não estamos <em>substituindo</em> a diretiva <code>docker</code>, estamos <em>adicionando</em> uma opção alternativa.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>Existem algumas maneiras diferentes de obter o URI para um determinado pacote conda.
 Recomendamos usar a consulta de busca <a href="https://seqera.io/containers/">Seqera Containers</a>, que lhe dará um URI que você pode copiar e colar, mesmo que você não esteja planejando criar um contêiner a partir dele.</p>
 </div>
@@ -6140,7 +6441,7 @@ Recomendamos usar a consulta de busca <a href="https://seqera.io/containers/">Se
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><span class="filename">Saída</span><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><span class="filename">Output</span><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a>
 <a id="__codelineno-55-3" name="__codelineno-55-3" href="#__codelineno-55-3"></a><span class="go">Launching `hello-config.nf` [friendly_lamport] DSL2 - revision: 024d6361b5</span>
 <a id="__codelineno-55-4" name="__codelineno-55-4" href="#__codelineno-55-4"></a>
@@ -6154,7 +6455,7 @@ Recomendamos usar a consulta de busca <a href="https://seqera.io/containers/">Se
 <p>Isso deve funcionar sem problemas e produzir as mesmas saídas de antes em <code>custom-outdir-config/conda</code>.</p>
 <p>Nos bastidores, o Nextflow recuperou os pacotes Conda e criou o ambiente, o que normalmente requer um pouco de trabalho; então é bom que não tenhamos que fazer nada disso nós mesmos!</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Nota</p>
 <p>Isso executa rapidamente porque o pacote <code>cowpy</code> é bastante pequeno, mas se você estiver trabalhando com pacotes grandes, pode levar um pouco mais de tempo do que o normal na primeira vez, e você pode ver a saída do console ficar 'presa' por um minuto ou mais antes de completar.
 Isso é normal e se deve ao trabalho extra que o Nextflow faz na primeira vez que você usa um novo pacote.</p>
 </div>
@@ -6182,7 +6483,7 @@ Se os recursos das tarefas prontas para executar excedem os recursos disponívei
 <h3 id="41-direcionando-um-backend-diferente">4.1. Direcionando um backend diferente<a class="headerlink" href="#41-direcionando-um-backend-diferente" title="Permanent link">&para;</a></h3>
 <p>A escolha do executor é definida por uma diretiva de processo chamada <code>executor</code>.
 Por padrão, é definido como <code>local</code>, então a seguinte configuração está implícita:</p>
-<div class="highlight"><span class="filename">Configuração integrada</span><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight"><span class="filename">Built-in configuration</span><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="w">    </span><span class="n">executor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;local&#39;</span>
 <a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="o">}</span>
 </code></pre></div>
@@ -6192,7 +6493,7 @@ Por padrão, é definido como <code>local</code>, então a seguinte configuraç�
 <a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="o">}</span>
 </code></pre></div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Aviso</p>
 <p>Não podemos realmente testar isso no ambiente de treinamento porque não está configurado para se conectar a um HPC.</p>
 </div>
 <h3 id="42-lidando-com-sintaxe-especifica-do-backend-para-parametros-de-execucao">4.2. Lidando com sintaxe específica do backend para parâmetros de execução<a class="headerlink" href="#42-lidando-com-sintaxe-especifica-do-backend-para-parametros-de-execucao" title="Permanent link">&para;</a></h3>
@@ -6201,19 +6502,19 @@ Por padrão, é definido como <code>local</code>, então a seguinte configuraç�
 <details class="abstract">
 <summary>Exemplos</summary>
 <p>Por exemplo, o mesmo trabalho requerendo 8 CPUs e 4GB de RAM para ser executado na fila "my-science-work" precisa ser expresso das seguintes maneiras diferentes dependendo do backend.</p>
-<div class="highlight"><span class="filename">Config para SLURM / submeter usando sbatch</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="c1">#SBATCH -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for SLURM / submit using sbatch</span><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="c1">#SBATCH -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a><span class="c1">#SBATCH --no-requeue</span>
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="c1">#SBATCH -c 8</span>
 <a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a><span class="c1">#SBATCH --mem 4096M</span>
 <a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a><span class="c1">#SBATCH -p my-science-work</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">Config para PBS / submeter usando qsub</span><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1">#PBS -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for PBS / submit using qsub</span><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="c1">#PBS -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a><span class="c1">#PBS -j oe</span>
 <a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a><span class="c1">#PBS -q my-science-work</span>
 <a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a><span class="c1">#PBS -l nodes=1:ppn=5</span>
 <a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a><span class="c1">#PBS -l mem=4gb</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">Config para SGE / submeter usando qsub</span><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="c1">#$ -o /path/to/my/task/directory/my-task-1.log</span>
+<div class="highlight"><span class="filename">Config for SGE / submit using qsub</span><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="c1">#$ -o /path/to/my/task/directory/my-task-1.log</span>
 <a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="c1">#$ -j y</span>
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="c1">#$ -terse</span>
 <a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a><span class="c1">#$ -notify</span>
@@ -6235,7 +6536,7 @@ Então, no tempo de execução, o Nextflow usará essas configurações para ger
 <p>A maioria das plataformas de computação de alto desempenho permite (e às vezes exige) que você especifique certos parâmetros de alocação de recursos, como número de CPUs e memória.</p>
 <p>Por padrão, o Nextflow usará uma única CPU e 2GB de memória para cada processo.
 As diretivas de processo correspondentes são chamadas <code>cpus</code> e <code>memory</code>, então a seguinte configuração está implícita:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Configuração integrada</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Built-in configuration</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1">1</a></span>
 <span class="normal"><a href="#__codelineno-61-2">2</a></span>
 <span class="normal"><a href="#__codelineno-61-3">3</a></span>
 <span class="normal"><a href="#__codelineno-61-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
@@ -6370,7 +6671,7 @@ Certifique-se de clicar nas abas que mostram os resultados de utilização como 
 </div>
 <p>Com esta configuração, todos os processos solicitarão 1GB de memória e uma única CPU (o padrão implícito), exceto o processo <code>cowpy</code>, que solicitará 2GB e 2 CPUs.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>Se você tiver uma máquina com poucas CPUs e alocar um número alto por processo, poderá ver chamadas de processo sendo enfileiradas uma atrás da outra.
 Isso ocorre porque o Nextflow garante que não solicitemos mais CPUs do que as disponíveis.</p>
 </div>
@@ -6381,7 +6682,7 @@ Isso ocorre porque o Nextflow garante que não solicitemos mais CPUs do que as d
 <p>Você provavelmente não notará nenhuma diferença real, pois esta é uma carga de trabalho tão pequena, mas esta é a abordagem que você usaria para analisar o desempenho e os requisitos de recursos de um fluxo de trabalho do mundo real.</p>
 <p>É muito útil quando seus processos têm requisitos de recursos diferentes. Ele o capacita a dimensionar corretamente as alocações de recursos que você configura para cada processo com base em dados reais, não em suposições.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>Este é apenas um pequeno aperitivo do que você pode fazer para otimizar seu uso de recursos.
 O próprio Nextflow tem uma <a href="https://nextflow.io/docs/latest/process.html#dynamic-task-resources">lógica de repetição dinâmica</a> realmente interessante embutida para repetir trabalhos que falham devido a limitações de recursos.
 Além disso, a Seqera Platform oferece ferramentas orientadas por IA para otimizar suas alocações de recursos automaticamente também.</p>
@@ -6390,7 +6691,7 @@ Além disso, a Seqera Platform oferece ferramentas orientadas por IA para otimiz
 <p>Dependendo de qual executor de computação e infraestrutura de computação você está usando, pode haver algumas restrições sobre o que você pode (ou deve) alocar.
 Por exemplo, seu cluster pode exigir que você permaneça dentro de certos limites.</p>
 <p>Você pode usar a diretiva <code>resourceLimits</code> para definir as limitações relevantes. A sintaxe se parece com isso quando está sozinha em um bloco de processo:</p>
-<div class="highlight"><span class="filename">Exemplo de sintaxe</span><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight"><span class="filename">Syntax example</span><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="n">process</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="w">    </span><span class="n">resourceLimits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
 <a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="w">        </span><span class="nl">memory:</span><span class="w"> </span><span class="mi">750</span><span class="o">.</span><span class="na">GB</span><span class="o">,</span>
 <a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a><span class="w">        </span><span class="nl">cpus:</span><span class="w"> </span><span class="mi">200</span><span class="o">,</span>
@@ -6529,7 +6830,7 @@ No entanto, se você tentasse executar o fluxo de trabalho com alocações de re
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>
 <a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="go">Launching `hello-config.nf` [hungry_sanger] DSL2 - revision: 024d6361b5</span>
 <a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>
@@ -6542,7 +6843,7 @@ No entanto, se você tentasse executar o fluxo de trabalho com alocações de re
 </details>
 <p>Como você pode ver, isso nos permite alternar entre configurações muito convenientemente no tempo de execução.</p>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<p class="admonition-title">Aviso</p>
 <p>O perfil <code>univ_hpc</code> não será executado corretamente no ambiente de treinamento, pois não temos acesso a um agendador Slurm.</p>
 </div>
 <p>Se no futuro encontrarmos outros elementos de configuração que estão sempre co-ocorrendo com esses, podemos simplesmente adicioná-los ao(s) perfil(is) correspondente(s).
@@ -6553,7 +6854,7 @@ Também podemos usá-los para definir valores padrão para parâmetros de fluxo 
 Você pode considerar isso uma alternativa ao uso de um arquivo de parâmetros.</p>
 <h4 id="621-configure-o-perfil">6.2.1. Configure o perfil<a class="headerlink" href="#621-configure-o-perfil" title="Permanent link">&para;</a></h4>
 <p>A sintaxe para expressar valores padrão neste contexto se parece com isso, para um perfil que nomeamos <code>test</code>:</p>
-<div class="highlight"><span class="filename">Exemplo de sintaxe</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">    </span><span class="n">test</span><span class="w"> </span><span class="o">{</span>
+<div class="highlight"><span class="filename">Syntax example</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">    </span><span class="n">test</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a><span class="w">        </span><span class="n">params</span><span class="o">.&lt;</span><span class="n">parameter1</span><span class="o">&gt;</span>
 <a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a><span class="w">        </span><span class="n">params</span><span class="o">.&lt;</span><span class="n">parameter2</span><span class="o">&gt;</span>
 <a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a><span class="w">        </span><span class="o">...</span>
@@ -6616,7 +6917,7 @@ Se as configurações conflitantes são definidas em diferentes fontes de config
 </code></pre></div>
 <details class="success">
 <summary>Saída do comando</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>
 <a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="go">Launching `hello-config.nf` [modest_becquerel] DSL2 - revision: 024d6361b5</span>
 <a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a>
@@ -6631,7 +6932,7 @@ Se as configurações conflitantes são definidas em diferentes fontes de config
 <details class="abstract">
 <summary>Conteúdo do arquivo</summary>
 <div class="highlight"><span class="filename">custom-outdir-config/test/cowpy/cowpy-COLLECTED-test-output.txt</span><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="go"> _________</span>
-<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="go">/ HOLà    \</span>
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="go">/ HOLA    \</span>
 <a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="go">| HELLO   |</span>
 <a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a><span class="go">\ BONJOUR /</span>
 <a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a><span class="go">---------</span>
@@ -6655,7 +6956,7 @@ Se as configurações conflitantes são definidas em diferentes fontes de config
 </details>
 <p>Isso significa que, desde que distribuamos quaisquer arquivos de dados de teste com o código do fluxo de trabalho, qualquer pessoa pode rapidamente experimentar o fluxo de trabalho sem ter que fornecer suas próprias entradas via linha de comando ou arquivo de parâmetros.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
+<p class="admonition-title">Dica</p>
 <p>Podemos apontar para URLs para arquivos maiores que são armazenados externamente.
 O Nextflow os baixará automaticamente desde que haja uma conexão aberta.</p>
 <p>Para mais detalhes, veja a Side Quest <a href="../../side_quests/working_with_files/">Trabalhando com Arquivos</a></p>
@@ -6765,11 +7066,11 @@ Qual é o nome do arquivo de configuração que o Nextflow carrega automaticamen
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-0">
     <a href="#quiz-0" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-0-question">
         <p>Qual é o nome do arquivo de configuração que o Nextflow carrega automaticamente?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0"><code>config.nf</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" ><label for="quiz-0-1"><code>pipeline.config</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" correct><label for="quiz-0-2"><code>nextflow.config</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3"><code>workflow.config</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-0-question"><div><input type="radio" name="answer" value="0" id="quiz-0-0" ><label for="quiz-0-0"><code>config.nf</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-0-1" ><label for="quiz-0-1"><code>pipeline.config</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-0-2" data-correct="true"><label for="quiz-0-2"><code>nextflow.config</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-0-3" ><label for="quiz-0-3"><code>workflow.config</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -6784,21 +7085,21 @@ O que tem precedência quando o mesmo parâmetro é definido tanto no arquivo de
 - [ ] O primeiro valor encontrado
 - [ ] Nenhum; causa um erro
 
-Saiba mais: [1.1. Mova os valores padrão para o `nextflow.config`](#11-mova-os-valores-padrão-para-o-nextflowconfig)
+Saiba mais: [1.1. Mova os valores padrão para o `nextflow.config`](#11-move-default-values-to-nextflowconfig)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-1">
     <a href="#quiz-1" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-1-question">
         <p>O que tem precedência quando o mesmo parâmetro é definido tanto no arquivo de configuração quanto na linha de comando?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">O valor do arquivo de configuração</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" correct><label for="quiz-1-1">O valor da linha de comando</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" ><label for="quiz-1-2">O primeiro valor encontrado</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Nenhum; causa um erro</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-1-question"><div><input type="radio" name="answer" value="0" id="quiz-1-0" ><label for="quiz-1-0">O valor do arquivo de configuração</label></div><div><input type="radio" name="answer" value="1" id="quiz-1-1" data-correct="true"><label for="quiz-1-1">O valor da linha de comando</label></div><div><input type="radio" name="answer" value="2" id="quiz-1-2" ><label for="quiz-1-2">O primeiro valor encontrado</label></div><div><input type="radio" name="answer" value="3" id="quiz-1-3" ><label for="quiz-1-3">Nenhum; causa um erro</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#11-mova-os-valores-padrão-para-o-nextflowconfig">1.1. Mova os valores padrão para o <code>nextflow.config</code></a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#11-move-default-values-to-nextflowconfig">1.1. Mova os valores padrão para o <code>nextflow.config</code></a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6813,11 +7114,11 @@ Você pode ter tanto Docker quanto Conda habilitados na mesma configuração?
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-2">
     <a href="#quiz-2" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-2-question">
         <p>Você pode ter tanto Docker quanto Conda habilitados na mesma configuração?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-2-0" correct><label for="quiz-2-0">Sim, o Nextflow pode usar ambos dependendo das diretivas de processo</label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1">Não, apenas um pode ser habilitado por vez</label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" ><label for="quiz-2-2">Sim, mas apenas em perfis</label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3">Não, eles são mutuamente exclusivos</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-2-question"><div><input type="radio" name="answer" value="0" id="quiz-2-0" data-correct="true"><label for="quiz-2-0">Sim, o Nextflow pode usar ambos dependendo das diretivas de processo</label></div><div><input type="radio" name="answer" value="1" id="quiz-2-1" ><label for="quiz-2-1">Não, apenas um pode ser habilitado por vez</label></div><div><input type="radio" name="answer" value="2" id="quiz-2-2" ><label for="quiz-2-2">Sim, mas apenas em perfis</label></div><div><input type="radio" name="answer" value="3" id="quiz-2-3" ><label for="quiz-2-3">Não, eles são mutuamente exclusivos</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -6832,21 +7133,21 @@ Se tanto Docker quanto Conda estão habilitados e um processo tem ambas as diret
 - [ ] O primeiro definido
 - [ ] Causa um erro
 
-Saiba mais: [3. Selecione uma tecnologia de empacotamento de software](#3-selecione-uma-tecnologia-de-empacotamento-de-software)
+Saiba mais: [3. Selecione uma tecnologia de empacotamento de software](#3-select-a-software-packaging-technology)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-3">
     <a href="#quiz-3" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-3-question">
         <p>Se tanto Docker quanto Conda estão habilitados e um processo tem ambas as diretivas, qual é priorizado?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-3-0" correct><label for="quiz-3-0">Docker (contêineres)</label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" ><label for="quiz-3-1">Conda</label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2">O primeiro definido</label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3">Causa um erro</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-3-question"><div><input type="radio" name="answer" value="0" id="quiz-3-0" data-correct="true"><label for="quiz-3-0">Docker (contêineres)</label></div><div><input type="radio" name="answer" value="1" id="quiz-3-1" ><label for="quiz-3-1">Conda</label></div><div><input type="radio" name="answer" value="2" id="quiz-3-2" ><label for="quiz-3-2">O primeiro definido</label></div><div><input type="radio" name="answer" value="3" id="quiz-3-3" ><label for="quiz-3-3">Causa um erro</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#3-selecione-uma-tecnologia-de-empacotamento-de-software">3. Selecione uma tecnologia de empacotamento de software</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#3-select-a-software-packaging-technology">3. Selecione uma tecnologia de empacotamento de software</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6861,11 +7162,11 @@ Qual é a alocação de memória padrão para processos Nextflow?
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-4">
     <a href="#quiz-4" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-4-question">
         <p>Qual é a alocação de memória padrão para processos Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0">1 GB</label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" correct><label for="quiz-4-1">2 GB</label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" ><label for="quiz-4-2">4 GB</label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3">Sem limite</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-4-question"><div><input type="radio" name="answer" value="0" id="quiz-4-0" ><label for="quiz-4-0">1 GB</label></div><div><input type="radio" name="answer" value="1" id="quiz-4-1" data-correct="true"><label for="quiz-4-1">2 GB</label></div><div><input type="radio" name="answer" value="2" id="quiz-4-2" ><label for="quiz-4-2">4 GB</label></div><div><input type="radio" name="answer" value="3" id="quiz-4-3" ><label for="quiz-4-3">Sem limite</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
@@ -6880,21 +7181,21 @@ Como você define requisitos de recursos para um processo específico no arquivo
 - [x] `#!groovy process { withName: 'processName' { memory = '4 GB' } }`
 - [ ] `#!groovy resources.processName.memory = '4 GB'`
 
-Saiba mais: [5.3. Defina alocações de recursos para um processo específico](#53-defina-alocações-de-recursos-para-um-processo-específico)
+Saiba mais: [5.3. Defina alocações de recursos para um processo específico](#53-set-resource-allocations-for-a-specific-process)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-5">
     <a href="#quiz-5" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-5-question">
         <p>Como você define requisitos de recursos para um processo específico no arquivo de configuração?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-5-0" ><label for="quiz-5-0"><code class="highlight"><span class="n">processName</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" ><label for="quiz-5-1"><code class="highlight"><span class="n">process</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">processName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" correct><label for="quiz-5-2"><code class="highlight"><span class="n">process</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nl">withName:</span><span class="w"> </span><span class="s1">&#39;processName&#39;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3"><code class="highlight"><span class="n">resources</span><span class="o">.</span><span class="na">processName</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-5-question"><div><input type="radio" name="answer" value="0" id="quiz-5-0" ><label for="quiz-5-0"><code class="highlight"><span class="n">processName</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="1" id="quiz-5-1" ><label for="quiz-5-1"><code class="highlight"><span class="n">process</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">processName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div><div><input type="radio" name="answer" value="2" id="quiz-5-2" data-correct="true"><label for="quiz-5-2"><code class="highlight"><span class="n">process</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nl">withName:</span><span class="w"> </span><span class="s1">&#39;processName&#39;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span></code></label></div><div><input type="radio" name="answer" value="3" id="quiz-5-3" ><label for="quiz-5-3"><code class="highlight"><span class="n">resources</span><span class="o">.</span><span class="na">processName</span><span class="o">.</span><span class="na">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;4 GB&#39;</span></code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#53-defina-alocações-de-recursos-para-um-processo-específico">5.3. Defina alocações de recursos para um processo específico</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#53-set-resource-allocations-for-a-specific-process">5.3. Defina alocações de recursos para um processo específico</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6905,21 +7206,21 @@ Qual opção de linha de comando gera um relatório de utilização de recursos?
 - [x] `-with-report`
 - [ ] `-with-profile`
 
-Saiba mais: [5.1. Execute o fluxo de trabalho para gerar um relatório de utilização de recursos](#51-execute-o-fluxo-de-trabalho-para-gerar-um-relatório-de-utilização-de-recursos)
+Saiba mais: [5.1. Execute o fluxo de trabalho para gerar um relatório de utilização de recursos](#51-run-the-workflow-to-generate-a-resource-utilization-report)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-6">
     <a href="#quiz-6" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-6-question">
         <p>Qual opção de linha de comando gera um relatório de utilização de recursos?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-6-0" ><label for="quiz-6-0"><code>-with-metrics</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>-with-stats</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" correct><label for="quiz-6-2"><code>-with-report</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>-with-profile</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-6-question"><div><input type="radio" name="answer" value="0" id="quiz-6-0" ><label for="quiz-6-0"><code>-with-metrics</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-6-1" ><label for="quiz-6-1"><code>-with-stats</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-6-2" data-correct="true"><label for="quiz-6-2"><code>-with-report</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-6-3" ><label for="quiz-6-3"><code>-with-profile</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#51-execute-o-fluxo-de-trabalho-para-gerar-um-relatório-de-utilização-de-recursos">5.1. Execute o fluxo de trabalho para gerar um relatório de utilização de recursos</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#51-run-the-workflow-to-generate-a-resource-utilization-report">5.1. Execute o fluxo de trabalho para gerar um relatório de utilização de recursos</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6930,21 +7231,21 @@ O que a diretiva `resourceLimits` faz?
 - [x] Limita os recursos máximos que podem ser solicitados
 - [ ] Monitora o uso de recursos
 
-Saiba mais: [5.5. Adicione limites de recursos](#55-adicione-limites-de-recursos)
+Saiba mais: [5.5. Adicione limites de recursos](#55-add-resource-limits)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-7">
     <a href="#quiz-7" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-7-question">
         <p>O que a diretiva <code>resourceLimits</code> faz?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0">Define requisitos mínimos de recursos</label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" ><label for="quiz-7-1">Aloca recursos aos processos</label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" correct><label for="quiz-7-2">Limita os recursos máximos que podem ser solicitados</label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3">Monitora o uso de recursos</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-7-question"><div><input type="radio" name="answer" value="0" id="quiz-7-0" ><label for="quiz-7-0">Define requisitos mínimos de recursos</label></div><div><input type="radio" name="answer" value="1" id="quiz-7-1" ><label for="quiz-7-1">Aloca recursos aos processos</label></div><div><input type="radio" name="answer" value="2" id="quiz-7-2" data-correct="true"><label for="quiz-7-2">Limita os recursos máximos que podem ser solicitados</label></div><div><input type="radio" name="answer" value="3" id="quiz-7-3" ><label for="quiz-7-3">Monitora o uso de recursos</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#55-adicione-limites-de-recursos">5.5. Adicione limites de recursos</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#55-add-resource-limits">5.5. Adicione limites de recursos</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6955,21 +7256,21 @@ Qual é o executor padrão no Nextflow?
 - [ ] `kubernetes`
 - [ ] `aws`
 
-Saiba mais: [4. Selecione uma plataforma de execução](#4-selecione-uma-plataforma-de-execução)
+Saiba mais: [4. Selecione uma plataforma de execução](#4-select-an-execution-platform)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-8">
     <a href="#quiz-8" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-8-question">
         <p>Qual é o executor padrão no Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-8-0" correct><label for="quiz-8-0"><code>local</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-8-1" ><label for="quiz-8-1"><code>slurm</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-8-2" ><label for="quiz-8-2"><code>kubernetes</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-8-3" ><label for="quiz-8-3"><code>aws</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-8-question"><div><input type="radio" name="answer" value="0" id="quiz-8-0" data-correct="true"><label for="quiz-8-0"><code>local</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-8-1" ><label for="quiz-8-1"><code>slurm</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-8-2" ><label for="quiz-8-2"><code>kubernetes</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-8-3" ><label for="quiz-8-3"><code>aws</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#4-selecione-uma-plataforma-de-execução">4. Selecione uma plataforma de execução</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#4-select-an-execution-platform">4. Selecione uma plataforma de execução</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -6980,21 +7281,21 @@ Como você especifica um arquivo de parâmetros ao executar o Nextflow?
 - [x] `-params-file params.json`
 - [ ] `--input params.json`
 
-Saiba mais: [1.3. Use um arquivo de parâmetros](#13-use-um-arquivo-de-parâmetros)
+Saiba mais: [1.3. Use um arquivo de parâmetros](#13-use-a-parameter-file)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-9">
     <a href="#quiz-9" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-9-question">
         <p>Como você especifica um arquivo de parâmetros ao executar o Nextflow?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-9-0" ><label for="quiz-9-0"><code>--params params.json</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-9-1" ><label for="quiz-9-1"><code>-config params.json</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-9-2" correct><label for="quiz-9-2"><code>-params-file params.json</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-9-3" ><label for="quiz-9-3"><code>--input params.json</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-9-question"><div><input type="radio" name="answer" value="0" id="quiz-9-0" ><label for="quiz-9-0"><code>--params params.json</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-9-1" ><label for="quiz-9-1"><code>-config params.json</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-9-2" data-correct="true"><label for="quiz-9-2"><code>-params-file params.json</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-9-3" ><label for="quiz-9-3"><code>--input params.json</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#13-use-um-arquivo-de-parâmetros">1.3. Use um arquivo de parâmetros</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#13-use-a-parameter-file">1.3. Use um arquivo de parâmetros</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -7005,21 +7306,21 @@ Para que os perfis podem ser usados? (Selecione todas as opções que se aplicam
 - [x] Fornecer parâmetros de teste
 - [ ] Definir novos processos
 
-Saiba mais: [6. Use perfis para alternar entre configurações predefinidas](#6-use-perfis-para-alternar-entre-configurações-predefinidas)
+Saiba mais: [6. Use perfis para alternar entre configurações predefinidas](#6-use-profiles-to-switch-between-preset-configurations)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-10">
     <a href="#quiz-10" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-10-question">
         <p>Para que os perfis podem ser usados? (Selecione todas as opções que se aplicam)</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="checkbox" name="answer" value="0" id="quiz-10-0" correct><label for="quiz-10-0">Definir configurações específicas de infraestrutura</label></div><div><input type="checkbox" name="answer" value="1" id="quiz-10-1" correct><label for="quiz-10-1">Definir limites de recursos para diferentes ambientes</label></div><div><input type="checkbox" name="answer" value="2" id="quiz-10-2" correct><label for="quiz-10-2">Fornecer parâmetros de teste</label></div><div><input type="checkbox" name="answer" value="3" id="quiz-10-3" ><label for="quiz-10-3">Definir novos processos</label></div></fieldset>
+        <fieldset aria-labelledby="quiz-10-question"><div><input type="checkbox" name="answer" value="0" id="quiz-10-0" data-correct="true"><label for="quiz-10-0">Definir configurações específicas de infraestrutura</label></div><div><input type="checkbox" name="answer" value="1" id="quiz-10-1" data-correct="true"><label for="quiz-10-1">Definir limites de recursos para diferentes ambientes</label></div><div><input type="checkbox" name="answer" value="2" id="quiz-10-2" data-correct="true"><label for="quiz-10-2">Fornecer parâmetros de teste</label></div><div><input type="checkbox" name="answer" value="3" id="quiz-10-3" ><label for="quiz-10-3">Definir novos processos</label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
         <button type="submit" class="quiz-button">Submit</button>
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#6-use-perfis-para-alternar-entre-configurações-predefinidas">6. Use perfis para alternar entre configurações predefinidas</a></p></section>
+    <section class="content hidden"><p>Saiba mais: <a href="#6-use-profiles-to-switch-between-preset-configurations">6. Use perfis para alternar entre configurações predefinidas</a></p></section>
 </div>
 
 <!-- mkdocs-quiz-source
@@ -7030,22 +7331,75 @@ Como você especifica múltiplos perfis em um único comando?
 - [x] `-profile profile1,profile2`
 - [ ] `--profile profile1 --profile profile2`
 
-Saiba mais: [6. Use perfis para alternar entre configurações predefinidas](#6-use-perfis-para-alternar-entre-configurações-predefinidas)
+Saiba mais: [6. Use perfis para alternar entre configurações predefinidas](#6-use-profiles-to-switch-between-preset-configurations)
 </quiz>
 -->
 <div class="quiz" data-show-correct="true" data-auto-submit="true" data-disable-after-submit="true" id="quiz-11">
     <a href="#quiz-11" class="quiz-header-link">#</a>
 
-    <div class="quiz-question">
+    <div class="quiz-question" id="quiz-11-question">
         <p>Como você especifica múltiplos perfis em um único comando?</p>
     </div>
     <form action="javascript:void(0);" onsubmit="return false;">
-        <fieldset><div><input type="radio" name="answer" value="0" id="quiz-11-0" ><label for="quiz-11-0"><code>-profile profile1 -profile profile2</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-11-1" ><label for="quiz-11-1"><code>-profiles profile1,profile2</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-11-2" correct><label for="quiz-11-2"><code>-profile profile1,profile2</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-11-3" ><label for="quiz-11-3"><code>--profile profile1 --profile profile2</code></label></div></fieldset>
+        <fieldset aria-labelledby="quiz-11-question"><div><input type="radio" name="answer" value="0" id="quiz-11-0" ><label for="quiz-11-0"><code>-profile profile1 -profile profile2</code></label></div><div><input type="radio" name="answer" value="1" id="quiz-11-1" ><label for="quiz-11-1"><code>-profiles profile1,profile2</code></label></div><div><input type="radio" name="answer" value="2" id="quiz-11-2" data-correct="true"><label for="quiz-11-2"><code>-profile profile1,profile2</code></label></div><div><input type="radio" name="answer" value="3" id="quiz-11-3" ><label for="quiz-11-3"><code>--profile profile1 --profile profile2</code></label></div></fieldset>
         <div class="quiz-feedback hidden"></div>
 
     </form>
-    <section class="content hidden"><p>Saiba mais: <a href="#6-use-perfis-para-alternar-entre-configurações-predefinidas">6. Use perfis para alternar entre configurações predefinidas</a></p></section>
-</div><style type="text/css">.quiz {
+    <section class="content hidden"><p>Saiba mais: <a href="#6-use-profiles-to-switch-between-preset-configurations">6. Use perfis para alternar entre configurações predefinidas</a></p></section>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -7059,11 +7413,11 @@ Saiba mais: [6. Use perfis para alternar entre configurações predefinidas](#6-
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -7078,11 +7432,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -7092,10 +7446,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -7120,34 +7476,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -7162,8 +7567,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -7418,7 +7830,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -7635,10 +8046,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -7963,14 +8372,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -8093,9 +8609,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -8136,27 +8651,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -8177,7 +8692,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -8197,15 +8712,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8225,7 +8742,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -8235,8 +8752,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -8250,11 +8767,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8316,10 +8837,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -8370,34 +8889,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -8418,11 +8933,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -8434,39 +8949,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -8492,6 +8980,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -8511,9 +9005,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();

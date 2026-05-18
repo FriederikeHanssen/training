@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://training.nextflow.io/ca/side_quests/splitting_and_grouping/">
       
       
-        <link rel="prev" href="../working_with_files/">
+        <link rel="prev" href="../metadata/">
       
       
-        <link rel="next" href="../workflows_of_workflows/">
+        <link rel="next" href="../nf_test/">
       
       
         
@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -460,7 +491,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Inici
   
 
     
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    Orientació
+    Primers passos
   
 
     
@@ -2345,7 +2376,63 @@
   <span class="md-ellipsis">
     
   
-    Entorn de Desenvolupament
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../essential_scripting_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrons Essencials de Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processament de fitxers d'entrada
   
 
     
@@ -2374,34 +2461,6 @@
     
   
     Metadades i mapes de metadades
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../working_with_files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Processament d'entrada de fitxers
   
 
     
@@ -2506,10 +2565,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obriu-lespai-de-codi-de-formacio" class="md-nav__link">
+  <a href="#obriu-lespai-de-treball-de-formacio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Obriu l'espai de codi de formació
+        Obriu l'espai de treball de formació
       
     </span>
   </a>
@@ -2564,22 +2623,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#1-llegir-dades-de-mostres" class="md-nav__link">
+  <a href="#1-llegir-les-dades-de-mostres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Llegir dades de mostres
+        1. Llegir les dades de mostres
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Llegir dades de mostres">
+    <nav class="md-nav" aria-label="1. Llegir les dades de mostres">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-llegir-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" class="md-nav__link">
+  <a href="#11-llegir-les-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Llegir dades de mostres amb splitCsv i crear mapes de metadades
+        1.1. Llegir les dades de mostres amb splitCsv i crear mapes de metadades
       
     </span>
   </a>
@@ -2650,22 +2709,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-utilitzar-map-i-join-per-combinar-segons-lid-del-pacient" class="md-nav__link">
+  <a href="#31-utilitzar-map-i-join-per-combinar-basant-se-en-lid-del-pacient" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Utilitzar map i join per combinar segons l'ID del pacient
+        3.1. Utilitzar map i join per combinar basant-se en l'ID del pacient
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.1. Utilitzar map i join per combinar segons l&#39;ID del pacient">
+    <nav class="md-nav" aria-label="3.1. Utilitzar map i join per combinar basant-se en l&#39;ID del pacient">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311-comprovar-lestructura-de-dades" class="md-nav__link">
+  <a href="#311-comproveu-lestructura-de-dades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.1. Comprovar l'estructura de dades
+        3.1.1. Comproveu l'estructura de dades
       
     </span>
   </a>
@@ -2673,10 +2732,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-aillar-el-camp-id" class="md-nav__link">
+  <a href="#312-ailleu-el-camp-id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.2. Aïllar el camp id
+        3.1.2. Aïlleu el camp id
       
     </span>
   </a>
@@ -2684,10 +2743,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#313-combinar-els-dos-canals" class="md-nav__link">
+  <a href="#313-combineu-els-dos-canals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.3. Combinar els dos canals
+        3.1.3. Combineu els dos canals
       
     </span>
   </a>
@@ -2781,10 +2840,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-distribuir-mostres-per-intervals-utilitzant-combine" class="md-nav__link">
+  <a href="#41-distribuir-mostres-per-intervals-amb-combine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Distribuir mostres per intervals utilitzant combine
+        4.1. Distribuir mostres per intervals amb combine
       
     </span>
   </a>
@@ -2817,15 +2876,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-agregar-mostres-utilitzant-grouptuple" class="md-nav__link">
+  <a href="#5-agregar-mostres-amb-grouptuple" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Agregar mostres utilitzant groupTuple
+        5. Agregar mostres amb groupTuple
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Agregar mostres utilitzant groupTuple">
+    <nav class="md-nav" aria-label="5. Agregar mostres amb groupTuple">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3091,14 +3150,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
+      <a href="../nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Workflows de Workflows
+    Proves amb nf-test
   
 
     
@@ -3126,7 +3185,7 @@
   <span class="md-ellipsis">
     
   
-    Depuració de Workflows
+    Resolució de Problemes en Workflows
   
 
     
@@ -3147,14 +3206,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../essential_scripting_patterns/" class="md-nav__link">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Patrons Essencials de Scripting en Nextflow
+    Workflows de Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolupament de Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desenvolupament de Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolupament de Plugins
   
 
     
@@ -3175,14 +3309,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Proves amb nf-test
+    Part 1: Conceptes bàsics dels plugins
   
 
     
@@ -3191,6 +3325,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: Crear un projecte de plugin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Funcions personalitzades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Proves
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Configuració
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passos Següents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3669,10 +4007,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#obriu-lespai-de-codi-de-formacio" class="md-nav__link">
+  <a href="#obriu-lespai-de-treball-de-formacio" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Obriu l'espai de codi de formació
+        Obriu l'espai de treball de formació
       
     </span>
   </a>
@@ -3727,22 +4065,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#1-llegir-dades-de-mostres" class="md-nav__link">
+  <a href="#1-llegir-les-dades-de-mostres" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Llegir dades de mostres
+        1. Llegir les dades de mostres
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Llegir dades de mostres">
+    <nav class="md-nav" aria-label="1. Llegir les dades de mostres">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-llegir-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" class="md-nav__link">
+  <a href="#11-llegir-les-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. Llegir dades de mostres amb splitCsv i crear mapes de metadades
+        1.1. Llegir les dades de mostres amb splitCsv i crear mapes de metadades
       
     </span>
   </a>
@@ -3813,22 +4151,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-utilitzar-map-i-join-per-combinar-segons-lid-del-pacient" class="md-nav__link">
+  <a href="#31-utilitzar-map-i-join-per-combinar-basant-se-en-lid-del-pacient" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. Utilitzar map i join per combinar segons l'ID del pacient
+        3.1. Utilitzar map i join per combinar basant-se en l'ID del pacient
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.1. Utilitzar map i join per combinar segons l&#39;ID del pacient">
+    <nav class="md-nav" aria-label="3.1. Utilitzar map i join per combinar basant-se en l&#39;ID del pacient">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311-comprovar-lestructura-de-dades" class="md-nav__link">
+  <a href="#311-comproveu-lestructura-de-dades" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.1. Comprovar l'estructura de dades
+        3.1.1. Comproveu l'estructura de dades
       
     </span>
   </a>
@@ -3836,10 +4174,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-aillar-el-camp-id" class="md-nav__link">
+  <a href="#312-ailleu-el-camp-id" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.2. Aïllar el camp id
+        3.1.2. Aïlleu el camp id
       
     </span>
   </a>
@@ -3847,10 +4185,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#313-combinar-els-dos-canals" class="md-nav__link">
+  <a href="#313-combineu-els-dos-canals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.3. Combinar els dos canals
+        3.1.3. Combineu els dos canals
       
     </span>
   </a>
@@ -3944,10 +4282,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-distribuir-mostres-per-intervals-utilitzant-combine" class="md-nav__link">
+  <a href="#41-distribuir-mostres-per-intervals-amb-combine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. Distribuir mostres per intervals utilitzant combine
+        4.1. Distribuir mostres per intervals amb combine
       
     </span>
   </a>
@@ -3980,15 +4318,15 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-agregar-mostres-utilitzant-grouptuple" class="md-nav__link">
+  <a href="#5-agregar-mostres-amb-grouptuple" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Agregar mostres utilitzant groupTuple
+        5. Agregar mostres amb groupTuple
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. Agregar mostres utilitzant groupTuple">
+    <nav class="md-nav" aria-label="5. Agregar mostres amb groupTuple">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4246,43 +4584,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4292,7 +4593,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/splitting_and_grouping.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/splitting_and_grouping/index.md"
   title="Edita aquesta pàgina"
   class="md-content__button md-icon"
   rel="edit"
@@ -4311,42 +4612,43 @@
 
 <h1 id="divisio-i-agrupacio">Divisió i Agrupació<a class="headerlink" href="#divisio-i-agrupacio" title="Permanent link">&para;</a></h1>
 <p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> Traducció assistida per IA - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">més informació i suggeriments</a></span></p>
-<p>Nextflow proporciona eines potents per treballar amb dades de manera flexible. Una capacitat clau és dividir les dades en diferents fluxos i després agrupar els elements relacionats de nou. Això és especialment valuós en workflows de bioinformàtica on necessiteu processar diferents tipus de mostres per separat abans de combinar els resultats per a l'anàlisi.</p>
-<p>Penseu-ho com classificar el correu: separeu les cartes per destinació, processeu cada pila de manera diferent i després recombineu els elements que van a la mateixa persona. Nextflow utilitza operadors especials per aconseguir això amb dades científiques. Aquest enfocament també es coneix comunament com el patró <strong>scatter/gather</strong> en computació distribuïda i workflows de bioinformàtica.</p>
-<p>El sistema de canals de Nextflow és el cor d'aquesta flexibilitat. Els canals connecten diferents parts del vostre workflow, permetent que les dades flueixin a través de la vostra anàlisi. Podeu crear múltiples canals des d'una única font de dades, processar cada canal de manera diferent i després fusionar els canals de nou quan sigui necessari. Aquest enfocament us permet dissenyar workflows que reflecteixen naturalment els camins de ramificació i convergència d'anàlisis bioinformàtiques complexes.</p>
+<p>Nextflow proporciona eines potents per treballar amb dades de manera flexible. Una capacitat clau és dividir les dades en diferents fluxos i després agrupar els elements relacionats. Això és especialment valuós en workflows de bioinformàtica on cal processar diferents tipus de mostres de manera independent abans de combinar els resultats per a l'anàlisi.</p>
+<p>Penseu-hi com si ordenéssiu el correu: separeu les cartes per destinació, processeu cada pila de manera diferent i després torneu a combinar els elements que van a la mateixa persona. Nextflow utilitza operadors especials per aconseguir això amb dades científiques. Aquest enfocament també es coneix comunament com el patró <strong>scatter/gather</strong> en computació distribuïda i workflows de bioinformàtica.</p>
+<p>El sistema de canals de Nextflow és el nucli d'aquesta flexibilitat. Els canals connecten diferents parts del vostre workflow, permetent que les dades flueixin a través de l'anàlisi. Podeu crear múltiples canals a partir d'una única font de dades, processar cada canal de manera diferent i després fusionar els canals quan calgui. Aquest enfocament us permet dissenyar workflows que reflecteixin de manera natural els camins ramificats i convergents de les anàlisis de bioinformàtica complexes.</p>
 <h3 id="objectius-daprenentatge">Objectius d'aprenentatge<a class="headerlink" href="#objectius-daprenentatge" title="Permanent link">&para;</a></h3>
-<p>En aquesta missió secundària, aprendreu a dividir i agrupar dades utilitzant els operadors de canal de Nextflow.
-Començarem amb un fitxer CSV que conté informació de mostres i fitxers de dades associats, després manipularem i reorganitzarem aquestes dades.</p>
-<p>Al final d'aquesta missió secundària, podreu separar i combinar fluxos de dades de manera efectiva, utilitzant les següents tècniques:</p>
+<p>En aquesta missió secundària, aprendreu a dividir i agrupar dades utilitzant els operadors de canals de Nextflow.
+Començarem amb un fitxer CSV que conté informació sobre mostres i fitxers de dades associats, i després manipularem i reorganitzarem aquestes dades.</p>
+<p>Al final d'aquesta missió secundària, sereu capaços de separar i combinar fluxos de dades de manera efectiva, utilitzant les tècniques següents:</p>
 <ul>
-<li>Llegir dades de fitxers utilitzant <code>splitCsv</code></li>
+<li>Llegir dades de fitxers amb <code>splitCsv</code></li>
 <li>Filtrar i transformar dades amb <code>filter</code> i <code>map</code></li>
-<li>Combinar dades relacionades utilitzant <code>join</code> i <code>groupTuple</code></li>
-<li>Crear combinacions de dades amb <code>combine</code> per a processament paral·lel</li>
-<li>Optimitzar l'estructura de dades utilitzant <code>subMap</code> i estratègies de deduplicació</li>
-<li>Construir funcions reutilitzables amb closures amb nom per ajudar-vos a manipular estructures de canal</li>
+<li>Combinar dades relacionades amb <code>join</code> i <code>groupTuple</code></li>
+<li>Crear combinacions de dades amb <code>combine</code> per al processament paral·lel</li>
+<li>Optimitzar l'estructura de dades amb <code>subMap</code> i estratègies de deduplicació</li>
+<li>Construir funcions reutilitzables amb closures amb nom per manipular estructures de canals</li>
 </ul>
-<p>Aquestes habilitats us ajudaran a construir workflows que poden gestionar múltiples fitxers d'entrada i diferents tipus de dades de manera eficient, mentre manteniu una estructura de codi neta i mantenible.</p>
+<p>Aquestes habilitats us ajudaran a construir workflows que puguin gestionar múltiples fitxers d'entrada i diferents tipus de dades de manera eficient, mantenint una estructura de codi neta i mantenible.</p>
 <h3 id="prerequisits">Prerequisits<a class="headerlink" href="#prerequisits" title="Permanent link">&para;</a></h3>
-<p>Abans d'emprendre aquesta missió secundària, hauríeu de:</p>
+<p>Abans d'abordar aquesta missió secundària, hauríeu de:</p>
 <ul>
-<li>Haver completat el tutorial <a href="../hello_nextflow/README.md">Hello Nextflow</a> o un curs equivalent per a principiants.</li>
-<li>Sentir-vos còmodes utilitzant conceptes i mecanismes bàsics de Nextflow (processos, canals, operadors, treballar amb fitxers, metadades)</li>
+<li>Haver completat el tutorial <a href="../../hello_nextflow/">Hello Nextflow</a> o un curs equivalent per a principiants.</li>
+<li>Estar còmodes amb els conceptes i mecanismes bàsics de Nextflow (processos, canals, operadors, treball amb fitxers, metadades)</li>
 </ul>
-<p><strong>Opcional:</strong> Recomanem completar primer la missió secundària <a href="../metadata/">Metadades en workflows</a>.
-Això cobreix els fonaments de llegir fitxers CSV amb <code>splitCsv</code> i crear mapes de metadades, que utilitzarem intensament aquí.</p>
+<p><strong>Opcional:</strong> Recomanem completar primer la missió secundària <a href="../metadata/">Metadata in workflows</a>.
+Aquesta cobreix els fonaments de la lectura de fitxers CSV amb <code>splitCsv</code> i la creació de mapes de metadades, que utilitzarem àmpliament aquí.</p>
 <hr />
 <h2 id="0-primers-passos">0. Primers passos<a class="headerlink" href="#0-primers-passos" title="Permanent link">&para;</a></h2>
-<h4 id="obriu-lespai-de-codi-de-formacio">Obriu l'espai de codi de formació<a class="headerlink" href="#obriu-lespai-de-codi-de-formacio" title="Permanent link">&para;</a></h4>
-<p>Si encara no ho heu fet, assegureu-vos d'obrir l'entorn de formació tal com es descriu a <a href="../../envsetup/">Configuració de l'entorn</a>.</p>
+<h4 id="obriu-lespai-de-treball-de-formacio">Obriu l'espai de treball de formació<a class="headerlink" href="#obriu-lespai-de-treball-de-formacio" title="Permanent link">&para;</a></h4>
+<p>Si encara no ho heu fet, assegureu-vos d'obrir l'entorn de formació tal com es descriu a la <a href="../../envsetup/">Configuració de l'entorn</a>.</p>
 <p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
 <h4 id="moveu-vos-al-directori-del-projecte">Moveu-vos al directori del projecte<a class="headerlink" href="#moveu-vos-al-directori-del-projecte" title="Permanent link">&para;</a></h4>
-<p>Movem-nos al directori on es troben els fitxers per a aquest tutorial.</p>
+<p>Movem-nos al directori on es troben els fitxers d'aquest tutorial.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>side-quests/splitting_and_grouping
 </code></pre></div>
-<p>Podeu configurar VSCode per centrar-vos en aquest directori:</p>
+<p>Podeu configurar VSCode perquè es centri en aquest directori:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
 </code></pre></div>
+<p>L'editor s'obre amb el directori del projecte en focus.</p>
 <h4 id="reviseu-els-materials">Reviseu els materials<a class="headerlink" href="#reviseu-els-materials" title="Permanent link">&para;</a></h4>
 <p>Trobareu un fitxer de workflow principal i un directori <code>data</code> que conté un full de mostres anomenat <code>samplesheet.csv</code>.</p>
 <div class="highlight"><span class="filename">Directory contents</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">.</span>
@@ -4354,7 +4656,7 @@ Això cobreix els fonaments de llegir fitxers CSV amb <code>splitCsv</code> i cr
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">│   └── samplesheet.csv</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">└── main.nf</span>
 </code></pre></div>
-<p>El full de mostres conté informació sobre mostres de diferents pacients, incloent l'ID del pacient, el número de repetició de la mostra, el tipus (normal o tumor) i els camins a fitxers de dades hipotètics (que en realitat no existeixen, però farem veure que sí).</p>
+<p>El full de mostres conté informació sobre mostres de diferents pacients, incloent l'ID del pacient, el número de repetició de la mostra, el tipus (normal o tumor) i les rutes a fitxers de dades hipotètics (que en realitat no existeixen, però farem veure que sí).</p>
 <div class="highlight"><span class="filename">samplesheet.csv</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">id,repeat,type,bam</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">patientA,1,normal,patientA_rep1_normal.bam</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">patientA,1,tumor,patientA_rep1_tumor.bam</span>
@@ -4366,36 +4668,37 @@ Això cobreix els fonaments de llegir fitxers CSV amb <code>splitCsv</code> i cr
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="go">patientC,1,tumor,patientC_rep1_tumor.bam</span>
 </code></pre></div>
 <p>Aquest full de mostres llista vuit mostres de tres pacients (A, B, C).</p>
-<p>Per a cada pacient, tenim mostres que són de tipus <code>tumor</code> (típicament originades de biòpsies de tumor) o <code>normal</code> (preses de teixit sa o sang).
-Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això correspon a un model experimental que utilitza mostres aparellades tumor/normal per realitzar anàlisis contrastives.</p>
+<p>Per a cada pacient, tenim mostres de tipus <code>tumor</code> (que típicament provenen de biòpsies tumorals) o <code>normal</code> (extretes de teixit sa o sang).
+Si no esteu familiaritzats amb l'anàlisi del càncer, simplement sapigueu que això correspon a un model experimental que utilitza parells de mostres tumor/normal per realitzar anàlisis contrastives.</p>
 <p>Per al pacient A específicament, tenim dos conjunts de rèpliques tècniques (repeticions).</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>No us preocupeu si no esteu familiaritzats amb aquest disseny experimental, no és crític per entendre aquest tutorial.</p>
 </div>
+<p>Amb el contingut de les dades entès, podem veure què ha d'aconseguir el workflow.</p>
 <h4 id="reviseu-lassignacio">Reviseu l'assignació<a class="headerlink" href="#reviseu-lassignacio" title="Permanent link">&para;</a></h4>
 <p>El vostre repte és escriure un workflow de Nextflow que:</p>
 <ol>
-<li><strong>Llegeixi</strong> dades de mostres d'un fitxer CSV i les estructuri amb mapes de metadades</li>
-<li><strong>Separi</strong> mostres en diferents canals segons el tipus (normal vs tumor)</li>
-<li><strong>Uneixi</strong> parelles aparellades tumor/normal per ID de pacient i número de rèplica</li>
-<li><strong>Distribueixi</strong> mostres a través d'intervals genòmics per a processament paral·lel</li>
-<li><strong>Agrupí</strong> mostres relacionades de nou per a anàlisi posterior</li>
+<li><strong>Llegeixi</strong> les dades de mostres d'un fitxer CSV i les estructuri amb mapes de metadades</li>
+<li><strong>Separi</strong> les mostres en canals diferents basant-se en el tipus (normal vs tumor)</li>
+<li><strong>Uneixi</strong> els parells tumor/normal coincidents per ID de pacient i número de rèplica</li>
+<li><strong>Distribueixi</strong> les mostres entre intervals genòmics per al processament paral·lel</li>
+<li><strong>Agrupa</strong> les mostres relacionades per a l'anàlisi posterior</li>
 </ol>
-<p>Això representa un patró comú de bioinformàtica on necessiteu dividir dades per a processament independent, després recombinar elements relacionats per a anàlisi comparativa.</p>
+<p>Això representa un patró comú de bioinformàtica on cal dividir les dades per al processament independent i després recombinar els elements relacionats per a l'anàlisi comparativa.</p>
 <h4 id="llista-de-verificacio-de-preparacio">Llista de verificació de preparació<a class="headerlink" href="#llista-de-verificacio-de-preparacio" title="Permanent link">&para;</a></h4>
-<p>Creieu que esteu preparats per començar?</p>
+<p>Creieu que esteu preparats per submergir-vos?</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Entenc l'objectiu d'aquest curs i els seus prerequisits</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> El meu espai de codi està en funcionament</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> He establert el meu directori de treball adequadament</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> El meu espai de treball està en funcionament</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> He configurat el meu directori de treball adequadament</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Entenc l'assignació</li>
 </ul>
-<p>Si podeu marcar totes les caselles, esteu preparats per començar.</p>
+<p>Si podeu marcar totes les caselles, esteu a punt per començar.</p>
 <hr />
-<h2 id="1-llegir-dades-de-mostres">1. Llegir dades de mostres<a class="headerlink" href="#1-llegir-dades-de-mostres" title="Permanent link">&para;</a></h2>
-<h3 id="11-llegir-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades">1.1. Llegir dades de mostres amb <code>splitCsv</code> i crear mapes de metadades<a class="headerlink" href="#11-llegir-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" title="Permanent link">&para;</a></h3>
-<p>Comencem llegint les dades de mostres amb <code>splitCsv</code> i organitzant-les en el patró de mapa de metadades. Al <code>main.nf</code>, veureu que ja hem començat el workflow.</p>
+<h2 id="1-llegir-les-dades-de-mostres">1. Llegir les dades de mostres<a class="headerlink" href="#1-llegir-les-dades-de-mostres" title="Permanent link">&para;</a></h2>
+<h3 id="11-llegir-les-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades">1.1. Llegir les dades de mostres amb <code>splitCsv</code> i crear mapes de metadades<a class="headerlink" href="#11-llegir-les-dades-de-mostres-amb-splitcsv-i-crear-mapes-de-metadades" title="Permanent link">&para;</a></h3>
+<p>Comencem llegint les dades de mostres amb <code>splitCsv</code> i organitzant-les en el patró de mapa de metadades. Al <code>main.nf</code>, veureu que ja hem iniciat el workflow.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
@@ -4406,15 +4709,15 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <p class="admonition-title">Nota</p>
 <p>Al llarg d'aquest tutorial, utilitzarem el prefix <code>ch_</code> per a totes les variables de canal per indicar clarament que són canals de Nextflow.</p>
 </div>
-<p>Si heu completat la missió secundària <a href="../metadata/">Metadades en workflows</a>, reconeixereu aquest patró. Utilitzarem <code>splitCsv</code> per llegir el CSV i estructurar immediatament les dades amb un mapa de metadades per separar les metadades dels camins de fitxers.</p>
+<p>Si heu completat la missió secundària <a href="../metadata/">Metadata in workflows</a>, reconeixereu aquest patró. Utilitzarem <code>splitCsv</code> per llegir el CSV i estructurar immediatament les dades amb un mapa de metadades per separar les metadades de les rutes dels fitxers.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Trobarem dos conceptes diferents anomenats <code>map</code> en aquesta formació:</p>
+<p>En aquesta formació trobarem dos conceptes diferents anomenats <code>map</code>:</p>
 <ul>
-<li><strong>Estructura de dades</strong>: El mapa de Groovy (equivalent a diccionaris/hashs en altres llenguatges) que emmagatzema parells clau-valor</li>
+<li><strong>Estructura de dades</strong>: El mapa de Groovy (equivalent als diccionaris/hashes en altres llenguatges) que emmagatzema parells clau-valor</li>
 <li><strong>Operador de canal</strong>: L'operador <code>.map()</code> que transforma elements en un canal</li>
 </ul>
-<p>Aclararem quin volem dir en context, però aquesta distinció és important per entendre quan es treballa amb Nextflow.</p>
+<p>Aclararem quin volem dir en context, però aquesta distinció és important d'entendre quan es treballa amb Nextflow.</p>
 </div>
 <p>Apliqueu aquests canvis a <code>main.nf</code>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Després</label><label for="__tabbed_1_2">Abans</label></div>
@@ -4439,12 +4742,12 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </div>
 </div>
 </div>
-<p>Això combina l'operació <code>splitCsv</code> (llegir el CSV amb capçaleres) i l'operació <code>map</code> (estructurar dades com a tuples <code>[meta, file]</code>) en un sol pas. Apliqueu aquest canvi i executeu el pipeline:</p>
+<p>Això combina l'operació <code>splitCsv</code> (llegir el CSV amb capçaleres) i l'operació <code>map</code> (estructurar les dades com a tuples <code>[meta, fitxer]</code>) en un sol pas. Apliqueu aquest canvi i executeu el pipeline:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">Launching `main.nf` [deadly_mercator] DSL2 - revision: bd6b0224e9</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
@@ -4458,11 +4761,11 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="go">[[id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Ara tenim un canal on cada element és una tupla <code>[meta, file]</code> - metadades separades dels camins de fitxers. Aquesta estructura ens permet dividir i agrupar la nostra càrrega de treball basant-nos en camps de metadades.</p>
+<p>Ara tenim un canal on cada element és una tupla <code>[meta, fitxer]</code> — les metadades separades de les rutes dels fitxers. Aquesta estructura ens permet dividir i agrupar la nostra càrrega de treball basant-nos en els camps de metadades.</p>
 <hr />
 <h2 id="2-filtrar-i-transformar-dades">2. Filtrar i transformar dades<a class="headerlink" href="#2-filtrar-i-transformar-dades" title="Permanent link">&para;</a></h2>
 <h3 id="21-filtrar-dades-amb-filter">2.1. Filtrar dades amb <code>filter</code><a class="headerlink" href="#21-filtrar-dades-amb-filter" title="Permanent link">&para;</a></h3>
-<p>Podem utilitzar l'<a href="https://www.nextflow.io/docs/latest/operator.html#filter">operador <code>filter</code></a> per filtrar les dades segons una condició. Diguem que només volem processar mostres normals. Podem fer això filtrant les dades segons el camp <code>type</code>. Inserim això abans de l'operador <code>view</code>.</p>
+<p>Podem utilitzar l'<a href="https://www.nextflow.io/docs/latest/operator.html#filter">operador <code>filter</code></a> per filtrar les dades basant-nos en una condició. Diguem que només volem processar mostres normals. Podem fer-ho filtrant les dades basant-nos en el camp <code>type</code>. Inserim això abans de l'operador <code>view</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Després</label><label for="__tabbed_2_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4502,7 +4805,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">Launching `main.nf` [admiring_brown] DSL2 - revision: 194d61704d</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
@@ -4512,14 +4815,15 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="go">[[id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam]</span>
 </code></pre></div>
 </details>
-<p>Hem filtrat amb èxit les dades per incloure només mostres normals. Recapitulem com funciona això.</p>
+<p>Hem filtrat correctament les dades per incloure només les mostres normals. Fem un resum de com funciona.</p>
 <p>L'operador <code>filter</code> pren una closure que s'aplica a cada element del canal. Si la closure retorna <code>true</code>, l'element s'inclou; si retorna <code>false</code>, l'element s'exclou.</p>
-<p>En el nostre cas, volem mantenir només mostres on <code>meta.type == 'normal'</code>. La closure utilitza la tupla <code>meta,file</code> per referir-se a cada mostra, accedeix al tipus de mostra amb <code>meta.type</code> i comprova si és igual a <code>'normal'</code>.</p>
-<p>Això s'aconsegueix amb la única closure que hem introduït anteriorment:</p>
+<p>En el nostre cas, volem conservar només les mostres on <code>meta.type == 'normal'</code>. La closure utilitza la tupla <code>meta,file</code> per referir-se a cada mostra, accedeix al tipus de mostra amb <code>meta.type</code> i comprova si és igual a <code>'normal'</code>.</p>
+<p>Això s'aconsegueix amb la closure única que hem introduït anteriorment:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="o">.</span><span class="na">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;normal&#39;</span><span class="w"> </span><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
+<p>Aquest filtre s'encadena directament en l'operació del canal.</p>
 <h3 id="22-crear-canals-filtrats-separats">2.2. Crear canals filtrats separats<a class="headerlink" href="#22-crear-canals-filtrats-separats" title="Permanent link">&para;</a></h3>
-<p>Actualment estem aplicant el filtre al canal creat directament des del CSV, però volem filtrar això de més d'una manera, així que reescrivim la lògica per crear un canal filtrat separat per a mostres normals:</p>
+<p>Actualment estem aplicant el filtre al canal creat directament des del CSV, però volem filtrar-lo de més d'una manera, de manera que reescrivim la lògica per crear un canal filtrat separat per a les mostres normals:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Després</label><label for="__tabbed_3_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4565,7 +4869,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">Launching `main.nf` [trusting_poisson] DSL2 - revision: 639186ee74</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
@@ -4575,8 +4879,8 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="go">[[id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam]</span>
 </code></pre></div>
 </details>
-<p>Hem filtrat amb èxit les dades i creat un canal separat per a mostres normals.</p>
-<p>Creem també un canal filtrat per a les mostres de tumor:</p>
+<p>Hem filtrat correctament les dades i hem creat un canal separat per a les mostres normals.</p>
+<p>Creem també un canal filtrat per a les mostres tumorals:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Després</label><label for="__tabbed_4_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4613,7 +4917,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">Launching `main.nf` [maniac_boltzmann] DSL2 - revision: 3636b6576b</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
@@ -4627,28 +4931,28 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="go">Tumor sample: [[id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Hem separat les mostres normals i de tumor en dos canals diferents, i hem utilitzat una closure proporcionada a <code>view()</code> per etiquetar-les de manera diferent a la sortida: <code>ch_tumor_samples.view{'Mostra tumor: ' + it}</code>.</p>
+<p>Hem separat les mostres normals i tumorals en dos canals diferents, i hem utilitzat una closure subministrada a <code>view()</code> per etiquetar-les de manera diferent a la sortida: <code class="highlight"><span class="n">ch_tumor_samples</span><span class="o">.</span><span class="na">view</span><span class="o">{</span><span class="s1">&#39;Tumor sample: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="o">}</span></code>.</p>
 <h3 id="conclusio">Conclusió<a class="headerlink" href="#conclusio" title="Permanent link">&para;</a></h3>
 <p>En aquesta secció, heu après:</p>
 <ul>
 <li><strong>Filtrar dades</strong>: Com filtrar dades amb <code>filter</code></li>
-<li><strong>Dividir dades</strong>: Com dividir dades en diferents canals segons una condició</li>
-<li><strong>Visualitzar dades</strong>: Com utilitzar <code>view</code> per imprimir les dades i etiquetar la sortida de diferents canals</li>
+<li><strong>Dividir dades</strong>: Com dividir dades en canals diferents basant-se en una condició</li>
+<li><strong>Visualitzar dades</strong>: Com utilitzar <code>view</code> per imprimir les dades i etiquetar la sortida de canals diferents</li>
 </ul>
-<p>Ara hem separat les mostres normals i de tumor en dos canals diferents. A continuació, unirem les mostres normals i de tumor pel camp <code>id</code>.</p>
+<p>Ara hem separat les mostres normals i tumorals en dos canals diferents. A continuació, unirem les mostres normals i tumorals pel camp <code>id</code>.</p>
 <hr />
 <h2 id="3-unir-canals-per-identificadors">3. Unir canals per identificadors<a class="headerlink" href="#3-unir-canals-per-identificadors" title="Permanent link">&para;</a></h2>
-<p>A la secció anterior, hem separat les mostres normals i de tumor en dos canals diferents. Aquestes podrien processar-se independentment utilitzant processos o workflows específics segons el seu tipus. Però què passa quan volem comparar les mostres normals i de tumor del mateix pacient? En aquest punt, necessitem unir-les de nou assegurant-nos d'aparellar les mostres segons el seu camp <code>id</code>.</p>
-<p>Nextflow inclou molts mètodes per combinar canals, però en aquest cas l'operador més apropiat és <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a>. Si esteu familiaritzats amb SQL, actua com l'operació <code>JOIN</code>, on especifiquem la clau per unir i el tipus d'unió a realitzar.</p>
-<h3 id="31-utilitzar-map-i-join-per-combinar-segons-lid-del-pacient">3.1. Utilitzar <code>map</code> i <code>join</code> per combinar segons l'ID del pacient<a class="headerlink" href="#31-utilitzar-map-i-join-per-combinar-segons-lid-del-pacient" title="Permanent link">&para;</a></h3>
-<p>Si comprovem la documentació de <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a>, podem veure que per defecte uneix dos canals segons el primer element de cada tupla.</p>
-<h4 id="311-comprovar-lestructura-de-dades">3.1.1. Comprovar l'estructura de dades<a class="headerlink" href="#311-comprovar-lestructura-de-dades" title="Permanent link">&para;</a></h4>
-<p>Si no teniu la sortida de consola encara disponible, executem el pipeline per comprovar la nostra estructura de dades i veure com necessitem modificar-la per unir pel camp <code>id</code>.</p>
+<p>A la secció anterior, hem separat les mostres normals i tumorals en dos canals diferents. Aquests podrien processar-se de manera independent utilitzant processos o workflows específics basats en el seu tipus. Però, què passa quan volem comparar les mostres normals i tumorals del mateix pacient? En aquest punt, hem de tornar a unir-les assegurant-nos de fer coincidir les mostres basant-nos en el camp <code>id</code>.</p>
+<p>Nextflow inclou molts mètodes per combinar canals, però en aquest cas l'operador més adequat és <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a>. Si esteu familiaritzats amb SQL, actua com l'operació <code>JOIN</code>, on especifiquem la clau per unir i el tipus d'unió a realitzar.</p>
+<h3 id="31-utilitzar-map-i-join-per-combinar-basant-se-en-lid-del-pacient">3.1. Utilitzar <code>map</code> i <code>join</code> per combinar basant-se en l'ID del pacient<a class="headerlink" href="#31-utilitzar-map-i-join-per-combinar-basant-se-en-lid-del-pacient" title="Permanent link">&para;</a></h3>
+<p>Si consultem la documentació de <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a>, podem veure que per defecte uneix dos canals basant-se en el primer element de cada tupla.</p>
+<h4 id="311-comproveu-lestructura-de-dades">3.1.1. Comproveu l'estructura de dades<a class="headerlink" href="#311-comproveu-lestructura-de-dades" title="Permanent link">&para;</a></h4>
+<p>Si ja no teniu la sortida de la consola disponible, executem el pipeline per comprovar l'estructura de les nostres dades i veure com hem de modificar-la per unir pel camp <code>id</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">Launching `main.nf` [maniac_boltzmann] DSL2 - revision: 3636b6576b</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
@@ -4663,7 +4967,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 </details>
 <p>Podem veure que el camp <code>id</code> és el primer element de cada mapa de metadades. Perquè <code>join</code> funcioni, hauríem d'aïllar el camp <code>id</code> en cada tupla. Després d'això, podem simplement utilitzar l'operador <code>join</code> per combinar els dos canals.</p>
-<h4 id="312-aillar-el-camp-id">3.1.2. Aïllar el camp <code>id</code><a class="headerlink" href="#312-aillar-el-camp-id" title="Permanent link">&para;</a></h4>
+<h4 id="312-ailleu-el-camp-id">3.1.2. Aïlleu el camp <code>id</code><a class="headerlink" href="#312-ailleu-el-camp-id" title="Permanent link">&para;</a></h4>
 <p>Per aïllar el camp <code>id</code>, podem utilitzar l'<a href="https://www.nextflow.io/docs/latest/operator.html#map">operador <code>map</code></a> per crear una nova tupla amb el camp <code>id</code> com a primer element.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Després</label><label for="__tabbed_5_2">Abans</label></div>
 <div class="tabbed-content">
@@ -4713,7 +5017,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">Launching `main.nf` [mad_lagrange] DSL2 - revision: 9940b3f23d</span>
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
@@ -4728,8 +5032,8 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 </details>
 <p>Pot ser subtil, però hauríeu de poder veure que el primer element de cada tupla és el camp <code>id</code>.</p>
-<h4 id="313-combinar-els-dos-canals">3.1.3. Combinar els dos canals<a class="headerlink" href="#313-combinar-els-dos-canals" title="Permanent link">&para;</a></h4>
-<p>Ara podem utilitzar l'operador <code>join</code> per combinar els dos canals segons el camp <code>id</code>.</p>
+<h4 id="313-combineu-els-dos-canals">3.1.3. Combineu els dos canals<a class="headerlink" href="#313-combineu-els-dos-canals" title="Permanent link">&para;</a></h4>
+<p>Ara podem utilitzar l'operador <code>join</code> per combinar els dos canals basant-nos en el camp <code>id</code>.</p>
 <p>Un cop més, utilitzarem <code>view</code> per imprimir les sortides unides.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Després</label><label for="__tabbed_6_2">Abans</label></div>
 <div class="tabbed-content">
@@ -4781,7 +5085,7 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go">Launching `main.nf` [soggy_wiles] DSL2 - revision: 3bc1979889</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
@@ -4791,25 +5095,25 @@ Si no esteu familiaritzats amb l'anàlisi de càncer, només cal saber que això
 <a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="go">[patientC, [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>És una mica difícil de veure perquè és molt ample, però hauríeu de poder veure que les mostres s'han unit pel camp <code>id</code>. Cada tupla ara té el format:</p>
+<p>És una mica difícil de llegir perquè és molt ample, però hauríeu de poder veure que les mostres s'han unit pel camp <code>id</code>. Cada tupla ara té el format:</p>
 <ul>
 <li><code>id</code>: L'ID de la mostra</li>
-<li><code>normal_meta_map</code>: Les metadades de la mostra normal incloent tipus, rèplica i camí al fitxer bam</li>
-<li><code>normal_sample_file</code>: El fitxer de mostra normal</li>
-<li><code>tumor_meta_map</code>: Les metadades de la mostra de tumor incloent tipus, rèplica i camí al fitxer bam</li>
-<li><code>tumor_sample</code>: La mostra de tumor incloent tipus, rèplica i camí al fitxer bam</li>
+<li><code>normal_meta_map</code>: Les metadades de la mostra normal incloent el tipus, la rèplica i la ruta al fitxer BAM</li>
+<li><code>normal_sample_file</code>: El fitxer de la mostra normal</li>
+<li><code>tumor_meta_map</code>: Les metadades de la mostra tumoral incloent el tipus, la rèplica i la ruta al fitxer BAM</li>
+<li><code>tumor_sample</code>: La mostra tumoral incloent el tipus, la rèplica i la ruta al fitxer BAM</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Advertència</p>
-<p>L'operador <code>join</code> descartarà qualsevol tupla no aparellada. En aquest exemple, ens hem assegurat que totes les mostres estiguessin aparellades per a tumor i normal, però si això no és cert heu d'utilitzar el paràmetre <code>remainder: true</code> per mantenir les tuples no aparellades. Consulteu la <a href="https://www.nextflow.io/docs/latest/operator.html#join">documentació</a> per a més detalls.</p>
+<p>L'operador <code>join</code> descartarà qualsevol tupla sense coincidència. En aquest exemple, ens hem assegurat que totes les mostres tenien coincidència per a tumor i normal, però si això no és cert, heu d'utilitzar el paràmetre <code>remainder: true</code> per conservar les tuples sense coincidència. Consulteu la <a href="https://www.nextflow.io/docs/latest/operator.html#join">documentació</a> per a més detalls.</p>
 </div>
-<p>Així que ara sabeu com utilitzar <code>map</code> per aïllar un camp en una tupla, i com utilitzar <code>join</code> per combinar tuples segons el primer camp.
-Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit.</p>
-<p>A continuació, considerarem la situació on voleu unir per múltiples camps.</p>
+<p>Ara sabeu com utilitzar <code>map</code> per aïllar un camp en una tupla, i com utilitzar <code>join</code> per combinar tuples basant-se en el primer camp.
+Amb aquest coneixement, podem combinar canals correctament basant-nos en un camp compartit.</p>
+<p>A continuació, considerarem la situació en què voleu unir per múltiples camps.</p>
 <h3 id="32-unir-per-multiples-camps">3.2. Unir per múltiples camps<a class="headerlink" href="#32-unir-per-multiples-camps" title="Permanent link">&para;</a></h3>
-<p>Tenim 2 rèpliques per a sampleA, però només 1 per a sampleB i sampleC. En aquest cas vam poder unir-les efectivament utilitzant el camp <code>id</code>, però què passaria si estiguessin desincronitzades? Podríem barrejar les mostres normals i de tumor de diferents rèpliques!</p>
-<p>Per evitar això, podem unir per múltiples camps. En realitat hi ha múltiples maneres d'aconseguir això, però ens centrarem en crear una nova clau d'unió que inclogui tant l'<code>id</code> de la mostra com el número de <code>replicate</code>.</p>
-<p>Comencem creant una nova clau d'unió. Podem fer això de la mateixa manera que abans utilitzant l'<a href="https://www.nextflow.io/docs/latest/operator.html#map">operador <code>map</code></a> per crear una nova tupla amb els camps <code>id</code> i <code>repeat</code> com a primer element.</p>
+<p>Tenim 2 rèpliques per a la mostra A, però només 1 per a les mostres B i C. En aquest cas hem pogut unir-les efectivament utilitzant el camp <code>id</code>, però, què passaria si estiguessin desincronitzades? Podríem barrejar les mostres normals i tumorals de rèpliques diferents!</p>
+<p>Per evitar-ho, podem unir per múltiples camps. En realitat hi ha múltiples maneres d'aconseguir-ho, però ens centrarem en crear una nova clau d'unió que inclogui tant l'<code>id</code> de la mostra com el número de <code>replicate</code>.</p>
+<p>Comencem creant una nova clau d'unió. Podem fer-ho de la mateixa manera que abans, utilitzant l'<a href="https://www.nextflow.io/docs/latest/operator.html#map">operador <code>map</code></a> per crear una nova tupla amb els camps <code>id</code> i <code>repeat</code> com a primer element.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Després</label><label for="__tabbed_7_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4842,12 +5146,12 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Ara hauríem de veure que la unió s'està produint però utilitzant tant els camps <code>id</code> com <code>repeat</code>. Executeu el workflow:</p>
+<p>Ara hauríem de veure que la unió es produeix però utilitzant tant els camps <code>id</code> com <code>repeat</code>. Executeu el workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `main.nf` [prickly_wing] DSL2 - revision: 3bebf22dee</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
@@ -4857,10 +5161,10 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="go">[[patientC, 1], [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Noteu com tenim una tupla de dos elements (camps <code>id</code> i <code>repeat</code>) com a primer element de cada resultat unit. Això demostra com elements complexos poden utilitzar-se com a clau d'unió, permetent aparellaments força complexos entre mostres de les mateixes condicions.</p>
-<p>Si voleu explorar més maneres d'unir per diferents claus, consulteu la <a href="https://www.nextflow.io/docs/latest/operator.html#join">documentació de l'operador join</a> per a opcions i exemples addicionals.</p>
+<p>Observeu com tenim una tupla de dos elements (camps <code>id</code> i <code>repeat</code>) com a primer element de cada resultat unit. Això demostra com es poden utilitzar elements complexos com a clau d'unió, permetent una coincidència força intricada entre mostres de les mateixes condicions.</p>
+<p>Si voleu explorar més maneres d'unir per claus diferents, consulteu la <a href="https://www.nextflow.io/docs/latest/operator.html#join">documentació de l'operador join</a> per a opcions i exemples addicionals.</p>
 <h3 id="33-utilitzar-submap-per-crear-una-nova-clau-dunio">3.3. Utilitzar <code>subMap</code> per crear una nova clau d'unió<a class="headerlink" href="#33-utilitzar-submap-per-crear-una-nova-clau-dunio" title="Permanent link">&para;</a></h3>
-<p>L'enfocament anterior perd els noms dels camps de la nostra clau d'unió - els camps <code>id</code> i <code>repeat</code> es converteixen només en una llista de valors. Per retenir els noms dels camps per a accés posterior, podem utilitzar el <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html#subMap(java.util.Collection)">mètode <code>subMap</code></a>.</p>
+<p>L'enfocament anterior perd els noms dels camps de la nostra clau d'unió — els camps <code>id</code> i <code>repeat</code> es converteixen simplement en una llista de valors. Per conservar els noms dels camps per a un accés posterior, podem utilitzar el <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html#subMap(java.util.Collection)">mètode <code>subMap</code></a>.</p>
 <p>El mètode <code>subMap</code> extreu només els parells clau-valor especificats d'un mapa. Aquí extraurem només els camps <code>id</code> i <code>repeat</code> per crear la nostra clau d'unió.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Després</label><label for="__tabbed_8_2">Abans</label></div>
 <div class="tabbed-content">
@@ -4898,7 +5202,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="go">Launching `main.nf` [reverent_wing] DSL2 - revision: 847016c3b7</span>
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
@@ -4908,10 +5212,10 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="go">[[id:patientC, repeat:1], [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Ara tenim una nova clau d'unió que no només inclou els camps <code>id</code> i <code>repeat</code> sinó que també conserva els noms dels camps perquè puguem accedir-hi més tard per nom, per exemple <code>meta.id</code> i <code>meta.repeat</code>.</p>
+<p>Ara tenim una nova clau d'unió que no només inclou els camps <code>id</code> i <code>repeat</code> sinó que també conserva els noms dels camps perquè puguem accedir-hi posteriorment per nom, p. ex. <code>meta.id</code> i <code>meta.repeat</code>.</p>
 <h3 id="34-utilitzar-una-closure-amb-nom-en-map">3.4. Utilitzar una closure amb nom en map<a class="headerlink" href="#34-utilitzar-una-closure-amb-nom-en-map" title="Permanent link">&para;</a></h3>
-<p>Per evitar duplicació i reduir errors, podem utilitzar una closure amb nom. Una closure amb nom ens permet crear una funció reutilitzable que podem cridar en múltiples llocs.</p>
-<p>Per fer-ho, primer definim la closure com a nova variable:</p>
+<p>Per evitar la duplicació i reduir errors, podem utilitzar una closure amb nom. Una closure amb nom ens permet crear una funció reutilitzable que podem cridar en múltiples llocs.</p>
+<p>Per fer-ho, primer definim la closure com una nova variable:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Després</label><label for="__tabbed_9_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4954,8 +5258,8 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Hem definit la transformació map com a variable amb nom que podem reutilitzar.</p>
-<p>Noteu que també convertim el camí del fitxer a un objecte Path utilitzant <code>file()</code> perquè qualsevol procés que rebi aquest canal pugui gestionar el fitxer correctament (per a més informació vegeu <a href="../working_with_files/">Treballar amb fitxers</a>).</p>
+<p>Hem definit la transformació map com una variable amb nom que podem reutilitzar.</p>
+<p>Tingueu en compte que també convertim la ruta del fitxer a un objecte Path utilitzant <code>file()</code> perquè qualsevol procés que rebi aquest canal pugui gestionar el fitxer correctament (per a més informació vegeu <a href="../working_with_files/">Working with files</a>).</p>
 <p>Implementem la closure al nostre workflow:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Després</label><label for="__tabbed_10_2">Abans</label></div>
 <div class="tabbed-content">
@@ -4993,12 +5297,12 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <p class="admonition-title">Nota</p>
 <p>L'operador <code>map</code> ha canviat d'utilitzar <code>{ }</code> a utilitzar <code>( )</code> per passar la closure com a argument. Això és perquè l'operador <code>map</code> espera una closure com a argument i <code>{ }</code> s'utilitza per definir una closure anònima. Quan es crida una closure amb nom, utilitzeu la sintaxi <code>( )</code>.</p>
 </div>
-<p>Executeu el workflow un cop més per comprovar que tot segueix funcionant:</p>
+<p>Executeu el workflow una vegada més per comprovar que tot continua funcionant:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="go">Launching `main.nf` [angry_meninsky] DSL2 - revision: 2edc226b1d</span>
 <a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>
@@ -5010,7 +5314,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </details>
 <p>Utilitzar una closure amb nom ens permet reutilitzar la mateixa transformació en múltiples llocs, reduint el risc d'errors i fent el codi més llegible i mantenible.</p>
 <h3 id="35-reduir-la-duplicacio-de-dades">3.5. Reduir la duplicació de dades<a class="headerlink" href="#35-reduir-la-duplicacio-de-dades" title="Permanent link">&para;</a></h3>
-<p>Tenim moltes dades duplicades al nostre workflow. Cada element de les mostres unides repeteix els camps <code>id</code> i <code>repeat</code>. Com que aquesta informació ja està disponible a la clau d'agrupació, podem evitar aquesta redundància. Com a recordatori, la nostra estructura de dades actual té aquest aspecte:</p>
+<p>Tenim moltes dades duplicades al nostre workflow. Cada element de les mostres unides repeteix els camps <code>id</code> i <code>repeat</code>. Com que aquesta informació ja està disponible a la clau d'agrupació, podem evitar aquesta redundància. Com a recordatori, l'estructura de dades actual és la següent:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="o">[</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">  </span><span class="o">[</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sampleC&quot;</span><span class="o">,</span>
@@ -5030,7 +5334,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="w">  </span><span class="s2">&quot;sampleC_rep1_tumor.bam&quot;</span>
 <a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="o">]</span>
 </code></pre></div>
-<p>Com que els camps <code>id</code> i <code>repeat</code> estan disponibles a la clau d'agrupació, eliminem-los de la resta de cada element del canal per evitar duplicació. Podem fer això utilitzant el mètode <code>subMap</code> per crear un nou mapa amb només el camp <code>type</code>. Aquest enfocament ens permet mantenir tota la informació necessària mentre eliminem la redundància a la nostra estructura de dades.</p>
+<p>Com que els camps <code>id</code> i <code>repeat</code> estan disponibles a la clau d'agrupació, eliminem-los de la resta de cada element del canal per evitar la duplicació. Podem fer-ho utilitzant el mètode <code>subMap</code> per crear un nou mapa amb només el camp <code>type</code>. Aquest enfocament ens permet mantenir tota la informació necessària eliminant la redundància en la nostra estructura de dades.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Després</label><label for="__tabbed_11_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5043,8 +5347,8 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Ara la closure retorna una tupla on el primer element conté els camps <code>id</code> i <code>repeat</code>, i el segon element conté només el camp <code>type</code>. Això elimina la redundància emmagatzemant la informació d'<code>id</code> i <code>repeat</code> un cop a la clau d'agrupació, mentre es manté tota la informació necessària.</p>
-<p>Executeu el workflow per veure com es veu això:</p>
+<p>Ara la closure retorna una tupla on el primer element conté els camps <code>id</code> i <code>repeat</code>, i el segon element conté només el camp <code>type</code>. Això elimina la redundància emmagatzemant la informació de <code>id</code> i <code>repeat</code> una sola vegada a la clau d'agrupació, mantenint tota la informació necessària.</p>
+<p>Executeu el workflow per veure com queda:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
@@ -5055,11 +5359,11 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="go">[[id:patientC, repeat:1], [type:normal], /workspaces/training/side-quests/splitting_and_grouping/patientC_rep1_normal.bam, [type:tumor], /workspaces/training/side-quests/splitting_and_grouping/patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Podem veure que només declarem els camps <code>id</code> i <code>repeat</code> un cop a la clau d'agrupació i tenim el camp <code>type</code> a les dades de mostra. No hem perdut cap informació però hem aconseguit fer els continguts del nostre canal més concisos.</p>
+<p>Podem veure que només indiquem els camps <code>id</code> i <code>repeat</code> una vegada a la clau d'agrupació i tenim el camp <code>type</code> a les dades de la mostra. No hem perdut cap informació però hem aconseguit fer el contingut del nostre canal més concís.</p>
 <h3 id="36-eliminar-informacio-redundant">3.6. Eliminar informació redundant<a class="headerlink" href="#36-eliminar-informacio-redundant" title="Permanent link">&para;</a></h3>
-<p>Hem eliminat informació duplicada anteriorment, però encara tenim altra informació redundant als nostres canals.</p>
-<p>Al principi, vam separar les mostres normals i de tumor utilitzant <code>filter</code>, després les vam unir segons les claus <code>id</code> i <code>repeat</code>. L'operador <code>join</code> preserva l'ordre en què es fusionen les tuples, així que en el nostre cas, amb mostres normals al costat esquerre i mostres de tumor a la dreta, el canal resultant manté aquesta estructura: <code>id, &lt;elements normals&gt;, &lt;elements tumor&gt;</code>.</p>
-<p>Com que coneixem la posició de cada element al nostre canal, podem simplificar encara més l'estructura eliminant les metadades <code>[type:normal]</code> i <code>[type:tumor]</code>.</p>
+<p>Hem eliminat la informació duplicada anteriorment, però encara tenim alguna altra informació redundant als nostres canals.</p>
+<p>Al principi, hem separat les mostres normals i tumorals utilitzant <code>filter</code>, i després les hem unit basant-nos en les claus <code>id</code> i <code>repeat</code>. L'operador <code>join</code> preserva l'ordre en què es fusionen les tuples, de manera que en el nostre cas, amb les mostres normals al costat esquerre i les tumorals al dret, el canal resultant manté aquesta estructura: <code>id, &lt;elements normals&gt;, &lt;elements tumorals&gt;</code>.</p>
+<p>Com que coneixem la posició de cada element al nostre canal, podem simplificar l'estructura eliminant les metadades <code>[type:normal]</code> i <code>[type:tumor]</code>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Després</label><label for="__tabbed_12_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5077,7 +5381,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="go">Launching `main.nf` [confident_leavitt] DSL2 - revision: a2303895bd</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>
@@ -5087,23 +5391,24 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-54-8" name="__codelineno-54-8" href="#__codelineno-54-8"></a><span class="go">[[id:patientC, repeat:1], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
+<p>Cada tupla ara conté només la clau d'agrupació i les dues rutes de fitxer, sense camps repetits.</p>
 <h3 id="conclusio_1">Conclusió<a class="headerlink" href="#conclusio_1" title="Permanent link">&para;</a></h3>
 <p>En aquesta secció, heu après:</p>
 <ul>
-<li><strong>Manipular Tuples</strong>: Com utilitzar <code>map</code> per aïllar un camp en una tupla</li>
-<li><strong>Unir Tuples</strong>: Com utilitzar <code>join</code> per combinar tuples segons el primer camp</li>
-<li><strong>Crear Claus d'Unió</strong>: Com utilitzar <code>subMap</code> per crear una nova clau d'unió</li>
-<li><strong>Closures amb Nom</strong>: Com utilitzar una closure amb nom en map</li>
-<li><strong>Unió per Múltiples Camps</strong>: Com unir per múltiples camps per a aparellament més precís</li>
-<li><strong>Optimització d'Estructura de Dades</strong>: Com racionalitzar l'estructura del canal eliminant informació redundant</li>
+<li><strong>Manipular tuples</strong>: Com utilitzar <code>map</code> per aïllar un camp en una tupla</li>
+<li><strong>Unir tuples</strong>: Com utilitzar <code>join</code> per combinar tuples basant-se en el primer camp</li>
+<li><strong>Crear claus d'unió</strong>: Com utilitzar <code>subMap</code> per crear una nova clau d'unió</li>
+<li><strong>Closures amb nom</strong>: Com utilitzar una closure amb nom en map</li>
+<li><strong>Unió per múltiples camps</strong>: Com unir per múltiples camps per a una coincidència més precisa</li>
+<li><strong>Optimització de l'estructura de dades</strong>: Com simplificar l'estructura del canal eliminant informació redundant</li>
 </ul>
-<p>Ara teniu un workflow que pot dividir un full de mostres, filtrar les mostres normals i de tumor, unir-les per ID de mostra i número de rèplica, després imprimir els resultats.</p>
-<p>Aquest és un patró comú en workflows de bioinformàtica on necessiteu aparellar mostres o altres tipus de dades després de processar-les independentment, així que és una habilitat útil. A continuació, veurem com repetir una mostra múltiples vegades.</p>
+<p>Ara teniu un workflow que pot dividir un full de mostres, filtrar les mostres normals i tumorals, unir-les per ID de mostra i número de rèplica, i imprimir els resultats.</p>
+<p>Aquest és un patró comú en workflows de bioinformàtica on cal fer coincidir mostres o altres tipus de dades després de processar-les de manera independent, de manera que és una habilitat útil. A continuació, veurem com repetir una mostra múltiples vegades.</p>
 <h2 id="4-distribuir-mostres-per-intervals">4. Distribuir mostres per intervals<a class="headerlink" href="#4-distribuir-mostres-per-intervals" title="Permanent link">&para;</a></h2>
-<p>Un patró clau en workflows de bioinformàtica és distribuir l'anàlisi a través de regions genòmiques. Per exemple, la crida de variants pot paral·lelitzar-se dividint el genoma en intervals (com cromosomes o regions més petites). Aquesta estratègia de paral·lelització millora significativament l'eficiència del pipeline distribuint la càrrega computacional a través de múltiples nuclis o nodes, reduint el temps total d'execució.</p>
-<p>A la següent secció, demostrarem com distribuir les nostres dades de mostres a través de múltiples intervals genòmics. Aparellarem cada mostra amb cada interval, permetent el processament paral·lel de diferents regions genòmiques. Això multiplicarà la mida del nostre conjunt de dades pel nombre d'intervals, creant múltiples unitats d'anàlisi independents que poden tornar-se a reunir més tard.</p>
-<h3 id="41-distribuir-mostres-per-intervals-utilitzant-combine">4.1. Distribuir mostres per intervals utilitzant <code>combine</code><a class="headerlink" href="#41-distribuir-mostres-per-intervals-utilitzant-combine" title="Permanent link">&para;</a></h3>
-<p>Comencem creant un canal d'intervals. Per mantenir la vida simple, utilitzarem només 3 intervals que definirem manualment. En un workflow real, podríeu llegir-los d'un fitxer d'entrada o fins i tot crear un canal amb molts fitxers d'intervals.</p>
+<p>Un patró clau en els workflows de bioinformàtica és distribuir l'anàlisi entre regions genòmiques. Per exemple, la detecció de variants es pot paral·lelitzar dividint el genoma en intervals (com cromosomes o regions més petites). Aquesta estratègia de paral·lelització millora significativament l'eficiència del pipeline distribuint la càrrega computacional entre múltiples nuclis o nodes, reduint el temps d'execució total.</p>
+<p>A la secció següent, demostrarem com distribuir les nostres dades de mostres entre múltiples intervals genòmics. Emparellarem cada mostra amb cada interval, permetent el processament paral·lel de diferents regions genòmiques. Això multiplicarà la mida del nostre conjunt de dades pel nombre d'intervals, creant múltiples unitats d'anàlisi independents que es podran tornar a reunir posteriorment.</p>
+<h3 id="41-distribuir-mostres-per-intervals-amb-combine">4.1. Distribuir mostres per intervals amb <code>combine</code><a class="headerlink" href="#41-distribuir-mostres-per-intervals-amb-combine" title="Permanent link">&para;</a></h3>
+<p>Comencem creant un canal d'intervals. Per simplificar, simplement utilitzarem 3 intervals que definirem manualment. En un workflow real, podríeu llegir-los d'un fitxer d'entrada o fins i tot crear un canal amb molts fitxers d'intervals.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Després</label><label for="__tabbed_13_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5120,7 +5425,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Ara recordeu, volem repetir cada mostra per a cada interval. Això de vegades es coneix com el producte cartesià de les mostres i els intervals. Podem aconseguir això utilitzant l'<a href="https://www.nextflow.io/docs/latest/operator.html#combine">operador <code>combine</code></a>. Això prendrà cada element del canal 1 i el repetirà per a cada element del canal 2. Afegim un operador combine al nostre workflow:</p>
+<p>Recordeu que volem repetir cada mostra per a cada interval. Això de vegades s'anomena el producte cartesià de les mostres i els intervals. Podem aconseguir-ho utilitzant l'<a href="https://www.nextflow.io/docs/latest/operator.html#combine">operador <code>combine</code></a>. Això agafarà cada element del canal 1 i el repetirà per a cada element del canal 2. Afegim un operador combine al nostre workflow:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Després</label><label for="__tabbed_14_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5141,12 +5446,12 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Ara executem-ho i vegem què passa:</p>
+<p>Ara executem-ho i veiem què passa:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="go">Launching `main.nf` [mighty_tesla] DSL2 - revision: ae013ab70b</span>
 <a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>
@@ -5165,9 +5470,9 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </code></pre></div>
 </details>
 <p>Èxit! Hem repetit cada mostra per a cada interval de la nostra llista de 3 intervals. Hem triplicat efectivament el nombre d'elements al nostre canal.</p>
-<p>És una mica difícil de llegir, però a la següent secció ho endreçarem.</p>
+<p>És una mica difícil de llegir, de manera que a la secció següent ho ordenarem.</p>
 <h3 id="42-organitzar-el-canal">4.2. Organitzar el canal<a class="headerlink" href="#42-organitzar-el-canal" title="Permanent link">&para;</a></h3>
-<p>Podem utilitzar l'operador <code>map</code> per endreçar i refactoritzar les nostres dades de mostres perquè siguin més fàcils d'entendre. Movem la cadena d'intervals al mapa d'unió al primer element.</p>
+<p>Podem utilitzar l'operador <code>map</code> per ordenar i refactoritzar les nostres dades de mostres perquè siguin més fàcils d'entendre. Movem la cadena d'intervals al mapa d'unió del primer element.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Després</label><label for="__tabbed_15_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5202,26 +5507,26 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Desglossem què fa aquesta operació map pas a pas.</p>
-<p>Primer, utilitzem paràmetres amb nom per fer el codi més llegible. Utilitzant els noms <code>grouping_key</code>, <code>normal</code>, <code>tumor</code> i <code>interval</code>, podem referir-nos als elements de la tupla per nom en lloc de per índex:</p>
+<p>Analitzem pas a pas el que fa aquesta operació map.</p>
+<p>Primer, utilitzem paràmetres amb nom per fer el codi més llegible. Utilitzant els noms <code>grouping_key</code>, <code>normal</code>, <code>tumor</code> i <code>interval</code>, podem referir-nos als elements de la tupla per nom en lloc d'índex:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="w">        </span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">grouping_key</span><span class="o">,</span><span class="w"> </span><span class="n">normal</span><span class="o">,</span><span class="w"> </span><span class="n">tumor</span><span class="o">,</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">-&gt;</span>
 </code></pre></div>
-<p>A continuació, combinem el <code>grouping_key</code> amb el camp <code>interval</code>. El <code>grouping_key</code> és un mapa que conté els camps <code>id</code> i <code>repeat</code>. Creem un nou mapa amb l'<code>interval</code> i els fusionem utilitzant l'addició de mapes de Groovy (<code>+</code>):</p>
+<p>A continuació, combinem la <code>grouping_key</code> amb el camp <code>interval</code>. La <code>grouping_key</code> és un mapa que conté els camps <code>id</code> i <code>repeat</code>. Creem un nou mapa amb l'<code>interval</code> i els fusionem utilitzant l'addició de mapes de Groovy (<code>+</code>):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="w">                </span><span class="n">grouping_key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">interval:</span><span class="w"> </span><span class="n">interval</span><span class="o">],</span>
 </code></pre></div>
-<p>Finalment, retornem això com una tupla amb tres elements: el mapa de metadades combinat, el fitxer de mostra normal i el fitxer de mostra de tumor:</p>
+<p>Finalment, retornem això com una tupla amb tres elements: el mapa de metadades combinat, el fitxer de la mostra normal i el fitxer de la mostra tumoral:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="w">            </span><span class="o">[</span>
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">                </span><span class="n">grouping_key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">interval:</span><span class="w"> </span><span class="n">interval</span><span class="o">],</span>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="w">                </span><span class="n">normal</span><span class="o">,</span>
 <a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="w">                </span><span class="n">tumor</span>
 <a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a><span class="w">            </span><span class="o">]</span>
 </code></pre></div>
-<p>Executem-ho de nou i comprovem els continguts del canal:</p>
+<p>Executem-ho de nou i comprovem el contingut del canal:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>
 <a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="go">Launching `main.nf` [sad_hawking] DSL2 - revision: 1f6f6250cd</span>
 <a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>
@@ -5239,22 +5544,22 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-67-16" name="__codelineno-67-16" href="#__codelineno-67-16"></a><span class="go">[[id:patientC, repeat:1, interval:chr3], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Utilitzar <code>map</code> per coaccionar les vostres dades a l'estructura correcta pot ser complicat, però és crucial per a la manipulació efectiva de dades.</p>
-<p>Ara tenim cada mostra repetida a través de tots els intervals genòmics, creant múltiples unitats d'anàlisi independents que poden processar-se en paral·lel. Però què passa si volem tornar a reunir mostres relacionades? A la següent secció, aprendrem com agrupar mostres que comparteixen atributs comuns.</p>
+<p>Utilitzar <code>map</code> per forçar les dades a l'estructura correcta pot ser complicat, però és crucial per a una manipulació de dades efectiva.</p>
+<p>Ara tenim cada mostra repetida per tots els intervals genòmics, creant múltiples unitats d'anàlisi independents que es poden processar en paral·lel. Però, i si volem tornar a reunir les mostres relacionades? A la secció següent, aprendrem a agrupar mostres que comparteixen atributs comuns.</p>
 <h3 id="conclusio_2">Conclusió<a class="headerlink" href="#conclusio_2" title="Permanent link">&para;</a></h3>
 <p>En aquesta secció, heu après:</p>
 <ul>
 <li><strong>Distribuir mostres per intervals</strong>: Com utilitzar <code>combine</code> per repetir mostres per intervals</li>
 <li><strong>Crear productes cartesians</strong>: Com generar totes les combinacions de mostres i intervals</li>
-<li><strong>Organitzar l'estructura del canal</strong>: Com utilitzar <code>map</code> per reestructurar dades per a millor llegibilitat</li>
-<li><strong>Preparació per a processament paral·lel</strong>: Com configurar dades per a anàlisi distribuïda</li>
+<li><strong>Organitzar l'estructura del canal</strong>: Com utilitzar <code>map</code> per reestructurar les dades per a una millor llegibilitat</li>
+<li><strong>Preparació per al processament paral·lel</strong>: Com configurar les dades per a l'anàlisi distribuïda</li>
 </ul>
-<h2 id="5-agregar-mostres-utilitzant-grouptuple">5. Agregar mostres utilitzant <code>groupTuple</code><a class="headerlink" href="#5-agregar-mostres-utilitzant-grouptuple" title="Permanent link">&para;</a></h2>
-<p>A les seccions anteriors, hem après com dividir dades d'un fitxer d'entrada i filtrar per camps específics (en el nostre cas mostres normals i de tumor). Però això només cobreix un únic tipus d'unió. Què passa si volem agrupar mostres per un atribut específic? Per exemple, en lloc d'unir parelles aparellades normal-tumor, podríem voler processar totes les mostres de "sampleA" juntes independentment del seu tipus. Aquest patró és comú en workflows de bioinformàtica on podeu voler processar mostres relacionades per separat per raons d'eficiència abans de comparar o combinar els resultats al final.</p>
-<p>Nextflow inclou mètodes integrats per fer això, el principal que veurem és <code>groupTuple</code>.</p>
-<p>Comencem agrupant totes les nostres mostres que tenen els mateixos camps <code>id</code> i <code>interval</code>, això seria típic d'una anàlisi on volguéssim agrupar rèpliques tècniques però mantenir mostres significativament diferents separades.</p>
-<p>Per fer això, hauríem de separar les nostres variables d'agrupació perquè puguem utilitzar-les de manera aïllada.</p>
-<p>El primer pas és similar al que vam fer a la secció anterior. Hem d'aïllar la nostra variable d'agrupació com a primer element de la tupla. Recordeu, el nostre primer element és actualment un mapa dels camps <code>id</code>, <code>repeat</code> i <code>interval</code>:</p>
+<h2 id="5-agregar-mostres-amb-grouptuple">5. Agregar mostres amb <code>groupTuple</code><a class="headerlink" href="#5-agregar-mostres-amb-grouptuple" title="Permanent link">&para;</a></h2>
+<p>A les seccions anteriors, hem après a dividir les dades d'un fitxer d'entrada i filtrar per camps específics (en el nostre cas mostres normals i tumorals). Però això només cobreix un únic tipus d'unió. I si volem agrupar mostres per un atribut específic? Per exemple, en lloc d'unir parells normal-tumor coincidents, potser volem processar totes les mostres de "sampleA" juntes independentment del seu tipus. Aquest patró és comú en workflows de bioinformàtica on potser voleu processar mostres relacionades per separat per raons d'eficiència abans de comparar o combinar els resultats al final.</p>
+<p>Nextflow inclou mètodes integrats per fer-ho, el principal que veurem és <code>groupTuple</code>.</p>
+<p>Comencem agrupant totes les nostres mostres que tenen els mateixos camps <code>id</code> i <code>interval</code>, cosa que seria típica d'una anàlisi on volguéssim agrupar rèpliques tècniques però mantenir separades les mostres significativament diferents.</p>
+<p>Per fer-ho, hauríem de separar les nostres variables d'agrupació perquè puguem utilitzar-les de manera aïllada.</p>
+<p>El primer pas és similar al que hem fet a la secció anterior. Hem d'aïllar la nostra variable d'agrupació com a primer element de la tupla. Recordeu que el nostre primer element és actualment un mapa dels camps <code>id</code>, <code>repeat</code> i <code>interval</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
 <span class="normal"><a href="#__codelineno-68-2">2</a></span>
 <span class="normal"><a href="#__codelineno-68-3">3</a></span>
@@ -5265,7 +5570,7 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-68-4" name="__codelineno-68-4"></a><span class="w">  </span><span class="s2">&quot;interval&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chr1&quot;</span>
 <a id="__codelineno-68-5" name="__codelineno-68-5"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Podem reutilitzar el mètode <code>subMap</code> d'abans per aïllar els nostres camps <code>id</code> i <code>interval</code> del mapa. Com abans, utilitzarem l'operador <code>map</code> per aplicar el mètode <code>subMap</code> al primer element de la tupla per a cada mostra.</p>
+<p>Podem reutilitzar el mètode <code>subMap</code> d'abans per aïllar els camps <code>id</code> i <code>interval</code> del mapa. Com abans, utilitzarem l'operador <code>map</code> per aplicar el mètode <code>subMap</code> al primer element de la tupla per a cada mostra.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">Després</label><label for="__tabbed_16_2">Abans</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5332,12 +5637,12 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Executem-ho de nou i comprovem els continguts del canal:</p>
+<p>Executem-ho de nou i comprovem el contingut del canal:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>
 <a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="go">Launching `main.nf` [hopeful_brenner] DSL2 - revision: 7f4f7fea76</span>
 <a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>
@@ -5355,10 +5660,10 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-72-16" name="__codelineno-72-16" href="#__codelineno-72-16"></a><span class="go">[[id:patientC, interval:chr3], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>Podem veure que hem aïllat amb èxit els camps <code>id</code> i <code>interval</code>, però encara no hem agrupat les mostres.</p>
+<p>Podem veure que hem aïllat correctament els camps <code>id</code> i <code>interval</code>, però encara no hem agrupat les mostres.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Estem descartant el camp <code>replicate</code> aquí. Això és perquè no el necessitem per a processament posterior. Després de completar aquest tutorial, vegeu si podeu incloure'l sense afectar l'agrupació posterior!</p>
+<p>Aquí estem descartant el camp <code>replicate</code>. Això és perquè no el necessitem per al processament posterior. Després de completar aquest tutorial, comproveu si podeu incloure-lo sense afectar l'agrupació posterior!</p>
 </div>
 <p>Ara agrupem les mostres per aquest nou element d'agrupació, utilitzant l'<a href="https://www.nextflow.io/docs/latest/operator.html#grouptuple">operador <code>groupTuple</code></a>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">Després</label><label for="__tabbed_17_2">Abans</label></div>
@@ -5407,12 +5712,12 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </div>
 </div>
 </div>
-<p>Això és tot! Només hem afegit una única línia de codi. Vegem què passa quan l'executem:</p>
+<p>Això és tot! Simplement hem afegit una sola línia de codi. Veiem què passa quan l'executem:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>Sortida de la comanda</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>
 <a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="go">Launching `main.nf` [friendly_jang] DSL2 - revision: a1bee1c55d</span>
 <a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a>
@@ -5427,35 +5732,36 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 <a id="__codelineno-76-13" name="__codelineno-76-13" href="#__codelineno-76-13"></a><span class="go">[[id:patientC, interval:chr3], [patientC_rep1_normal.bam], [patientC_rep1_tumor.bam]]</span>
 </code></pre></div>
 </details>
-<p>Noteu que les nostres dades han canviat d'estructura i dins de cada element del canal els fitxers ara estan continguts en tuples com <code>[patientA_rep1_normal.bam, patientA_rep2_normal.bam]</code>. Això és perquè quan utilitzem <code>groupTuple</code>, Nextflow combina els fitxers individuals per a cada mostra d'un grup. Això és important recordar quan intenteu gestionar les dades posteriorment.</p>
+<p>Observeu que les nostres dades han canviat d'estructura i dins de cada element del canal els fitxers ara estan continguts en tuples com <code>[patientA_rep1_normal.bam, patientA_rep2_normal.bam]</code>. Això és perquè quan utilitzem <code>groupTuple</code>, Nextflow combina els fitxers individuals per a cada mostra d'un grup. Això és important de recordar quan intenteu gestionar les dades posteriorment.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#transpose"><code>transpose</code></a> és l'oposat de groupTuple. Desempaqueta els elements d'un canal i els aplana. Proveu d'afegir <code>transpose</code> i desfer l'agrupació que hem realitzat anteriorment!</p>
+<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#transpose"><code>transpose</code></a> és l'operació inversa de groupTuple. Desempaqueta els elements d'un canal i els aplana. Proveu d'afegir <code>transpose</code> i desfer l'agrupació que hem realitzat anteriorment!</p>
 </div>
+<p>Ambdues direccions de l'operació — agrupar i desagrupar — formen ara part del vostre conjunt d'eines.</p>
 <h3 id="conclusio_3">Conclusió<a class="headerlink" href="#conclusio_3" title="Permanent link">&para;</a></h3>
 <p>En aquesta secció, heu après:</p>
 <ul>
 <li><strong>Agrupar mostres relacionades</strong>: Com utilitzar <code>groupTuple</code> per agregar mostres per atributs comuns</li>
-<li><strong>Aïllar claus d'agrupació</strong>: Com utilitzar <code>subMap</code> per extreure camps específics per a agrupació</li>
-<li><strong>Gestionar estructures de dades agrupades</strong>: Com treballar amb l'estructura niuada creada per <code>groupTuple</code></li>
+<li><strong>Aïllar claus d'agrupació</strong>: Com utilitzar <code>subMap</code> per extreure camps específics per a l'agrupació</li>
+<li><strong>Gestionar estructures de dades agrupades</strong>: Com treballar amb l'estructura niada creada per <code>groupTuple</code></li>
 <li><strong>Gestió de rèpliques tècniques</strong>: Com agrupar mostres que comparteixen les mateixes condicions experimentals</li>
 </ul>
 <hr />
 <h2 id="resum">Resum<a class="headerlink" href="#resum" title="Permanent link">&para;</a></h2>
-<p>En aquesta missió secundària, heu après com dividir i agrupar dades utilitzant canals.</p>
-<p>Modificant les dades mentre flueixen pel pipeline, podeu construir un pipeline escalable sense utilitzar bucles o sentències while, oferint diversos avantatges sobre enfocaments més tradicionals:</p>
+<p>En aquesta missió secundària, heu après a dividir i agrupar dades utilitzant canals.</p>
+<p>Modificant les dades a mesura que flueixen a través del pipeline, podeu construir un pipeline escalable sense utilitzar bucles ni sentències while, oferint diversos avantatges respecte als enfocaments més tradicionals:</p>
 <ul>
-<li>Podem escalar a tantes o tan poques entrades com vulguem sense codi addicional</li>
-<li>Ens centrem en gestionar el flux de dades pel pipeline, en lloc de la iteració</li>
-<li>Podem ser tan complexos o simples com sigui necessari</li>
-<li>El pipeline es torna més declaratiu, centrant-se en què hauria de passar en lloc de com hauria de passar</li>
-<li>Nextflow optimitzarà l'execució per a nosaltres executant operacions independents en paral·lel</li>
+<li>Podem escalar a tants o tan pocs inputs com vulguem sense codi addicional</li>
+<li>Ens centrem en gestionar el flux de dades a través del pipeline, en lloc de la iteració</li>
+<li>Podem ser tan complexos o simples com calgui</li>
+<li>El pipeline es torna més declaratiu, centrant-se en el que ha de passar en lloc de com ha de passar</li>
+<li>Nextflow optimitzarà l'execució per nosaltres executant operacions independents en paral·lel</li>
 </ul>
 <p>Dominar aquestes operacions de canal us permetrà construir pipelines flexibles i escalables que gestionen relacions de dades complexes sense recórrer a bucles o programació iterativa, permetent a Nextflow optimitzar l'execució i paral·lelitzar operacions independents automàticament.</p>
 <h3 id="patrons-clau">Patrons clau<a class="headerlink" href="#patrons-clau" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p><strong>Crear dades d'entrada estructurades:</strong> Començant des d'un fitxer CSV amb mapes de metadades (basant-se en patrons de <a href="../metadata/">Metadades en workflows</a>)</p>
+<p><strong>Crear dades d'entrada estructurades:</strong> Partint d'un fitxer CSV amb mapes de metadades (basant-se en patrons de <a href="../metadata/">Metadata in workflows</a>)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="n">ch_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s2">&quot;./data/samplesheet.csv&quot;</span><span class="o">)</span>
 <a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="w">    </span><span class="o">.</span><span class="na">splitCsv</span><span class="o">(</span><span class="nl">header:</span><span class="w"> </span><span class="kc">true</span><span class="o">)</span>
 <a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="w">    </span><span class="o">.</span><span class="na">map</span><span class="o">{</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">-&gt;</span>
@@ -5464,19 +5770,19 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </code></pre></div>
 </li>
 <li>
-<p><strong>Dividir dades en canals separats:</strong> Hem utilitzat <code>filter</code> per dividir dades en fluxos independents segons el camp <code>type</code></p>
+<p><strong>Dividir dades en canals separats:</strong> Hem utilitzat <code>filter</code> per dividir les dades en fluxos independents basant-nos en el camp <code>type</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="n">channel</span><span class="o">.</span><span class="na">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;tumor&#39;</span><span class="w"> </span><span class="o">}</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Unir mostres aparellades:</strong> Hem utilitzat <code>join</code> per recombinar mostres relacionades segons els camps <code>id</code> i <code>repeat</code></p>
+<p><strong>Unir mostres coincidents:</strong> Hem utilitzat <code>join</code> per recombinar mostres relacionades basant-nos en els camps <code>id</code> i <code>repeat</code></p>
 <ul>
 <li>Unir dos canals per clau (primer element de la tupla)</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="n">tumor_ch</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">normal_ch</span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>Extreure clau d'unió i unir per aquest valor</li>
+<li>Extreure la clau d'unió i unir per aquest valor</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="n">tumor_ch</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">meta</span><span class="o">.</span><span class="na">id</span><span class="o">,</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="w">    </span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
@@ -5493,24 +5799,24 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </code></pre></div>
 </li>
 <li>
-<p><strong>Distribuir a través d'intervals:</strong> Hem utilitzat <code>combine</code> per crear productes cartesians de mostres amb intervals genòmics per a processament paral·lel.</p>
+<p><strong>Distribuir per intervals:</strong> Hem utilitzat <code>combine</code> per crear productes cartesians de mostres amb intervals genòmics per al processament paral·lel.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="n">samples_ch</span><span class="o">.</span><span class="na">combine</span><span class="o">(</span><span class="n">intervals_ch</span><span class="o">)</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Agregar per claus d'agrupació:</strong> Hem utilitzat <code>groupTuple</code> per agrupar pel primer element de cada tupla, recollint així mostres que comparteixen els camps <code>id</code> i <code>interval</code> i fusionant rèpliques tècniques.</p>
+<p><strong>Agregar per claus d'agrupació:</strong> Hem utilitzat <code>groupTuple</code> per agrupar pel primer element de cada tupla, recollint així les mostres que comparteixen els camps <code>id</code> i <code>interval</code> i fusionant les rèpliques tècniques.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="n">channel</span><span class="o">.</span><span class="na">groupTuple</span><span class="o">()</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Optimitzar l'estructura de dades:</strong> Hem utilitzat <code>subMap</code> per extreure camps específics i hem creat una closure amb nom per fer transformacions reutilitzables.</p>
+<p><strong>Optimitzar l'estructura de dades:</strong> Hem utilitzat <code>subMap</code> per extreure camps específics i hem creat una closure amb nom per fer les transformacions reutilitzables.</p>
 <ul>
 <li>Extreure camps específics d'un mapa</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">])</span>
 </code></pre></div>
 <ul>
-<li>Utilitzar closure amb nom per a transformacions reutilitzables</li>
+<li>Utilitzar una closure amb nom per a transformacions reutilitzables</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="n">getSampleIdAndReplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a><span class="n">channel</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">getSampleIdAndReplicate</span><span class="o">)</span>
@@ -5527,7 +5833,60 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 </ul>
 <hr />
 <h2 id="que-segueix">Què segueix?<a class="headerlink" href="#que-segueix" title="Permanent link">&para;</a></h2>
-<p>Torneu al <a href="../">menú de Missions Secundàries</a> o feu clic al botó a la part inferior dreta de la pàgina per passar al següent tema de la llista.</p><style type="text/css">.quiz {
+<p>Torneu al <a href="../">menú de missions secundàries</a> o feu clic al botó a la part inferior dreta de la pàgina per continuar amb el tema següent de la llista.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -5541,11 +5900,11 @@ Amb aquest coneixement, podem combinar amb èxit canals segons un camp compartit
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -5560,11 +5919,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -5574,10 +5933,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -5602,34 +5963,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -5644,8 +6054,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -5900,7 +6317,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -6117,10 +6533,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -6445,14 +6859,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -6575,9 +7096,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -6618,27 +7138,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -6659,7 +7179,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -6679,15 +7199,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6707,7 +7229,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -6717,8 +7239,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -6732,11 +7254,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6798,10 +7324,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -6852,34 +7376,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -6900,11 +7420,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -6916,39 +7436,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -6974,6 +7467,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -6993,9 +7492,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
@@ -7077,7 +7573,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
         
           
-          <a href="../working_with_files/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Processament d&#39;entrada de fitxers">
+          <a href="../metadata/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Metadades i mapes de metadades">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7087,20 +7583,20 @@ window.mkdocsQuizConfig = {
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Processament d'entrada de fitxers
+                Metadades i mapes de metadades
               </div>
             </div>
           </a>
         
         
           
-          <a href="../workflows_of_workflows/" class="md-footer__link md-footer__link--next" aria-label="Següent: Workflows de Workflows">
+          <a href="../nf_test/" class="md-footer__link md-footer__link--next" aria-label="Següent: Proves amb nf-test">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Següent
               </span>
               <div class="md-ellipsis">
-                Workflows de Workflows
+                Proves amb nf-test
               </div>
             </div>
             <div class="md-footer__button md-icon">

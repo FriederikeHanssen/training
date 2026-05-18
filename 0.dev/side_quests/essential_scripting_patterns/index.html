@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://training.nextflow.io/side_quests/essential_scripting_patterns/">
       
       
-        <link rel="prev" href="../debugging/">
+        <link rel="prev" href="../dev_environment/">
       
       
-        <link rel="next" href="../nf-test/">
+        <link rel="next" href="../working_with_files/">
       
       
         
@@ -43,11 +43,11 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Essential Nextflow Scripting Patterns - training.nextflow.io</title>
+        <title>Essential Scripting Patterns - training.nextflow.io</title>
       
     
     
@@ -157,12 +157,70 @@
     <div data-md-component="skip">
       
         
-        <a href="#essential-nextflow-scripting-patterns" class="md-skip">
+        <a href="#essential-scripting-patterns" class="md-skip">
           Skip to content
         </a>
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -196,7 +254,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Essential Nextflow Scripting Patterns
+              Essential Scripting Patterns
             
           </span>
         </div>
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    Orientation
+    Getting started
   
 
     
@@ -2363,146 +2394,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../metadata/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Metadata and meta maps
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../working_with_files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    File input processing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../splitting_and_grouping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Splitting and Grouping
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Workflows of Workflows
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../debugging/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Debugging Workflows
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2522,7 +2413,7 @@
   <span class="md-ellipsis">
     
   
-    Essential Nextflow Scripting Patterns
+    Essential Scripting Patterns
   
 
     
@@ -2540,7 +2431,7 @@
   <span class="md-ellipsis">
     
   
-    Essential Nextflow Scripting Patterns
+    Essential Scripting Patterns
   
 
     
@@ -3330,7 +3221,91 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Input Processing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metadata and Meta Maps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../splitting_and_grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Splitting and Grouping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nf_test/" class="md-nav__link">
         
   
   
@@ -3346,6 +3321,369 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows of Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugin Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 1: Plugin Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 2: Create a Plugin Project
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Custom Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -4556,43 +4894,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4602,7 +4903,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/essential_scripting_patterns.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/essential_scripting_patterns/index.md"
   title="Edit this page"
   class="md-content__button md-icon"
   rel="edit"
@@ -4611,7 +4912,7 @@
 </a>
     
 
-<h1 id="essential-nextflow-scripting-patterns">Essential Nextflow Scripting Patterns<a class="headerlink" href="#essential-nextflow-scripting-patterns" title="Permanent link">&para;</a></h1>
+<h1 id="essential-scripting-patterns">Essential Scripting Patterns<a class="headerlink" href="#essential-scripting-patterns" title="Permanent link">&para;</a></h1>
 <p>Nextflow is a programming language that runs on the Java Virtual Machine. While Nextflow is built on <a href="http://groovy-lang.org/">Groovy</a> and shares much of its syntax, Nextflow is more than just "Groovy with extensions" -- it is a standalone language with a fully-specified <a href="https://nextflow.io/docs/latest/reference/syntax.html">syntax</a> and <a href="https://nextflow.io/docs/latest/reference/stdlib.html">standard library</a>.</p>
 <p>You can write a lot of Nextflow without venturing beyond basic syntax for variables, maps, and lists. Most Nextflow tutorials focus on workflow orchestration (channels, processes, and data flow), and you can go surprisingly far with just that.</p>
 <p>However, when you need to manipulate data, parse complex filenames, implement conditional logic, or build robust production workflows, it helps to think about two distinct aspects of your code: <strong>dataflow</strong> (channels, operators, processes, and workflows) and <strong>scripting</strong> (the code inside closures, functions, and process scripts). While this distinction is somewhat arbitrary—it's all Nextflow code—it provides a useful mental model for understanding when you're orchestrating your pipeline versus when you're manipulating data. Mastering both dramatically improves your ability to write clear, maintainable workflows.</p>
@@ -4631,7 +4932,7 @@ We'll transform a simple CSV-reading workflow into a sophisticated bioinformatic
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>Before taking on this side quest, you should:</p>
 <ul>
-<li>Have completed the <a href="../hello_nextflow/README.md">Hello Nextflow</a> tutorial or equivalent beginner's course.</li>
+<li>Have completed the <a href="../../hello_nextflow/">Hello Nextflow</a> tutorial or equivalent beginner's course.</li>
 <li>Be comfortable using basic Nextflow concepts and mechanisms (processes, channels, operators, working with files, meta data)</li>
 <li>Have basic familiarity with common programming constructs (variables, maps, lists)</li>
 </ul>
@@ -4747,7 +5048,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </div>
 </div>
 <p>This is our first <strong>closure</strong> - an anonymous function you can pass as an argument (similar to lambdas in Python or arrow functions in JavaScript). Closures are essential for working with Nextflow operators.</p>
-<p>The closure <code>{ row -&gt; return row }</code> takes a parameter <code>row</code> (could be any name: <code>item</code>, <code>sample</code>, etc.).</p>
+<p>The closure <code class="highlight"><span class="o">{</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">}</span></code> takes a parameter <code>row</code> (could be any name: <code>item</code>, <code>sample</code>, etc.).</p>
 <p>When the <code>.map()</code> operator processes each channel item, it passes that item to your closure. Here, <code>row</code> holds one CSV row at a time.</p>
 <p>Apply this change and run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
@@ -4979,7 +5280,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="go">Launching `main.nf` [peaceful_cori] DSL2 - revision: 4cc4a8340f</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
@@ -5118,7 +5419,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">Launching `collect.nf` [loving_mendel] DSL2 - revision: e8d054a46e</span>
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
@@ -5188,7 +5489,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go">Launching `collect.nf` [cheeky_stonebraker] DSL2 - revision: 2d5039fb47</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
@@ -5279,7 +5580,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `collect.nf` [cranky_galileo] DSL2 - revision: 5f3c8b2a91</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
@@ -5305,7 +5606,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <p class="admonition-title">When to Use Spread vs Collect</p>
 <ul>
 <li><strong>Use spread (<code>*.</code>)</strong> for simple property access: <code>samples*.id</code>, <code>files*.name</code></li>
-<li><strong>Use collect</strong> for transformations or complex logic: <code>samples.collect { it.id.toUpperCase() }</code>, <code>samples.collect { [it.id, it.quality &gt; 40] }</code></li>
+<li><strong>Use collect</strong> for transformations or complex logic: <code class="highlight"><span class="n">samples</span><span class="o">.</span><span class="na">collect</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">()</span><span class="w"> </span><span class="o">}</span></code>, <code class="highlight"><span class="n">samples</span><span class="o">.</span><span class="na">collect</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="o">[</span><span class="n">it</span><span class="o">.</span><span class="na">id</span><span class="o">,</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">quality</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40</span><span class="o">]</span><span class="w"> </span><span class="o">}</span></code></li>
 </ul>
 </div>
 <h3 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h3>
@@ -5454,7 +5755,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
 <a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="go">Launching `main.nf` [clever_pauling] DSL2 - revision: 605d2058b4</span>
 <a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
@@ -5692,8 +5993,8 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-47-33">33</a></span>
 <span class="normal"><a href="#__codelineno-47-34">34</a></span>
 <span class="normal"><a href="#__codelineno-47-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-10" name="__codelineno-47-10"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-47-11" name="__codelineno-47-11"></a><span class="w">    </span><span class="c1">// Simple single-end vs paired-end detection</span>
-<a id="__codelineno-47-12" name="__codelineno-47-12"></a><span class="hll"><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">is_single</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reads</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">reads</span><span class="o">.</span><span class="na">size</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-47-11" name="__codelineno-47-11"></a><span class="hll"><span class="w">    </span><span class="c1">// Simple single-end vs paired-end detection</span>
+</span><a id="__codelineno-47-12" name="__codelineno-47-12"></a><span class="hll"><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="n">is_single</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reads</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">reads</span><span class="o">.</span><span class="na">size</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
 </span><a id="__codelineno-47-13" name="__codelineno-47-13"></a><span class="hll">
 </span><a id="__codelineno-47-14" name="__codelineno-47-14"></a><span class="hll"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">is_single</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
 </span><a id="__codelineno-47-15" name="__codelineno-47-15"></a><span class="hll"><span class="w">        </span><span class="kt">def</span><span class="w"> </span><span class="n">input_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reads</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">List</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">reads</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">reads</span>
@@ -5752,7 +6053,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>
 <a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="go">Launching `main.nf` [adoring_rosalind] DSL2 - revision: 04b1cd93e9</span>
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>
@@ -5772,7 +6073,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <a id="__codelineno-52-6" name="__codelineno-52-6" href="#__codelineno-52-6"></a><span class="w">    </span>--html<span class="w"> </span>sample_003.fastp.html<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-52-7" name="__codelineno-52-7" href="#__codelineno-52-7"></a><span class="w">    </span>--thread<span class="w"> </span><span class="m">2</span>
 </code></pre></div>
-<p>Another common usage of dynamic script logic can be seen in <a href="../../nf4science/genomics/02_joint_calling">the Nextflow for Science Genomics module</a>. In that module, the GATK process being called can take multiple input files, but each must be prefixed with <code>-V</code> to form a correct command line. The process uses scripting to transform a collection of input files (<code>all_gvcfs</code>) into the correct command arguments:</p>
+<p>Another common usage of dynamic script logic can be seen in <a href="../../nf4_science/genomics/03_joint_calling/">the Nextflow for Science Genomics module</a>. In that module, the GATK process being called can take multiple input files, but each must be prefixed with <code>-V</code> to form a correct command line. The process uses scripting to transform a collection of input files (<code>all_gvcfs</code>) into the correct command arguments:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">command line manipulation for GATK</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span>
 <span class="normal"><a href="#__codelineno-53-2">2</a></span>
 <span class="normal"><a href="#__codelineno-53-3">3</a></span>
@@ -5806,24 +6107,20 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-54-11">11</a></span>
 <span class="normal"><a href="#__codelineno-54-12">12</a></span>
 <span class="normal"><a href="#__codelineno-54-13">13</a></span>
-<span class="normal"><a href="#__codelineno-54-14">14</a></span>
-<span class="normal"><a href="#__codelineno-54-15">15</a></span>
-<span class="normal"><a href="#__codelineno-54-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">process</span><span class="w"> </span><span class="n">GENERATE_REPORT</span><span class="w"> </span><span class="o">{</span>
+<span class="normal"><a href="#__codelineno-54-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">process</span><span class="w"> </span><span class="n">GENERATE_REPORT</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2"></a>
-<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="s1">&#39;results/reports&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-<a id="__codelineno-54-4" name="__codelineno-54-4"></a>
-<a id="__codelineno-54-5" name="__codelineno-54-5"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-54-6" name="__codelineno-54-6"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
-<a id="__codelineno-54-7" name="__codelineno-54-7"></a>
-<a id="__codelineno-54-8" name="__codelineno-54-8"></a><span class="w">    </span><span class="nl">output:</span>
-<a id="__codelineno-54-9" name="__codelineno-54-9"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="s2">&quot;${meta.id}_report.txt&quot;</span>
-<a id="__codelineno-54-10" name="__codelineno-54-10"></a>
-<a id="__codelineno-54-11" name="__codelineno-54-11"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-54-12" name="__codelineno-54-12"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-54-13" name="__codelineno-54-13"></a><span class="s2">    echo &quot;Processing ${reads}&quot; &gt; ${meta.id}_report.txt</span>
-<a id="__codelineno-54-14" name="__codelineno-54-14"></a><span class="s2">    echo &quot;Sample: ${meta.id}&quot; &gt;&gt; ${meta.id}_report.txt</span>
-<a id="__codelineno-54-15" name="__codelineno-54-15"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-54-16" name="__codelineno-54-16"></a><span class="o">}</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">reads</span><span class="o">)</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5"></a>
+<a id="__codelineno-54-6" name="__codelineno-54-6"></a><span class="w">    </span><span class="nl">output:</span>
+<a id="__codelineno-54-7" name="__codelineno-54-7"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="s2">&quot;${meta.id}_report.txt&quot;</span>
+<a id="__codelineno-54-8" name="__codelineno-54-8"></a>
+<a id="__codelineno-54-9" name="__codelineno-54-9"></a><span class="w">    </span><span class="nl">script:</span>
+<a id="__codelineno-54-10" name="__codelineno-54-10"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-54-11" name="__codelineno-54-11"></a><span class="s2">    echo &quot;Processing ${reads}&quot; &gt; ${meta.id}_report.txt</span>
+<a id="__codelineno-54-12" name="__codelineno-54-12"></a><span class="s2">    echo &quot;Sample: ${meta.id}&quot; &gt;&gt; ${meta.id}_report.txt</span>
+<a id="__codelineno-54-13" name="__codelineno-54-13"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-54-14" name="__codelineno-54-14"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p>This process writes a simple report with the sample ID and filename. Now let's run it to see what happens when we need to mix different types of variables.</p>
 <p>Include the process in your <code>main.nf</code> and add it to the workflow:</p>
@@ -5931,27 +6228,27 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <a id="__codelineno-56-7" name="__codelineno-56-7"></a><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">sample_meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
 <a id="__codelineno-56-8" name="__codelineno-56-8"></a><span class="w">                </span><span class="nl">id:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">sample_id</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">(),</span>
 <a id="__codelineno-56-9" name="__codelineno-56-9"></a><span class="w">                </span><span class="nl">organism:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">organism</span><span class="o">,</span>
-<a id="__codelineno-56-10" name="__codelineno-56-10"></a><span class="hll"><span class="w">                </span><span class="nl">tissue:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">tissue_type</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">(),</span>
-</span><a id="__codelineno-56-11" name="__codelineno-56-11"></a><span class="hll"><span class="w">                </span><span class="nl">depth:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">sequencing_depth</span><span class="o">.</span><span class="na">toInteger</span><span class="o">(),</span>
-</span><a id="__codelineno-56-12" name="__codelineno-56-12"></a><span class="hll"><span class="w">                </span><span class="nl">quality:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">quality_score</span><span class="o">.</span><span class="na">toDouble</span><span class="o">()</span>
-</span><a id="__codelineno-56-13" name="__codelineno-56-13"></a><span class="hll"><span class="w">            </span><span class="o">]</span>
-</span><a id="__codelineno-56-14" name="__codelineno-56-14"></a><span class="hll"><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">fastq_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">row</span><span class="o">.</span><span class="na">file_path</span><span class="o">)</span>
-</span><a id="__codelineno-56-15" name="__codelineno-56-15"></a><span class="hll">
-</span><a id="__codelineno-56-16" name="__codelineno-56-16"></a><span class="hll"><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="n">fastq_path</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="s">/^(.+)_S(\d+)_L(\d{3})_(R[12])_(\d{3})\.fastq(?:\.gz)?$/</span><span class="o">)</span>
-</span><a id="__codelineno-56-17" name="__codelineno-56-17"></a><span class="hll"><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">file_meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="o">[</span>
-</span><a id="__codelineno-56-18" name="__codelineno-56-18"></a><span class="hll"><span class="w">                </span><span class="nl">sample_num:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">].</span><span class="na">toInteger</span><span class="o">(),</span>
-</span><a id="__codelineno-56-19" name="__codelineno-56-19"></a><span class="hll"><span class="w">                </span><span class="nl">lane:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">],</span>
-</span><a id="__codelineno-56-20" name="__codelineno-56-20"></a><span class="hll"><span class="w">                </span><span class="nl">read:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">4</span><span class="o">],</span>
-</span><a id="__codelineno-56-21" name="__codelineno-56-21"></a><span class="hll"><span class="w">                </span><span class="nl">chunk:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span>
-</span><a id="__codelineno-56-22" name="__codelineno-56-22"></a><span class="hll"><span class="w">            </span><span class="o">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">[:]</span>
-</span><a id="__codelineno-56-23" name="__codelineno-56-23"></a><span class="hll">
-</span><a id="__codelineno-56-24" name="__codelineno-56-24"></a><span class="hll"><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_meta</span><span class="o">.</span><span class="na">quality</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;high&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;normal&#39;</span>
-</span><a id="__codelineno-56-25" name="__codelineno-56-25"></a><span class="hll"><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">tuple</span><span class="o">(</span><span class="n">sample_meta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">file_meta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">priority:</span><span class="w"> </span><span class="n">priority</span><span class="o">],</span><span class="w"> </span><span class="n">fastq_path</span><span class="o">)</span>
-</span><a id="__codelineno-56-26" name="__codelineno-56-26"></a><span class="hll"><span class="w">        </span><span class="o">}</span>
-</span><a id="__codelineno-56-27" name="__codelineno-56-27"></a><span class="hll">
-</span><a id="__codelineno-56-28" name="__codelineno-56-28"></a><span class="hll"><span class="w">    </span><span class="n">ch_fastp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FASTP</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
-</span><a id="__codelineno-56-29" name="__codelineno-56-29"></a><span class="hll"><span class="o">}</span>
-</span></code></pre></div></td></tr></table></div>
+<a id="__codelineno-56-10" name="__codelineno-56-10"></a><span class="w">                </span><span class="nl">tissue:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">tissue_type</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="o">).</span><span class="na">toLowerCase</span><span class="o">(),</span>
+<a id="__codelineno-56-11" name="__codelineno-56-11"></a><span class="w">                </span><span class="nl">depth:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">sequencing_depth</span><span class="o">.</span><span class="na">toInteger</span><span class="o">(),</span>
+<a id="__codelineno-56-12" name="__codelineno-56-12"></a><span class="w">                </span><span class="nl">quality:</span><span class="w"> </span><span class="n">row</span><span class="o">.</span><span class="na">quality_score</span><span class="o">.</span><span class="na">toDouble</span><span class="o">()</span>
+<a id="__codelineno-56-13" name="__codelineno-56-13"></a><span class="w">            </span><span class="o">]</span>
+<a id="__codelineno-56-14" name="__codelineno-56-14"></a><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">fastq_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">row</span><span class="o">.</span><span class="na">file_path</span><span class="o">)</span>
+<a id="__codelineno-56-15" name="__codelineno-56-15"></a>
+<a id="__codelineno-56-16" name="__codelineno-56-16"></a><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">(</span><span class="n">fastq_path</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=~</span><span class="w"> </span><span class="s">/^(.+)_S(\d+)_L(\d{3})_(R[12])_(\d{3})\.fastq(?:\.gz)?$/</span><span class="o">)</span>
+<a id="__codelineno-56-17" name="__codelineno-56-17"></a><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">file_meta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-56-18" name="__codelineno-56-18"></a><span class="w">                </span><span class="nl">sample_num:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">].</span><span class="na">toInteger</span><span class="o">(),</span>
+<a id="__codelineno-56-19" name="__codelineno-56-19"></a><span class="w">                </span><span class="nl">lane:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">3</span><span class="o">],</span>
+<a id="__codelineno-56-20" name="__codelineno-56-20"></a><span class="w">                </span><span class="nl">read:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">4</span><span class="o">],</span>
+<a id="__codelineno-56-21" name="__codelineno-56-21"></a><span class="w">                </span><span class="nl">chunk:</span><span class="w"> </span><span class="n">m</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span>
+<a id="__codelineno-56-22" name="__codelineno-56-22"></a><span class="w">            </span><span class="o">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">[:]</span>
+<a id="__codelineno-56-23" name="__codelineno-56-23"></a>
+<a id="__codelineno-56-24" name="__codelineno-56-24"></a><span class="w">            </span><span class="kt">def</span><span class="w"> </span><span class="n">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sample_meta</span><span class="o">.</span><span class="na">quality</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;high&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;normal&#39;</span>
+<a id="__codelineno-56-25" name="__codelineno-56-25"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">tuple</span><span class="o">(</span><span class="n">sample_meta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">file_meta</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">priority:</span><span class="w"> </span><span class="n">priority</span><span class="o">],</span><span class="w"> </span><span class="n">fastq_path</span><span class="o">)</span>
+<a id="__codelineno-56-26" name="__codelineno-56-26"></a><span class="w">        </span><span class="o">}</span>
+<a id="__codelineno-56-27" name="__codelineno-56-27"></a>
+<a id="__codelineno-56-28" name="__codelineno-56-28"></a><span class="hll"><span class="w">    </span><span class="n">ch_fastp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FASTP</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
+</span><a id="__codelineno-56-29" name="__codelineno-56-29"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -5998,7 +6295,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </div>
 </div>
 </div>
-<p>If you run this, you'll notice an error - Nextflow tries to interpret <code>${USER}</code> as a Nextflow variable that doesn't exist.</p>
+<p>If you run this, you'll notice an error - Nextflow tries to interpret <code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">USER</span><span class="o">}</span></code> as a Nextflow variable that doesn't exist.</p>
 <details class="failure">
 <summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="go">Error modules/generate_report.nf:15:27: `USER` is not defined</span>
@@ -6057,9 +6354,9 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <li><strong>Regular expressions for file parsing</strong>: Using the <code>=~</code> operator and regex patterns (<code>~/pattern/</code>) to extract metadata from complex file naming conventions</li>
 <li><strong>Dynamic script generation</strong>: Using conditional logic (if/else, ternary operators) to generate different script strings based on input characteristics</li>
 <li><strong>Variable interpolation</strong>: Understanding when Nextflow interprets strings vs when the shell does</li>
-<li><code>${var}</code> - Nextflow variables (interpolated by Nextflow at workflow compile time)</li>
-<li><code>\${var}</code> - Shell environment variables (escaped, passed to bash at runtime)</li>
-<li><code>\$(cmd)</code> - Shell command substitution (escaped, executed by bash at runtime)</li>
+<li><code class="highlight"><span class="n">$</span><span class="o">{</span><span class="n">var</span><span class="o">}</span></code> - Nextflow variables (interpolated by Nextflow at workflow compile time)</li>
+<li><code class="highlight"><span class="err">\</span><span class="n">$</span><span class="o">{</span><span class="n">var</span><span class="o">}</span></code> - Shell environment variables (escaped, passed to bash at runtime)</li>
+<li><code class="highlight"><span class="err">\</span><span class="n">$</span><span class="o">(</span><span class="n">cmd</span><span class="o">)</span></code> - Shell command substitution (escaped, executed by bash at runtime)</li>
 </ul>
 <p>These string processing and generation patterns are essential for handling the diverse file formats and naming conventions you'll encounter in real-world bioinformatics workflows.</p>
 <hr />
@@ -6217,7 +6514,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>
 <a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="go">Launching `main.nf` [admiring_panini] DSL2 - revision: 8cc832e32f</span>
 <a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>
@@ -6275,7 +6572,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </div>
 </div>
 </div>
-<p>The closure <code>{ meta.depth &gt; 40000000 ? 2 : 1 }</code> uses the <strong>ternary operator</strong> (covered in Section 1.1) and is evaluated for each task, allowing per-sample resource allocation. High-depth samples (&gt;40M reads) get 2 CPUs, while others get 1 CPU.</p>
+<p>The closure <code class="highlight"><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">}</span></code> uses the <strong>ternary operator</strong> (covered in Section 1.1) and is evaluated for each task, allowing per-sample resource allocation. High-depth samples (&gt;40M reads) get 2 CPUs, while others get 1 CPU.</p>
 <div class="admonition note">
 <p class="admonition-title">Accessing Input Variables in Directives</p>
 <p>The closure can access any input variables (like <code>meta</code> here) because Nextflow evaluates these closures in the context of each task execution.</p>
@@ -6285,7 +6582,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="go">N E X T F L O W  ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="go">N E X T F L O W  ~  version 25.10.4</span>
 <a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="go">Launching `main.nf` [fervent_albattani] DSL2 - revision: fa8f249759</span>
 <a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a><span class="go">[bd/ff3d41] Submitted process &gt; FASTP (2)</span>
 <a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a><span class="go">[a4/a3aab2] Submitted process &gt; FASTP (1)</span>
@@ -6299,7 +6596,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <div class="highlight"><span class="filename">Check docker command</span><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">cat work/48/6db0c9e9d8aa65e4bb4936cd3bd59e/.command.run | grep &quot;docker run&quot;</span>
 </code></pre></div>
 <p>You should see something like:</p>
-<div class="highlight"><span class="filename">docker command</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-i<span class="w"> </span>--cpu-shares<span class="w"> </span><span class="m">4096</span><span class="w"> </span>--memory<span class="w"> </span>2048m<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;NXF_TASK_WORKDIR&quot;</span><span class="w"> </span>-v<span class="w"> </span>/workspaces/training/side-quests/essential_scripting_patterns:/workspaces/training/side-quests/essential_scripting_patterns<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NXF_TASK_WORKDIR</span><span class="s2">&quot;</span><span class="w"> </span>--name<span class="w"> </span><span class="nv">$NXF_BOXID</span><span class="w"> </span>community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690<span class="w"> </span>/bin/bash<span class="w"> </span>-ue<span class="w"> </span>/workspaces/training/side-quests/essential_scripting_patterns/work/48/6db0c9e9d8aa65e4bb4936cd3bd59e/.command.sh
+<div class="highlight"><span class="filename">docker command</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-i<span class="w"> </span>--cpu-shares<span class="w"> </span><span class="m">2048</span><span class="w"> </span>--memory<span class="w"> </span>2048m<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;NXF_TASK_WORKDIR&quot;</span><span class="w"> </span>-v<span class="w"> </span>/workspaces/training/side-quests/essential_scripting_patterns:/workspaces/training/side-quests/essential_scripting_patterns<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$NXF_TASK_WORKDIR</span><span class="s2">&quot;</span><span class="w"> </span>--name<span class="w"> </span><span class="nv">$NXF_BOXID</span><span class="w"> </span>community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690<span class="w"> </span>/bin/bash<span class="w"> </span>-ue<span class="w"> </span>/workspaces/training/side-quests/essential_scripting_patterns/work/48/6db0c9e9d8aa65e4bb4936cd3bd59e/.command.sh
 </code></pre></div>
 <p>In this example we've chosen an example that requested 2 CPUs (<code>--cpu-shares 2048</code>), because it was a high-depth sample, but you should see different CPU allocations depending on the sample depth. Try this for the other tasks as well.</p>
 <h3 id="42-retry-strategies">4.2. Retry strategies<a class="headerlink" href="#42-retry-strategies" title="Permanent link">&para;</a></h3>
@@ -6317,7 +6614,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-74-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTP</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-74-2" name="__codelineno-74-2"></a><span class="w">    </span><span class="n">container</span><span class="w"> </span><span class="s1">&#39;community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690&#39;</span>
 <a id="__codelineno-74-3" name="__codelineno-74-3"></a>
-<a id="__codelineno-74-4" name="__codelineno-74-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-74-4" name="__codelineno-74-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-74-5" name="__codelineno-74-5"></a><span class="hll"><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="na">GB</span>
 </span><a id="__codelineno-74-6" name="__codelineno-74-6"></a>
 <a id="__codelineno-74-7" name="__codelineno-74-7"></a><span class="w">    </span><span class="nl">input:</span>
@@ -6335,7 +6632,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-75-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTP</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-75-2" name="__codelineno-75-2"></a><span class="w">    </span><span class="n">container</span><span class="w"> </span><span class="s1">&#39;community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690&#39;</span>
 <a id="__codelineno-75-3" name="__codelineno-75-3"></a>
-<a id="__codelineno-75-4" name="__codelineno-75-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-75-5" name="__codelineno-75-5"></a><span class="hll"><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="mi">2</span><span class="o">.</span><span class="na">GB</span>
 </span><a id="__codelineno-75-6" name="__codelineno-75-6"></a>
 <a id="__codelineno-75-7" name="__codelineno-75-7"></a><span class="w">    </span><span class="nl">input:</span>
@@ -6359,7 +6656,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <a id="__codelineno-77-8" name="__codelineno-77-8" href="#__codelineno-77-8"></a><span class="go">  Detecting adapter sequence for read1...</span>
 <a id="__codelineno-77-9" name="__codelineno-77-9" href="#__codelineno-77-9"></a><span class="go">  No adapter detected for read1</span>
 <a id="__codelineno-77-10" name="__codelineno-77-10" href="#__codelineno-77-10"></a>
-<a id="__codelineno-77-11" name="__codelineno-77-11" href="#__codelineno-77-11"></a><span class="hll"><span class="go">  .command.sh: line 7:   101 Killed                  fastp --in1 SAMPLE_002_S2_L001_R1_001.fastq --out1 sample_002_trimmed.fastq.gz --json sample_002.fastp.json --html sample_002.fastp.html --thread 2</span>
+<a id="__codelineno-77-11" name="__codelineno-77-11" href="#__codelineno-77-11"></a><span class="hll"><span class="go">  .command.sh: line 7:   101 Killed                  fastp --in1 SAMPLE_002_S2_L001_R1_001.fastq --out1 sample_002_trimmed.fastq.gz --json sample_002.fastp.json --html sample_002.fastp.html --thread 1</span>
 </span></code></pre></div>
 </details>
 <p>This indicates that the process was killed for exceeding memory limits.</p>
@@ -6380,7 +6677,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-78-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTP</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-78-2" name="__codelineno-78-2"></a><span class="w">    </span><span class="n">container</span><span class="w"> </span><span class="s1">&#39;community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690&#39;</span>
 <a id="__codelineno-78-3" name="__codelineno-78-3"></a>
-<a id="__codelineno-78-4" name="__codelineno-78-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-78-4" name="__codelineno-78-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-78-5" name="__codelineno-78-5"></a><span class="hll"><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="mi">1</span><span class="o">.</span><span class="na">GB</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">task</span><span class="o">.</span><span class="na">attempt</span><span class="w"> </span><span class="o">}</span>
 </span><a id="__codelineno-78-6" name="__codelineno-78-6"></a><span class="hll"><span class="w">    </span><span class="n">errorStrategy</span><span class="w"> </span><span class="s1">&#39;retry&#39;</span>
 </span><a id="__codelineno-78-7" name="__codelineno-78-7"></a><span class="hll"><span class="w">    </span><span class="n">maxRetries</span><span class="w"> </span><span class="mi">2</span>
@@ -6400,7 +6697,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 <span class="normal"><a href="#__codelineno-79-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1"></a><span class="n">process</span><span class="w"> </span><span class="n">FASTP</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-79-2" name="__codelineno-79-2"></a><span class="w">    </span><span class="n">container</span><span class="w"> </span><span class="s1">&#39;community.wave.seqera.io/library/fastp:0.24.0--62c97b06e8447690&#39;</span>
 <a id="__codelineno-79-3" name="__codelineno-79-3"></a>
-<a id="__codelineno-79-4" name="__codelineno-79-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-79-4" name="__codelineno-79-4"></a><span class="w">    </span><span class="n">cpus</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">depth</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">40000000</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-79-5" name="__codelineno-79-5"></a><span class="hll"><span class="w">    </span><span class="n">memory</span><span class="w"> </span><span class="mi">2</span><span class="o">.</span><span class="na">GB</span>
 </span><a id="__codelineno-79-6" name="__codelineno-79-6"></a>
 <a id="__codelineno-79-7" name="__codelineno-79-7"></a><span class="w">    </span><span class="nl">input:</span>
@@ -6498,7 +6795,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a>
 <a id="__codelineno-85-3" name="__codelineno-85-3" href="#__codelineno-85-3"></a><span class="go">Launching `main.nf` [adoring_galileo] DSL2 - revision: c9e83aaef1</span>
 <a id="__codelineno-85-4" name="__codelineno-85-4" href="#__codelineno-85-4"></a>
@@ -6579,7 +6876,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="go">N E X T F L O W  ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="go">N E X T F L O W  ~  version 25.10.4</span>
 <a id="__codelineno-89-2" name="__codelineno-89-2" href="#__codelineno-89-2"></a><span class="go">Launching `main.nf` [lonely_williams] DSL2 - revision: d0b3f121ec</span>
 <a id="__codelineno-89-3" name="__codelineno-89-3" href="#__codelineno-89-3"></a><span class="go">[94/b48eac] Submitted process &gt; FASTP (2)</span>
 <a id="__codelineno-89-4" name="__codelineno-89-4" href="#__codelineno-89-4"></a><span class="go">[2c/d2b28f] Submitted process &gt; GENERATE_REPORT (2)</span>
@@ -6662,7 +6959,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="failure">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a>
 <a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a><span class="go">Launching `main.nf` [trusting_torvalds] DSL2 - revision: b56fbfbce2</span>
 <a id="__codelineno-94-4" name="__codelineno-94-4" href="#__codelineno-94-4"></a>
@@ -6870,9 +7167,9 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </span><a id="__codelineno-105-13" name="__codelineno-105-13"></a><span class="hll"><span class="w">        </span><span class="n">error</span><span class="o">(</span><span class="s2">&quot;Input CSV file not found: ${params.input}&quot;</span><span class="o">)</span>
 </span><a id="__codelineno-105-14" name="__codelineno-105-14"></a><span class="hll"><span class="w">    </span><span class="o">}</span>
 </span><a id="__codelineno-105-15" name="__codelineno-105-15"></a><span class="hll"><span class="o">}</span>
-</span><a id="__codelineno-105-16" name="__codelineno-105-16"></a><span class="hll"><span class="o">...</span>
-</span><a id="__codelineno-105-17" name="__codelineno-105-17"></a><span class="hll"><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
-</span><a id="__codelineno-105-18" name="__codelineno-105-18"></a><span class="hll"><span class="w">    </span><span class="n">validateInputs</span><span class="o">()</span>
+</span><a id="__codelineno-105-16" name="__codelineno-105-16"></a><span class="o">...</span>
+<a id="__codelineno-105-17" name="__codelineno-105-17"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-105-18" name="__codelineno-105-18"></a><span class="hll"><span class="w">    </span><span class="n">validateInputs</span><span class="o">()</span>
 </span><a id="__codelineno-105-19" name="__codelineno-105-19"></a><span class="hll"><span class="w">    </span><span class="n">ch_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="n">params</span><span class="o">.</span><span class="na">input</span><span class="o">)</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
@@ -6899,7 +7196,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="failure">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-108-2" name="__codelineno-108-2" href="#__codelineno-108-2"></a>
 <a id="__codelineno-108-3" name="__codelineno-108-3" href="#__codelineno-108-3"></a><span class="go">Launching `main.nf` [confident_coulomb] DSL2 - revision: 07059399ed</span>
 <a id="__codelineno-108-4" name="__codelineno-108-4" href="#__codelineno-108-4"></a>
@@ -6913,7 +7210,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="failure">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-110-2" name="__codelineno-110-2" href="#__codelineno-110-2"></a>
 <a id="__codelineno-110-3" name="__codelineno-110-3" href="#__codelineno-110-3"></a><span class="go">Launching `main.nf` [cranky_gates] DSL2 - revision: 26839ae3eb</span>
 <a id="__codelineno-110-4" name="__codelineno-110-4" href="#__codelineno-110-4"></a>
@@ -6969,7 +7266,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="warning">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-116-2" name="__codelineno-116-2" href="#__codelineno-116-2"></a>
 <a id="__codelineno-116-3" name="__codelineno-116-3" href="#__codelineno-116-3"></a><span class="go">Launching `main.nf` [awesome_goldwasser] DSL2 - revision: a31662a7c1</span>
 <a id="__codelineno-116-4" name="__codelineno-116-4" href="#__codelineno-116-4"></a>
@@ -7050,7 +7347,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 </code></pre></div>
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a><span class="go">N E X T F L O W  ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a><span class="go">N E X T F L O W  ~  version 25.10.4</span>
 <a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a><span class="go">Launching `main.nf` [marvelous_boltzmann] DSL2 - revision: a31662a7c1</span>
 <a id="__codelineno-120-3" name="__codelineno-120-3" href="#__codelineno-120-3"></a><span class="go">WARN: Low sequencing depth for sample_002: 25000000</span>
 <a id="__codelineno-120-4" name="__codelineno-120-4" href="#__codelineno-120-4"></a><span class="go">[9b/d48e40] Submitted process &gt; FASTP (2)</span>
@@ -7160,7 +7457,7 @@ We'll start with fundamental concepts and build up to advanced patterns.</p>
 
 <details class="success">
 <summary>Command output</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a><span class="go">N E X T F L O W  ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a><span class="go">N E X T F L O W  ~  version 25.10.4</span>
 <a id="__codelineno-123-2" name="__codelineno-123-2" href="#__codelineno-123-2"></a><span class="go">Launching `main.nf` [boring_linnaeus] DSL2 - revision: a31662a7c1</span>
 <a id="__codelineno-123-3" name="__codelineno-123-3" href="#__codelineno-123-3"></a><span class="go">WARN: Low sequencing depth for sample_002: 25000000</span>
 <a id="__codelineno-123-4" name="__codelineno-123-4" href="#__codelineno-123-4"></a><span class="go">[e5/242efc] Submitted process &gt; FASTP (2)</span>
@@ -7449,7 +7746,60 @@ Every challenge you solved and pattern you learned reflects actual problems deve
 </ul>
 <hr />
 <h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
-<p>Return to the <a href="../">menu of Side Quests</a> or click the button in the bottom right of the page to move on to the next topic in the list.</p><style type="text/css">.quiz {
+<p>Return to the <a href="../">menu of Side Quests</a> or click the button in the bottom right of the page to move on to the next topic in the list.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -7463,11 +7813,11 @@ Every challenge you solved and pattern you learned reflects actual problems deve
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -7482,11 +7832,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -7496,10 +7846,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -7524,34 +7876,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -7566,8 +7967,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -7822,7 +8230,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -8039,10 +8446,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -8367,14 +8772,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -8497,9 +9009,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -8540,27 +9051,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -8581,7 +9092,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -8601,15 +9112,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8629,7 +9142,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -8639,8 +9152,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -8654,11 +9167,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -8720,10 +9237,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -8774,34 +9289,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -8822,11 +9333,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -8838,39 +9349,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -8896,6 +9380,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -8915,9 +9405,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
@@ -8999,7 +9486,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../debugging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Debugging Workflows">
+          <a href="../dev_environment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Development Environment">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -9009,20 +9496,20 @@ window.mkdocsQuizConfig = {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Debugging Workflows
+                Development Environment
               </div>
             </div>
           </a>
         
         
           
-          <a href="../nf-test/" class="md-footer__link md-footer__link--next" aria-label="Next: Testing with nf-test">
+          <a href="../working_with_files/" class="md-footer__link md-footer__link--next" aria-label="Next: File Input Processing">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Testing with nf-test
+                File Input Processing
               </div>
             </div>
             <div class="md-footer__button md-icon">

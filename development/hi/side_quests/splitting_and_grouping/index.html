@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://training.nextflow.io/hi/side_quests/splitting_and_grouping/">
       
       
-        <link rel="prev" href="../working_with_files/">
+        <link rel="prev" href="../metadata/">
       
       
-        <link rel="next" href="../workflows_of_workflows/">
+        <link rel="next" href="../nf_test/">
       
       
         
@@ -43,7 +43,7 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    अभिविन्यास
+    शुरू करना
   
 
     
@@ -2345,7 +2376,7 @@
   <span class="md-ellipsis">
     
   
-    विकास वातावरण
+    डेवलपमेंट एनवायरनमेंट
   
 
     
@@ -2366,14 +2397,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../metadata/" class="md-nav__link">
+      <a href="../essential_scripting_patterns/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    मेटाडेटा और मेटा मैप्स
+    आवश्यक स्क्रिप्टिंग पैटर्न
   
 
     
@@ -2402,6 +2433,34 @@
     
   
     फ़ाइल इनपुट प्रोसेसिंग
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    मेटाडेटा और मेटा मैप्स
   
 
     
@@ -2497,19 +2556,30 @@
   <a href="#0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0. शुरुआत करें
+        0. शुरू करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0. शुरुआत करें">
+    <nav class="md-nav" aria-label="0. शुरू करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codespace" class="md-nav__link">
+  <a href="#training-codespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रशिक्षण codespace खोलें
+        Training codespace खोलो
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project डायरेक्टरी में जाओ
       
     </span>
   </a>
@@ -2520,7 +2590,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रोजेक्ट डायरेक्टरी में जाएं
+        सामग्री की समीक्षा करो
       
     </span>
   </a>
@@ -2531,7 +2601,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        सामग्री की समीक्षा करें
+        असाइनमेंट की समीक्षा करो
       
     </span>
   </a>
@@ -2542,18 +2612,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        असाइनमेंट की समीक्षा करें
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        तैयारी चेकलिस्ट
+        तैयारी की जाँच सूची
       
     </span>
   </a>
@@ -2567,19 +2626,19 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. नमूना डेटा पढ़ें
+        1. नमूना डेटा पढ़ना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. नमूना डेटा पढ़ें">
+    <nav class="md-nav" aria-label="1. नमूना डेटा पढ़ना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#11-splitcsv-meta-maps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. splitCsv के साथ नमूना डेटा पढ़ें और meta maps बनाएं
+        1.1. splitCsv से नमूना डेटा पढ़ना और meta maps बनाना
       
     </span>
   </a>
@@ -2590,22 +2649,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-filter-transform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करें
+        2. डेटा को filter और transform करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करें">
+    <nav class="md-nav" aria-label="2. डेटा को filter और transform करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-filter" class="md-nav__link">
+  <a href="#21-filter-filter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. filter के साथ डेटा को फ़िल्टर करें
+        2.1. filter से डेटा filter करना
       
     </span>
   </a>
@@ -2613,10 +2672,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-channel" class="md-nav__link">
+  <a href="#22-filtered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. अलग फ़िल्टर किए गए channel बनाएं
+        2.2. अलग filtered चैनल बनाना
       
     </span>
   </a>
@@ -2624,10 +2683,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -2638,34 +2697,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#3-channel" class="md-nav__link">
+  <a href="#3-identifiers-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. पहचानकर्ताओं द्वारा channel जोड़ना
+        3. Identifiers द्वारा चैनलों को join करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. पहचानकर्ताओं द्वारा channel जोड़ना">
+    <nav class="md-nav" aria-label="3. Identifiers द्वारा चैनलों को join करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-patient-id-map-join" class="md-nav__link">
+  <a href="#31-patient-id-combine-map-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. patient ID के आधार पर संयोजित करने के लिए map और join का उपयोग करें
+        3.1. Patient ID के आधार पर combine करने के लिए map और join का उपयोग करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.1. patient ID के आधार पर संयोजित करने के लिए map और join का उपयोग करें">
+    <nav class="md-nav" aria-label="3.1. Patient ID के आधार पर combine करने के लिए map और join का उपयोग करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311" class="md-nav__link">
+  <a href="#311-data-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.1. डेटा संरचना की जांच करें
+        3.1.1. Data structure की जाँच करना
       
     </span>
   </a>
@@ -2673,10 +2732,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-id" class="md-nav__link">
+  <a href="#312-id-field-isolate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.2. id फ़ील्ड को अलग करें
+        3.1.2. id field को isolate करना
       
     </span>
   </a>
@@ -2684,10 +2743,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#313-channel" class="md-nav__link">
+  <a href="#313-combine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.3. दोनों channel को संयोजित करें
+        3.1.3. दो चैनलों को combine करना
       
     </span>
   </a>
@@ -2700,10 +2759,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-join" class="md-nav__link">
+  <a href="#32-multiple-fields-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. कई फ़ील्ड पर join करें
+        3.2. Multiple fields पर join करना
       
     </span>
   </a>
@@ -2714,7 +2773,7 @@
   <a href="#33-joining-key-submap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. नई joining key बनाने के लिए subMap का उपयोग करें
+        3.3. नई joining key बनाने के लिए subMap का उपयोग करना
       
     </span>
   </a>
@@ -2725,7 +2784,7 @@
   <a href="#34-map-named-closure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.4. map में named closure का उपयोग करें
+        3.4. map में named closure का उपयोग करना
       
     </span>
   </a>
@@ -2733,10 +2792,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#35" class="md-nav__link">
+  <a href="#35-duplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. डेटा के डुप्लीकेशन को कम करें
+        3.5. डेटा की duplication कम करना
       
     </span>
   </a>
@@ -2744,10 +2803,58 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
+  <a href="#36-redundant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. अतिरिक्त जानकारी हटाएं
+        3.6. Redundant जानकारी हटाना
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        सारांश
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>  <li class="md-nav__item">
+  <a href="#4-samples-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Samples को intervals में फैलाना
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Samples को intervals में फैलाना">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-combine-samples-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. combine का उपयोग करके samples को intervals में फैलाना
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. चैनल को व्यवस्थित करना
       
     </span>
   </a>
@@ -2758,7 +2865,7 @@
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -2769,44 +2876,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-intervals" class="md-nav__link">
+  <a href="#5-grouptuple-samples-aggregate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. नमूनों को intervals में फैलाएं
+        5. groupTuple का उपयोग करके samples को aggregate करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. नमूनों को intervals में फैलाएं">
+    <nav class="md-nav" aria-label="5. groupTuple का उपयोग करके samples को aggregate करना">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-combine-intervals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1. combine का उपयोग करके नमूनों को intervals में फैलाएं
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. Channel को व्यवस्थित करें
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -2817,33 +2902,7 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-grouptuple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. groupTuple का उपयोग करके नमूनों को एकत्रित करना
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. groupTuple का उपयोग करके नमूनों को एकत्रित करना">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        निष्कर्ष
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>  <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         सारांश
@@ -2855,10 +2914,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रमुख पैटर्न
+        मुख्य patterns
       
     </span>
   </a>
@@ -2866,7 +2925,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         अतिरिक्त संसाधन
@@ -2880,7 +2939,7 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
         आगे क्या है?
@@ -3091,14 +3150,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
+      <a href="../nf_test/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    वर्कफ़्लो के वर्कफ़्लो
+    nf-test के साथ परीक्षण
   
 
     
@@ -3126,7 +3185,7 @@
   <span class="md-ellipsis">
     
   
-    वर्कफ़्लो की डिबगिंग
+    वर्कफ़्लो की समस्या निवारण
   
 
     
@@ -3147,14 +3206,89 @@
   
   
     <li class="md-nav__item">
-      <a href="../essential_scripting_patterns/" class="md-nav__link">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    आवश्यक Nextflow स्क्रिप्टिंग पैटर्न
+    वर्कफ़्लो के वर्कफ़्लो
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugin Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
   
 
     
@@ -3175,14 +3309,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    nf-test के साथ परीक्षण
+    भाग 1: Plugin की मूल बातें
   
 
     
@@ -3191,6 +3325,210 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    भाग 2: एक Plugin प्रोजेक्ट बनाओ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    भाग 3: कस्टम फ़ंक्शन
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    भाग 4: परीक्षण
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    भाग 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    भाग 6: कॉन्फ़िगरेशन
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    सारांश
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    अगले कदम
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3660,19 +3998,30 @@
   <a href="#0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0. शुरुआत करें
+        0. शुरू करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0. शुरुआत करें">
+    <nav class="md-nav" aria-label="0. शुरू करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#codespace" class="md-nav__link">
+  <a href="#training-codespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रशिक्षण codespace खोलें
+        Training codespace खोलो
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project डायरेक्टरी में जाओ
       
     </span>
   </a>
@@ -3683,7 +4032,7 @@
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रोजेक्ट डायरेक्टरी में जाएं
+        सामग्री की समीक्षा करो
       
     </span>
   </a>
@@ -3694,7 +4043,7 @@
   <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        सामग्री की समीक्षा करें
+        असाइनमेंट की समीक्षा करो
       
     </span>
   </a>
@@ -3705,18 +4054,7 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        असाइनमेंट की समीक्षा करें
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        तैयारी चेकलिस्ट
+        तैयारी की जाँच सूची
       
     </span>
   </a>
@@ -3730,19 +4068,19 @@
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. नमूना डेटा पढ़ें
+        1. नमूना डेटा पढ़ना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. नमूना डेटा पढ़ें">
+    <nav class="md-nav" aria-label="1. नमूना डेटा पढ़ना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#11-splitcsv-meta-maps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1. splitCsv के साथ नमूना डेटा पढ़ें और meta maps बनाएं
+        1.1. splitCsv से नमूना डेटा पढ़ना और meta maps बनाना
       
     </span>
   </a>
@@ -3753,22 +4091,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#2-filter-transform" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करें
+        2. डेटा को filter और transform करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करें">
+    <nav class="md-nav" aria-label="2. डेटा को filter और transform करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-filter" class="md-nav__link">
+  <a href="#21-filter-filter" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. filter के साथ डेटा को फ़िल्टर करें
+        2.1. filter से डेटा filter करना
       
     </span>
   </a>
@@ -3776,10 +4114,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-channel" class="md-nav__link">
+  <a href="#22-filtered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. अलग फ़िल्टर किए गए channel बनाएं
+        2.2. अलग filtered चैनल बनाना
       
     </span>
   </a>
@@ -3787,10 +4125,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -3801,34 +4139,34 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#3-channel" class="md-nav__link">
+  <a href="#3-identifiers-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. पहचानकर्ताओं द्वारा channel जोड़ना
+        3. Identifiers द्वारा चैनलों को join करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. पहचानकर्ताओं द्वारा channel जोड़ना">
+    <nav class="md-nav" aria-label="3. Identifiers द्वारा चैनलों को join करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-patient-id-map-join" class="md-nav__link">
+  <a href="#31-patient-id-combine-map-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. patient ID के आधार पर संयोजित करने के लिए map और join का उपयोग करें
+        3.1. Patient ID के आधार पर combine करने के लिए map और join का उपयोग करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3.1. patient ID के आधार पर संयोजित करने के लिए map और join का उपयोग करें">
+    <nav class="md-nav" aria-label="3.1. Patient ID के आधार पर combine करने के लिए map और join का उपयोग करना">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#311" class="md-nav__link">
+  <a href="#311-data-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.1. डेटा संरचना की जांच करें
+        3.1.1. Data structure की जाँच करना
       
     </span>
   </a>
@@ -3836,10 +4174,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-id" class="md-nav__link">
+  <a href="#312-id-field-isolate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.2. id फ़ील्ड को अलग करें
+        3.1.2. id field को isolate करना
       
     </span>
   </a>
@@ -3847,10 +4185,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#313-channel" class="md-nav__link">
+  <a href="#313-combine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1.3. दोनों channel को संयोजित करें
+        3.1.3. दो चैनलों को combine करना
       
     </span>
   </a>
@@ -3863,10 +4201,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-join" class="md-nav__link">
+  <a href="#32-multiple-fields-join" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. कई फ़ील्ड पर join करें
+        3.2. Multiple fields पर join करना
       
     </span>
   </a>
@@ -3877,7 +4215,7 @@
   <a href="#33-joining-key-submap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. नई joining key बनाने के लिए subMap का उपयोग करें
+        3.3. नई joining key बनाने के लिए subMap का उपयोग करना
       
     </span>
   </a>
@@ -3888,7 +4226,7 @@
   <a href="#34-map-named-closure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.4. map में named closure का उपयोग करें
+        3.4. map में named closure का उपयोग करना
       
     </span>
   </a>
@@ -3896,10 +4234,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#35" class="md-nav__link">
+  <a href="#35-duplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. डेटा के डुप्लीकेशन को कम करें
+        3.5. डेटा की duplication कम करना
       
     </span>
   </a>
@@ -3907,10 +4245,58 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
+  <a href="#36-redundant" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.6. अतिरिक्त जानकारी हटाएं
+        3.6. Redundant जानकारी हटाना
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        सारांश
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>  <li class="md-nav__item">
+  <a href="#4-samples-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Samples को intervals में फैलाना
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Samples को intervals में फैलाना">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-combine-samples-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. combine का उपयोग करके samples को intervals में फैलाना
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. चैनल को व्यवस्थित करना
       
     </span>
   </a>
@@ -3921,7 +4307,7 @@
   <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -3932,44 +4318,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4-intervals" class="md-nav__link">
+  <a href="#5-grouptuple-samples-aggregate" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. नमूनों को intervals में फैलाएं
+        5. groupTuple का उपयोग करके samples को aggregate करना
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. नमूनों को intervals में फैलाएं">
+    <nav class="md-nav" aria-label="5. groupTuple का उपयोग करके samples को aggregate करना">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-combine-intervals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1. combine का उपयोग करके नमूनों को intervals में फैलाएं
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2. Channel को व्यवस्थित करें
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        निष्कर्ष
+        सारांश
       
     </span>
   </a>
@@ -3980,33 +4344,7 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5-grouptuple" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. groupTuple का उपयोग करके नमूनों को एकत्रित करना
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. groupTuple का उपयोग करके नमूनों को एकत्रित करना">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        निष्कर्ष
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>  <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         सारांश
@@ -4018,10 +4356,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        प्रमुख पैटर्न
+        मुख्य patterns
       
     </span>
   </a>
@@ -4029,7 +4367,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
         अतिरिक्त संसाधन
@@ -4043,7 +4381,7 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     <span class="md-ellipsis">
       
         आगे क्या है?
@@ -4246,43 +4584,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4292,7 +4593,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/splitting_and_grouping.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/splitting_and_grouping/index.md"
   title="इस पृष्ठ को संपादित करें"
   class="md-content__button md-icon"
   rel="edit"
@@ -4311,50 +4612,51 @@
 
 <h1 id="_1">विभाजन और समूहीकरण<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> AI-सहायता प्राप्त अनुवाद - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">अधिक जानें और सुधार सुझाएं</a></span></p>
-<p>Nextflow डेटा के साथ लचीले ढंग से काम करने के लिए शक्तिशाली उपकरण प्रदान करता है। एक प्रमुख क्षमता है डेटा को विभिन्न स्ट्रीम में विभाजित करना और फिर संबंधित आइटम को वापस एक साथ समूहित करना। यह बायोइन्फॉर्मेटिक्स वर्कफ़्लो में विशेष रूप से मूल्यवान है जहाँ आपको विश्लेषण के लिए परिणामों को संयोजित करने से पहले विभिन्न प्रकार के नमूनों को अलग-अलग प्रोसेस करने की आवश्यकता होती है।</p>
-<p>इसे मेल को सॉर्ट करने की तरह समझें: आप गंतव्य के आधार पर पत्रों को अलग करते हैं, प्रत्येक ढेर को अलग तरीके से प्रोसेस करते हैं, फिर एक ही व्यक्ति के पास जाने वाली वस्तुओं को फिर से जोड़ते हैं। Nextflow वैज्ञानिक डेटा के साथ ऐसा करने के लिए विशेष ऑपरेटर का उपयोग करता है। इस दृष्टिकोण को डिस्ट्रिब्यूटेड कंप्यूटिंग और बायोइन्फॉर्मेटिक्स वर्कफ़्लो में <strong>scatter/gather</strong> पैटर्न के रूप में भी जाना जाता है।</p>
-<p>Nextflow का channel सिस्टम इस लचीलेपन का केंद्र है। Channel आपके वर्कफ़्लो के विभिन्न भागों को जोड़ते हैं, जिससे डेटा आपके विश्लेषण के माध्यम से प्रवाहित हो सकता है। आप एक ही डेटा स्रोत से कई channel बना सकते हैं, प्रत्येक channel को अलग तरीके से प्रोसेस कर सकते हैं, और फिर आवश्यकता पड़ने पर channel को वापस एक साथ मर्ज कर सकते हैं। यह दृष्टिकोण आपको ऐसे वर्कफ़्लो डिज़ाइन करने देता है जो स्वाभाविक रूप से जटिल बायोइन्फॉर्मेटिक्स विश्लेषणों के शाखाओं और अभिसरण पथों को दर्शाते हैं।</p>
+<p>Nextflow डेटा के साथ लचीले तरीके से काम करने के लिए शक्तिशाली टूल प्रदान करता है। एक महत्वपूर्ण क्षमता है डेटा को अलग-अलग streams में विभाजित करना और फिर संबंधित items को वापस एक साथ समूहित करना। यह बायोइनफॉर्मेटिक्स वर्कफ़्लो में विशेष रूप से मूल्यवान है जहाँ तुम्हें विश्लेषण के लिए परिणामों को मिलाने से पहले विभिन्न प्रकार के नमूनों को अलग-अलग प्रोसेस करना होता है।</p>
+<p>इसे डाक छाँटने जैसा समझो: तुम पत्रों को गंतव्य के अनुसार अलग करते हो, प्रत्येक ढेर को अलग तरह से प्रोसेस करते हो, फिर एक ही व्यक्ति के पास जाने वाले items को फिर से मिला देते हो। Nextflow वैज्ञानिक डेटा के साथ यह काम करने के लिए विशेष ऑपरेटर का उपयोग करता है। इस दृष्टिकोण को distributed computing और बायोइनफॉर्मेटिक्स वर्कफ़्लो में <strong>scatter/gather</strong> pattern के नाम से भी जाना जाता है।</p>
+<p>Nextflow का चैनल सिस्टम इस लचीलेपन के केंद्र में है। चैनल तुम्हारे वर्कफ़्लो के विभिन्न हिस्सों को जोड़ते हैं, जिससे डेटा तुम्हारे विश्लेषण से होकर प्रवाहित होता है। तुम एक ही डेटा स्रोत से कई चैनल बना सकते हो, प्रत्येक चैनल को अलग तरह से प्रोसेस कर सकते हो, और जरूरत पड़ने पर चैनलों को वापस एक साथ मिला सकते हो। यह दृष्टिकोण तुम्हें ऐसे वर्कफ़्लो डिज़ाइन करने देता है जो जटिल बायोइनफॉर्मेटिक्स विश्लेषणों के शाखाओं और मिलन बिंदुओं को स्वाभाविक रूप से दर्शाते हैं।</p>
 <h3 id="_2">सीखने के लक्ष्य<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>इस side quest में, आप Nextflow के channel ऑपरेटर का उपयोग करके डेटा को विभाजित और समूहित करना सीखेंगे।
-हम एक CSV फ़ाइल से शुरू करेंगे जिसमें नमूना जानकारी और संबंधित डेटा फ़ाइलें होंगी, फिर इस डेटा को मैनिपुलेट और पुनर्गठित करेंगे।</p>
-<p>इस side quest के अंत तक, आप निम्नलिखित तकनीकों का उपयोग करके डेटा स्ट्रीम को प्रभावी ढंग से अलग और संयोजित करने में सक्षम होंगे:</p>
+<p>इस side quest में, तुम Nextflow के चैनल ऑपरेटर का उपयोग करके डेटा को विभाजित और समूहित करना सीखोगे।
+हम नमूना जानकारी और संबंधित डेटा फ़ाइलों वाली एक CSV फ़ाइल से शुरू करेंगे, फिर इस डेटा को manipulate और पुनर्व्यवस्थित करेंगे।</p>
+<p>इस side quest के अंत तक, तुम निम्नलिखित तकनीकों का उपयोग करके डेटा streams को प्रभावी ढंग से अलग और मिला सकोगे:</p>
 <ul>
 <li><code>splitCsv</code> का उपयोग करके फ़ाइलों से डेटा पढ़ना</li>
-<li><code>filter</code> और <code>map</code> के साथ डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करना</li>
-<li><code>join</code> और <code>groupTuple</code> का उपयोग करके संबंधित डेटा को संयोजित करना</li>
-<li>समानांतर प्रोसेसिंग के लिए <code>combine</code> के साथ डेटा संयोजन बनाना</li>
-<li><code>subMap</code> और डुप्लीकेशन रणनीतियों का उपयोग करके डेटा संरचना को अनुकूलित करना</li>
-<li>channel संरचनाओं को मैनिपुलेट करने में मदद करने के लिए named closures के साथ पुन: प्रयोज्य फ़ंक्शन बनाना</li>
+<li><code>filter</code> और <code>map</code> से डेटा को filter और transform करना</li>
+<li><code>join</code> और <code>groupTuple</code> का उपयोग करके संबंधित डेटा को मिलाना</li>
+<li>समानांतर प्रोसेसिंग के लिए <code>combine</code> से डेटा combinations बनाना</li>
+<li><code>subMap</code> और deduplication strategies का उपयोग करके डेटा संरचना को optimize करना</li>
+<li>चैनल संरचनाओं को manipulate करने में मदद के लिए named closures के साथ पुन: उपयोग योग्य functions बनाना</li>
 </ul>
-<p>ये कौशल आपको ऐसे वर्कफ़्लो बनाने में मदद करेंगे जो कई इनपुट फ़ाइलों और विभिन्न प्रकार के डेटा को कुशलता से संभाल सकते हैं, जबकि स्वच्छ, रखरखाव योग्य कोड संरचना बनाए रखते हैं।</p>
+<p>ये skills तुम्हें ऐसे वर्कफ़्लो बनाने में मदद करेंगी जो कई इनपुट फ़ाइलों और विभिन्न प्रकार के डेटा को कुशलतापूर्वक संभाल सकें, साथ ही clean और maintainable code structure बनाए रखें।</p>
 <h3 id="_3">पूर्वापेक्षाएँ<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>इस side quest को शुरू करने से पहले, आपको चाहिए:</p>
+<p>इस side quest को शुरू करने से पहले, तुम्हें:</p>
 <ul>
-<li><a href="../hello_nextflow/README.md">Hello Nextflow</a> ट्यूटोरियल या समकक्ष शुरुआती पाठ्यक्रम पूरा किया हो।</li>
-<li>बुनियादी Nextflow अवधारणाओं और तंत्रों (processes, channels, operators, फ़ाइलों के साथ काम करना, meta data) का उपयोग करने में सहज हों</li>
+<li><a href="../../hello_nextflow/">Hello Nextflow</a> ट्यूटोरियल या समकक्ष beginner's course पूरा करना चाहिए।</li>
+<li>बुनियादी Nextflow concepts और mechanisms (प्रोसेस, चैनल, ऑपरेटर, फ़ाइलों के साथ काम करना, meta data) का उपयोग करने में सहज होना चाहिए।</li>
 </ul>
 <p><strong>वैकल्पिक:</strong> हम पहले <a href="../metadata/">Metadata in workflows</a> side quest पूरा करने की सलाह देते हैं।
-यह <code>splitCsv</code> के साथ CSV फ़ाइलों को पढ़ने और meta maps बनाने की बुनियादी बातों को कवर करता है, जिसका हम यहाँ भारी उपयोग करेंगे।</p>
+वह <code>splitCsv</code> के साथ CSV फ़ाइलें पढ़ने और meta maps बनाने की मूल बातें कवर करता है, जिनका हम यहाँ बहुत उपयोग करेंगे।</p>
 <hr />
-<h2 id="0">0. शुरुआत करें<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
-<h4 id="codespace">प्रशिक्षण codespace खोलें<a class="headerlink" href="#codespace" title="Permanent link">&para;</a></h4>
-<p>यदि आपने अभी तक ऐसा नहीं किया है, तो <a href="../../envsetup/">Environment Setup</a> में वर्णित अनुसार प्रशिक्षण वातावरण खोलना सुनिश्चित करें।</p>
+<h2 id="0">0. शुरू करना<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
+<h4 id="training-codespace">Training codespace खोलो<a class="headerlink" href="#training-codespace" title="Permanent link">&para;</a></h4>
+<p>अगर तुमने अभी तक नहीं किया है, तो <a href="../../envsetup/">Environment Setup</a> में बताए अनुसार training environment खोलना सुनिश्चित करो।</p>
 <p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
-<h4 id="_4">प्रोजेक्ट डायरेक्टरी में जाएं<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>चलिए उस डायरेक्टरी में चलते हैं जहाँ इस ट्यूटोरियल के लिए फ़ाइलें स्थित हैं।</p>
+<h4 id="project">Project डायरेक्टरी में जाओ<a class="headerlink" href="#project" title="Permanent link">&para;</a></h4>
+<p>चलो उस डायरेक्टरी में जाते हैं जहाँ इस ट्यूटोरियल की फ़ाइलें हैं।</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>side-quests/splitting_and_grouping
 </code></pre></div>
-<p>आप VSCode को इस डायरेक्टरी पर फ़ोकस करने के लिए सेट कर सकते हैं:</p>
+<p>तुम VSCode को इस डायरेक्टरी पर focus करने के लिए सेट कर सकते हो:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
 </code></pre></div>
-<h4 id="_5">सामग्री की समीक्षा करें<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>आपको एक मुख्य वर्कफ़्लो फ़ाइल और एक <code>data</code> डायरेक्टरी मिलेगी जिसमें <code>samplesheet.csv</code> नाम की एक samplesheet है।</p>
-<div class="highlight"><span class="filename">डायरेक्टरी सामग्री</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">.</span>
+<p>Editor project डायरेक्टरी पर focus के साथ खुलता है।</p>
+<h4 id="_4">सामग्री की समीक्षा करो<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>तुम्हें एक main workflow फ़ाइल और एक <code>data</code> डायरेक्टरी मिलेगी जिसमें <code>samplesheet.csv</code> नाम की एक samplesheet है।</p>
+<div class="highlight"><span class="filename">Directory contents</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">.</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">├── data</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">│   └── samplesheet.csv</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">└── main.nf</span>
 </code></pre></div>
-<p>Samplesheet में विभिन्न रोगियों के नमूनों के बारे में जानकारी होती है, जिसमें patient ID, sample repeat number, type (normal या tumor), और काल्पनिक डेटा फ़ाइलों के पथ शामिल हैं (जो वास्तव में मौजूद नहीं हैं, लेकिन हम मान लेंगे कि वे हैं)।</p>
+<p>Samplesheet में विभिन्न मरीजों के नमूनों की जानकारी है, जिसमें patient ID, sample repeat number, type (normal या tumor), और काल्पनिक डेटा फ़ाइलों के paths शामिल हैं (जो वास्तव में मौजूद नहीं हैं, लेकिन हम मान लेंगे कि हैं)।</p>
 <div class="highlight"><span class="filename">samplesheet.csv</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">id,repeat,type,bam</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">patientA,1,normal,patientA_rep1_normal.bam</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="go">patientA,1,tumor,patientA_rep1_tumor.bam</span>
@@ -4365,37 +4667,38 @@
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="go">patientC,1,normal,patientC_rep1_normal.bam</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="go">patientC,1,tumor,patientC_rep1_tumor.bam</span>
 </code></pre></div>
-<p>यह samplesheet तीन रोगियों (A, B, C) से आठ नमूनों की सूची बनाती है।</p>
-<p>प्रत्येक रोगी के लिए, हमारे पास ऐसे नमूने हैं जो <code>tumor</code> प्रकार के हैं (आमतौर पर ट्यूमर बायोप्सी से उत्पन्न) या <code>normal</code> (स्वस्थ ऊतक या रक्त से लिए गए)।
-यदि आप कैंसर विश्लेषण से परिचित नहीं हैं, तो बस जान लें कि यह एक प्रायोगिक मॉडल से मेल खाता है जो विपरीत विश्लेषण करने के लिए युग्मित tumor/normal नमूनों का उपयोग करता है।</p>
-<p>विशेष रूप से रोगी A के लिए, हमारे पास तकनीकी प्रतिकृतियों (repeats) के दो सेट हैं।</p>
+<p>इस samplesheet में तीन मरीजों (A, B, C) के आठ नमूने सूचीबद्ध हैं।</p>
+<p>प्रत्येक मरीज के लिए, हमारे पास <code>tumor</code> type (आमतौर पर tumor biopsies से) या <code>normal</code> type (स्वस्थ ऊतक या रक्त से लिए गए) के नमूने हैं।
+अगर तुम cancer analysis से परिचित नहीं हो, तो बस यह जानो कि यह एक experimental model से मेल खाता है जो contrastive analyses करने के लिए paired tumor/normal नमूनों का उपयोग करता है।</p>
+<p>विशेष रूप से patient A के लिए, हमारे पास दो sets के technical replicates (repeats) हैं।</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>यदि आप इस प्रायोगिक डिज़ाइन से परिचित नहीं हैं तो चिंता न करें, यह इस ट्यूटोरियल को समझने के लिए महत्वपूर्ण नहीं है।</p>
+<p class="admonition-title">नोट</p>
+<p>अगर तुम इस experimental design से परिचित नहीं हो तो चिंता मत करो, यह इस ट्यूटोरियल को समझने के लिए महत्वपूर्ण नहीं है।</p>
 </div>
-<h4 id="_6">असाइनमेंट की समीक्षा करें<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p>आपकी चुनौती एक Nextflow वर्कफ़्लो लिखना है जो:</p>
+<p>डेटा की सामग्री समझ लेने के बाद, हम देख सकते हैं कि वर्कफ़्लो को क्या accomplish करना है।</p>
+<h4 id="_5">असाइनमेंट की समीक्षा करो<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>तुम्हारी चुनौती एक Nextflow वर्कफ़्लो लिखना है जो:</p>
 <ol>
-<li>CSV फ़ाइल से नमूना डेटा <strong>पढ़ेगा</strong> और इसे meta maps के साथ संरचित करेगा</li>
-<li>प्रकार (normal बनाम tumor) के आधार पर नमूनों को विभिन्न channel में <strong>अलग</strong> करेगा</li>
-<li>patient ID और replicate number द्वारा मिलान किए गए tumor/normal जोड़ों को <strong>जोड़ेगा</strong></li>
-<li>समानांतर प्रोसेसिंग के लिए genomic intervals में नमूनों को <strong>वितरित</strong> करेगा</li>
-<li>डाउनस्ट्रीम विश्लेषण के लिए संबंधित नमूनों को वापस एक साथ <strong>समूहित</strong> करेगा</li>
+<li>CSV फ़ाइल से नमूना डेटा <strong>पढ़े</strong> और इसे meta maps के साथ structure करे</li>
+<li>type (normal vs tumor) के आधार पर नमूनों को अलग-अलग चैनलों में <strong>अलग करे</strong></li>
+<li>patient ID और replicate number के आधार पर matched tumor/normal pairs को <strong>join करे</strong></li>
+<li>समानांतर प्रोसेसिंग के लिए नमूनों को genomic intervals में <strong>वितरित करे</strong></li>
+<li>downstream analysis के लिए संबंधित नमूनों को वापस <strong>समूहित करे</strong></li>
 </ol>
-<p>यह एक सामान्य बायोइन्फॉर्मेटिक्स पैटर्न का प्रतिनिधित्व करता है जहाँ आपको स्वतंत्र प्रोसेसिंग के लिए डेटा को विभाजित करने की आवश्यकता होती है, फिर तुलनात्मक विश्लेषण के लिए संबंधित आइटम को फिर से संयोजित करना होता है।</p>
-<h4 id="_7">तैयारी चेकलिस्ट<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>क्या आप गोता लगाने के लिए तैयार हैं?</p>
+<p>यह एक सामान्य बायोइनफॉर्मेटिक्स pattern है जहाँ तुम्हें स्वतंत्र प्रोसेसिंग के लिए डेटा को विभाजित करना होता है, फिर तुलनात्मक विश्लेषण के लिए संबंधित items को फिर से मिलाना होता है।</p>
+<h4 id="_6">तैयारी की जाँच सूची<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>क्या तुम शुरू करने के लिए तैयार हो?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैं इस पाठ्यक्रम के लक्ष्य और इसकी पूर्वापेक्षाओं को समझता हूँ</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मेरा codespace चालू है</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैंने अपनी कार्य डायरेक्टरी उचित रूप से सेट कर ली है</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैं असाइनमेंट को समझता हूँ</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैं इस course के लक्ष्य और इसकी पूर्वापेक्षाओं को समझता/समझती हूँ</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मेरा codespace चल रहा है</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैंने अपनी working directory उचित रूप से सेट की है</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> मैं असाइनमेंट समझता/समझती हूँ</li>
 </ul>
-<p>यदि आप सभी बॉक्स को चेक कर सकते हैं, तो आप जाने के लिए तैयार हैं।</p>
+<p>अगर तुम सभी boxes check कर सकते हो, तो तुम जाने के लिए तैयार हो।</p>
 <hr />
-<h2 id="1">1. नमूना डेटा पढ़ें<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<h3 id="11-splitcsv-meta-maps">1.1. <code>splitCsv</code> के साथ नमूना डेटा पढ़ें और meta maps बनाएं<a class="headerlink" href="#11-splitcsv-meta-maps" title="Permanent link">&para;</a></h3>
-<p>चलिए <code>splitCsv</code> के साथ नमूना डेटा को पढ़कर और इसे meta map पैटर्न में व्यवस्थित करके शुरुआत करते हैं। <code>main.nf</code> में, आप देखेंगे कि हमने पहले से ही वर्कफ़्लो शुरू किया है।</p>
+<h2 id="1">1. नमूना डेटा पढ़ना<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="11-splitcsv-meta-maps">1.1. <code>splitCsv</code> से नमूना डेटा पढ़ना और meta maps बनाना<a class="headerlink" href="#11-splitcsv-meta-maps" title="Permanent link">&para;</a></h3>
+<p>चलो <code>splitCsv</code> से नमूना डेटा पढ़कर और इसे meta map pattern में व्यवस्थित करके शुरू करते हैं। <code>main.nf</code> में, तुम देखोगे कि हमने पहले से ही वर्कफ़्लो शुरू कर दिया है।</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
@@ -4403,21 +4706,21 @@
 </span><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>इस ट्यूटोरियल के दौरान, हम सभी channel वेरिएबल के लिए <code>ch_</code> prefix का उपयोग करेंगे ताकि स्पष्ट रूप से संकेत दिया जा सके कि वे Nextflow channels हैं।</p>
+<p class="admonition-title">नोट</p>
+<p>इस ट्यूटोरियल में, हम सभी चैनल variables के लिए <code>ch_</code> prefix का उपयोग करेंगे ताकि यह स्पष्ट रूप से indicate हो कि वे Nextflow चैनल हैं।</p>
 </div>
-<p>यदि आपने <a href="../metadata/">Metadata in workflows</a> side quest पूरा किया है, तो आप इस पैटर्न को पहचानेंगे। हम CSV को पढ़ने के लिए <code>splitCsv</code> का उपयोग करेंगे और तुरंत डेटा को meta map के साथ संरचित करेंगे ताकि मेटाडेटा को फ़ाइल पथों से अलग किया जा सके।</p>
+<p>अगर तुमने <a href="../metadata/">Metadata in workflows</a> side quest पूरा किया है, तो तुम इस pattern को पहचानोगे। हम CSV पढ़ने के लिए <code>splitCsv</code> का उपयोग करेंगे और तुरंत file paths से metadata को अलग करने के लिए meta map के साथ डेटा को structure करेंगे।</p>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>इस प्रशिक्षण में हम दो अलग-अलग अवधारणाओं का सामना करेंगे जिन्हें <code>map</code> कहा जाता है:</p>
+<p class="admonition-title">जानकारी</p>
+<p>इस प्रशिक्षण में हम <code>map</code> नाम की दो अलग-अलग concepts से मिलेंगे:</p>
 <ul>
-<li><strong>डेटा संरचना</strong>: Groovy map (अन्य भाषाओं में dictionaries/hashes के बराबर) जो key-value pairs को स्टोर करता है</li>
-<li><strong>Channel ऑपरेटर</strong>: <code>.map()</code> ऑपरेटर जो channel में आइटम को ट्रांसफ़ॉर्म करता है</li>
+<li><strong>Data structure</strong>: Groovy map (अन्य भाषाओं में dictionaries/hashes के समकक्ष) जो key-value pairs store करता है</li>
+<li><strong>Channel operator</strong>: <code>.map()</code> ऑपरेटर जो चैनल में items को transform करता है</li>
 </ul>
-<p>हम संदर्भ में स्पष्ट करेंगे कि हमारा क्या मतलब है, लेकिन Nextflow के साथ काम करते समय यह भेद समझना महत्वपूर्ण है।</p>
+<p>हम context में स्पष्ट करेंगे कि हमारा मतलब कौन सा है, लेकिन Nextflow के साथ काम करते समय यह अंतर समझना महत्वपूर्ण है।</p>
 </div>
-<p><code>main.nf</code> में ये परिवर्तन लागू करें:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">बाद</label><label for="__tabbed_1_2">पहले</label></div>
+<p><code>main.nf</code> में ये बदलाव करो:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">बाद में</label><label for="__tabbed_1_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-2">2</a></span>
@@ -4439,12 +4742,12 @@
 </div>
 </div>
 </div>
-<p>यह <code>splitCsv</code> ऑपरेशन (headers के साथ CSV पढ़ना) और <code>map</code> ऑपरेशन (डेटा को <code>[meta, file]</code> tuples के रूप में संरचित करना) को एक चरण में जोड़ता है। उस परिवर्तन को लागू करें और pipeline चलाएं:</p>
+<p>यह <code>splitCsv</code> operation (headers के साथ CSV पढ़ना) और <code>map</code> operation (डेटा को <code>[meta, file]</code> tuples के रूप में structure करना) को एक ही step में जोड़ता है। वह बदलाव करो और pipeline चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">Launching `main.nf` [deadly_mercator] DSL2 - revision: bd6b0224e9</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
@@ -4458,12 +4761,12 @@
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="go">[[id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>अब हमारे पास एक channel है जहाँ प्रत्येक आइटम एक <code>[meta, file]</code> tuple है - मेटाडेटा फ़ाइल पथों से अलग है। यह संरचना हमें मेटाडेटा फ़ील्ड के आधार पर अपने workload को विभाजित और समूहित करने की अनुमति देती है।</p>
+<p>अब हमारे पास एक चैनल है जहाँ प्रत्येक item एक <code>[meta, file]</code> tuple है - file paths से अलग किया गया metadata। यह संरचना हमें metadata fields के आधार पर अपने workload को विभाजित और समूहित करने देती है।</p>
 <hr />
-<h2 id="2">2. डेटा को फ़िल्टर और ट्रांसफ़ॉर्म करें<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<h3 id="21-filter">2.1. <code>filter</code> के साथ डेटा को फ़िल्टर करें<a class="headerlink" href="#21-filter" title="Permanent link">&para;</a></h3>
-<p>हम एक शर्त के आधार पर डेटा को फ़िल्टर करने के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#filter"><code>filter</code> ऑपरेटर</a> का उपयोग कर सकते हैं। मान लें कि हम केवल normal नमूनों को प्रोसेस करना चाहते हैं। हम <code>type</code> फ़ील्ड के आधार पर डेटा को फ़िल्टर करके ऐसा कर सकते हैं। चलिए इसे <code>view</code> ऑपरेटर से पहले डालते हैं।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">बाद</label><label for="__tabbed_2_2">पहले</label></div>
+<h2 id="2-filter-transform">2. डेटा को filter और transform करना<a class="headerlink" href="#2-filter-transform" title="Permanent link">&para;</a></h2>
+<h3 id="21-filter-filter">2.1. <code>filter</code> से डेटा filter करना<a class="headerlink" href="#21-filter-filter" title="Permanent link">&para;</a></h3>
+<p>हम किसी condition के आधार पर डेटा filter करने के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#filter"><code>filter</code> ऑपरेटर</a> का उपयोग कर सकते हैं। मान लो हम केवल normal नमूनों को प्रोसेस करना चाहते हैं। हम <code>type</code> field के आधार पर डेटा filter करके ऐसा कर सकते हैं। चलो इसे <code>view</code> ऑपरेटर से पहले insert करते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">बाद में</label><label for="__tabbed_2_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-2">2</a></span>
@@ -4497,12 +4800,12 @@
 </div>
 </div>
 </div>
-<p>फ़िल्टर किए गए परिणाम देखने के लिए वर्कफ़्लो को फिर से चलाएं:</p>
+<p>filtered result देखने के लिए वर्कफ़्लो फिर से चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">Launching `main.nf` [admiring_brown] DSL2 - revision: 194d61704d</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
@@ -4512,15 +4815,16 @@
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="go">[[id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam]</span>
 </code></pre></div>
 </details>
-<p>हमने सफलतापूर्वक डेटा को केवल normal नमूनों को शामिल करने के लिए फ़िल्टर किया है। चलिए संक्षेप में देखें कि यह कैसे काम करता है।</p>
-<p><code>filter</code> ऑपरेटर एक closure लेता है जो channel में प्रत्येक तत्व पर लागू होता है। यदि closure <code>true</code> लौटाता है, तो तत्व शामिल है; यदि यह <code>false</code> लौटाता है, तो तत्व बाहर रखा जाता है।</p>
-<p>हमारे मामले में, हम केवल उन नमूनों को रखना चाहते हैं जहाँ <code>meta.type == 'normal'</code> है। Closure tuple <code>meta,file</code> का उपयोग प्रत्येक नमूने को संदर्भित करने के लिए करता है, <code>meta.type</code> के साथ नमूना प्रकार को एक्सेस करता है, और जांचता है कि यह <code>'normal'</code> के बराबर है या नहीं।</p>
-<p>यह ऊपर प्रस्तुत single closure के साथ पूरा होता है:</p>
+<p>हमने सफलतापूर्वक डेटा को केवल normal नमूनों तक filter किया है। चलो देखते हैं यह कैसे काम करता है।</p>
+<p><code>filter</code> ऑपरेटर एक closure लेता है जो चैनल के प्रत्येक element पर apply होता है। अगर closure <code>true</code> return करता है, तो element शामिल होता है; अगर <code>false</code> return करता है, तो element बाहर हो जाता है।</p>
+<p>हमारे case में, हम केवल वे नमूने रखना चाहते हैं जहाँ <code>meta.type == 'normal'</code>। Closure tuple <code>meta,file</code> का उपयोग प्रत्येक नमूने को refer करने के लिए करता है, <code>meta.type</code> से sample type access करता है, और जाँचता है कि यह <code>'normal'</code> के बराबर है या नहीं।</p>
+<p>यह ऊपर introduce किए गए single closure से accomplish होता है:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="o">.</span><span class="na">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;normal&#39;</span><span class="w"> </span><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="22-channel">2.2. अलग फ़िल्टर किए गए channel बनाएं<a class="headerlink" href="#22-channel" title="Permanent link">&para;</a></h3>
-<p>वर्तमान में हम CSV से सीधे बनाए गए channel पर फ़िल्टर लागू कर रहे हैं, लेकिन हम इसे एक से अधिक तरीकों से फ़िल्टर करना चाहते हैं, तो चलिए normal नमूनों के लिए एक अलग फ़िल्टर किया गया channel बनाने के लिए तर्क को फिर से लिखते हैं:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">बाद</label><label for="__tabbed_3_2">पहले</label></div>
+<p>यह filter चैनल operation में सीधे chain होता है।</p>
+<h3 id="22-filtered">2.2. अलग filtered चैनल बनाना<a class="headerlink" href="#22-filtered" title="Permanent link">&para;</a></h3>
+<p>अभी हम filter को सीधे CSV से बनाए गए चैनल पर apply कर रहे हैं, लेकिन हम इसे एक से अधिक तरीकों से filter करना चाहते हैं, इसलिए चलो logic को फिर से लिखते हैं ताकि normal नमूनों के लिए एक अलग filtered चैनल बनाया जा सके:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">बाद में</label><label for="__tabbed_3_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
@@ -4560,12 +4864,12 @@
 </div>
 </div>
 </div>
-<p>परिणाम देखने के लिए pipeline चलाएं:</p>
+<p>परिणाम देखने के लिए pipeline चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="go">Launching `main.nf` [trusting_poisson] DSL2 - revision: 639186ee74</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
@@ -4575,9 +4879,9 @@
 <a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="go">[[id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam]</span>
 </code></pre></div>
 </details>
-<p>हमने सफलतापूर्वक डेटा को फ़िल्टर किया है और normal नमूनों के लिए एक अलग channel बनाया है।</p>
-<p>चलिए tumor नमूनों के लिए भी एक फ़िल्टर किया गया channel बनाते हैं:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">बाद</label><label for="__tabbed_4_2">पहले</label></div>
+<p>हमने सफलतापूर्वक डेटा filter किया और normal नमूनों के लिए एक अलग चैनल बनाया।</p>
+<p>चलो tumor नमूनों के लिए भी एक filtered चैनल बनाते हैं:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">बाद में</label><label for="__tabbed_4_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
@@ -4613,7 +4917,7 @@
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
 <a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="go">Launching `main.nf` [maniac_boltzmann] DSL2 - revision: 3636b6576b</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
@@ -4627,28 +4931,28 @@
 <a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="go">Tumor sample: [[id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>हमने normal और tumor नमूनों को दो अलग-अलग channel में अलग कर दिया है, और आउटपुट में उन्हें अलग तरह से लेबल करने के लिए <code>view()</code> को प्रदान किए गए एक closure का उपयोग किया है: <code>ch_tumor_samples.view{'Tumor sample: ' + it}</code>।</p>
-<h3 id="_8">निष्कर्ष<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>इस खंड में, आपने सीखा:</p>
+<p>हमने normal और tumor नमूनों को दो अलग-अलग चैनलों में अलग किया है, और <code>view()</code> को दिए गए closure का उपयोग करके आउटपुट में उन्हें अलग-अलग label किया है: <code class="highlight"><span class="n">ch_tumor_samples</span><span class="o">.</span><span class="na">view</span><span class="o">{</span><span class="s1">&#39;Tumor sample: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">it</span><span class="o">}</span></code>।</p>
+<h3 id="_7">सारांश<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>इस section में, तुमने सीखा:</p>
 <ul>
-<li><strong>डेटा फ़िल्टर करना</strong>: <code>filter</code> के साथ डेटा को कैसे फ़िल्टर करें</li>
-<li><strong>डेटा विभाजित करना</strong>: किसी शर्त के आधार पर डेटा को विभिन्न channel में कैसे विभाजित करें</li>
-<li><strong>डेटा देखना</strong>: डेटा प्रिंट करने और विभिन्न channel से आउटपुट को लेबल करने के लिए <code>view</code> का उपयोग कैसे करें</li>
+<li><strong>डेटा filtering</strong>: <code>filter</code> से डेटा कैसे filter करें</li>
+<li><strong>डेटा विभाजन</strong>: किसी condition के आधार पर डेटा को अलग-अलग चैनलों में कैसे विभाजित करें</li>
+<li><strong>डेटा देखना</strong>: अलग-अलग चैनलों से डेटा print करने और आउटपुट label करने के लिए <code>view</code> का उपयोग कैसे करें</li>
 </ul>
-<p>हमने अब normal और tumor नमूनों को दो अलग-अलग channel में अलग कर दिया है। अगला, हम <code>id</code> फ़ील्ड पर normal और tumor नमूनों को जोड़ेंगे।</p>
+<p>हमने अब normal और tumor नमूनों को दो अलग-अलग चैनलों में अलग कर दिया है। अगले section में, हम <code>id</code> field पर normal और tumor नमूनों को join करेंगे।</p>
 <hr />
-<h2 id="3-channel">3. पहचानकर्ताओं द्वारा channel जोड़ना<a class="headerlink" href="#3-channel" title="Permanent link">&para;</a></h2>
-<p>पिछले खंड में, हमने normal और tumor नमूनों को दो अलग-अलग channel में अलग किया। इन्हें उनके प्रकार के आधार पर विशिष्ट processes या workflows का उपयोग करके स्वतंत्र रूप से प्रोसेस किया जा सकता है। लेकिन क्या होता है जब हम एक ही रोगी से normal और tumor नमूनों की तुलना करना चाहते हैं? इस बिंदु पर, हमें उन्हें वापस एक साथ जोड़ने की आवश्यकता है, यह सुनिश्चित करते हुए कि नमूनों को उनके <code>id</code> फ़ील्ड के आधार पर मैच किया जाए।</p>
-<p>Nextflow में channel को संयोजित करने के कई तरीके शामिल हैं, लेकिन इस मामले में सबसे उपयुक्त ऑपरेटर <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a> है। यदि आप SQL से परिचित हैं, तो यह <code>JOIN</code> ऑपरेशन की तरह कार्य करता है, जहाँ हम join करने के लिए key और join के प्रकार को निर्दिष्ट करते हैं।</p>
-<h3 id="31-patient-id-map-join">3.1. patient ID के आधार पर संयोजित करने के लिए <code>map</code> और <code>join</code> का उपयोग करें<a class="headerlink" href="#31-patient-id-map-join" title="Permanent link">&para;</a></h3>
-<p>यदि हम <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a> दस्तावेज़ीकरण की जांच करते हैं, तो हम देख सकते हैं कि डिफ़ॉल्ट रूप से यह प्रत्येक tuple के पहले आइटम के आधार पर दो channel को join करता है।</p>
-<h4 id="311">3.1.1. डेटा संरचना की जांच करें<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
-<p>यदि आपके पास अभी भी console आउटपुट उपलब्ध नहीं है, तो चलिए हमारी डेटा संरचना की जांच करने और देखने के लिए pipeline चलाते हैं कि हमें <code>id</code> फ़ील्ड पर join करने के लिए इसे कैसे संशोधित करने की आवश्यकता है।</p>
+<h2 id="3-identifiers-join">3. Identifiers द्वारा चैनलों को join करना<a class="headerlink" href="#3-identifiers-join" title="Permanent link">&para;</a></h2>
+<p>पिछले section में, हमने normal और tumor नमूनों को दो अलग-अलग चैनलों में अलग किया। इन्हें उनके type के आधार पर specific processes या वर्कफ़्लो का उपयोग करके स्वतंत्र रूप से प्रोसेस किया जा सकता है। लेकिन क्या होता है जब हम एक ही मरीज के normal और tumor नमूनों की तुलना करना चाहते हैं? इस बिंदु पर, हमें उन्हें वापस एक साथ join करना होगा और यह सुनिश्चित करना होगा कि नमूने उनके <code>id</code> field के आधार पर match हों।</p>
+<p>Nextflow में चैनलों को combine करने के कई तरीके हैं, लेकिन इस case में सबसे उपयुक्त ऑपरेटर <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a> है। अगर तुम SQL से परिचित हो, तो यह <code>JOIN</code> operation की तरह काम करता है, जहाँ हम join करने की key और join का type specify करते हैं।</p>
+<h3 id="31-patient-id-combine-map-join">3.1. Patient ID के आधार पर combine करने के लिए <code>map</code> और <code>join</code> का उपयोग करना<a class="headerlink" href="#31-patient-id-combine-map-join" title="Permanent link">&para;</a></h3>
+<p>अगर हम <a href="https://www.nextflow.io/docs/latest/operator.html#join"><code>join</code></a> documentation देखें, तो हम देख सकते हैं कि default रूप से यह प्रत्येक tuple के पहले item के आधार पर दो चैनलों को join करता है।</p>
+<h4 id="311-data-structure">3.1.1. Data structure की जाँच करना<a class="headerlink" href="#311-data-structure" title="Permanent link">&para;</a></h4>
+<p>अगर console output अभी भी उपलब्ध नहीं है, तो चलो pipeline चलाते हैं और अपनी data structure जाँचते हैं और देखते हैं कि <code>id</code> field पर join करने के लिए हमें इसे कैसे modify करना होगा।</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
 <a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="go">Launching `main.nf` [maniac_boltzmann] DSL2 - revision: 3636b6576b</span>
 <a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
@@ -4662,10 +4966,10 @@
 <a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="go">Tumor sample: [[id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>हम देख सकते हैं कि <code>id</code> फ़ील्ड प्रत्येक meta map में पहला तत्व है। <code>join</code> के काम करने के लिए, हमें प्रत्येक tuple में <code>id</code> फ़ील्ड को अलग करना चाहिए। उसके बाद, हम दोनों channel को संयोजित करने के लिए बस <code>join</code> ऑपरेटर का उपयोग कर सकते हैं।</p>
-<h4 id="312-id">3.1.2. <code>id</code> फ़ील्ड को अलग करें<a class="headerlink" href="#312-id" title="Permanent link">&para;</a></h4>
-<p><code>id</code> फ़ील्ड को अलग करने के लिए, हम <a href="https://www.nextflow.io/docs/latest/operator.html#map"><code>map</code> ऑपरेटर</a> का उपयोग करके एक नया tuple बना सकते हैं जिसमें <code>id</code> फ़ील्ड पहले तत्व के रूप में है।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">बाद</label><label for="__tabbed_5_2">पहले</label></div>
+<p>हम देख सकते हैं कि <code>id</code> field प्रत्येक meta map का पहला element है। <code>join</code> काम करे इसके लिए, हमें प्रत्येक tuple में <code>id</code> field को isolate करना चाहिए। उसके बाद, हम दो चैनलों को combine करने के लिए <code>join</code> ऑपरेटर का उपयोग कर सकते हैं।</p>
+<h4 id="312-id-field-isolate">3.1.2. <code>id</code> field को isolate करना<a class="headerlink" href="#312-id-field-isolate" title="Permanent link">&para;</a></h4>
+<p><code>id</code> field को isolate करने के लिए, हम <a href="https://www.nextflow.io/docs/latest/operator.html#map"><code>map</code> ऑपरेटर</a> का उपयोग करके <code>id</code> field को पहले element के रूप में एक नया tuple बना सकते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">बाद में</label><label for="__tabbed_5_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
@@ -4713,7 +5017,7 @@
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
 <a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="go">Launching `main.nf` [mad_lagrange] DSL2 - revision: 9940b3f23d</span>
 <a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
@@ -4727,11 +5031,11 @@
 <a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="go">Normal sample: [patientC, [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam]</span>
 </code></pre></div>
 </details>
-<p>यह सूक्ष्म हो सकता है, लेकिन आपको प्रत्येक tuple में पहला तत्व <code>id</code> फ़ील्ड होना चाहिए।</p>
-<h4 id="313-channel">3.1.3. दोनों channel को संयोजित करें<a class="headerlink" href="#313-channel" title="Permanent link">&para;</a></h4>
-<p>अब हम <code>id</code> फ़ील्ड के आधार पर दोनों channel को संयोजित करने के लिए <code>join</code> ऑपरेटर का उपयोग कर सकते हैं।</p>
-<p>एक बार फिर, हम joined आउटपुट प्रिंट करने के लिए <code>view</code> का उपयोग करेंगे।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">बाद</label><label for="__tabbed_6_2">पहले</label></div>
+<p>यह थोड़ा subtle हो सकता है, लेकिन तुम देख सकते हो कि प्रत्येक tuple का पहला element <code>id</code> field है।</p>
+<h4 id="313-combine">3.1.3. दो चैनलों को combine करना<a class="headerlink" href="#313-combine" title="Permanent link">&para;</a></h4>
+<p>अब हम <code>id</code> field के आधार पर दो चैनलों को combine करने के लिए <code>join</code> ऑपरेटर का उपयोग कर सकते हैं।</p>
+<p>एक बार फिर, हम joined outputs print करने के लिए <code>view</code> का उपयोग करेंगे।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">बाद में</label><label for="__tabbed_6_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
@@ -4781,7 +5085,7 @@
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go">Launching `main.nf` [soggy_wiles] DSL2 - revision: 3bc1979889</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
@@ -4791,26 +5095,26 @@
 <a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="go">[patientC, [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>यह बताना थोड़ा मुश्किल है क्योंकि यह इतना चौड़ा है, लेकिन आपको देखने में सक्षम होना चाहिए कि नमूनों को <code>id</code> फ़ील्ड द्वारा joined किया गया है। प्रत्येक tuple में अब यह प्रारूप है:</p>
+<p>यह थोड़ा पढ़ने में मुश्किल है क्योंकि यह बहुत चौड़ा है, लेकिन तुम देख सकते हो कि नमूने <code>id</code> field द्वारा join हो गए हैं। प्रत्येक tuple का format अब इस प्रकार है:</p>
 <ul>
 <li><code>id</code>: नमूना ID</li>
-<li><code>normal_meta_map</code>: normal नमूना मेटा डेटा जिसमें type, replicate और bam फ़ाइल का पथ शामिल है</li>
-<li><code>normal_sample_file</code>: normal नमूना फ़ाइल</li>
-<li><code>tumor_meta_map</code>: tumor नमूना मेटा डेटा जिसमें type, replicate और bam फ़ाइल का पथ शामिल है</li>
-<li><code>tumor_sample</code>: tumor नमूना जिसमें type, replicate और bam फ़ाइल का पथ शामिल है</li>
+<li><code>normal_meta_map</code>: Normal नमूने का meta data जिसमें type, replicate और bam फ़ाइल का path शामिल है</li>
+<li><code>normal_sample_file</code>: Normal नमूने की फ़ाइल</li>
+<li><code>tumor_meta_map</code>: Tumor नमूने का meta data जिसमें type, replicate और bam फ़ाइल का path शामिल है</li>
+<li><code>tumor_sample</code>: Tumor नमूना जिसमें type, replicate और bam फ़ाइल का path शामिल है</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code>join</code> ऑपरेटर किसी भी बेमेल tuple को त्याग देगा। इस उदाहरण में, हमने यह सुनिश्चित किया कि सभी नमूने tumor और normal के लिए मेल खाते थे, लेकिन यदि यह सच नहीं है तो आपको बेमेल tuple रखने के लिए पैरामीटर <code>remainder: true</code> का उपयोग करना होगा। अधिक विवरण के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#join">दस्तावेज़ीकरण</a> देखें।</p>
+<p class="admonition-title">चेतावनी</p>
+<p><code>join</code> ऑपरेटर किसी भी un-matched tuples को discard कर देगा। इस उदाहरण में, हमने सुनिश्चित किया कि सभी नमूने tumor और normal के लिए matched थे, लेकिन अगर यह सच नहीं है तो तुम्हें unmatched tuples रखने के लिए <code>remainder: true</code> parameter का उपयोग करना होगा। अधिक जानकारी के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#join">documentation</a> देखो।</p>
 </div>
-<p>तो अब आप जानते हैं कि tuple में किसी फ़ील्ड को अलग करने के लिए <code>map</code> का उपयोग कैसे करें, और पहले फ़ील्ड के आधार पर tuple को संयोजित करने के लिए <code>join</code> का उपयोग कैसे करें।
-इस ज्ञान के साथ, हम साझा फ़ील्ड के आधार पर channel को सफलतापूर्वक संयोजित कर सकते हैं।</p>
-<p>अगला, हम उस स्थिति पर विचार करेंगे जहाँ आप कई फ़ील्ड पर join करना चाहते हैं।</p>
-<h3 id="32-join">3.2. कई फ़ील्ड पर join करें<a class="headerlink" href="#32-join" title="Permanent link">&para;</a></h3>
-<p>हमारे पास sampleA के लिए 2 replicates हैं, लेकिन sampleB और sampleC के लिए केवल 1। इस मामले में हम <code>id</code> फ़ील्ड का उपयोग करके उन्हें प्रभावी ढंग से join करने में सक्षम थे, लेकिन क्या होगा यदि वे sync से बाहर हों? हम विभिन्न replicates से normal और tumor नमूनों को मिला सकते हैं!</p>
-<p>इससे बचने के लिए, हम कई फ़ील्ड पर join कर सकते हैं। वास्तव में इसे प्राप्त करने के कई तरीके हैं लेकिन हम एक नई joining key बनाने पर ध्यान केंद्रित करने जा रहे हैं जिसमें नमूना <code>id</code> और <code>replicate</code> number दोनों शामिल हैं।</p>
-<p>चलिए एक नई joining key बनाने से शुरू करते हैं। हम पहले की तरह <a href="https://www.nextflow.io/docs/latest/operator.html#map"><code>map</code> ऑपरेटर</a> का उपयोग करके ऐसा कर सकते हैं ताकि एक नया tuple बनाया जा सके जिसमें <code>id</code> और <code>repeat</code> फ़ील्ड पहले तत्व के रूप में हों।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">बाद</label><label for="__tabbed_7_2">पहले</label></div>
+<p>तो अब तुम जानते हो कि tuple में किसी field को isolate करने के लिए <code>map</code> का उपयोग कैसे करें, और पहले field के आधार पर tuples को combine करने के लिए <code>join</code> का उपयोग कैसे करें।
+इस ज्ञान के साथ, हम एक shared field के आधार पर चैनलों को सफलतापूर्वक combine कर सकते हैं।</p>
+<p>अगले section में, हम उस situation पर विचार करेंगे जहाँ तुम multiple fields पर join करना चाहते हो।</p>
+<h3 id="32-multiple-fields-join">3.2. Multiple fields पर join करना<a class="headerlink" href="#32-multiple-fields-join" title="Permanent link">&para;</a></h3>
+<p>sampleA के लिए हमारे पास 2 replicates हैं, लेकिन sampleB और sampleC के लिए केवल 1। इस case में हम <code>id</code> field का उपयोग करके उन्हें प्रभावी ढंग से join कर सके, लेकिन क्या होता अगर वे sync से बाहर होते? हम अलग-अलग replicates के normal और tumor नमूनों को mix up कर सकते थे!</p>
+<p>इससे बचने के लिए, हम multiple fields पर join कर सकते हैं। इसे achieve करने के वास्तव में कई तरीके हैं लेकिन हम एक नई joining key बनाने पर focus करेंगे जिसमें नमूना <code>id</code> और <code>replicate</code> number दोनों शामिल हों।</p>
+<p>चलो एक नई joining key बनाकर शुरू करते हैं। हम यह उसी तरह कर सकते हैं जैसे पहले किया था, <a href="https://www.nextflow.io/docs/latest/operator.html#map"><code>map</code> ऑपरेटर</a> का उपयोग करके <code>id</code> और <code>repeat</code> fields को पहले element के रूप में एक नया tuple बनाते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">बाद में</label><label for="__tabbed_7_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
@@ -4842,12 +5146,12 @@
 </div>
 </div>
 </div>
-<p>अब हमें join होता दिखना चाहिए लेकिन <code>id</code> और <code>repeat</code> दोनों फ़ील्ड का उपयोग करते हुए। वर्कफ़्लो चलाएं:</p>
+<p>अब हमें दिखना चाहिए कि join <code>id</code> और <code>repeat</code> दोनों fields का उपयोग करके हो रहा है। वर्कफ़्लो चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `main.nf` [prickly_wing] DSL2 - revision: 3bebf22dee</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
@@ -4857,12 +5161,12 @@
 <a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="go">[[patientC, 1], [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>ध्यान दें कि हमारे पास प्रत्येक joined परिणाम के पहले तत्व के रूप में दो तत्वों (<code>id</code> और <code>repeat</code> फ़ील्ड) का एक tuple है। यह दर्शाता है कि जटिल आइटम को joining key के रूप में कैसे उपयोग किया जा सकता है, जो एक ही स्थितियों से नमूनों के बीच काफी जटिल मिलान को सक्षम बनाता है।</p>
-<p>यदि आप विभिन्न keys पर join करने के अधिक तरीकों का पता लगाना चाहते हैं, तो अतिरिक्त विकल्पों और उदाहरणों के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#join">join ऑपरेटर दस्तावेज़ीकरण</a> देखें।</p>
-<h3 id="33-joining-key-submap">3.3. नई joining key बनाने के लिए <code>subMap</code> का उपयोग करें<a class="headerlink" href="#33-joining-key-submap" title="Permanent link">&para;</a></h3>
-<p>पिछला दृष्टिकोण हमारी joining key से फ़ील्ड नामों को खो देता है - <code>id</code> और <code>repeat</code> फ़ील्ड केवल मूल्यों की एक list बन जाते हैं। बाद में पहुँच के लिए फ़ील्ड नामों को बनाए रखने के लिए, हम <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html#subMap(java.util.Collection)"><code>subMap</code> method</a> का उपयोग कर सकते हैं।</p>
-<p><code>subMap</code> method एक map से केवल निर्दिष्ट key-value pairs को extract करता है। यहाँ हम अपनी joining key बनाने के लिए केवल <code>id</code> और <code>repeat</code> फ़ील्ड को extract करेंगे।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">बाद</label><label for="__tabbed_8_2">पहले</label></div>
+<p>ध्यान दो कि प्रत्येक joined result के पहले element के रूप में दो elements (<code>id</code> और <code>repeat</code> fields) का एक tuple है। यह दर्शाता है कि complex items को joining key के रूप में कैसे उपयोग किया जा सकता है, जो एक ही conditions के नमूनों के बीच काफी intricate matching को सक्षम बनाता है।</p>
+<p>अगर तुम अलग-अलग keys पर join करने के अधिक तरीके explore करना चाहते हो, तो additional options और examples के लिए <a href="https://www.nextflow.io/docs/latest/operator.html#join">join operator documentation</a> देखो।</p>
+<h3 id="33-joining-key-submap">3.3. नई joining key बनाने के लिए <code>subMap</code> का उपयोग करना<a class="headerlink" href="#33-joining-key-submap" title="Permanent link">&para;</a></h3>
+<p>पिछला approach हमारी joining key से field names खो देता है - <code>id</code> और <code>repeat</code> fields केवल values की एक list बन जाती हैं। बाद में access के लिए field names retain करने के लिए, हम <a href="https://docs.groovy-lang.org/latest/html/groovy-jdk/java/util/Map.html#subMap(java.util.Collection)"><code>subMap</code> method</a> का उपयोग कर सकते हैं।</p>
+<p><code>subMap</code> method एक map से केवल specified key-value pairs extract करती है। यहाँ हम अपनी joining key बनाने के लिए केवल <code>id</code> और <code>repeat</code> fields extract करेंगे।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">बाद में</label><label for="__tabbed_8_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
@@ -4898,7 +5202,7 @@
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
 <a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="go">Launching `main.nf` [reverent_wing] DSL2 - revision: 847016c3b7</span>
 <a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>
@@ -4908,11 +5212,11 @@
 <a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="go">[[id:patientC, repeat:1], [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>अब हमारे पास एक नई joining key है जो न केवल <code>id</code> और <code>repeat</code> फ़ील्ड शामिल करती है, बल्कि फ़ील्ड नामों को भी बनाए रखती है ताकि हम उन्हें बाद में नाम से एक्सेस कर सकें, जैसे <code>meta.id</code> और <code>meta.repeat</code>।</p>
-<h3 id="34-map-named-closure">3.4. map में named closure का उपयोग करें<a class="headerlink" href="#34-map-named-closure" title="Permanent link">&para;</a></h3>
-<p>डुप्लीकेशन से बचने और त्रुटियों को कम करने के लिए, हम एक named closure का उपयोग कर सकते हैं। एक named closure हमें एक पुन: प्रयोज्य फ़ंक्शन बनाने की अनुमति देता है जिसे हम कई स्थानों पर call कर सकते हैं।</p>
-<p>ऐसा करने के लिए, पहले हम closure को एक नए वेरिएबल के रूप में परिभाषित करते हैं:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">बाद</label><label for="__tabbed_9_2">पहले</label></div>
+<p>अब हमारे पास एक नई joining key है जो न केवल <code>id</code> और <code>repeat</code> fields शामिल करती है बल्कि field names भी retain करती है ताकि हम उन्हें बाद में नाम से access कर सकें, जैसे <code>meta.id</code> और <code>meta.repeat</code>।</p>
+<h3 id="34-map-named-closure">3.4. map में named closure का उपयोग करना<a class="headerlink" href="#34-map-named-closure" title="Permanent link">&para;</a></h3>
+<p>duplication से बचने और errors कम करने के लिए, हम एक named closure का उपयोग कर सकते हैं। एक named closure हमें एक reusable function बनाने देता है जिसे हम कई जगहों पर call कर सकते हैं।</p>
+<p>ऐसा करने के लिए, पहले closure को एक नए variable के रूप में define करो:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">बाद में</label><label for="__tabbed_9_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
@@ -4954,10 +5258,10 @@
 </div>
 </div>
 </div>
-<p>हमने map transformation को एक named वेरिएबल के रूप में परिभाषित किया है जिसे हम पुन: उपयोग कर सकते हैं।</p>
-<p>ध्यान दें कि हम फ़ाइल पथ को <code>file()</code> का उपयोग करके एक Path object में भी convert करते हैं ताकि इस channel को प्राप्त करने वाली कोई भी process फ़ाइल को सही ढंग से handle कर सके (अधिक जानकारी के लिए <a href="../working_with_files/">Working with files</a> देखें)।</p>
-<p>चलिए अपने वर्कफ़्लो में closure को implement करते हैं:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">बाद</label><label for="__tabbed_10_2">पहले</label></div>
+<p>हमने map transformation को एक named variable के रूप में define किया है जिसे हम reuse कर सकते हैं।</p>
+<p>ध्यान दो कि हम <code>file()</code> का उपयोग करके file path को एक Path object में भी convert करते हैं ताकि इस चैनल को receive करने वाला कोई भी process फ़ाइल को सही तरीके से handle कर सके (अधिक जानकारी के लिए <a href="../working_with_files/">Working with files</a> देखो)।</p>
+<p>चलो अपने वर्कफ़्लो में closure implement करते हैं:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">बाद में</label><label for="__tabbed_10_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-10">10</a></span>
@@ -4990,15 +5294,15 @@
 </div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>map</code> ऑपरेटर closure को एक argument के रूप में पास करने के लिए <code>{ }</code> के बजाय <code>( )</code> का उपयोग करने के लिए स्विच हो गया है। ऐसा इसलिए है क्योंकि <code>map</code> ऑपरेटर एक closure को argument के रूप में अपेक्षा करता है और <code>{ }</code> का उपयोग anonymous closure को परिभाषित करने के लिए किया जाता है। named closure को call करते समय, <code>( )</code> syntax का उपयोग करें।</p>
+<p class="admonition-title">नोट</p>
+<p><code>map</code> ऑपरेटर ने closure pass करने के लिए <code>{ }</code> से <code>( )</code> में switch किया है। यह इसलिए है क्योंकि <code>map</code> ऑपरेटर एक argument के रूप में closure expect करता है और <code>{ }</code> का उपयोग anonymous closure define करने के लिए किया जाता है। Named closure call करते समय, <code>( )</code> syntax का उपयोग करो।</p>
 </div>
-<p>यह जांचने के लिए कि सबकुछ अभी भी काम कर रहा है, वर्कफ़्लो को एक बार और चलाएं:</p>
+<p>यह जाँचने के लिए कि सब कुछ अभी भी काम कर रहा है, वर्कफ़्लो एक बार और चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
 <a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="go">Launching `main.nf` [angry_meninsky] DSL2 - revision: 2edc226b1d</span>
 <a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>
@@ -5008,9 +5312,9 @@
 <a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="go">[[id:patientC, repeat:1], [id:patientC, repeat:1, type:normal], patientC_rep1_normal.bam, [id:patientC, repeat:1, type:tumor], patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>named closure का उपयोग करने से हम कई स्थानों पर एक ही transformation को पुन: उपयोग कर सकते हैं, जिससे त्रुटियों का जोखिम कम होता है और कोड अधिक पठनीय और रखरखाव योग्य बनता है।</p>
-<h3 id="35">3.5. डेटा के डुप्लीकेशन को कम करें<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
-<p>हमारे वर्कफ़्लो में बहुत सारा डुप्लिकेट डेटा है। joined नमूनों में प्रत्येक आइटम <code>id</code> और <code>repeat</code> फ़ील्ड को दोहराता है। चूँकि यह जानकारी पहले से grouping key में उपलब्ध है, इसलिए हम इस अतिरेक से बच सकते हैं। एक reminder के रूप में, हमारी वर्तमान डेटा संरचना इस तरह दिखती है:</p>
+<p>Named closure का उपयोग करने से हम कई जगहों पर एक ही transformation reuse कर सकते हैं, जिससे errors का जोखिम कम होता है और code अधिक readable और maintainable बनता है।</p>
+<h3 id="35-duplication">3.5. डेटा की duplication कम करना<a class="headerlink" href="#35-duplication" title="Permanent link">&para;</a></h3>
+<p>हमारे वर्कफ़्लो में बहुत सारा duplicated डेटा है। Joined samples के प्रत्येक item में <code>id</code> और <code>repeat</code> fields repeat होते हैं। चूँकि यह जानकारी grouping key में पहले से उपलब्ध है, हम इस redundancy से बच सकते हैं। याद दिलाने के लिए, हमारी current data structure इस प्रकार दिखती है:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="o">[</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="w">  </span><span class="o">[</span>
 <a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a><span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;sampleC&quot;</span><span class="o">,</span>
@@ -5030,8 +5334,8 @@
 <a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a><span class="w">  </span><span class="s2">&quot;sampleC_rep1_tumor.bam&quot;</span>
 <a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a><span class="o">]</span>
 </code></pre></div>
-<p>चूँकि <code>id</code> और <code>repeat</code> फ़ील्ड grouping key में उपलब्ध हैं, चलिए डुप्लीकेशन से बचने के लिए प्रत्येक channel आइटम के बाकी हिस्सों से उन्हें हटाते हैं। हम केवल <code>type</code> फ़ील्ड के साथ एक नया map बनाने के लिए <code>subMap</code> method का उपयोग कर सकते हैं। यह दृष्टिकोण हमें हमारे डेटा संरचना में अतिरेक को समाप्त करते हुए सभी आवश्यक जानकारी बनाए रखने की अनुमति देता है।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">बाद</label><label for="__tabbed_11_2">पहले</label></div>
+<p>चूँकि <code>id</code> और <code>repeat</code> fields grouping key में उपलब्ध हैं, चलो duplication से बचने के लिए उन्हें प्रत्येक चैनल item के बाकी हिस्से से हटा देते हैं। हम केवल <code>type</code> field के साथ एक नया map बनाने के लिए <code>subMap</code> method का उपयोग कर सकते हैं। यह approach हमें redundancy को eliminate करते हुए सभी आवश्यक जानकारी बनाए रखने देती है।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">बाद में</label><label for="__tabbed_11_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-8" name="__codelineno-47-8"></a><span class="hll"><span class="w">    </span><span class="n">getSampleIdAndReplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">bam</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;type&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="n">bam</span><span class="o">)</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
@@ -5043,8 +5347,8 @@
 </div>
 </div>
 </div>
-<p>अब closure एक tuple लौटाता है जहाँ पहले तत्व में <code>id</code> और <code>repeat</code> फ़ील्ड हैं, और दूसरे तत्व में केवल <code>type</code> फ़ील्ड है। यह grouping key में <code>id</code> और <code>repeat</code> जानकारी को एक बार संग्रहीत करके अतिरेक को समाप्त करता है, जबकि सभी आवश्यक जानकारी बनाए रखता है।</p>
-<p>यह देखने के लिए वर्कफ़्लो चलाएं कि यह कैसा दिखता है:</p>
+<p>अब closure एक tuple return करता है जहाँ पहले element में <code>id</code> और <code>repeat</code> fields हैं, और दूसरे element में केवल <code>type</code> field है। यह grouping key में एक बार <code>id</code> और <code>repeat</code> जानकारी store करके redundancy को eliminate करता है, साथ ही सभी आवश्यक जानकारी बनाए रखता है।</p>
+<p>देखने के लिए वर्कफ़्लो चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
@@ -5055,12 +5359,12 @@
 <a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="go">[[id:patientC, repeat:1], [type:normal], /workspaces/training/side-quests/splitting_and_grouping/patientC_rep1_normal.bam, [type:tumor], /workspaces/training/side-quests/splitting_and_grouping/patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>हम देख सकते हैं कि हम grouping key में <code>id</code> और <code>repeat</code> फ़ील्ड केवल एक बार बताते हैं और हमारे पास sample data में <code>type</code> फ़ील्ड है। हमने कोई जानकारी नहीं खोई है लेकिन हमने अपने channel contents को अधिक संक्षिप्त बनाने में सफलता प्राप्त की है।</p>
-<h3 id="36">3.6. अतिरिक्त जानकारी हटाएं<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
-<p>हमने ऊपर डुप्लिकेट जानकारी हटा दी, लेकिन हमारे channels में अभी भी कुछ अन्य अतिरिक्त जानकारी है।</p>
-<p>शुरुआत में, हमने <code>filter</code> का उपयोग करके normal और tumor नमूनों को अलग किया, फिर <code>id</code> और <code>repeat</code> keys के आधार पर उन्हें जोड़ा। <code>join</code> ऑपरेटर उस क्रम को संरक्षित करता है जिसमें tuples मर्ज किए जाते हैं, इसलिए हमारे मामले में, बाईं ओर normal नमूने और दाईं ओर tumor नमूनों के साथ, परिणामी channel यह संरचना बनाए रखता है: <code>id, &lt;normal elements&gt;, &lt;tumor elements&gt;</code>।</p>
-<p>चूँकि हम अपने channel में प्रत्येक तत्व की स्थिति जानते हैं, हम <code>[type:normal]</code> और <code>[type:tumor]</code> metadata को हटाकर संरचना को और सरल बना सकते हैं।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">बाद</label><label for="__tabbed_12_2">पहले</label></div>
+<p>हम देख सकते हैं कि हम grouping key में <code>id</code> और <code>repeat</code> fields केवल एक बार बताते हैं और नमूना डेटा में <code>type</code> field है। हमने कोई जानकारी नहीं खोई लेकिन हम अपने चैनल की सामग्री को अधिक संक्षिप्त बनाने में सफल रहे।</p>
+<h3 id="36-redundant">3.6. Redundant जानकारी हटाना<a class="headerlink" href="#36-redundant" title="Permanent link">&para;</a></h3>
+<p>हमने ऊपर duplicated जानकारी हटाई, लेकिन हमारे चैनलों में अभी भी कुछ अन्य redundant जानकारी है।</p>
+<p>शुरुआत में, हमने <code>filter</code> का उपयोग करके normal और tumor नमूनों को अलग किया, फिर उन्हें <code>id</code> और <code>repeat</code> keys के आधार पर join किया। <code>join</code> ऑपरेटर tuples को merge करने के क्रम को preserve करता है, इसलिए हमारे case में, left side पर normal नमूनों और right side पर tumor नमूनों के साथ, resulting चैनल इस structure को maintain करता है: <code>id, &lt;normal elements&gt;, &lt;tumor elements&gt;</code>।</p>
+<p>चूँकि हम अपने चैनल में प्रत्येक element की position जानते हैं, हम <code>[type:normal]</code> और <code>[type:tumor]</code> metadata को drop करके structure को और simplify कर सकते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">बाद में</label><label for="__tabbed_12_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-8" name="__codelineno-51-8"></a><span class="hll"><span class="w">    </span><span class="n">getSampleIdAndReplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
@@ -5072,12 +5376,12 @@
 </div>
 </div>
 </div>
-<p>परिणाम देखने के लिए फिर से चलाएं:</p>
+<p>परिणाम देखने के लिए फिर से चलाओ:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="go">Launching `main.nf` [confident_leavitt] DSL2 - revision: a2303895bd</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>
@@ -5087,24 +5391,25 @@
 <a id="__codelineno-54-8" name="__codelineno-54-8" href="#__codelineno-54-8"></a><span class="go">[[id:patientC, repeat:1], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<h3 id="_9">निष्कर्ष<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>इस खंड में, आपने सीखा:</p>
+<p>प्रत्येक tuple में अब केवल grouping key और दो file paths हैं, बिना किसी repeated field के।</p>
+<h3 id="_8">सारांश<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>इस section में, तुमने सीखा:</p>
 <ul>
-<li><strong>Tuples को मैनिपुलेट करना</strong>: tuple में किसी फ़ील्ड को अलग करने के लिए <code>map</code> का उपयोग कैसे करें</li>
-<li><strong>Tuples को जोड़ना</strong>: पहले फ़ील्ड के आधार पर tuples को संयोजित करने के लिए <code>join</code> का उपयोग कैसे करें</li>
+<li><strong>Tuples को Manipulate करना</strong>: Tuple में किसी field को isolate करने के लिए <code>map</code> का उपयोग कैसे करें</li>
+<li><strong>Tuples को Join करना</strong>: पहले field के आधार पर tuples को combine करने के लिए <code>join</code> का उपयोग कैसे करें</li>
 <li><strong>Joining Keys बनाना</strong>: नई joining key बनाने के लिए <code>subMap</code> का उपयोग कैसे करें</li>
 <li><strong>Named Closures</strong>: map में named closure का उपयोग कैसे करें</li>
-<li><strong>Multiple Field Joining</strong>: अधिक सटीक मिलान के लिए कई फ़ील्ड पर join कैसे करें</li>
-<li><strong>डेटा संरचना अनुकूलन</strong>: अतिरिक्त जानकारी हटाकर channel संरचना को कैसे सुव्यवस्थित करें</li>
+<li><strong>Multiple Field Joining</strong>: अधिक precise matching के लिए multiple fields पर join कैसे करें</li>
+<li><strong>Data Structure Optimization</strong>: Redundant जानकारी हटाकर चैनल structure को कैसे streamline करें</li>
 </ul>
-<p>अब आपके पास एक वर्कफ़्लो है जो samplesheet को विभाजित कर सकता है, normal और tumor नमूनों को फ़िल्टर कर सकता है, उन्हें sample ID और replicate number के आधार पर जोड़ सकता है, फिर परिणाम प्रिंट कर सकता है।</p>
-<p>यह बायोइन्फॉर्मेटिक्स वर्कफ़्लो में एक सामान्य पैटर्न है जहाँ आपको स्वतंत्र रूप से प्रोसेस करने के बाद नमूनों या अन्य प्रकार के डेटा को मिलाने की आवश्यकता होती है, इसलिए यह एक उपयोगी कौशल है। अगले भाग में, हम एक नमूने को कई बार दोहराने पर नज़र डालेंगे।</p>
-<h2 id="4-intervals">4. नमूनों को intervals में फैलाएं<a class="headerlink" href="#4-intervals" title="Permanent link">&para;</a></h2>
-<p>बायोइन्फॉर्मेटिक्स वर्कफ़्लो में एक प्रमुख पैटर्न जीनोमिक क्षेत्रों में विश्लेषण का वितरण है। उदाहरण के लिए, variant calling को जीनोम को intervals (जैसे chromosomes या छोटे क्षेत्र) में विभाजित करके समानांतर बनाया जा सकता है। यह समानांतरीकरण रणनीति कई cores या nodes में computational load वितरित करके pipeline दक्षता में काफी सुधार करती है, जिससे समग्र execution समय कम होता है।</p>
-<p>निम्नलिखित खंड में, हम प्रदर्शित करेंगे कि कई जीनोमिक intervals में अपने sample data को कैसे वितरित किया जाए। हम प्रत्येक नमूने को प्रत्येक interval के साथ जोड़ेंगे, जिससे विभिन्न जीनोमिक क्षेत्रों का समानांतर प्रोसेसिंग संभव हो सकेगा। यह intervals की संख्या से हमारे dataset का आकार गुणा कर देगा, कई स्वतंत्र विश्लेषण इकाइयां बनाएगा जिन्हें बाद में वापस एक साथ लाया जा सकता है।</p>
-<h3 id="41-combine-intervals">4.1. <code>combine</code> का उपयोग करके नमूनों को intervals में फैलाएं<a class="headerlink" href="#41-combine-intervals" title="Permanent link">&para;</a></h3>
-<p>चलिए intervals का एक channel बनाकर शुरू करते हैं। चीजों को सरल रखने के लिए, हम केवल 3 intervals का उपयोग करेंगे जिन्हें हम मैन्युअल रूप से परिभाषित करेंगे। एक वास्तविक वर्कफ़्लो में, आप इन्हें किसी फ़ाइल इनपुट से पढ़ सकते हैं या बहुत सी interval फ़ाइलों के साथ एक channel बना सकते हैं।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">बाद</label><label for="__tabbed_13_2">पहले</label></div>
+<p>अब तुम्हारे पास एक ऐसा वर्कफ़्लो है जो एक samplesheet को split कर सकता है, normal और tumor नमूनों को filter कर सकता है, उन्हें sample ID और replicate number के आधार पर join कर सकता है, फिर परिणाम print कर सकता है।</p>
+<p>यह बायोइनफॉर्मेटिक्स वर्कफ़्लो में एक सामान्य pattern है जहाँ तुम्हें स्वतंत्र रूप से प्रोसेस करने के बाद नमूनों या अन्य प्रकार के डेटा को match करना होता है, इसलिए यह एक उपयोगी skill है। अगले section में, हम एक नमूने को कई बार repeat करने पर ध्यान देंगे।</p>
+<h2 id="4-samples-intervals">4. Samples को intervals में फैलाना<a class="headerlink" href="#4-samples-intervals" title="Permanent link">&para;</a></h2>
+<p>बायोइनफॉर्मेटिक्स वर्कफ़्लो में एक महत्वपूर्ण pattern है genomic regions में analysis वितरित करना। उदाहरण के लिए, variant calling को genome को intervals (जैसे chromosomes या छोटे regions) में विभाजित करके parallelize किया जा सकता है। यह parallelization strategy multiple cores या nodes में computational load वितरित करके pipeline efficiency में काफी सुधार करती है, जिससे overall execution time कम होता है।</p>
+<p>निम्नलिखित section में, हम दिखाएंगे कि अपने नमूना डेटा को multiple genomic intervals में कैसे वितरित करें। हम प्रत्येक नमूने को हर interval के साथ pair करेंगे, जिससे अलग-अलग genomic regions की parallel processing संभव होगी। यह हमारे dataset size को intervals की संख्या से गुणा कर देगा, जिससे कई independent analysis units बनेंगी जिन्हें बाद में वापस एक साथ लाया जा सकता है।</p>
+<h3 id="41-combine-samples-intervals">4.1. <code>combine</code> का उपयोग करके samples को intervals में फैलाना<a class="headerlink" href="#41-combine-samples-intervals" title="Permanent link">&para;</a></h3>
+<p>चलो intervals का एक चैनल बनाकर शुरू करते हैं। जीवन को सरल रखने के लिए, हम केवल 3 intervals का उपयोग करेंगे जिन्हें हम manually define करेंगे। एक real वर्कफ़्लो में, तुम इन्हें एक file input से पढ़ सकते हो या यहाँ तक कि बहुत सारी interval files के साथ एक चैनल बना सकते हो।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">बाद में</label><label for="__tabbed_13_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-17">17</a></span>
@@ -5120,8 +5425,8 @@
 </div>
 </div>
 </div>
-<p>याद रखें, हम प्रत्येक नमूने को प्रत्येक interval के लिए दोहराना चाहते हैं। इसे कभी-कभी नमूनों और intervals का Cartesian product कहा जाता है। हम <a href="https://www.nextflow.io/docs/latest/operator.html#combine"><code>combine</code> ऑपरेटर</a> का उपयोग करके इसे प्राप्त कर सकते हैं। यह channel 1 से प्रत्येक आइटम लेगा और इसे channel 2 में प्रत्येक आइटम के लिए दोहराएगा। चलिए अपने वर्कफ़्लो में combine ऑपरेटर जोड़ते हैं:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">बाद</label><label for="__tabbed_14_2">पहले</label></div>
+<p>याद रखो, हम प्रत्येक नमूने को प्रत्येक interval के लिए repeat करना चाहते हैं। इसे कभी-कभी samples और intervals का Cartesian product कहा जाता है। हम <a href="https://www.nextflow.io/docs/latest/operator.html#combine"><code>combine</code> ऑपरेटर</a> का उपयोग करके यह achieve कर सकते हैं। यह channel 1 से प्रत्येक item लेगा और channel 2 के प्रत्येक item के लिए इसे repeat करेगा। चलो अपने वर्कफ़्लो में combine ऑपरेटर जोड़ते हैं:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">बाद में</label><label for="__tabbed_14_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-18">18</a></span>
@@ -5141,12 +5446,12 @@
 </div>
 </div>
 </div>
-<p>अब चलिए इसे चलाते हैं और देखते हैं क्या होता है:</p>
+<p>अब चलाते हैं और देखते हैं क्या होता है:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>
 <a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="go">Launching `main.nf` [mighty_tesla] DSL2 - revision: ae013ab70b</span>
 <a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>
@@ -5164,11 +5469,11 @@
 <a id="__codelineno-60-16" name="__codelineno-60-16" href="#__codelineno-60-16"></a><span class="go">[[id:patientC, repeat:1], patientC_rep1_normal.bam, patientC_rep1_tumor.bam, chr3]</span>
 </code></pre></div>
 </details>
-<p>सफलता! हमने अपनी 3 interval सूची में प्रत्येक interval के लिए हर नमूने को दोहराया है। हमने अपने channel में आइटम की संख्या को प्रभावी रूप से तीन गुना कर दिया है।</p>
-<p>हालांकि इसे पढ़ना थोड़ा कठिन है, इसलिए अगले खंड में हम इसे व्यवस्थित करेंगे।</p>
-<h3 id="42-channel">4.2. Channel को व्यवस्थित करें<a class="headerlink" href="#42-channel" title="Permanent link">&para;</a></h3>
-<p>हम अपने sample data को व्यवस्थित और पुनर्गठित करने के लिए <code>map</code> ऑपरेटर का उपयोग कर सकते हैं ताकि इसे समझना आसान हो। चलिए intervals string को पहले तत्व में joining map में ले जाते हैं।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">बाद</label><label for="__tabbed_15_2">पहले</label></div>
+<p>सफलता! हमने हमारी 3 interval list में प्रत्येक single interval के लिए हर नमूने को repeat किया है। हमने effectively अपने चैनल में items की संख्या तीन गुना कर दी है।</p>
+<p>हालाँकि यह पढ़ने में थोड़ा मुश्किल है, इसलिए अगले section में हम इसे व्यवस्थित करेंगे।</p>
+<h3 id="42">4.2. चैनल को व्यवस्थित करना<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>हम अपने नमूना डेटा को tidy और refactor करने के लिए <code>map</code> ऑपरेटर का उपयोग कर सकते हैं ताकि इसे समझना आसान हो। चलो intervals string को पहले element पर joining map में move करते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">बाद में</label><label for="__tabbed_15_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-20">20</a></span>
@@ -5202,26 +5507,26 @@
 </div>
 </div>
 </div>
-<p>आइए चरण दर चरण समझें कि यह map ऑपरेशन क्या करता है।</p>
-<p>सबसे पहले, हम कोड को अधिक पठनीय बनाने के लिए named parameters का उपयोग करते हैं। <code>grouping_key</code>, <code>normal</code>, <code>tumor</code> और <code>interval</code> नामों का उपयोग करके, हम tuple में तत्वों को index के बजाय नाम से संदर्भित कर सकते हैं:</p>
+<p>चलो step by step देखते हैं कि यह map operation क्या करती है।</p>
+<p>पहले, हम code को अधिक readable बनाने के लिए named parameters का उपयोग करते हैं। <code>grouping_key</code>, <code>normal</code>, <code>tumor</code> और <code>interval</code> नामों का उपयोग करके, हम tuple के elements को index के बजाय नाम से refer कर सकते हैं:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="w">        </span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">grouping_key</span><span class="o">,</span><span class="w"> </span><span class="n">normal</span><span class="o">,</span><span class="w"> </span><span class="n">tumor</span><span class="o">,</span><span class="w"> </span><span class="n">interval</span><span class="w"> </span><span class="o">-&gt;</span>
 </code></pre></div>
-<p>इसके बाद, हम <code>grouping_key</code> को <code>interval</code> फ़ील्ड के साथ संयोजित करते हैं। <code>grouping_key</code> एक map है जिसमें <code>id</code> और <code>repeat</code> फ़ील्ड हैं। हम <code>interval</code> के साथ एक नया map बनाते हैं और उन्हें Groovy के map addition (<code>+</code>) का उपयोग करके मर्ज करते हैं:</p>
+<p>अगला, हम <code>grouping_key</code> को <code>interval</code> field के साथ combine करते हैं। <code>grouping_key</code> एक map है जिसमें <code>id</code> और <code>repeat</code> fields हैं। हम Groovy के map addition (<code>+</code>) का उपयोग करके <code>interval</code> के साथ एक नया map बनाते हैं:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="w">                </span><span class="n">grouping_key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">interval:</span><span class="w"> </span><span class="n">interval</span><span class="o">],</span>
 </code></pre></div>
-<p>अंत में, हम इसे तीन तत्वों वाले tuple के रूप में लौटाते हैं: combined metadata map, normal sample file, और tumor sample file:</p>
+<p>अंत में, हम इसे तीन elements के tuple के रूप में return करते हैं: combined metadata map, normal नमूना फ़ाइल, और tumor नमूना फ़ाइल:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="w">            </span><span class="o">[</span>
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="w">                </span><span class="n">grouping_key</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="nl">interval:</span><span class="w"> </span><span class="n">interval</span><span class="o">],</span>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="w">                </span><span class="n">normal</span><span class="o">,</span>
 <a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="w">                </span><span class="n">tumor</span>
 <a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a><span class="w">            </span><span class="o">]</span>
 </code></pre></div>
-<p>चलिए इसे फिर से चलाते हैं और channel contents की जांच करते हैं:</p>
+<p>चलो फिर से चलाते हैं और चैनल की सामग्री जाँचते हैं:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>
 <a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="go">Launching `main.nf` [sad_hawking] DSL2 - revision: 1f6f6250cd</span>
 <a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>
@@ -5239,22 +5544,22 @@
 <a id="__codelineno-67-16" name="__codelineno-67-16" href="#__codelineno-67-16"></a><span class="go">[[id:patientC, repeat:1, interval:chr3], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>अपने डेटा को सही संरचना में बदलने के लिए <code>map</code> का उपयोग करना मुश्किल हो सकता है, लेकिन प्रभावी डेटा मैनिपुलेशन के लिए यह महत्वपूर्ण है।</p>
-<p>अब हमारे पास प्रत्येक नमूना सभी जीनोमिक intervals में दोहराया गया है, जिससे कई स्वतंत्र विश्लेषण इकाइयां बनती हैं जिन्हें समानांतर में प्रोसेस किया जा सकता है। लेकिन क्या होगा अगर हम संबंधित नमूनों को वापस एक साथ लाना चाहते हैं? अगले खंड में, हम सीखेंगे कि समान विशेषताओं वाले नमूनों को कैसे समूहित किया जाए।</p>
-<h3 id="_10">निष्कर्ष<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<p>इस खंड में, आपने सीखा:</p>
+<p>अपने डेटा को सही structure में coerce करने के लिए <code>map</code> का उपयोग करना tricky हो सकता है, लेकिन effective data manipulation के लिए यह महत्वपूर्ण है।</p>
+<p>अब हमारे पास सभी genomic intervals में repeat किए गए हर नमूने हैं, जिससे कई independent analysis units बनती हैं जिन्हें parallel में प्रोसेस किया जा सकता है। लेकिन क्या होगा अगर हम संबंधित नमूनों को वापस एक साथ लाना चाहते हैं? अगले section में, हम सीखेंगे कि common attributes share करने वाले नमूनों को कैसे group करें।</p>
+<h3 id="_9">सारांश<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>इस section में, तुमने सीखा:</p>
 <ul>
-<li><strong>नमूनों को intervals में फैलाना</strong>: intervals में नमूनों को दोहराने के लिए <code>combine</code> का उपयोग कैसे करें</li>
-<li><strong>Cartesian products बनाना</strong>: नमूनों और intervals के सभी संयोजन कैसे उत्पन्न करें</li>
-<li><strong>Channel संरचना व्यवस्थित करना</strong>: बेहतर पठनीयता के लिए डेटा को पुनर्गठित करने के लिए <code>map</code> का उपयोग कैसे करें</li>
-<li><strong>समानांतर प्रोसेसिंग की तैयारी</strong>: वितरित विश्लेषण के लिए डेटा कैसे सेट करें</li>
+<li><strong>Samples को intervals में फैलाना</strong>: Samples को intervals पर repeat करने के लिए <code>combine</code> का उपयोग कैसे करें</li>
+<li><strong>Cartesian products बनाना</strong>: Samples और intervals के सभी combinations कैसे generate करें</li>
+<li><strong>चैनल structure व्यवस्थित करना</strong>: बेहतर readability के लिए डेटा restructure करने के लिए <code>map</code> का उपयोग कैसे करें</li>
+<li><strong>Parallel processing की तैयारी</strong>: Distributed analysis के लिए डेटा कैसे setup करें</li>
 </ul>
-<h2 id="5-grouptuple">5. <code>groupTuple</code> का उपयोग करके नमूनों को एकत्रित करना<a class="headerlink" href="#5-grouptuple" title="Permanent link">&para;</a></h2>
-<p>पिछले खंडों में, हमने सीखा कि इनपुट फ़ाइल से डेटा को कैसे विभाजित करें और विशिष्ट फ़ील्ड (हमारे मामले में normal और tumor नमूने) के आधार पर कैसे फ़िल्टर करें। लेकिन यह केवल एक प्रकार के joining को कवर करता है। क्या होगा अगर हम किसी विशिष्ट विशेषता के आधार पर नमूनों को समूहित करना चाहते हैं? उदाहरण के लिए, matched normal-tumor pairs को जोड़ने के बजाय, हम "sampleA" के सभी नमूनों को उनके type की परवाह किए बिना एक साथ प्रोसेस करना चाह सकते हैं। यह पैटर्न बायोइन्फॉर्मेटिक्स वर्कफ़्लो में सामान्य है जहाँ आप दक्षता के कारणों के लिए संबंधित नमूनों को अलग-अलग प्रोसेस करना चाह सकते हैं, इससे पहले कि अंत में परिणामों की तुलना या संयोजन करें।</p>
-<p>Nextflow में ऐसा करने के लिए built-in methods हैं, जिनमें से मुख्य जिसे हम देखेंगे वह है <code>groupTuple</code>।</p>
-<p>चलिए शुरू करते हैं अपने सभी नमूनों को समूहित करने से जिनके <code>id</code> और <code>interval</code> फ़ील्ड समान हैं, यह एक ऐसे विश्लेषण के लिए विशिष्ट होगा जहाँ हम technical replicates को समूहित करना चाहते थे लेकिन meaningfully different नमूनों को अलग रखना चाहते थे।</p>
+<h2 id="5-grouptuple-samples-aggregate">5. <code>groupTuple</code> का उपयोग करके samples को aggregate करना<a class="headerlink" href="#5-grouptuple-samples-aggregate" title="Permanent link">&para;</a></h2>
+<p>पिछले sections में, हमने सीखा कि input फ़ाइल से डेटा कैसे split करें और specific fields (हमारे case में normal और tumor नमूने) के आधार पर filter करें। लेकिन यह केवल एक प्रकार के joining को cover करता है। क्या होगा अगर हम किसी specific attribute के आधार पर नमूनों को group करना चाहते हैं? उदाहरण के लिए, matched normal-tumor pairs join करने के बजाय, हम "sampleA" के सभी नमूनों को उनके type की परवाह किए बिना एक साथ प्रोसेस करना चाहते हैं। यह pattern बायोइनफॉर्मेटिक्स वर्कफ़्लो में सामान्य है जहाँ तुम efficiency के कारणों से अंत में परिणामों की तुलना या combine करने से पहले संबंधित नमूनों को अलग-अलग प्रोसेस करना चाहते हो।</p>
+<p>Nextflow में इसके लिए built-in methods हैं, जिनमें से मुख्य एक हम देखेंगे वह है <code>groupTuple</code>।</p>
+<p>चलो उन सभी नमूनों को group करके शुरू करते हैं जिनके <code>id</code> और <code>interval</code> fields समान हैं, यह उस analysis के लिए typical होगा जहाँ हम technical replicates को group करना चाहते हैं लेकिन meaningfully different नमूनों को अलग रखना चाहते हैं।</p>
 <p>ऐसा करने के लिए, हमें अपने grouping variables को अलग करना चाहिए ताकि हम उन्हें isolation में उपयोग कर सकें।</p>
-<p>पहला कदम पिछले खंड में हमने जो किया उसके समान है। हमें अपने grouping variable को tuple के पहले तत्व के रूप में अलग करना होगा। याद रखें, हमारा पहला तत्व वर्तमान में <code>id</code>, <code>repeat</code> और <code>interval</code> फ़ील्ड का map है:</p>
+<p>पहला step पिछले section में किए गए के समान है। हमें अपने grouping variable को tuple के पहले element के रूप में isolate करना होगा। याद रखो, हमारा पहला element वर्तमान में <code>id</code>, <code>repeat</code> और <code>interval</code> fields का एक map है:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
 <span class="normal"><a href="#__codelineno-68-2">2</a></span>
 <span class="normal"><a href="#__codelineno-68-3">3</a></span>
@@ -5265,8 +5570,8 @@
 <a id="__codelineno-68-4" name="__codelineno-68-4"></a><span class="w">  </span><span class="s2">&quot;interval&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;chr1&quot;</span>
 <a id="__codelineno-68-5" name="__codelineno-68-5"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>हम पहले की तरह <code>subMap</code> method का पुन: उपयोग करके map से अपने <code>id</code> और <code>interval</code> फ़ील्ड को अलग कर सकते हैं। पहले की तरह, हम प्रत्येक नमूने के लिए tuple के पहले तत्व पर <code>subMap</code> method लागू करने के लिए <code>map</code> ऑपरेटर का उपयोग करेंगे।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">बाद</label><label for="__tabbed_16_2">पहले</label></div>
+<p>हम map से अपने <code>id</code> और <code>interval</code> fields को isolate करने के लिए पहले से <code>subMap</code> method का reuse कर सकते हैं। पहले की तरह, हम प्रत्येक नमूने के tuple के पहले element पर <code>subMap</code> method apply करने के लिए <code>map</code> ऑपरेटर का उपयोग करेंगे।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">बाद में</label><label for="__tabbed_16_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-69-20">20</a></span>
@@ -5332,12 +5637,12 @@
 </div>
 </div>
 </div>
-<p>चलिए इसे फिर से चलाते हैं और channel contents की जांच करते हैं:</p>
+<p>चलो फिर से चलाते हैं और चैनल की सामग्री जाँचते हैं:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>
 <a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="go">Launching `main.nf` [hopeful_brenner] DSL2 - revision: 7f4f7fea76</span>
 <a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>
@@ -5355,13 +5660,13 @@
 <a id="__codelineno-72-16" name="__codelineno-72-16" href="#__codelineno-72-16"></a><span class="go">[[id:patientC, interval:chr3], patientC_rep1_normal.bam, patientC_rep1_tumor.bam]</span>
 </code></pre></div>
 </details>
-<p>हम देख सकते हैं कि हमने <code>id</code> और <code>interval</code> फ़ील्ड को सफलतापूर्वक अलग कर लिया है, लेकिन अभी तक नमूनों को समूहित नहीं किया है।</p>
+<p>हम देख सकते हैं कि हमने सफलतापूर्वक <code>id</code> और <code>interval</code> fields को isolate किया है, लेकिन अभी तक नमूनों को group नहीं किया है।</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>हम यहाँ <code>replicate</code> फ़ील्ड को हटा रहे हैं। ऐसा इसलिए है क्योंकि हमें इसकी आगे की downstream प्रोसेसिंग के लिए आवश्यकता नहीं है। इस ट्यूटोरियल को पूरा करने के बाद, देखें कि क्या आप इसे बाद के grouping को प्रभावित किए बिना शामिल कर सकते हैं!</p>
+<p class="admonition-title">नोट</p>
+<p>हम यहाँ <code>replicate</code> field को discard कर रहे हैं। यह इसलिए है क्योंकि हमें इसे आगे downstream processing के लिए नहीं चाहिए। इस ट्यूटोरियल को पूरा करने के बाद, देखो कि क्या तुम बाद के grouping को प्रभावित किए बिना इसे शामिल कर सकते हो!</p>
 </div>
-<p>अब इस नए grouping तत्व के आधार पर नमूनों को समूहित करते हैं, <a href="https://www.nextflow.io/docs/latest/operator.html#grouptuple"><code>groupTuple</code> ऑपरेटर</a> का उपयोग करके।</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">बाद</label><label for="__tabbed_17_2">पहले</label></div>
+<p>चलो अब <a href="https://www.nextflow.io/docs/latest/operator.html#grouptuple"><code>groupTuple</code> ऑपरेटर</a> का उपयोग करके इस नए grouping element द्वारा नमूनों को group करते हैं।</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">बाद में</label><label for="__tabbed_17_2">पहले</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-73-30">30</a></span>
@@ -5407,12 +5712,12 @@
 </div>
 </div>
 </div>
-<p>बस इतना ही! हमने केवल एक पंक्ति का कोड जोड़ा। देखते हैं कि इसे चलाने पर क्या होता है:</p>
+<p>बस इतना ही है! हमने केवल एक line of code जोड़ी। चलो देखते हैं जब हम इसे चलाते हैं तो क्या होता है:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>कमांड आउटपुट</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>
 <a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="go">Launching `main.nf` [friendly_jang] DSL2 - revision: a1bee1c55d</span>
 <a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a>
@@ -5427,35 +5732,36 @@
 <a id="__codelineno-76-13" name="__codelineno-76-13" href="#__codelineno-76-13"></a><span class="go">[[id:patientC, interval:chr3], [patientC_rep1_normal.bam], [patientC_rep1_tumor.bam]]</span>
 </code></pre></div>
 </details>
-<p>ध्यान दें कि हमारे डेटा की संरचना बदल गई है और प्रत्येक channel तत्व के भीतर फ़ाइलें अब <code>[patientA_rep1_normal.bam, patientA_rep2_normal.bam]</code> जैसे tuples में हैं। ऐसा इसलिए है क्योंकि जब हम <code>groupTuple</code> का उपयोग करते हैं, तो Nextflow एक group के प्रत्येक नमूने के लिए अलग-अलग फ़ाइलों को संयोजित करता है। downstream डेटा को संभालने का प्रयास करते समय इसे याद रखना महत्वपूर्ण है।</p>
+<p>ध्यान दो कि हमारे डेटा की structure बदल गई है और प्रत्येक चैनल element के भीतर फ़ाइलें अब <code>[patientA_rep1_normal.bam, patientA_rep2_normal.bam]</code> जैसे tuples में हैं। यह इसलिए है क्योंकि जब हम <code>groupTuple</code> का उपयोग करते हैं, तो Nextflow एक group के प्रत्येक नमूने की single files को combine करता है। Downstream में डेटा handle करने की कोशिश करते समय यह याद रखना महत्वपूर्ण है।</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#transpose"><code>transpose</code></a> groupTuple का विपरीत है। यह channel में आइटम को अनपैक और flatten करता है। <code>transpose</code> जोड़कर ऊपर किए गए grouping को पूर्ववत करने का प्रयास करें!</p>
+<p class="admonition-title">नोट</p>
+<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#transpose"><code>transpose</code></a> groupTuple का विपरीत है। यह चैनल में items को unpack करता है और उन्हें flatten करता है। <code>transpose</code> जोड़ने की कोशिश करो और ऊपर किए गए grouping को undo करो!</p>
 </div>
-<h3 id="_11">निष्कर्ष<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<p>इस खंड में, आपने सीखा:</p>
+<p>operation के दोनों दिशाएँ — grouping और ungrouping — अब तुम्हारे toolkit में हैं।</p>
+<h3 id="_10">सारांश<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>इस section में, तुमने सीखा:</p>
 <ul>
-<li><strong>संबंधित नमूनों का समूहीकरण</strong>: समान विशेषताओं के आधार पर नमूनों को एकत्रित करने के लिए <code>groupTuple</code> का उपयोग कैसे करें</li>
-<li><strong>Grouping keys को अलग करना</strong>: grouping के लिए विशिष्ट फ़ील्ड निकालने के लिए <code>subMap</code> का उपयोग कैसे करें</li>
-<li><strong>Grouped डेटा संरचनाओं को संभालना</strong>: <code>groupTuple</code> द्वारा बनाई गई nested संरचना के साथ कैसे काम करें</li>
-<li><strong>Technical replicate handling</strong>: समान experimental conditions साझा करने वाले नमूनों को कैसे समूहित करें</li>
+<li><strong>संबंधित नमूनों को group करना</strong>: Common attributes के आधार पर नमूनों को aggregate करने के लिए <code>groupTuple</code> का उपयोग कैसे करें</li>
+<li><strong>Grouping keys को isolate करना</strong>: Grouping के लिए specific fields extract करने के लिए <code>subMap</code> का उपयोग कैसे करें</li>
+<li><strong>Grouped data structures को handle करना</strong>: <code>groupTuple</code> द्वारा बनाई गई nested structure के साथ कैसे काम करें</li>
+<li><strong>Technical replicate handling</strong>: एक ही experimental conditions share करने वाले नमूनों को कैसे group करें</li>
 </ul>
 <hr />
-<h2 id="_12">सारांश<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
-<p>इस side quest में, आपने channels का उपयोग करके डेटा को विभाजित और समूहित करना सीखा।</p>
-<p>Pipeline के माध्यम से बहते डेटा को संशोधित करके, आप loops या while statements का उपयोग किए बिना एक scalable pipeline बना सकते हैं, जो अधिक पारंपरिक दृष्टिकोणों की तुलना में कई फायदे प्रदान करता है:</p>
+<h2 id="_11">सारांश<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>इस side quest में, तुमने चैनलों का उपयोग करके डेटा को split और group करना सीखा।</p>
+<p>Pipeline से होकर बहते समय डेटा को modify करके, तुम loops या while statements का उपयोग किए बिना एक scalable pipeline बना सकते हो, जो अधिक traditional approaches की तुलना में कई फायदे प्रदान करता है:</p>
 <ul>
-<li>हम बिना किसी अतिरिक्त कोड के जितने चाहें उतने या कम इनपुट के लिए scale कर सकते हैं</li>
-<li>हम iteration के बजाय pipeline के माध्यम से डेटा के प्रवाह को संभालने पर ध्यान केंद्रित करते हैं</li>
-<li>हम आवश्यकतानुसार जटिल या सरल हो सकते हैं</li>
-<li>Pipeline अधिक declarative हो जाती है, इस पर ध्यान केंद्रित करती है कि क्या होना चाहिए बजाय इसके कि कैसे होना चाहिए</li>
-<li>Nextflow स्वतंत्र operations को समानांतर में चलाकर हमारे लिए execution को optimize करेगा</li>
+<li>हम बिना किसी additional code के जितने चाहें उतने कम या ज्यादा inputs तक scale कर सकते हैं</li>
+<li>हम iteration के बजाय pipeline से होकर डेटा के flow को handle करने पर focus करते हैं</li>
+<li>हम जितना जरूरी हो उतना complex या simple हो सकते हैं</li>
+<li>Pipeline अधिक declarative बन जाती है, यह focus करते हुए कि क्या होना चाहिए न कि कैसे होना चाहिए</li>
+<li>Nextflow हमारे लिए independent operations को parallel में चलाकर execution optimize करेगा</li>
 </ul>
-<p>इन channel operations में महारत हासिल करने से आप लचीली, scalable pipelines बना सकेंगे जो loops या iterative programming का सहारा लिए बिना जटिल डेटा संबंधों को संभालती हैं, जिससे Nextflow स्वचालित रूप से execution को optimize और स्वतंत्र operations को parallelize कर सके।</p>
-<h3 id="_13">प्रमुख पैटर्न<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>इन चैनल operations में महारत हासिल करने से तुम flexible, scalable pipelines बना सकोगे जो loops या iterative programming का सहारा लिए बिना complex data relationships को handle करती हैं, जिससे Nextflow execution optimize कर सके और independent operations को automatically parallelize कर सके।</p>
+<h3 id="patterns">मुख्य patterns<a class="headerlink" href="#patterns" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p><strong>Structured input data बनाना:</strong> meta maps के साथ CSV फ़ाइल से शुरू करना (<a href="../metadata/">Metadata in workflows</a> के पैटर्न पर आधारित)</p>
+<p><strong>Structured input data बनाना:</strong> meta maps के साथ CSV फ़ाइल से शुरू करना (<a href="../metadata/">Metadata in workflows</a> के patterns पर आधारित)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="n">ch_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s2">&quot;./data/samplesheet.csv&quot;</span><span class="o">)</span>
 <a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="w">    </span><span class="o">.</span><span class="na">splitCsv</span><span class="o">(</span><span class="nl">header:</span><span class="w"> </span><span class="kc">true</span><span class="o">)</span>
 <a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="w">    </span><span class="o">.</span><span class="na">map</span><span class="o">{</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">-&gt;</span>
@@ -5464,19 +5770,19 @@
 </code></pre></div>
 </li>
 <li>
-<p><strong>डेटा को अलग channels में विभाजित करना:</strong> हमने <code>type</code> फ़ील्ड के आधार पर डेटा को स्वतंत्र streams में विभाजित करने के लिए <code>filter</code> का उपयोग किया</p>
+<p><strong>डेटा को अलग चैनलों में split करना:</strong> हमने <code>type</code> field के आधार पर डेटा को independent streams में divide करने के लिए <code>filter</code> का उपयोग किया</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="n">channel</span><span class="o">.</span><span class="na">filter</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;tumor&#39;</span><span class="w"> </span><span class="o">}</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Matched नमूनों को जोड़ना:</strong> हमने <code>id</code> और <code>repeat</code> फ़ील्ड के आधार पर संबंधित नमूनों को पुनः संयोजित करने के लिए <code>join</code> का उपयोग किया</p>
+<p><strong>Matched नमूनों को join करना:</strong> हमने <code>id</code> और <code>repeat</code> fields के आधार पर संबंधित नमूनों को recombine करने के लिए <code>join</code> का उपयोग किया</p>
 <ul>
-<li>key के आधार पर दो channels को join करना (tuple का पहला तत्व)</li>
+<li>Key (tuple के पहले element) द्वारा दो चैनलों को join करना</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="n">tumor_ch</span><span class="o">.</span><span class="na">join</span><span class="o">(</span><span class="n">normal_ch</span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>Joining key निकालना और इस value से join करना</li>
+<li>Joining key extract करना और इस value द्वारा join करना</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="n">tumor_ch</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">meta</span><span class="o">.</span><span class="na">id</span><span class="o">,</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="w">    </span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
@@ -5484,7 +5790,7 @@
 <a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="w">    </span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>subMap का उपयोग करके कई फ़ील्ड पर join करना</li>
+<li>subMap का उपयोग करके multiple fields पर join करना</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="n">tumor_ch</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="w">    </span><span class="o">.</span><span class="na">join</span><span class="o">(</span>
@@ -5493,31 +5799,31 @@
 </code></pre></div>
 </li>
 <li>
-<p><strong>Intervals में वितरण:</strong> हमने समानांतर प्रोसेसिंग के लिए नमूनों के जीनोमिक intervals के साथ Cartesian products बनाने के लिए <code>combine</code> का उपयोग किया।</p>
+<p><strong>Intervals में वितरित करना:</strong> हमने parallel processing के लिए genomic intervals के साथ नमूनों के Cartesian products बनाने के लिए <code>combine</code> का उपयोग किया।</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="n">samples_ch</span><span class="o">.</span><span class="na">combine</span><span class="o">(</span><span class="n">intervals_ch</span><span class="o">)</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Grouping keys द्वारा एकत्रीकरण:</strong> हमने प्रत्येक tuple में पहले तत्व के आधार पर समूहित करने के लिए <code>groupTuple</code> का उपयोग किया, जिससे <code>id</code> और <code>interval</code> फ़ील्ड साझा करने वाले नमूने एकत्र होते हैं और technical replicates मर्ज होते हैं।</p>
+<p><strong>Grouping keys द्वारा aggregate करना:</strong> हमने प्रत्येक tuple के पहले element द्वारा group करने के लिए <code>groupTuple</code> का उपयोग किया, जिससे <code>id</code> और <code>interval</code> fields share करने वाले नमूने collect हुए और technical replicates merge हुए।</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="n">channel</span><span class="o">.</span><span class="na">groupTuple</span><span class="o">()</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>डेटा संरचना का अनुकूलन:</strong> हमने विशिष्ट फ़ील्ड निकालने के लिए <code>subMap</code> का उपयोग किया और transformations को पुन: प्रयोज्य बनाने के लिए named closure बनाई।</p>
+<p><strong>Data structure को optimize करना:</strong> हमने specific fields extract करने के लिए <code>subMap</code> का उपयोग किया और transformations को reusable बनाने के लिए named closure बनाया।</p>
 <ul>
-<li>Map से विशिष्ट फ़ील्ड निकालना</li>
+<li>Map से specific fields extract करना</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">])</span>
 </code></pre></div>
 <ul>
-<li>पुन: प्रयोज्य transformations के लिए named closure का उपयोग करना</li>
+<li>Reusable transformations के लिए named closure का उपयोग करना</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="n">getSampleIdAndReplicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">meta</span><span class="o">.</span><span class="na">subMap</span><span class="o">([</span><span class="s1">&#39;id&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;repeat&#39;</span><span class="o">]),</span><span class="w"> </span><span class="n">file</span><span class="o">]</span><span class="w"> </span><span class="o">}</span>
 <a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a><span class="n">channel</span><span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">getSampleIdAndReplicate</span><span class="o">)</span>
 </code></pre></div>
 </li>
 </ol>
-<h3 id="_14">अतिरिक्त संसाधन<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_12">अतिरिक्त संसाधन<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.nextflow.io/docs/latest/operator.html#filter">filter</a></li>
 <li><a href="https://www.nextflow.io/docs/latest/operator.html#map">map</a></li>
@@ -5526,8 +5832,61 @@
 <li><a href="https://www.nextflow.io/docs/latest/operator.html#combine">combine</a></li>
 </ul>
 <hr />
-<h2 id="_15">आगे क्या है?<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
-<p><a href="../">Side Quests के मेनू</a> पर लौटें या सूची में अगले विषय पर जाने के लिए पृष्ठ के नीचे दाईं ओर बटन पर क्लिक करें।</p><style type="text/css">.quiz {
+<h2 id="_13">आगे क्या है?<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><a href="../">Side Quests के menu</a> पर वापस जाओ या list में अगले topic पर जाने के लिए page के नीचे दाईं ओर button पर click करो।</p><div id="quiz-progress-sidebar" aria-label="क्विज़ प्रगति" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    क्विज़ प्रगति
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          उत्तर दिए: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          सही: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          रीसेट
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="क्विज़ प्रगति" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        उत्तर दिए: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        सही: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        रीसेट
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -5541,11 +5900,11 @@
 .quiz-question > *:first-child {
   margin-top: 0;
 }
-.hidden {
+.quiz .hidden {
   display: none;
 }
 
-form button {
+.quiz form button {
   background-color: var(--md-primary-fg-color);
   border: none;
   color: var(--md-primary-bg-color);
@@ -5560,11 +5919,11 @@ form button {
     background-color 0.2s;
 }
 
-form button:hover:not(:disabled) {
+.quiz form button:hover:not(:disabled) {
   opacity: 0.9;
 }
 
-form button:disabled {
+.quiz form button:disabled {
   background-color: var(--md-default-fg-color--lighter, #ccc);
   color: var(--md-default-fg-color--light, #666);
   cursor: not-allowed;
@@ -5574,10 +5933,12 @@ form button:disabled {
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -5602,34 +5963,83 @@ input[type="radio"].wrong {
   margin: 10px;
 }
 
-/* Quiz feedback message */
+/* Quiz feedback container */
 .quiz-feedback {
-  padding: 0.75rem;
   margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual feedback box (one per answer) */
+.quiz-feedback-item {
+  position: relative;
+  padding: 0.75rem;
   border-radius: 4px;
   font-weight: 500;
 }
 
-.quiz-feedback.correct {
+.quiz-feedback-item.correct {
   background-color: #d1e7dd;
   border: 1px solid #a3cfbb;
   color: #198754;
 }
 
-.quiz-feedback.incorrect {
+.quiz-feedback-item.incorrect {
   background-color: #f8d7da;
   border: 1px solid #f1aeb5;
   color: #dc3545;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.correct {
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct {
   background-color: #051b11;
   border: 1px solid #0f5132;
 }
 
-[data-md-color-scheme="slate"] .quiz-feedback.incorrect {
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect {
   background-color: #2c0b0e;
   border: 1px solid #842029;
+}
+
+/* Answer label badge overlapping top-left of feedback box */
+.quiz-feedback-badge {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #a3cfbb;
+  color: #0f5132;
+}
+
+.quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #f1aeb5;
+  color: #842029;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.correct .quiz-feedback-badge {
+  background-color: #0f5132;
+  color: #a3cfbb;
+}
+
+[data-md-color-scheme="slate"] .quiz-feedback-item.incorrect .quiz-feedback-badge {
+  background-color: #842029;
+  color: #f1aeb5;
+}
+
+/* When badge is present, add top padding to prevent content overlap */
+.quiz-feedback-badge + .quiz-feedback-item-content {
+  margin-top: 0.25rem;
 }
 
 /* Quiz header link styling - positioned in top right corner */
@@ -5644,8 +6054,15 @@ input[type="radio"].wrong {
   transition: opacity 0.2s;
   padding: 0.25rem 0.5rem;
 }
-.quiz:hover .quiz-header-link {
+.quiz:hover .quiz-header-link,
+.quiz-header-link:focus-visible {
   opacity: 1;
+}
+
+/* Focus indicators for keyboard navigation */
+.quiz input:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color, #448aff);
+  outline-offset: 2px;
 }
 
 /* Quiz number header styling */
@@ -5900,7 +6317,6 @@ input[type="radio"].wrong {
     border-color 0.2s,
     background-color 0.2s;
   /* min-width is set via inline style based on answer length */
-  outline: none;
 }
 
 .quiz-blank-input:focus {
@@ -5947,7 +6363,7 @@ input[type="radio"].wrong {
 }
 </style><script type="text/javascript">var JSConfetti=function(){"use strict";function t(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function e(t,e){for(var i=0;i<e.length;i++){var n=e[i];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(t,n.key,n)}}function i(t,i,n){return i&&e(t.prototype,i),n&&e(t,n),t}function n(t){return+t.replace(/px/,"")}function s(t,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:0,n=Math.random()*(e-t)+t;return Math.floor(n*Math.pow(10,i))/Math.pow(10,i)}function o(t){return t[s(0,t.length)]}var a=["#fcf403","#62fc03","#f4fc03","#03e7fc","#03fca5","#a503fc","#fc03ad","#fc03c2"];function r(t){return Math.log(t)/Math.log(1920)}var h=function(){function e(i){t(this,e);var n=i.initialPosition,a=i.direction,h=i.confettiRadius,c=i.confettiColors,u=i.emojis,l=i.emojiSize,d=i.canvasWidth,f=s(.9,1.7,3)*r(d);this.confettiSpeed={x:f,y:f},this.finalConfettiSpeedX=s(.2,.6,3),this.rotationSpeed=u.length?.01:s(.03,.07,3)*r(d),this.dragForceCoefficient=s(5e-4,9e-4,6),this.radius={x:h,y:h},this.initialRadius=h,this.rotationAngle="left"===a?s(0,.2,3):s(-.2,0,3),this.emojiSize=l,this.emojiRotationAngle=s(0,2*Math.PI),this.radiusYUpdateDirection="down";var m="left"===a?s(82,15)*Math.PI/180:s(-15,-82)*Math.PI/180;this.absCos=Math.abs(Math.cos(m)),this.absSin=Math.abs(Math.sin(m));var v=s(-150,0),p={x:n.x+("left"===a?-v:v)*this.absCos,y:n.y-v*this.absSin};this.currentPosition=Object.assign({},p),this.initialPosition=Object.assign({},p),this.color=u.length?null:o(c),this.emoji=u.length?o(u):null,this.createdAt=(new Date).getTime(),this.direction=a}return i(e,[{key:"draw",value:function(t){var e=this.currentPosition,i=this.radius,n=this.color,s=this.emoji,o=this.rotationAngle,a=this.emojiRotationAngle,r=this.emojiSize,h=window.devicePixelRatio;n?(t.fillStyle=n,t.beginPath(),t.ellipse(e.x*h,e.y*h,i.x*h,i.y*h,o,0,2*Math.PI),t.fill()):s&&(t.font="".concat(r,"px serif"),t.save(),t.translate(h*e.x,h*e.y),t.rotate(a),t.textAlign="center",t.fillText(s,0,0),t.restore())}},{key:"updatePosition",value:function(t,e){var i=this.confettiSpeed,n=this.dragForceCoefficient,s=this.finalConfettiSpeedX,o=this.radiusYUpdateDirection,a=this.rotationSpeed,r=this.createdAt,h=this.direction,c=e-r;i.x>s&&(this.confettiSpeed.x-=n*t),this.currentPosition.x+=i.x*("left"===h?-this.absCos:this.absCos)*t,this.currentPosition.y=this.initialPosition.y-i.y*this.absSin*c+.00125*Math.pow(c,2)/2,this.rotationSpeed-=this.emoji?1e-4:1e-5*t,this.rotationSpeed<0&&(this.rotationSpeed=0),this.emoji?this.emojiRotationAngle+=this.rotationSpeed*t%(2*Math.PI):"down"===o?(this.radius.y-=t*a,this.radius.y<=0&&(this.radius.y=0,this.radiusYUpdateDirection="up")):(this.radius.y+=t*a,this.radius.y>=this.initialRadius&&(this.radius.y=this.initialRadius,this.radiusYUpdateDirection="down"))}},{key:"getIsVisibleOnCanvas",value:function(t){return this.currentPosition.y<t+100}}]),e}();function c(){var t=document.createElement("canvas");return t.style.position="fixed",t.style.width="100%",t.style.height="100%",t.style.top="0",t.style.left="0",t.style.zIndex="1000",t.style.pointerEvents="none",document.body.appendChild(t),t}function u(t){var e=t.confettiRadius,i=void 0===e?6:e,n=t.confettiNumber,s=void 0===n?t.confettiesNumber||(t.emojis?40:250):n,o=t.confettiColors,r=void 0===o?a:o,h=t.emojis,c=void 0===h?t.emojies||[]:h,u=t.emojiSize,l=void 0===u?80:u;return t.emojies&&console.error("emojies argument is deprecated, please use emojis instead"),t.confettiesNumber&&console.error("confettiesNumber argument is deprecated, please use confettiNumber instead"),{confettiRadius:i,confettiNumber:s,confettiColors:r,emojis:c,emojiSize:l}}var l=function(){function e(i){var n=this;t(this,e),this.canvasContext=i,this.shapes=[],this.promise=new Promise((function(t){return n.resolvePromise=t}))}return i(e,[{key:"getBatchCompletePromise",value:function(){return this.promise}},{key:"addShapes",value:function(){var t;(t=this.shapes).push.apply(t,arguments)}},{key:"complete",value:function(){var t;return!this.shapes.length&&(null===(t=this.resolvePromise)||void 0===t||t.call(this),!0)}},{key:"processShapes",value:function(t,e,i){var n=this,s=t.timeDelta,o=t.currentTime;this.shapes=this.shapes.filter((function(t){return t.updatePosition(s,o),t.draw(n.canvasContext),!i||t.getIsVisibleOnCanvas(e)}))}}]),e}();return function(){function e(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};t(this,e),this.activeConfettiBatches=[],this.canvas=i.canvas||c(),this.canvasContext=this.canvas.getContext("2d"),this.requestAnimationFrameRequested=!1,this.lastUpdated=(new Date).getTime(),this.iterationIndex=0,this.loop=this.loop.bind(this),requestAnimationFrame(this.loop)}return i(e,[{key:"loop",value:function(){var t,e,i,s,o;this.requestAnimationFrameRequested=!1,t=this.canvas,e=window.devicePixelRatio,i=getComputedStyle(t),s=n(i.getPropertyValue("width")),o=n(i.getPropertyValue("height")),t.setAttribute("width",(s*e).toString()),t.setAttribute("height",(o*e).toString());var a=(new Date).getTime(),r=a-this.lastUpdated,h=this.canvas.offsetHeight,c=this.iterationIndex%10==0;this.activeConfettiBatches=this.activeConfettiBatches.filter((function(t){return t.processShapes({timeDelta:r,currentTime:a},h,c),!c||!t.complete()})),this.iterationIndex++,this.queueAnimationFrameIfNeeded(a)}},{key:"queueAnimationFrameIfNeeded",value:function(t){this.requestAnimationFrameRequested||this.activeConfettiBatches.length<1||(this.requestAnimationFrameRequested=!0,this.lastUpdated=t||(new Date).getTime(),requestAnimationFrame(this.loop))}},{key:"addConfetti",value:function(){for(var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},e=u(t),i=e.confettiRadius,n=e.confettiNumber,s=e.confettiColors,o=e.emojis,a=e.emojiSize,r=this.canvas.getBoundingClientRect(),c=r.width,d=r.height,f=5*d/7,m={x:0,y:f},v={x:c,y:f},p=new l(this.canvasContext),y=0;y<n/2;y++){var g=new h({initialPosition:m,direction:"right",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c}),C=new h({initialPosition:v,direction:"left",confettiRadius:i,confettiColors:s,confettiNumber:n,emojis:o,emojiSize:a,canvasWidth:c});p.addShapes(g,C)}return this.activeConfettiBatches.push(p),this.queueAnimationFrameIfNeeded(),p.getBatchCompletePromise()}},{key:"clearCanvas",value:function(){this.activeConfettiBatches=[]}},{key:"destroyCanvas",value:function(){this.canvas.remove()}}]),e}()}();
 </script><script type="text/javascript">
-window.mkdocsQuizTranslations = {"Submit": "जमा करें", "Question {n}": "प्रश्न {n}", "Quiz Progress": "क्विज़ प्रगति", "questions answered": "प्रश्नों के उत्तर दिए गए", "correct": "सही", "Quiz Complete!": "क्विज़ पूर्ण!", "Reset quiz": "क्विज़ रीसेट करें", "Quiz results are saved to your browser's local storage and will persist between sessions.": "क्विज़ परिणाम आपके ब्राउज़र के स्थानीय संग्रहण में सहेजे जाते हैं और सत्रों के बीच बने रहेंगे।", "Outstanding! You aced it!": "शानदार! आपने बहुत अच्छा किया!", "Great job! You really know your stuff!": "बहुत बढ़िया! आप वाकई इसमें माहिर हैं!", "Good effort! Keep learning!": "अच्छा प्रयास! सीखते रहें!", "Not bad, but there's room for improvement!": "बुरा नहीं, लेकिन सुधार की गुंजाइश है!", "Better luck next time! Keep trying!": "अगली बार बेहतर होगा! कोशिश करते रहें!", "Are you sure you want to reset the quiz? This will clear your progress.": "क्या आप वाकई क्विज़ रीसेट करना चाहते हैं? इससे आपकी प्रगति मिट जाएगी।", "Try Again": "पुनः प्रयास करें", "Correct answer!": "सही उत्तर!", "Incorrect answer. Please try again.": "गलत उत्तर। कृपया पुनः प्रयास करें।", "Incorrect answer.": "गलत उत्तर।", "Answered:": "उत्तर दिए:", "Correct:": "सही:", "Reset": "रीसेट", "(empty)": "(खाली)"};
+window.mkdocsQuizTranslations = {"Submit": "जमा करें", "Answer": "उत्तर", "Question {n}": "प्रश्न {n}", "Quiz Progress": "क्विज़ प्रगति", "questions answered": "प्रश्नों के उत्तर दिए गए", "correct": "सही", "Quiz Complete!": "क्विज़ पूर्ण!", "Reset quiz": "क्विज़ रीसेट करें", "Quiz results are saved to your browser's local storage and will persist between sessions.": "क्विज़ परिणाम आपके ब्राउज़र के स्थानीय संग्रहण में सहेजे जाते हैं और सत्रों के बीच बने रहेंगे।", "Outstanding! You aced it!": "शानदार! आपने बहुत अच्छा किया!", "Great job! You really know your stuff!": "बहुत बढ़िया! आप वाकई इसमें माहिर हैं!", "Good effort! Keep learning!": "अच्छा प्रयास! सीखते रहें!", "Not bad, but there's room for improvement!": "बुरा नहीं, लेकिन सुधार की गुंजाइश है!", "Better luck next time! Keep trying!": "अगली बार बेहतर होगा! कोशिश करते रहें!", "Are you sure you want to reset the quiz? This will clear your progress.": "क्या आप वाकई क्विज़ रीसेट करना चाहते हैं? इससे आपकी प्रगति मिट जाएगी।", "Try Again": "पुनः प्रयास करें", "Correct answer!": "सही उत्तर!", "Incorrect answer. Please try again.": "गलत उत्तर। कृपया पुनः प्रयास करें।", "Incorrect answer.": "गलत उत्तर।", "Answered:": "उत्तर दिए:", "Correct:": "सही:", "Reset": "रीसेट", "(empty)": "(खाली)"};
 </script><script type="text/javascript">
 window.mkdocsQuizConfig = {
   confetti: true,
@@ -6117,10 +6533,8 @@ window.mkdocsQuizConfig = {
           section.classList.add("hidden");
         }
 
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
 
         // Show submit button, hide reset button
@@ -6445,14 +6859,121 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
+  // Truncate text to a maximum length, adding ellipsis if needed
+  function truncateText(text, maxLength) {
+    if (text.length <= maxLength) return text;
+    return text.substring(0, maxLength).trimEnd() + "\u2026";
+  }
+
+  // Collect feedback HTML from a NodeList of input elements.
+  // Returns an array of {label, html} objects (one per answer that has feedback).
+  function collectFeedbackFromNodeList(nodeList) {
+    var items = [];
+    nodeList.forEach(function (input) {
+      var fb = input.parentElement.querySelector(".answer-feedback");
+      if (fb && fb.innerHTML.trim()) {
+        var label = input.parentElement.querySelector("label");
+        var labelText = label ? label.textContent.trim() : "";
+        items.push({ label: labelText, html: fb.innerHTML });
       }
     });
+    return items;
+  }
+
+  // Try to collect feedback from selected inputs, falling back to correct inputs if configured.
+  // Returns an array of {label, html} objects.
+  function collectFeedbackForSelectedOrCorrect(fieldset, quiz) {
+    var items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"]:checked'));
+    if (!items.length && quiz.hasAttribute("data-show-correct")) {
+      items = collectFeedbackFromNodeList(fieldset.querySelectorAll('input[name="answer"][data-correct="true"]'));
+    }
+    return items;
+  }
+
+  // Build feedback container HTML from an array of {label, html} items.
+  // Each item becomes its own styled feedback box with a badge showing the answer label.
+  function buildFeedbackHTML(items, cssClass) {
+    if (!items.length) return "";
+    var maxBadgeLen = 30;
+    var result = "";
+    items.forEach(function (item) {
+      var badge = "";
+      if (item.label) {
+        var escaped = item.label
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+        badge =
+          '<span class="quiz-feedback-badge" title="' + escaped + '">' + truncateText(escaped, maxBadgeLen) + "</span>";
+      }
+      result +=
+        '<div class="quiz-feedback-item ' +
+        cssClass +
+        '">' +
+        badge +
+        '<div class="quiz-feedback-item-content">' +
+        item.html +
+        "</div></div>";
+    });
+    return result;
+  }
+
+  // Wrap content in a single feedback item div with the given CSS class
+  function wrapFeedbackItem(cssClass, content) {
+    return (
+      '<div class="quiz-feedback-item ' +
+      cssClass +
+      '"><div class="quiz-feedback-item-content">' +
+      content +
+      "</div></div>"
+    );
+  }
+
+  // Get default feedback message based on submission correctness and retry status
+  function getDefaultFeedbackMessage(isCorrect, canRetry) {
+    if (isCorrect) return t("Correct answer!");
+    return canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+  }
+
+  // Mark answer elements with correct/wrong classes based on selection and correctness
+  function markAnswers(selectedAnswers, correctAnswers, quiz, isCorrect) {
+    selectedAnswers.forEach((answer) => {
+      if (isCorrect) {
+        // All selected answers are correct (since it's multiple correct)
+        answer.parentElement.classList.add("correct");
+      } else {
+        // Mark selected wrong answers, keep correct ones highlighted
+        const isAnswerCorrect = answer.hasAttribute("data-correct");
+        answer.parentElement.classList.toggle("wrong", !isAnswerCorrect);
+        answer.parentElement.classList.toggle("correct", isAnswerCorrect);
+      }
+    });
+
+    // If show-correct is enabled, also highlight unselected correct answers on incorrect submission
+    if (!isCorrect && quiz.hasAttribute("data-show-correct")) {
+      correctAnswers.forEach((a) => a.parentElement.classList.add("correct"));
+    }
+  }
+
+  // Display feedback message and styling after quiz submission
+  function showFeedback(feedbackDiv, isCorrect, selectedAnswers, correctAnswers, fieldset, quiz) {
+    feedbackDiv.classList.remove("hidden");
+
+    // Collect per-answer feedback items
+    var cssClass = isCorrect ? "correct" : "incorrect";
+    var items = isCorrect
+      ? collectFeedbackForSelectedOrCorrect(fieldset, quiz)
+      : collectFeedbackFromNodeList(selectedAnswers);
+
+    var html = buildFeedbackHTML(items, cssClass);
+    if (html) {
+      feedbackDiv.innerHTML = html;
+    } else {
+      // No per-answer feedback — show a single default message box
+      var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+      feedbackDiv.innerHTML = wrapFeedbackItem(cssClass, getDefaultFeedbackMessage(isCorrect, canRetry));
+    }
   }
 
   // Initialize results div reset button
@@ -6575,9 +7096,8 @@ window.mkdocsQuizConfig = {
               if (section) {
                 section.classList.remove("hidden");
               }
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              feedbackDiv.classList.remove("hidden");
+              feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Mark all inputs as correct
               blankInputs.forEach((input) => {
@@ -6618,27 +7138,27 @@ window.mkdocsQuizConfig = {
               });
 
               // Show incorrect feedback with detailed list
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              feedbackDiv.classList.remove("hidden");
+              var canRetryRestore = !quiz.hasAttribute("data-disable-after-submit");
+              var feedbackTextRestore = getDefaultFeedbackMessage(false, canRetryRestore);
 
               // Show correct answers if show-correct is enabled
               if (quiz.hasAttribute("data-show-correct")) {
-                let feedbackHTML = feedbackText + "<ul>";
-                blankInputs.forEach((input) => {
+                var fillRestoreHTML = feedbackTextRestore + "<ul>";
+                blankInputs.forEach(function (input) {
                   if (!input.classList.contains("correct")) {
-                    const userAnswer = input.value.trim();
-                    const correctAnswer = input.getAttribute("data-answer");
-                    feedbackHTML += `<li><del>${userAnswer || t("(empty)")}</del> → ${correctAnswer}</li>`;
+                    var userAnswer = input.value.trim();
+                    var correctAnswer = input.getAttribute("data-answer");
+                    fillRestoreHTML +=
+                      "<li><del>" + (userAnswer || t("(empty)")) + "</del> \u2192 " + correctAnswer + "</li>";
                     // Also show in placeholder
                     input.placeholder = correctAnswer;
                   }
                 });
-                feedbackHTML += "</ul>";
-                feedbackDiv.innerHTML = feedbackHTML;
+                fillRestoreHTML += "</ul>";
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillRestoreHTML);
               } else {
-                feedbackDiv.textContent = feedbackText;
+                feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextRestore);
               }
 
               // Disable inputs if disable-after-submit is enabled
@@ -6659,7 +7179,7 @@ window.mkdocsQuizConfig = {
         } else {
           // Restore multiple-choice quiz state (existing code)
           const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          const correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
 
           if (savedState.answered) {
             // Restore selected answers based on saved values
@@ -6679,15 +7199,17 @@ window.mkdocsQuizConfig = {
 
               // Only mark the correct answers in green (don't highlight wrong answers)
               allAnswers.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 }
               });
 
-              // Show correct feedback
-              feedbackDiv.classList.remove("hidden", "incorrect");
-              feedbackDiv.classList.add("correct");
-              feedbackDiv.textContent = t("Correct answer!");
+              // Show correct feedback - prefer per-answer feedback if present
+              feedbackDiv.classList.remove("hidden");
+              var correctItems = collectFeedbackForSelectedOrCorrect(fieldset, quiz);
+              var correctFeedbackHTML = buildFeedbackHTML(correctItems, "correct");
+              feedbackDiv.innerHTML =
+                correctFeedbackHTML || wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6707,7 +7229,7 @@ window.mkdocsQuizConfig = {
               }
             } else {
               // Restore incorrect answer state
-              const selectedInputs = Array.from(allAnswers).filter((input) =>
+              const selectedAnswers = Array.from(allAnswers).filter((input) =>
                 savedState.selectedValues.includes(input.value),
               );
 
@@ -6717,8 +7239,8 @@ window.mkdocsQuizConfig = {
               }
 
               // Mark selected answers
-              selectedInputs.forEach((input) => {
-                if (input.hasAttribute("correct")) {
+              selectedAnswers.forEach((input) => {
+                if (input.hasAttribute("data-correct")) {
                   input.parentElement.classList.add("correct");
                 } else {
                   input.parentElement.classList.add("wrong");
@@ -6732,11 +7254,15 @@ window.mkdocsQuizConfig = {
                 });
               }
 
-              // Show incorrect feedback
-              feedbackDiv.classList.remove("hidden", "correct");
-              feedbackDiv.classList.add("incorrect");
-              const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-              feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+              // Show incorrect feedback - prefer per-answer feedback for selected answers
+              feedbackDiv.classList.remove("hidden");
+              var canRetry = !quiz.hasAttribute("data-disable-after-submit");
+              var incorrectItems = collectFeedbackFromNodeList(
+                fieldset.querySelectorAll('input[name="answer"]:checked'),
+              );
+              var incorrectFeedbackHTML = buildFeedbackHTML(incorrectItems, "incorrect");
+              feedbackDiv.innerHTML =
+                incorrectFeedbackHTML || wrapFeedbackItem("incorrect", getDefaultFeedbackMessage(false, canRetry));
 
               // Disable inputs if disable-after-submit is enabled
               if (quiz.hasAttribute("data-disable-after-submit")) {
@@ -6798,10 +7324,8 @@ window.mkdocsQuizConfig = {
         if (section) {
           section.classList.add("hidden");
         }
-        // Hide feedback message
+        // Hide feedback container
         feedbackDiv.classList.add("hidden");
-        feedbackDiv.classList.remove("correct", "incorrect");
-        feedbackDiv.textContent = "";
         feedbackDiv.innerHTML = "";
         // Show submit button, hide reset button
         if (submitButton) {
@@ -6852,34 +7376,30 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            feedbackDiv.classList.remove("hidden");
+            feedbackDiv.innerHTML = wrapFeedbackItem("correct", getDefaultFeedbackMessage(true, false));
           } else {
             // Show incorrect feedback with detailed list
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-
-            // Build detailed feedback with bullet list
-            const feedbackText = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            feedbackDiv.classList.remove("hidden");
+            var canRetryFill = !quiz.hasAttribute("data-disable-after-submit");
+            var feedbackTextFill = getDefaultFeedbackMessage(false, canRetryFill);
 
             // Show correct answers if show-correct is enabled
             if (quiz.hasAttribute("data-show-correct")) {
-              let feedbackHTML = feedbackText + "<ul>";
-              blankInputs.forEach((input) => {
+              var fillHTML = feedbackTextFill + "<ul>";
+              blankInputs.forEach(function (input) {
                 if (!input.classList.contains("correct")) {
-                  const userAnswer = input.value.trim();
-                  const correctAnswer = input.getAttribute("data-answer");
-                  feedbackHTML += `<li><del>${userAnswer || "(empty)"}</del> → ${correctAnswer}</li>`;
+                  var userAnswer = input.value.trim();
+                  var correctAnswer = input.getAttribute("data-answer");
+                  fillHTML += "<li><del>" + (userAnswer || "(empty)") + "</del> \u2192 " + correctAnswer + "</li>";
                   // Also show in placeholder
                   input.placeholder = correctAnswer;
                 }
               });
-              feedbackHTML += "</ul>";
-              feedbackDiv.innerHTML = feedbackHTML;
+              fillHTML += "</ul>";
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", fillHTML);
             } else {
-              feedbackDiv.textContent = feedbackText;
+              feedbackDiv.innerHTML = wrapFeedbackItem("incorrect", feedbackTextFill);
             }
           }
 
@@ -6900,11 +7420,11 @@ window.mkdocsQuizConfig = {
         } else {
           // Handle multiple-choice quiz (existing code)
           let selectedAnswers = form.querySelectorAll('input[name="answer"]:checked');
-          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][correct]');
+          let correctAnswers = fieldset.querySelectorAll('input[name="answer"][data-correct="true"]');
           // Check if all correct answers are selected
           is_correct = selectedAnswers.length === correctAnswers.length;
           Array.from(selectedAnswers).forEach((answer) => {
-            if (!answer.hasAttribute("correct")) {
+            if (!answer.hasAttribute("data-correct")) {
               is_correct = false;
             }
           });
@@ -6916,39 +7436,12 @@ window.mkdocsQuizConfig = {
 
           if (is_correct) {
             resetFieldset(fieldset);
-            // Only mark the correct answers in green (don't highlight wrong answers)
-            const allAnswers = fieldset.querySelectorAll('input[name="answer"]');
-            allAnswers.forEach((answer) => {
-              if (answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // Show correct feedback
-            feedbackDiv.classList.remove("hidden", "incorrect");
-            feedbackDiv.classList.add("correct");
-            feedbackDiv.textContent = t("Correct answer!");
+            markAnswers(selectedAnswers, correctAnswers, quiz, true);
+            showFeedback(feedbackDiv, true, selectedAnswers, correctAnswers, fieldset, quiz);
           } else {
             resetFieldset(fieldset);
-            // Mark wrong fields with colors
-            Array.from(selectedAnswers).forEach((answer) => {
-              if (!answer.hasAttribute("correct")) {
-                answer.parentElement.classList.add("wrong");
-              } else {
-                answer.parentElement.classList.add("correct");
-              }
-            });
-            // If show-correct is enabled, also show all correct answers
-            if (quiz.hasAttribute("data-show-correct")) {
-              correctAnswers.forEach((answer) => {
-                answer.parentElement.classList.add("correct");
-              });
-            }
-            // Show incorrect feedback
-            feedbackDiv.classList.remove("hidden", "correct");
-            feedbackDiv.classList.add("incorrect");
-            // Only show "Please try again" if the quiz is not disabled after submission
-            const canRetry = !quiz.hasAttribute("data-disable-after-submit");
-            feedbackDiv.textContent = canRetry ? t("Incorrect answer. Please try again.") : t("Incorrect answer.");
+            markAnswers(selectedAnswers, correctAnswers, quiz, false);
+            showFeedback(feedbackDiv, false, selectedAnswers, correctAnswers, fieldset, quiz);
           }
 
           // Get selected values to save
@@ -6974,6 +7467,12 @@ window.mkdocsQuizConfig = {
           }
         }
 
+        // Move focus to feedback div for screen readers and keyboard users
+        if (feedbackDiv) {
+          feedbackDiv.setAttribute("tabindex", "-1");
+          feedbackDiv.focus();
+        }
+
         // Update tracker
         if (quizId) {
           quizTracker.markQuiz(quizId, is_correct, selectedValues);
@@ -6993,9 +7492,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
@@ -7077,7 +7573,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="फुटर" >
         
           
-          <a href="../working_with_files/" class="md-footer__link md-footer__link--prev" aria-label="पिछला: फ़ाइल इनपुट प्रोसेसिंग">
+          <a href="../metadata/" class="md-footer__link md-footer__link--prev" aria-label="पिछला: मेटाडेटा और मेटा मैप्स">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -7087,20 +7583,20 @@ window.mkdocsQuizConfig = {
                 पिछला
               </span>
               <div class="md-ellipsis">
-                फ़ाइल इनपुट प्रोसेसिंग
+                मेटाडेटा और मेटा मैप्स
               </div>
             </div>
           </a>
         
         
           
-          <a href="../workflows_of_workflows/" class="md-footer__link md-footer__link--next" aria-label="आगामी: वर्कफ़्लो के वर्कफ़्लो">
+          <a href="../nf_test/" class="md-footer__link md-footer__link--next" aria-label="आगामी: nf-test के साथ परीक्षण">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 आगामी
               </span>
               <div class="md-ellipsis">
-                वर्कफ़्लो के वर्कफ़्लो
+                nf-test के साथ परीक्षण
               </div>
             </div>
             <div class="md-footer__button md-icon">
